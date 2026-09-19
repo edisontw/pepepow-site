@@ -178,7 +178,7 @@ Not yet completed:
 - [ ] identify canonical original images vs WordPress resized variants
 - [ ] classify missing media
 - [ ] convert the seven pages to normalized site content
-- [ ] convert representative posts
+- [x] convert representative posts (5 most recent published announcements recovered as review-only drafts)
 - [ ] validate old internal links
 - [ ] build final redirect map
 - [ ] batch migrate remaining posts
@@ -191,3 +191,31 @@ Not yet completed:
 4. Cross-check unresolved media against `edisontw/web/portal/pepepow-org/`.
 5. Produce a missing-media list; only then request `wp-content/uploads/` from the old host if needed.
 6. Validate route preservation before batch migration.
+
+
+## Phase 1 recovery slice — 2026-09-19
+
+The first repository-backed content recovery slice now preserves the five most recent published WordPress posts as normalized Markdown under `src/content/announcements/`.
+
+All five recovered entries remain:
+
+- `status: draft`
+- `migration_review: true`
+
+This is intentional. Recovery establishes provenance and URL continuity first; it does not assert that historical service status, software versions, download links, or operational statements are still current.
+
+A dedicated `pages` content collection is also defined so the seven published legacy pages can be recovered as review-only drafts without prematurely exposing stale operational guidance.
+
+The migration tooling now includes `scripts/migration/wxr_manifests.py`, which reproducibly writes working manifests under the ignored `migration/work/` directory for:
+
+- all published legacy page/post routes
+- attachment/media records
+- referenced PDF documents
+
+Validation against the canonical 2026-09-18 WXR yields:
+
+- 106 published legacy routes = 7 pages + 99 posts
+- 296 attachment records
+- 9 referenced PDF URLs
+
+The raw WXR and generated working manifests remain outside Git.

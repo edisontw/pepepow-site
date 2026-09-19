@@ -16,6 +16,7 @@ const commonSchema = z.object({
   source_url: z.string().optional(),
   status,
   featured: z.boolean().default(false),
+  migration_review: z.boolean().default(false),
 });
 
 const localCollection = (base: string) =>
@@ -24,10 +25,11 @@ const localCollection = (base: string) =>
     schema: commonSchema,
   });
 
+const pages = localCollection('./src/content/pages');
 const announcements = localCollection('./src/content/announcements');
 const articles = localCollection('./src/content/articles');
 const guides = localCollection('./src/content/guides');
 const learn = localCollection('./src/content/learn');
 const incidents = localCollection('./src/content/incidents');
 
-export const collections = { announcements, articles, guides, learn, incidents };
+export const collections = { pages, announcements, articles, guides, learn, incidents };
