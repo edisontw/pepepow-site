@@ -1038,3 +1038,35 @@ This completes the Phase 2 baseline after production cutover. The next implement
 Network Pulse: expose a minimal allowlisted cached summary from the existing PEPEPOW monitor and
 consume it on the homepage/network page with explicit stale/offline handling. The website must not
 duplicate the monitor collector or connect browser code directly to wallet/node RPC.
+
+
+## Phase 3 Network Pulse source integration — 2026-09-20
+
+Network Pulse v1 is implemented in source using the existing PEPEPOW monitor as the only collection
+authority.
+
+Monitor boundary:
+
+- the explorer monitor adds a dedicated `/monitor/api/public-summary` endpoint
+- the endpoint reads the existing cache-backed latest snapshot and does not trigger RPC, explorer,
+  pool, or other upstream collection on request
+- the public schema is allowlisted to block height, hashrate, difficulty, peer count, recent block
+  timing, aggregate masternode counts, compact service counts, and freshness state
+- peer details, block hashes, alerts, masternode records/version details, RPC diagnostics,
+  credentials, and private node data are excluded
+- browser CORS is restricted to `https://pepepow.net` and `https://www.pepepow.net`
+
+Website behavior:
+
+- the homepage and `/network/` use a shared `NetworkPulse.astro` component
+- the browser polls the cached public summary at a modest 30-second interval and pauses while the
+  page is hidden
+- requests use no credentials and have a short client timeout
+- stale monitor state is shown as delayed rather than presented as unquestionably current
+- unavailable data degrades to a clear unavailable state plus the Explorer link; static navigation
+  and content remain functional
+- the website still has no wallet/node RPC path and does not duplicate the monitor collector
+
+This section records source integration only. The live feature requires the explorer monitor change
+to be deployed first, followed by the pepepow.net Astro release. Until both production updates are
+complete, the existing Explorer remains the live network-data destination.
