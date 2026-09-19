@@ -232,6 +232,4 @@ Pass: x
 Extra config arguments: --pepepow
 If a new HTN Miner version is released, the safest way in HiveOS is to create a new custom miner name for the updated version, such as `hoo_cpu_v147` or `hoo_gpu_v147`. This avoids old cached files being reused.
 
-skip render: ucaddon\_post\_blocks
-skip render: ucaddon\_archive\_pagination
 ![](/media/legacy/2024/11/PEPEPOW-triumphant.webp)
