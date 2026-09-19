@@ -2,7 +2,7 @@
 title: "Masternode"
 description: ""
 date: "2020-04-13 11:18:50"
-updated: "2026-04-18 15:39:07"
+updated: "2026-09-19 20:25:51"
 slug: "masternode"
 categories: []
 tags: []
@@ -59,7 +59,8 @@ You can run a Masternode on your own machine or use a third-party hosting servic
 
 ## Requirements
 
-- **10,000,000 PEPEW** collateral *(new tiered levels may include 25M / 50M / 100M PEPEW)*
+- Tiered collateral levels: **10,000,000 / 25,000,000 / 50,000,000 / 100,000,000 PEPEW**
+- Higher collateral tiers receive proportionally higher reward-selection frequency
 - The latest **PEPEPOW wallet software**
 - A computer or VPS/server that can remain online **24/7**
 - A **static IP address**
@@ -67,6 +68,8 @@ You can run a Masternode on your own machine or use a third-party hosting servic
 
 Wallet download:
 <https://github.com/MattF42/PePe-core/releases>
+
+Current Core release reviewed on 19 Sep 2026: **v2.9.0.5**.
 
 ## Windows Masternode Setup
 
@@ -148,12 +151,11 @@ masternode status
 A successful setup should show **Successfully STARTED**.
 
 You can also verify it on the explorer:
-<https://explorer.pepepow.org/masternodes>
+<https://explorer.pepepow.org/network>
 
 ### 11. Rewards
 
-After the Masternode is fully enabled and recognized by the network, the first reward usually arrives
-**around 24 hours later**. Actual timing may vary depending on network conditions and queue position.
+Masternode reward timing is not fixed. It depends on the number of active masternodes, collateral tier, queue position, and current network conditions. Use the current Explorer/network page to verify masternode state rather than relying on a fixed first-payment estimate.
 
 ## Ubuntu / Linux Masternode Setup
 
@@ -245,7 +247,7 @@ scp -i <Your_Private_Key>.key ubuntu@<Your_IP>:/home/ubuntu/.PEPEPOWcore/wallet.
 
 ## Third-Party Masternode Hosting
 
-If you do not want to maintain your own 24/7 server, you may use a hosting provider instead.
+If you do not want to maintain your own 24/7 server, you may use a hosting provider instead. These are third-party services: verify current availability, terms, custody model, and support status before sending collateral or credentials.
 
 - [Pecunia Platform](https://www.pecuniaplatform.io/coin-stats/PEPEPOW)
 - [NodeHub](https://nodehub.io/dashboard/view_coin?coin=pepepow)
@@ -260,6 +262,7 @@ A properly configured Masternode helps strengthen the PEPEPOW network while allo
 - Your node is fully synced
 - Your IP and private key are configured correctly
 - Your wallet is backed up safely
+- Your masternode private key is never shared with a website, support account, or hosting provider unless that provider's documented setup explicitly requires custody and you understand the risk
 
 For additional help, join the
 **PEPEPOW Discord community**.
