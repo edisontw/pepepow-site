@@ -6,6 +6,9 @@ const { entry } = Astro.props;
 const { Content } = await render(entry);
 
 const isPage = entry.collection === 'pages';
+const isHistoricalPost =
+  entry.data.migration_review &&
+  (entry.collection === 'announcements' || entry.collection === 'articles');
 const description = entry.data.description || 'PEPEPOW community content.';
 const published = entry.data.date instanceof Date
   ? entry.data.date.toISOString().slice(0, 10)
@@ -24,6 +27,16 @@ const published = entry.data.date instanceof Date
         </p>
         <h1>{entry.data.title}</h1>
       </header>
+    )}
+    {isHistoricalPost && (
+      <aside class="archive-note historical-entry-notice">
+        <strong>Historical content:</strong>
+        This post is preserved from the PEPEPOW archive and reflects the software, services, market,
+        or network conditions at its original publication date. For current operational guidance,
+        use the <a href="/wallet/">Wallet</a>, <a href="/mining/">Mining</a>,
+        <a href="/masternode/">Masternode</a>, <a href="/market/">Market</a>, and
+        <a href="https://explorer.pepepow.org/">Explorer</a> pages.
+      </aside>
     )}
     <Content />
   </article>
