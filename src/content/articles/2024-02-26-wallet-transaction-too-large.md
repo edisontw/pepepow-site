@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 How to fix "Transaction too large" error when sending coins
 You can refer to this method: <https://coinguides.org/transaction-too-large-error-fix>
 Key points (Fix  1): Merge Transactions

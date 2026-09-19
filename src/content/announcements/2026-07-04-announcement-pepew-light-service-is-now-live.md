@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 The PEPEPOW community has completed a new infrastructure milestone:
 PEPEW Light Service / Dashboard / API
 <https://light.pepepow.net/>

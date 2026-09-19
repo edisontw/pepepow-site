@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 ## PEPEW Wallet v1.0.0 Released for Android
 
 The first public version of PEPEW Wallet for Android is now available.

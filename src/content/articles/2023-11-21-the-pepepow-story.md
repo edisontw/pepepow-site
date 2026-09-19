@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 The PEPE POW layer 1 blockchain originated early May 2023 in the form of a cryptocurrency code fork (DASH) produced by an unknown developer. Likely using AI assisted tools and hoping to capitalize on the popularity of the PEPE ethereum token which was growing (at the time) — a frog-themed dash fork was produced which claimed to one day rival doge-coin as the “second best” proof of work meme coin.
 
 PEPE POW billed itself as a community coin which would align itself with the greats among decentralized meme coins. As the miners began to discover this new coin, the community grew and began to form a life of its own. A tipping point came when multiple commercial mining software developers released new mining software which supported the PEPE Pow algorithm “memehash” for GPUs.

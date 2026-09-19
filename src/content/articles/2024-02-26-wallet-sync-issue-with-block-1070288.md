@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 If you're experiencing sync problems with block 1070288, please follow these steps:
 1. Ensure you're using the latest wallet version (v2.4.7.1) for Windows. Download it from: [PEPEPOW-v2.4.7.1-release-x86\_64-w64-mingw32.zip](https://github.com/MattF42/PePe-core/releases/download/v2.4.7.1/PEPEPOW-v2.4.7.1--release-x86\_64-w64-mingw32.zip)
 2. Open the wallet and navigate to `Tools` >> `Debug Console`.
