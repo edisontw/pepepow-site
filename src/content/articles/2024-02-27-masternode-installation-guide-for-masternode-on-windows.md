@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 1. Obtain 10 million PEPEW coins.
 2. Install a new QT wallet and wait for synchronization. Find the wallet address under: File >> Receiving Addresses. Transfer exactly 10 million PEPEW coins in one transaction.
 3. Open Masternode setup: Settings >> Options >> Wallet >> Enable Masternode tab. Configure and restart the wallet.

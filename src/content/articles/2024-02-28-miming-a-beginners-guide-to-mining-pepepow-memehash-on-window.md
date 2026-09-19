@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 ## Introduction:
 This guide provides a comprehensive walkthrough for new or inexperienced Windows users to start mining the proof-of-work cryptocurrency PepePoW. Mining cryptocurrencies like PepePoW is valued for its decentralization and fairness, allowing individuals to earn and participate in the network through mining.
 ## How to Start Mining:
