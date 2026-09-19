@@ -1,6 +1,6 @@
 # PEPEPOW Website Plan
 
-Status: **Planning / migration preparation**  
+Status: **Migration validation / staging preparation**  
 Target: **https://pepepow.net**  
 Repository authority: **edisontw/pepepow-site `main`**
 
