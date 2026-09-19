@@ -23,6 +23,13 @@ SOURCE_ARTIFACTS = (
         "WordPress emoji CDN",
         re.compile(r"https://s\.w\.org/images/core/emoji/", re.IGNORECASE),
     ),
+    (
+        "internal migration review banner",
+        re.compile(
+            r"Migration candidate generated from the legacy WordPress export",
+            re.IGNORECASE,
+        ),
+    ),
 )
 SKIP_SCHEMES = {"mailto", "tel", "javascript", "data"}
 
