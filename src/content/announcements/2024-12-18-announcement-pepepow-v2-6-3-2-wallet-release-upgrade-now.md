@@ -27,5 +27,5 @@ migration_review: true
 This is an **optional but strongly recommended** update to improve performance and aesthetics.
 ? Thanks to our dedicated developers for making this happen, and a big shoutout to our amazing community!
 ? Download now:
-[https://pepepow.org/wallet](https://pepepow.org/wallet "https://pepepow.org/wallet")
+[PEPEPOW Wallet](/wallet/)
 [https://github.com/MattF42/PePe-core/releases/tag/v2.6.3.2](https://github.com/MattF42/PePe-core/releases/tag/v2.6.3.2 "https://github.com/MattF42/PePe-core/releases/tag/v2.6.3.2")
