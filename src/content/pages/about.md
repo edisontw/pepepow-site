@@ -13,11 +13,9 @@ featured: false
 migration_review: true
 ---
 
-# About PEPEPOW
-
 Community-Driven Proof of Work
 
-# A Journey of Resilience and Growth
+## A Journey of Resilience and Growth
 
 ## Building the future of decentralized finance through community, mining, and adaptation.
 
