@@ -908,3 +908,34 @@ screen-reader, and visual staging review.
 
 No production deployment or Nginx change was made in this slice.
 
+## Custom staging homepage — 2026-09-19
+
+The root route no longer renders the recovered WordPress `home.md` body as the site homepage.
+That source file remains committed in `src/content/pages/home.md` for migration provenance and
+historical comparison.
+
+`src/pages/index.astro` now implements the concise homepage hierarchy defined in
+`docs/WEBSITE_PLAN.md`:
+
+- a short PEPEPOW / PEPEW hero with Wallet and Explorer entry points
+- a **Network at a glance** card using verified static facts and authoritative links rather than
+  introducing a new live-data collector
+- **Start here** cards for Wallets, Mining, Masternode, and Market
+- the three most recent recovered announcements selected automatically at build time
+- a visible archive-context note so announcement history is not mistaken for current operational
+  guidance
+- a compact set of verified PEPEPOW entry links for Explorer, Core releases, PEPEW Light, HTN
+  Miner, community/lab pools, and Discord
+
+The page remains fully static and requires no client-side JavaScript.
+
+The legacy catch-all route now excludes both `home-new` and `announcements`, because those two
+paths are owned by explicit Astro pages while their recovered Markdown remains available as
+migration provenance.
+
+The staging homepage intentionally does **not** invent live network metrics. A future Network Pulse
+should consume the isolated cached read-only monitor summary described in `docs/WEBSITE_PLAN.md`
+rather than querying wallet/node RPC or creating a duplicate collector.
+
+No production deployment or Nginx change was made in this slice.
+

@@ -1,13 +1,155 @@
 ---
 import { getCollection } from 'astro:content';
-import LegacyContent from '../components/LegacyContent.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
-const pages = await getCollection('pages');
-const home = pages.find((entry) => entry.data.slug === 'home-new');
+const announcements = (await getCollection('announcements'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
 
-if (!home) {
-  throw new Error('Recovered home page was not found in the pages collection.');
-}
+const routeFor = (entry: (typeof announcements)[number]) => {
+  if (entry.data.legacy_url) {
+    return new URL(entry.data.legacy_url).pathname;
+  }
+
+  const slug = entry.data.slug || entry.id.replace(/\.mdx?$/, '');
+  return `/${slug.replace(/^\/+|\/+$/g, '')}/`;
+};
+
+const startItems = [
+  {
+    href: '/wallet/',
+    title: 'Wallets',
+    text: 'Use PEPEW Light, Android, or the full PEPEPOW Core wallet.',
+  },
+  {
+    href: '/mining/',
+    title: 'Mining',
+    text: 'Mine HooHash V110 with current miner and pool guidance.',
+  },
+  {
+    href: '/masternode/',
+    title: 'Masternode',
+    text: 'Understand collateral tiers, setup, operation, and safety.',
+  },
+  {
+    href: '/market/',
+    title: 'Market',
+    text: 'Check confirmed venues and PEPEW market references.',
+  },
+];
+
+const quickLinks = [
+  ['Explorer', 'https://explorer.pepepow.org/'],
+  ['Core releases', 'https://github.com/MattF42/PePe-core/releases'],
+  ['PEPEW Light', 'https://light.pepepow.net/wallet/'],
+  ['HTN Miner', 'https://htn.foztor.net/'],
+  ['Community Pool', 'https://community-pool.pepepow.org/'],
+  ['Lab Pool', 'https://pool.pepepow.net/'],
+  ['Discord', 'https://discord.gg/sJgDVRkBcq'],
+];
 ---
 
-<LegacyContent entry={home} />
+<BaseLayout
+  title="PEPEPOW"
+  description="PEPEPOW is a community-powered Proof-of-Work cryptocurrency ecosystem: wallets, HooHash mining, masternodes, network tools, and open-source development."
+>
+  <div class="home-shell">
+    <section class="home-hero" aria-labelledby="home-title">
+      <div class="home-hero-copy">
+        <p class="eyebrow">PEPEPOW · PEPEW</p>
+        <h1 id="home-title">Community-powered Proof of Work.</h1>
+        <p class="home-hero-lede">
+          Open source, practical, and maintained by the community. Use a wallet, mine PEPEW,
+          operate a masternode, or inspect the network directly.
+        </p>
+        <div class="actions">
+          <a class="button" href="https://explorer.pepepow.org/">Explore Network</a>
+          <a class="button secondary" href="/wallet/">Get a Wallet</a>
+          <a class="text-action" href="/about/">About PEPEPOW →</a>
+        </div>
+      </div>
+
+      <aside class="network-card" aria-labelledby="network-card-title">
+        <p class="eyebrow">Network at a glance</p>
+        <h2 id="network-card-title">Built to be verifiable.</h2>
+        <dl class="network-facts">
+          <div>
+            <dt>Proof of Work</dt>
+            <dd>HooHash V110</dd>
+          </div>
+          <div>
+            <dt>Software</dt>
+            <dd><a href="https://github.com/MattF42/PePe-core/releases">Open Core releases</a></dd>
+          </div>
+          <div>
+            <dt>Live status</dt>
+            <dd><a href="https://explorer.pepepow.org/">PEPEPOW Explorer</a></dd>
+          </div>
+        </dl>
+      </aside>
+    </section>
+
+    <section class="home-section" aria-labelledby="start-title">
+      <div class="section-heading">
+        <p class="eyebrow">Start here</p>
+        <h2 id="start-title">Choose what you want to do.</h2>
+      </div>
+      <div class="start-grid">
+        {startItems.map((item) => (
+          <a class="start-card" href={item.href}>
+            <span class="card-arrow" aria-hidden="true">↗</span>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="home-section" aria-labelledby="latest-title">
+      <div class="section-heading section-heading-row">
+        <div>
+          <p class="eyebrow">PEPEPOW News</p>
+          <h2 id="latest-title">Latest from the archive.</h2>
+        </div>
+        <a class="text-action" href="/announcements/">All announcements →</a>
+      </div>
+
+      <div class="latest-grid">
+        {announcements.map((entry) => {
+          const date = entry.data.date.toISOString().slice(0, 10);
+          const categories = entry.data.categories.filter(
+            (category) => category !== 'Announcements',
+          );
+
+          return (
+            <article class="latest-card">
+              <p class="card-meta">
+                <time datetime={date}>{date}</time>
+                {categories.length > 0 && (
+                  <span> · {categories.slice(0, 2).join(' · ')}</span>
+                )}
+              </p>
+              <h3><a href={routeFor(entry)}>{entry.data.title}</a></h3>
+            </article>
+          );
+        })}
+      </div>
+      <p class="archive-context">
+        Announcement pages preserve their original publication context. For current operational
+        instructions, use the Wallet, Mining, Masternode, Market, and Explorer pages.
+      </p>
+    </section>
+
+    <section class="home-section" aria-labelledby="links-title">
+      <div class="section-heading">
+        <p class="eyebrow">Verified entry points</p>
+        <h2 id="links-title">Useful PEPEPOW links.</h2>
+      </div>
+      <div class="quick-links" aria-label="Useful PEPEPOW links">
+        {quickLinks.map(([label, href]) => (
+          <a href={href}>{label}<span aria-hidden="true"> ↗</span></a>
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>
