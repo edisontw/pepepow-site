@@ -16,9 +16,9 @@ migration_review: true
 1. Open your QT wallet and navigate to Tool >> Debug Console.
 2. Type the command: `getblockcount`.
 3. Ensure that the returned block count matches or is very close to the block height displayed on one of the following explorers: <https://pepew.ccore.online/>, <https://explorer.pepepow.org/>, or <https://explorer2.pepepow.org/>.
-\*\*Troubleshooting Sync Issues:\*\*
+**Troubleshooting Sync Issues:**
 - If your local sync stops at a significantly lower height for an extended period (approximately 10 minutes), take the following steps:
 - Delete all files in the wallet directory except for "wallet.dat".
 - Re-sync the wallet.
-\*\*Checking Address and Balance:\*\*
+**Checking Address and Balance:**
 To check your address and balance, use the command: `listaddressgroupings`.

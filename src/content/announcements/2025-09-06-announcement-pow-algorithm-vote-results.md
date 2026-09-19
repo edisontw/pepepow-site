@@ -26,6 +26,6 @@ We will not proceed immediately with the change. Instead, the DAO will continue 
 **Should PEPEPOW remain CPU-only, or move to a low-energy PoW that supports both GPU and CPU mining at near parity?**
  
 After this period of discussion, we will hold a second, more focused vote to confirm whether the community truly supports a change.
-Staying on XelisV2-pepew ? CPU-only mining, simpler, keeps things as they are.
-Switching to HooHash V110 ? Enables GPU mining + keeps CPUs competitive, higher energy efficiency, stronger ASIC resistance.
+Staying on XelisV2-pepew — CPU-only mining, simpler, keeps things as they are.
+Switching to HooHash V110 — enables GPU mining + keeps CPUs competitive, higher energy efficiency, stronger ASIC resistance.
 Thank you to everyone who voted and shared their views. Your participation helps guide the future of PEPEPOW. Stay tuned for more updates, and please join the discussion so we can reach a clearer consensus together.

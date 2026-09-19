@@ -13,17 +13,17 @@ featured: false
 migration_review: true
 ---
 
-? It's release time! ?
-We're excited to announce the release of version 2.4.7.1 of the PePe-core wallet! This is a \*\*mandatory update\*\* for all users.
-? \*\*Upgrade Deadline\*\*: Please upgrade before 19:00 UTC on March 11th, 2024, to avoid being SPORK'd off the main chain.
-?? \*\*Key Fixes\*\*:
+It's release time!
+We're excited to announce the release of version 2.4.7.1 of the PePe-core wallet! This is a **mandatory update** for all users.
+**Upgrade Deadline**: Please upgrade before 19:00 UTC on March 11th, 2024, to avoid being SPORK'd off the main chain.
+**Key Fixes**:
 - Fixes the blockchain height stall bug from v2.4.4.X related to orphans and superblocks.
 - Enforces masternode payments in every block with classic SPORK8 from Dash, activating on March 11th, 2024, 19:00 UTC.
 - Bumps protocol version to 70313 for consensus checks.
-? \*\*Important Notes\*\*:
+**Important Notes**:
 - Masternode timers have been relaxed, and WATCHDOG\_TIMER\_EXPIRED is equivalent to ENABLED.
 - Update to seed node definitions.
-?? \*\*Upgrade Instructions\*\*:
+**Upgrade Instructions**:
 Wallet holders, node operators, mining pool operators, masternode operators, and exchange operators, please start upgrading today.
 For masternode upgrade instructions and more details, check the release notes on GitHub: [Release Notes](https://github.com/MattF42/PePe-core/releases/tag/v2.4.7.1)
-Happy upgrading! ? #PePeCore #Release #Upgrade
+Happy upgrading! #PePeCore #Release #Upgrade

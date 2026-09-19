@@ -18,7 +18,7 @@ Mining on ARM takes a big step forward today!
 I have made some significant performance improvements with NEON/SIMD.
 For the moment I'm not publishing the source, but optimised variants are available at:
 https://github.com/MattF42/pepew-cpu-miner/releases/tag/v3.2.1
-Yes, this means you can now mine PEPEW on your Android phones through Termux or similar ?
+Yes, this means you can now mine PEPEW on your Android phones through Termux or similar.
 TL;DR
 curl -s -L https://github.com/MattF42/pepew-cpu-miner/releases/download/v3.2.1/install.sh | sh
 Expect further optimizations to this in the near future, I'm now going to take a look at what I can do on X64.

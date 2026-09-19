@@ -22,8 +22,8 @@ Given these results, we will **select an exchange first** to set a clear funding
 **Vote for Exchange Selection**
 We received offers from exchange managers. Please vote for your preferred exchange:
 **Weex | Biconomy | Latoken | P2B | Bifinance | Tapbit | Azbit | Coinstore | fameEX**
-[[Exchange Comparison](https://docs.google.com/spreadsheets/d/1S7Odq3udhztYkOOY4Y3_0LBVqZDfcuXacriZinpYI7I/edit?gid=1110779284#gid=1110779284)]
-[[Vote on Discord]](https://discord.com/channels/1206789719825055754/1208677848353865728/1352296670607708251)
+[Exchange Comparison](https://docs.google.com/spreadsheets/d/1S7Odq3udhztYkOOY4Y3_0LBVqZDfcuXacriZinpYI7I/edit?gid=1110779284#gid=1110779284)
+[Vote on Discord](https://discord.com/channels/1206789719825055754/1208677848353865728/1352296670607708251)
 Note: We are still far from our fundraising goal. Due to market conditions, listing may become a long-term goal, so we should focus on short-term, achievable developments first.
 **Support Tip.cc & Infrastructure Development**
 These projects remain unfunded. We need funders & developers to push them forward!

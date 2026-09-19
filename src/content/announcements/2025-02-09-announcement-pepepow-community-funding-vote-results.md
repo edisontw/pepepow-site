@@ -14,7 +14,7 @@ migration_review: true
 ---
 
 The voting for development and **crowdfunding priorities** has officially ended! You can review the full results here:
-[[Voting Results](https://docs.google.com/spreadsheets/d/1S7Odq3udhztYkOOY4Y3_0LBVqZDfcuXacriZinpYI7I/edit?gid=717508221#gid=717508221)]
+[Voting Results](https://docs.google.com/spreadsheets/d/1S7Odq3udhztYkOOY4Y3_0LBVqZDfcuXacriZinpYI7I/edit?gid=717508221#gid=717508221)
 Since some votes were anonymous, the donation amounts should be used as a reference only.
 **Final Priorities Based on Community Vote:**
 **1. Exchange Listing**

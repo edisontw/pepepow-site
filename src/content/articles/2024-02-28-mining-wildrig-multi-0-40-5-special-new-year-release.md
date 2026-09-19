@@ -13,14 +13,14 @@ featured: false
 migration_review: true
 ---
 
-Special New Year release for those who have Intel Arc gpu's ?
-\*\*WildRig Multi 0.40.5\*\*
-- huge improvement of \*\*memehash\*\* on \*\*Intel\*\* gpu's
-\*\*Windows\*\*:
+Special New Year release for those who have Intel Arc GPUs.
+**WildRig Multi 0.40.5**
+- huge improvement of **memehash** on **Intel** GPUs
+**Windows**:
 https://github.com/andru-kun/wildrig-multi/releases/download/0.40.5/wildrig-multi-windows-0.40.5.zip
-\*\*Linux\*\*:
+**Linux**:
 https://github.com/andru-kun/wildrig-multi/releases/download/0.40.5/wildrig-multi-linux-0.40.5.tar.xz
-\*\*RaveOS\*\* custom package:
+**RaveOS** custom package:
 https://github.com/andru-kun/wildrig-multi/releases/download/0.40.5/custom-raveos-wildrig-0.40.5.zip
-\*\*HiveOS\*\* script to upgrade 0.40.4 version:
+**HiveOS** script to upgrade 0.40.4 version:
 ```cd /hive/miners/wildrig-multi/0.40.4 && wget https://github.com/andru-kun/wildrig-multi/releases/download/0.40.5/wildrig-multi-linux-0.40.5.tar.xz && tar -xf wildrig-multi-linux-0.40.5.tar.xz```

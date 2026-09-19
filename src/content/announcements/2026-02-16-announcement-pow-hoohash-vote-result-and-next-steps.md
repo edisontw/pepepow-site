@@ -16,9 +16,9 @@ migration_review: true
 The second community vote on whether PEPEPOW should move from CPU-only mining to a low-energy PoW supporting both CPU and GPU mining has concluded.
 The results show a clear majority in favor of the transition, with strong support on Telegram and Discord.
 Following this outcome, development will proceed with:
-\* **Hoohash** integration into the core codebase
-\* Testnet upgrade and PoW activation testing
-\* Nonce spam protection and extranonce enforcement
-\* Miner and pool coordination
-\* A planned spork activation date for mainnet after testing
+- **Hoohash** integration into the core codebase
+- Testnet upgrade and PoW activation testing
+- Nonce spam protection and extranonce enforcement
+- Miner and pool coordination
+- A planned spork activation date for mainnet after testing
 No immediate mainnet changes will occur. Testing and stability remain the priority.

@@ -29,8 +29,8 @@ However, **account recovery and personal balance restoration are still in progre
 
 **How to Restore Your Xeggex Account & Balance**
 
-- **Recover Missing Accounts**  [Xeggex Claims](https://xeggex.com/claims " Xeggex Claims (https://xeggex.com/claims)")
-- **Report Incorrect Balances**  [Balance Recovery](https://xeggex.com/account/balances " Balance Recovery (https://xeggex.com/account/balances)")
+- **Recover Missing Accounts**  [Xeggex Claims](https://xeggex.com/claims)
+- **Report Incorrect Balances**  [Balance Recovery](https://xeggex.com/account/balances)
   Click **"Report Incorrect Balance"** on the right side of the page.
 
 **Stay Updated!**

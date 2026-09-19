@@ -35,4 +35,4 @@ Applications already developed in the PEPEPOW ecosystem include:
 These tools were previously built without ElectrumX.
 With PEPEW Light, they can now operate on a more scalable, consistent, and efficient backend.
 PEPEPOW continues to build practical infrastructure for a stronger community-driven Proof-of-Work ecosystem.
-Built by the community. Powered by work. ??
+Built by the community. Powered by work.

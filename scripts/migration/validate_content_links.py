@@ -30,6 +30,18 @@ SOURCE_ARTIFACTS = (
             re.IGNORECASE,
         ),
     ),
+    (
+        "escaped Markdown bold",
+        re.compile(r"\\\*\\\*[^\n]+?\\\*\\\*"),
+    ),
+    (
+        "escaped Markdown bullet",
+        re.compile(r"^\s*\\\*\s+", re.MULTILINE),
+    ),
+    (
+        "malformed double-bracket link",
+        re.compile(r"\[\[[^\n]+?\]\]?\("),
+    ),
 )
 SKIP_SCHEMES = {"mailto", "tel", "javascript", "data"}
 

@@ -101,7 +101,7 @@ Wait 1–2 minutes, then verify if syncing resumes:
 ./PEPEPOW-cli getblockcount
 ```
 
-If the number starts increasing, the issue is resolved ?
+If the number starts increasing, the issue is resolved.
 
 ### **Step 7: Add Reliable Peers (Optional)**
 

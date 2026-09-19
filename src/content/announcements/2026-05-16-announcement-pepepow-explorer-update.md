@@ -17,11 +17,11 @@ The **PEPEPOW explorer** has been updated and the main explorer domain now point
 <https://explorer.pepepow.org/>
 Common explorer paths should continue working normally, including transaction, block, blockhash, address, and rich list pages.
 Examples:
-\* `/tx/...`
-\* `/block/...`
-\* `/blockhash/...`
-\* `/address/...`
-\* `/richlist`
+- `/tx/...`
+- `/block/...`
+- `/blockhash/...`
+- `/address/...`
+- `/richlist`
 This update keeps existing explorer links working while ***improving the visual identity*** and user experience of the PEPEPOW explorer.
 The new explorer includes a PEPEPOW-themed background designed to support the project’s visual identity without interfering with page readability. This aligns with PEPEPOW’s broader community-driven spirit and focus on long-term ecosystem development.
 Some differences may still exist compared with the previous explorer, including certain masternode, API/info, claim, orphan-block, and whale-movement related pages. These may be improved in future updates.

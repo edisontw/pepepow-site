@@ -47,6 +47,15 @@ WORDPRESS_EMOJI_RE = re.compile(
     r"(?P<codepoints>[0-9a-fA-F-]+)\.svg"
     r"\)"
 )
+ESCAPED_BOLD_RE = re.compile(r"\\\*\\\*(.+?)\\\*\\\*")
+ESCAPED_BULLET_RE = re.compile(r"(?m)^(?P<indent>\s*)\\\*\s+")
+DOUBLE_BRACKET_LINK_RE = re.compile(
+    r"\[\[(?P<label>[^\]\n]+)\]\((?P<target>https?://[^)\s]+)"
+    r"(?:\s+\"[^\"]*\")?\)\]"
+)
+DOUBLE_LABEL_LINK_RE = re.compile(
+    r"\[\[(?P<label>[^\]\n]+)\]\]\((?P<target>https?://[^)]+)\)"
+)
 OBSOLETE_WORDPRESS_PATHS = (
     "/wp-admin/",
     "/wp-includes/",
@@ -156,6 +165,16 @@ def sanitize_migration_markdown(markdown: str) -> str:
     """Remove reproducible WordPress chrome and localize same-site public links."""
     markdown = markdown.replace("\xa0", " ")
     markdown = WORDPRESS_EMOJI_RE.sub(_wordpress_emoji, markdown)
+    markdown = ESCAPED_BOLD_RE.sub(r"**\1**", markdown)
+    markdown = ESCAPED_BULLET_RE.sub(r"\g<indent>- ", markdown)
+    markdown = DOUBLE_BRACKET_LINK_RE.sub(
+        lambda match: f"[{match.group('label')}]({match.group('target')})",
+        markdown,
+    )
+    markdown = DOUBLE_LABEL_LINK_RE.sub(
+        lambda match: f"[{match.group('label')}]({match.group('target')})",
+        markdown,
+    )
 
     clean_lines: list[str] = []
     for line in markdown.splitlines():
