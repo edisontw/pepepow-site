@@ -2,7 +2,7 @@
 title: "Wallet"
 description: ""
 date: "2020-04-13 11:18:52"
-updated: "2026-08-05 16:10:58"
+updated: "2026-09-19 20:25:51"
 slug: "wallet"
 categories: []
 tags: []
@@ -17,124 +17,106 @@ migration_review: true
 
 # PEPEPOW Wallets
 
-## Wallets are essential tools
+Use a wallet that matches your needs and verify the official project URL before entering a recovery phrase or moving funds.
 
-Please download the lastest version on Github
+## Recommended Wallet Options
 
-Wallets are essential tools for securely storing, sending, and receiving PEPEPOW Crypocions. Whether you're a trader, investor, or enthusiast, having a reliable wallet is crucial for managing your cryptocurrency holdings. Please use the lastest version on Github.
+### PEPEW Light Web Wallet
 
-PEPEPOW Wallets
+[Open PEPEW Light Wallet](https://light.pepepow.net/wallet/)
 
-Choose the wallet that fits your needs: full-featured desktop wallet, lightweight web wallet (non-custodial), or mobile wallet under development.
+PEPEW Light Wallet is the current recommended browser entry for PEPEPOW users. It is client-side and non-custodial: mnemonic and private-key handling remains in the browser, while the public PEPEW Light API provides read-only address/history/UTXO data and accepts already-signed transactions for broadcast.
 
-### Desktop Wallet
+The wallet remains a **public beta**. Start with small amounts and verify that you are using the official `light.pepepow.net` domain before entering recovery words.
 
-Official desktop wallet for Windows and Linux, with optional block file bootstrap.
-
-Main wallet
-![PEPEPOW Desktop Wallet](/media/legacy/2024/09/PEPEPOW-desktop1.webp)
-[PePecore Releases](https://github.com/MattF42/PePe-core/releases)
-[Download Block Files](https://pepepow.foztor.net/chain/pepepow-23Dec-24.zip)
-Windows
-
-- [Download ZIP](https://github.com/MattF42/PePe-core/releases/download/v2.9.0.5/PEPEPOW-v2.9.0.5-5a9debc-release-x86_64-w64-mingw32.zip)
-
-Ubuntu / Linux (x86\_64)
-wget -c https://github.com/MattF42/PePe-core/releases/download/v2.9.0.5/PEPEPOW-v2.9.0.5-5a9debc-release-x86\_64-linux-gnu.tgz
--O - | tar -xz
-Linux (AARCH64)
-wget -c https://github.com/MattF42/PePe-core/releases/download/v2.9.0.5/PEPEPOW-v2.9.0.5-5a9debc-release-aarch64-linux-gnu.tgz
--O - | tar -xz
-
-### Web Wallet
-
-Lightweight access for quick use. Includes a fully non-custodial option.
-
-Non-custodial
 ![](/media/legacy/2026/01/web-wallet1.png)
-[Open Non-Custodial Web Wallet](https://light.pepepow.net/wallet/)
 
-This is a fully non-custodial web wallet. Your mnemonic and private keys are generated
-and stored only on your device.
+### Android Wallet
 
----
+The PEPEW Android wallet has a public **v1.0.0** release.
 
-### Mobile Wallet
+[PEPEW Android Wallet releases](https://github.com/edisontw/pepepow-android-wallet-v2/releases)
 
-The mobile wallet is for quick transfers and storing assets .
+The Android wallet is non-custodial and uses PEPEW Light services for balance/history/UTXO queries and signed transaction broadcast.
 
-New release
 ![](/media/legacy/2025/12/android-wallet-release.png)
-Download
-<https://github.com/edisontw/pepepow-android-wallet-v2/releases>
-3rd-Party Platforms
 
-- nonKYC:
-  [iOS](https://ios.nonkyc.io/) /
-  [Android](https://nonkyc.io/download/latestAPK)
+### Desktop Core Wallet
 
-## PEPEPOW Wallet Installation Guide (2025.5.6)
+The full PEPEPOW Core wallet remains available for Windows and Linux.
 
-core wallet installation
+- [PEPEPOW Core releases](https://github.com/MattF42/PePe-core/releases)
+- Latest release reviewed on 19 Sep 2026: **v2.9.0.5**
+- v2.9.0.5 is an optional update that raises the minimum peer protocol so the node connects only to peers that understand the HooHash hard fork.
 
-1. **Download the Wallet**
-   - Visit the official release on GitHub and download the Windows wallet file: **[Download PEPEPOW Wallet for Windows](https://github.com/MattF42/PePe-core/releases/download/v2.9.0.4/PEPEPOW-v2.9.0.4-c1394e6-release-x86_64-w64-mingw32.zip)**
-2. **Install the Wallet**
-   - Unzip the downloaded file.
-   - Run the `PEPEPOW-qt.exe` file to launch the wallet.
-3. **Sync the Blockchain**
-   - The wallet will take some time to synchronize with the blockchain. Make sure your internet connection is stable.
-4. **Troubleshooting Sync Issues**
-   - If you encounter sync problems:
-     - Use the **rescan** option within the wallet.
-     - Alternatively, delete all files in the PEPEPOW folder except for `wallet.dat`, then restart the wallet to re-sync.
-     - Download the latest block files for faster synchronization: **[Download Block Files](https://pepepow.foztor.net/chain/pepepow-12-April-2026.zip)**
+![PEPEPOW Desktop Wallet](/media/legacy/2024/09/PEPEPOW-desktop1.webp)
 
----
+#### Windows x86_64
 
-**Ubuntu Wallet Installation & Update**
+[Download PEPEPOW Core v2.9.0.5 for Windows x86_64](https://github.com/MattF42/PePe-core/releases/download/v2.9.0.5/PEPEPOW-v2.9.0.5-5a9debc-release-x86_64-w64-mingw32.zip)
 
-1. **Check Masternode Sync Status**
-   - Run the following commands in the terminal:
+#### Linux x86_64
 
-     ```
-     ./PEPEPOW-cli mnsync status
-     ./PEPEPOW-cli masternode status
-     ```
-2. **Stop the Existing Wallet**
-   - Use the following command:
+```bash
+wget -c https://github.com/MattF42/PePe-core/releases/download/v2.9.0.5/PEPEPOW-v2.9.0.5-5a9debc-release-x86_64-linux-gnu.tgz -O - | tar -xz
+```
 
-     ```
-     ./PEPEPOW-cli stop
-     ```
-3. **Download and Extract the Latest Wallet Files**
-   - For **Ubuntu (x86\_64)**:
+#### Linux ARM64 / AARCH64
 
-     ```
-     wget -c https://github.com/MattF42/PePe-core/releases/download/v2.9.0.4/PEPEPOW-v2.9.0.4-c1394e6-release-aarch64-linux-gnu.tgz -O - | tar -xz
-     ```
-   - For **AARCH64**:
+```bash
+wget -c https://github.com/MattF42/PePe-core/releases/download/v2.9.0.5/PEPEPOW-v2.9.0.5-5a9debc-release-aarch64-linux-gnu.tgz -O - | tar -xz
+```
 
-     ```
-     wget -c https://github.com/MattF42/PePe-core/releases/download/v2.9.0.4/PEPEPOW-v2.9.0.4-c1394e6-release-x86_64-linux-gnu.tgz -O - | tar -xz
-     ```
-4. **Start the Wallet Daemon**
-   - After extracting the files, start the wallet daemon:
+## Core Wallet Installation and Update
 
-     ```
-     ./PEPEPOWd -daemon
-     ```
-5. **Start Masternodes**
-   - Ensure your masternodes are correctly configured and start them:
+1. Download the current release from the official PEPEPOW Core GitHub releases page.
+2. Confirm that the downloaded filename matches your platform and CPU architecture.
+3. Stop the existing Core wallet cleanly before replacing binaries.
+4. Keep a separate backup of `wallet.dat` before wallet maintenance or recovery work.
+5. Start the updated wallet and allow it to synchronize fully.
+6. If you operate masternodes, check the current release notes for any protocol-bump or restart requirement.
 
-     ```
-     ./PEPEPOW-cli masternode start-all
-     ```
-6. **Check Masternode Status**
-   - Verify the status of your masternodes:
+### Linux Update Example
 
-     ```
-     ./PEPEPOW-cli masternodelist info
-     ```
+Check the current daemon first:
 
----
+```bash
+./PEPEPOW-cli getblockcount
+./PEPEPOW-cli mnsync status
+```
+
+Stop it cleanly:
+
+```bash
+./PEPEPOW-cli stop
+```
+
+Download the correct current build for your architecture, extract it, then restart:
+
+```bash
+./PEPEPOWd -daemon
+```
+
+For masternode-specific startup/status commands, use the current [Masternode guide](/masternode/).
+
+## Sync and Recovery Safety
+
+Do **not** blindly delete the PEPEPOW data directory when troubleshooting synchronization.
+
+Before any destructive recovery step:
+
+- shut down the wallet cleanly
+- back up `wallet.dat` to a separate safe location
+- verify the PEPEPOW Core version
+- check the current Explorer/network status to distinguish a local sync problem from a network incident
+- use a current recovery guide or ask in the PEPEPOW community if the correct recovery path is unclear
+
+Old dated blockchain bootstrap archives may remain useful for specific recovery cases, but they should not be presented as the default current download because they age quickly.
+
+## Verification Links
+
+- [PEPEPOW Explorer](https://explorer.pepepow.org/)
+- [PEPEW Light status/API](https://light.pepepow.net/)
+- [PEPEPOW Core releases](https://github.com/MattF42/PePe-core/releases)
+- [Android wallet releases](https://github.com/edisontw/pepepow-android-wallet-v2/releases)
+
