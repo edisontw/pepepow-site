@@ -188,7 +188,7 @@ Not yet completed:
 1. Extract the seven published pages and a representative group of recent/older posts.
 2. Normalize WordPress/Elementor body markup into clean content.
 3. Create a media manifest and test automatic recovery from current public attachment URLs.
-4. Cross-check unresolved media against `edisontw/web/portal/pepepow-org/`.
+4. Cross-check only unresolved media against `edisontw/web/portal/pepepow-org/` and its raw-asset mapping.
 5. Produce a missing-media list; only then request `wp-content/uploads/` from the old host if needed.
 6. Validate route preservation before batch migration.
 
@@ -231,3 +231,27 @@ The recovered page set is:
 Every recovered page remains `status: draft` and `migration_review: true`. Historical operational claims and commands have not been promoted to current guidance.
 
 The raw WXR and generated working manifests remain outside Git.
+
+
+## Legacy static mirror cross-check
+
+The migration fallback at `edisontw/web/portal/pepepow-org/` was inspected after the repository-backed page recovery.
+
+Its archived README records a crawl performed on 2026-05-29 UTC / 2026-05-30 GMT+8. The mirror is useful for comparing rendered HTML, old routes, and the subset of assets that were actually captured, but it is not a complete media authority.
+
+Current findings from the mirror on `edisontw/web/main`:
+
+- `assets/img/` contains only the localized 2025 site logo.
+- `original/raw-assets/` is dominated by WordPress/Elementor CSS, JavaScript, fonts, and the same site logo.
+- `original/crawl-log/asset_mapping.json` maps the captured WordPress resources and confirms the limited image coverage.
+- The archived README records `/mining/`, `/wallet/`, `/announcements/`, and several other routes as unavailable during that crawl.
+- The README mentions three downloaded PDFs, but an `assets/docs/` directory is not present on the current mirror branch; therefore those files must not be assumed recovered without a separate check.
+
+Media recovery precedence is therefore:
+
+1. canonical WXR attachment/reference URL
+2. matching file already present in the static mirror/raw-assets mapping
+3. unresolved-media report
+4. only then obtain missing `wp-content/uploads/` material from the legacy host or another verified source
+
+This keeps the static archive as a recovery aid without treating its incomplete crawl as authoritative site content.
