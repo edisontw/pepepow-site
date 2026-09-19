@@ -27,25 +27,17 @@ Masternodes play a crucial role in the PEPEPOW Crypocions ecosystem, providing e
 
 ## Benefits of Running a Masternode
 
-![](https://pepepow.org/wp-content/uploads/2024/02/thumb-2.jpg)
-
 ### Rewards
 
 Masternode operators are rewarded with PEPEPOW Crypocions tokens for their service to the network. These rewards serve as an incentive for maintaining a robust and reliable Masternode.
-
-![](https://pepepow.org/wp-content/uploads/2024/02/thumb-1.jpg)
 
 ### Governance
 
 Masternode operators have the opportunity to participate in the decentralized governance of the PEPEPOW Crypocions network. They can vote on important proposals and decisions, contributing to the evolution and development of the ecosystem.
 
-![](https://pepepow.org/wp-content/uploads/2024/02/service-thumb-2.jpg)
-
 ### Enhanced Security
 
 Masternodes play a vital role in securing the network by validating and relaying transactions. Their presence helps prevent various attacks, ensuring the integrity and trustworthiness of the blockchain.
-
-![](https://pepepow.org/wp-content/uploads/2024/02/thumb-3.jpg)
 
 ### Privacy Features
 

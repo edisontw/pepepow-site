@@ -455,3 +455,12 @@ The three unresolved paths are:
 These are referenced by the legacy Masternode page but are not present as canonical attachment records in the WXR manifest. They are therefore treated as **supplemental content-referenced media**, not silently promoted to WXR attachments.
 
 The staging tool now recognizes such supplemental files when they are placed at their original relative path under `migration/work/recovered-uploads/`. It reports them separately and can stage/rewrite them together with the 55 canonical referenced files.
+
+
+### Masternode decorative thumbnail disposition
+
+The three content-referenced but non-WXR paths `2024/02/thumb-1.jpg`, `thumb-2.jpg`, and `thumb-3.jpg` were checked against both the older `edison2` WordPress uploads tree and the authorized 2026-09-19 WordPress Media Library export. None was present.
+
+These files were used only as decorative images in the legacy Masternode “Benefits” section. The remaining canonical sibling image `service-thumb-2.jpg` served the same decorative role. To avoid preserving an incomplete/inconsistent legacy decoration set, all four Benefits thumbnails were deliberately removed from the migration draft while retaining the substantive text.
+
+The future Astro presentation may render these benefits as consistent accessible cards/icons rather than reproducing the old WordPress thumbnails.
