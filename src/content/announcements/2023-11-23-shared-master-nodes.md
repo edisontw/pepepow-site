@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 **Pools**
 
 We've got a new partner! MiningPower has added support for PEPEPOW, the first platform to offer shared nodes.
