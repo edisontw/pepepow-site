@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 The second community vote on whether PEPEPOW should move from CPU-only mining to a low-energy PoW supporting both CPU and GPU mining has concluded.
 The results show a clear majority in favor of the transition, with strong support on Telegram and Discord.
 Following this outcome, development will proceed with:

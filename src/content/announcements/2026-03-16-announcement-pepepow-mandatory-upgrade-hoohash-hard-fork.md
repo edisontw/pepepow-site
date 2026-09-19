@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 The PEPEPOW network will perform a mandatory protocol upgrade introducing the new Proof-of-Work algorithm hoohash-pepew.
 **Hard Fork Schedule**
 Block Height: 4354200

@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 ## PEPEPOW Network Update: Chain Stable After Hoohash Upgrade
 
 PEPEPOW has completed its Hoohash upgrade, and the chain is now stable and operating normally.

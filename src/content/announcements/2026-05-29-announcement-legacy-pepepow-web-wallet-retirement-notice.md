@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 The legacy PEPEPOW web wallet will be retired and shut down soon.
 This service had already been planned for retirement. A newer web wallet option has been available for approximately four months, and the community now has a better alternative for users who prefer a web-based wallet.
 Recently, the legacy web wallet showed signs of possible unauthorized access or abnormal balance movement. The exact cause remains unclear. Because the legacy wallet has been running for a long time with limited maintenance, the safest path is to help users withdraw remaining funds and then fully retire the service.
