@@ -132,11 +132,17 @@ The community pool currently exposes a HooHash V110 PEPEW pool and active miner 
 
 The Lab Pool is a community development/testing pool. Confirm its current status and connection instructions on the pool itself before mining.
 
+#### Mining4People
+
+[Mining4People — PEPEW / HooHash pool](https://mining4people.com/pool/pepew)
+
+A current PEPEW HooHash pool page is available. Its displayed command examples may lag behind the latest HTN Miner behavior, so use the pool's current Stratum endpoint while following the current HTN release documentation for miner flags.
+
 #### Other Pools
 
 [MiningPoolStats — PEPEPOW](https://miningpoolstats.stream/pepepow)
 
-Mining4People, Zpool, and other third-party endpoints have changed over time. They should not be treated as current merely because they appear in an older PEPEPOW guide. Verify the pool page, algorithm, wallet format, fee, payout policy, and Stratum endpoint before connecting.
+Other third-party endpoints can change over time. They should not be treated as current merely because they appear in an older PEPEPOW guide. Verify the pool page, algorithm, wallet format, fee, payout policy, and Stratum endpoint before connecting.
 
 ### HiveOS
 

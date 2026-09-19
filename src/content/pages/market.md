@@ -77,30 +77,16 @@ Always verify that an exchange is still operating normally before depositing fun
 [NestEx Market](https://trade.nestex.one/spot/PEPEW)
 PEPEPOW remains a community-driven project. Market access may change over time, so users should always confirm the latest exchange status directly before trading or depositing funds.
 
-Coin Trackers
+## Market Data References
 
-### PEPEPOW on Coin Trackers
+The [PEPEPOW Explorer](https://explorer.pepepow.org/) is the preferred PEPEPOW-specific market reference because it shows the currently collected NonKYC and NestEx data alongside network information.
 
-You can also follow PEPEPOW across major coin tracking platforms for market data, listings, project information, and broader visibility.
+Additional independent reference pages that were reachable during the migration audit:
 
-[CoinCheckup
-View PEPEPOW market profile](https://coincheckup.com/coins/pepepow)
-[CoinCodex
-Track price and market data](https://coincodex.com/crypto/pepepow)
-[LiveCoinWatch
-Live price and market overview](https://www.livecoinwatch.com/price/PEPEPOW-PEPEW)
-[CoinPaprika
-Asset page and market details](https://coinpaprika.com/coin/pepew-pepe-pow)
-[Blockspot
-Project and blockchain directory](https://blockspot.io/coin/pepepow)
-[CoinCarp
-Price, markets, and project data](https://www.coincarp.com/currencies/pepepow)
-[Crypto.com
-Price page and token overview](https://crypto.com/price/pepepow)
-[CoinMarketCap
-Market cap and exchange listings](https://coinmarketcap.com/currencies/pepepow)
-[Coinbase
-Reference price page](https://www.coinbase.com/price/pepepow)
-[Binance
-Reference price page](https://www.binance.com/price/pepepow)
-Tracker pages may differ in update speed, exchange coverage, and displayed metrics. Please verify important market information across multiple sources when needed.
+- [CoinCodex — PEPEPOW](https://coincodex.com/crypto/pepepow/)
+- [LiveCoinWatch — PEPEW](https://www.livecoinwatch.com/price/PEPEPOW-PEPEW)
+- [CoinPaprika — PEPEW](https://coinpaprika.com/coin/pepew-pepe-pow/)
+- [Blockspot — PEPEPOW](https://blockspot.io/coin/pepepow/)
+- [CoinCarp — PEPEPOW](https://www.coincarp.com/currencies/pepepow/)
+
+Third-party trackers can lag protocol upgrades or retain stale exchange/algorithm metadata. Use them as secondary references, not as authority for wallet downloads, mining configuration, or whether an exchange currently accepts deposits and withdrawals.

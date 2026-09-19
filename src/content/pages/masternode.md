@@ -245,12 +245,14 @@ Always back up `wallet.dat` after setup.
 scp -i <Your_Private_Key>.key ubuntu@<Your_IP>:/home/ubuntu/.PEPEPOWcore/wallet.dat C:Users<Your_User>Downloadswallet.dat
 ```
 
-## Third-Party Masternode Hosting
+## Third-Party Masternode Services
 
-If you do not want to maintain your own 24/7 server, you may use a hosting provider instead. These are third-party services: verify current availability, terms, custody model, and support status before sending collateral or credentials.
+Third-party services change independently of PEPEPOW. Never infer that a service is endorsed, non-custodial, or currently accepting PEPEPOW solely because it appeared on the old website.
 
-- [Pecunia Platform](https://www.pecuniaplatform.io/coin-stats/PEPEPOW)
-- [NodeHub](https://nodehub.io/dashboard/view_coin?coin=pepepow)
+- [NodeHub](https://nodehub.io/dashboard/view_coin?coin=pepepow) — its public explorer still indexes PEPEPOW. Confirm current hosting terms and PEPEPOW support before paying or entering configuration data.
+- [Pecunia Platform](https://www.pecuniaplatform.io/coin-stats/PEPEPOW) — retained as a legacy service reference, but the PEPEPOW product page could not be independently verified during this migration audit. Confirm availability directly before use.
+
+Do not send masternode collateral or private keys to a third-party service until you understand its custody model, withdrawal process, fees, and security requirements.
 
 ## Final Notes
 
