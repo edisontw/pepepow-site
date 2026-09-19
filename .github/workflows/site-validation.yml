@@ -24,10 +24,13 @@ jobs:
           package-manager-cache: false
 
       - name: Install site dependencies
-        run: npm install --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
 
       - name: Build static site
         run: npm run build
 
+      - name: Validate legacy routes
+        run: python3 scripts/migration/validate_legacy_routes.py
+
       - name: Compile-check migration scripts
-        run: python3 -m py_compile scripts/migration/wxr_inventory.py scripts/migration/wxr_extract.py scripts/migration/wxr_manifests.py scripts/migration/media_probe.py scripts/migration/collect_uploads.py scripts/migration/stage_recovered_media.py
+        run: python3 -m py_compile scripts/migration/wxr_inventory.py scripts/migration/wxr_extract.py scripts/migration/wxr_manifests.py scripts/migration/media_probe.py scripts/migration/collect_uploads.py scripts/migration/stage_recovered_media.py scripts/migration/validate_legacy_routes.py

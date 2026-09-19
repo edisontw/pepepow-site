@@ -1,0 +1,30 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const isPage = entry.collection === 'pages';
+const description = entry.data.description || 'PEPEPOW community content.';
+const published = entry.data.date instanceof Date
+  ? entry.data.date.toISOString().slice(0, 10)
+  : String(entry.data.date);
+---
+
+<BaseLayout title={entry.data.title} description={description}>
+  <article class="legacy-entry">
+    {!isPage && (
+      <header class="legacy-entry-header">
+        <p class="legacy-entry-meta">
+          <time datetime={published}>{published}</time>
+          {entry.data.categories?.length > 0 && (
+            <span> · {entry.data.categories.join(' · ')}</span>
+          )}
+        </p>
+        <h1>{entry.data.title}</h1>
+      </header>
+    )}
+    <Content />
+  </article>
+</BaseLayout>

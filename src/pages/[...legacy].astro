@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import LegacyContent from '../components/LegacyContent.astro';
+
+export async function getStaticPaths() {
+  const groups = await Promise.all([
+    getCollection('pages'),
+    getCollection('announcements'),
+    getCollection('articles'),
+  ]);
+
+  return groups
+    .flat()
+    .map((entry) => {
+      const legacyUrl = entry.data.legacy_url;
+      if (!legacyUrl) return null;
+
+      const pathname = new URL(legacyUrl).pathname;
+      if (pathname === '/') return null;
+
+      const legacy = pathname.replace(/^\/+|\/+$/g, '');
+      if (!legacy) return null;
+
+      return {
+        params: { legacy },
+        props: { entry },
+      };
+    })
+    .filter(Boolean);
+}
+
+const { entry } = Astro.props;
+---
+
+<LegacyContent entry={entry} />
