@@ -273,25 +273,22 @@ For additional help, join the
 **PEPEPOW Discord community**.
 
 [Announcements](https://pepepow.org/category/announcements/)[Masternode](https://pepepow.org/category/masternode/)[Mining](https://pepepow.org/category/mining/)[Update](https://pepepow.org/category/update/)[Wallet](https://pepepow.org/category/wallet/)
-[[Annoucement] PEPEPOW Network Update: Chain Stable After Hoohash Upgrade](https://pepepow.org/announcement-pepepow-network-update-chain-stable-after-hoohash-upgrade/)
+[[Annoucement] PEPEPOW Network Update: Chain Stable After Hoohash Upgrade](https://pepepow.org/annoucement-pepepow-network-update-chain-stable-after-hoohash-upgrade/)
 PEPEPOW Network Update: Chain Stable After Hoohash Upgrade
 PEPEPOW has completed its Hoohash upgrade,...
-[Read More](https://pepepow.org/announcement-pepepow-network-update-chain-stable-after-hoohash-upgrade/)
-[Announcements](https://pepepow.org/category/announcements/)[Masternode](https://pepepow.org/category/masternode/)[Mining](https://pepepow.org/category/mining/)[Update](https://pepepow.org/category/update/)
-[Wallet](https://pepepow.org/category/wallet/)
-[[Announcement] Algorithm Upgrade! Hard Fork at Height 4,354,200 / Emergency miner update](https://pepepow.org/announcement-algorithm-upgrade-hard-fork-at-height-4354200-emergency-miner-update/)
+[Read More](https://pepepow.org/annoucement-pepepow-network-update-chain-stable-after-hoohash-upgrade/)
+[Announcements](https://pepepow.org/category/announcements/)[Masternode](https://pepepow.org/category/masternode/)[Mining](https://pepepow.org/category/mining/)[Update](https://pepepow.org/category/update/)[Wallet](https://pepepow.org/category/wallet/)
+[[Announcement] Algorithm Upgrade! Hard Fork at Height 4,354,200 / Emergency miner update](https://pepepow.org/anouncement-algorithm-upgrade-hard-fork-at-height-4354200-emergency-miner-update/)
 PEPEPOW has transitioned to a new PoW algorithm:
 Hoohash-pepew
 Fork Height: 4,354,200
 This upgrade...
 [Read More](https://pepepow.org/anouncement-algorithm-upgrade-hard-fork-at-height-4354200-emergency-miner-update/)
-[Announcements](https://pepepow.org/category/announcements/)[Masternode](https://pepepow.org/category/masternode/)[Mining](https://pepepow.org/category/mining/)[Update](https://pepepow.org/category/update/)
-[Wallet](https://pepepow.org/category/wallet/)
-[[Announcement] Hoohash Algorithm Upgrade – GIU Mining Returns (April 10, 2026)](https://pepepow.org/announcement-hoohash-algorithm-upgrade-gpu-mining-returns-april-10-2026/)
+[Announcements](https://pepepow.org/category/announcements/)[Masternode](https://pepepow.org/category/masternode/)[Mining](https://pepepow.org/category/mining/)[Update](https://pepepow.org/category/update/)[Wallet](https://pepepow.org/category/wallet/)
+[[Announcement] Hoohash Algorithm Upgrade – GPU Mining Returns (April 10, 2026)](https://pepepow.org/announcement-hoohash-algorithm-upgrade-gpu-mining-returns-april-10-2026/)
 The PEPEPOW network is preparing for an upcoming upgrade to the hoohash algorithm, with activation expected...
 [Read More](https://pepepow.org/announcement-hoohash-algorithm-upgrade-gpu-mining-returns-april-10-2026/)
-[Announcements](https://pepepow.org/category/announcements/)[Masternode](https://pepepow.org/category/masternode/)[Mining](https://pepepow.org/category/mining/)[Update](https://pepepow.org/category/update/)
-[Wallet](https://pepepow.org/category/wallet/)
+[Announcements](https://pepepow.org/category/announcements/)[Masternode](https://pepepow.org/category/masternode/)[Mining](https://pepepow.org/category/mining/)[Update](https://pepepow.org/category/update/)[Wallet](https://pepepow.org/category/wallet/)
 [[Announcement] PEPEPOW Mandatory Upgrade – Hoohash Hard Fork](https://pepepow.org/announcement-pepepow-mandatory-upgrade-hoohash-hard-fork/)
 The PEPEPOW network will perform a mandatory protocol upgrade introducing the new Proof-of-Work algorithm...
 [Read More](https://pepepow.org/announcement-pepepow-mandatory-upgrade-hoohash-hard-fork/)
