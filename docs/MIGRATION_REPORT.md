@@ -381,3 +381,19 @@ Missing canonical uploads by month:
 | 2026/08 | 1 |
 
 Recovery scope is therefore narrowed to these **62 exact canonical paths** from a newer legacy WordPress filesystem or verified backup. The existing 233 files on `edison2` do not need to be re-downloaded from the old site.
+
+
+### Cloudflare challenge confirmation
+
+A direct request from `edison2` to a known missing canonical upload was tested with a normal desktop browser user-agent and a `pepepow.org` referer:
+
+`/wp-content/uploads/2025/01/2025logo.png`
+
+The origin path returned **HTTP 403** with:
+
+- `server: cloudflare`
+- `cf-mitigated: challenge`
+
+This confirms that the public-URL probe cannot distinguish file existence for the 295 legacy-host attachments because Cloudflare is challenging non-browser requests. These records remain **blocked/unresolved**, not missing.
+
+Do not add bypass logic to the migration scripts. Recovery should use an authorized browser/WordPress-admin path, Cloudflare configuration if the account owner has access, or a verified filesystem backup.
