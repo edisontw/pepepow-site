@@ -605,10 +605,12 @@ Findings and changes:
   PEPEPOW resources. Specialized market/mining/masternode references now live on their relevant
   pages rather than implying homepage endorsement.
 - The About page's **White Paper v2.0** link was found to point incorrectly to the local v1.0.1
-  PDF. It now points to the recovered canonical
-  `/docs/legacy/2025/01/PEPEPOW-Whitepaper_v2.0.pdf`.
-- Homepage White Paper v2.0/v2.1 links now use the recovered local PDFs, reducing dependence on
-  editable external Google Docs for canonical website reading.
+  PDF. The canonical v2.0 file is present in the recovered migration archive/media map but was not
+  included in the earlier referenced-only public staging set. Until that PDF is deliberately
+  staged into `public/docs/legacy/2025/01/`, the page uses the correct v2.0 Google Doc rather
+  than pretending the missing local target exists.
+- Homepage White Paper v2.1 now uses the recovered local PDF. White Paper v2.0 remains external
+  for the same unstaged-file reason above.
 - The Market page now uses the PEPEPOW Explorer as the preferred PEPEPOW-specific market reference
   and keeps a smaller secondary tracker set: CoinCodex, LiveCoinWatch, CoinPaprika, Blockspot, and
   CoinCarp. Third-party tracker metadata is explicitly non-authoritative because some trackers lag
