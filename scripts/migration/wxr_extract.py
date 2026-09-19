@@ -210,6 +210,11 @@ def main() -> int:
         help="Also stage the N most recent published posts. Default: 0.",
     )
     parser.add_argument(
+        "--all-posts",
+        action="store_true",
+        help="Stage all published posts.",
+    )
+    parser.add_argument(
         "--post-slug",
         action="append",
         default=[],
@@ -234,8 +239,12 @@ def main() -> int:
     posts.sort(key=lambda entry: entry.published, reverse=True)
 
     selected_posts: dict[str, Entry] = {}
-    for entry in posts[: max(args.recent_posts, 0)]:
-        selected_posts[entry.slug] = entry
+    if args.all_posts:
+        for entry in posts:
+            selected_posts[entry.slug] = entry
+    else:
+        for entry in posts[: max(args.recent_posts, 0)]:
+            selected_posts[entry.slug] = entry
 
     requested = set(args.post_slug)
     for entry in posts:

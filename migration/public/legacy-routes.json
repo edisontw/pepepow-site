@@ -1,0 +1,1000 @@
+{
+  "source": "pepepowcommunityorganization.WordPress.2026-09-18.xml",
+  "generated_from": "canonical WXR",
+  "published_route_count": 106,
+  "strategy": "Preserve legacy public paths directly where practical; all recovered content remains draft pending review.",
+  "routes": [
+    {
+      "wordpress_id": "2485",
+      "post_type": "page",
+      "title": "Home",
+      "slug": "home-new",
+      "legacy_path": "/",
+      "target_path": "/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2611",
+      "post_type": "page",
+      "title": "About",
+      "slug": "about",
+      "legacy_path": "/about/",
+      "target_path": "/about/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2848",
+      "post_type": "page",
+      "title": "Announcements",
+      "slug": "announcements",
+      "legacy_path": "/announcements/",
+      "target_path": "/announcements/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2596",
+      "post_type": "page",
+      "title": "Market",
+      "slug": "market",
+      "legacy_path": "/market/",
+      "target_path": "/market/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "32",
+      "post_type": "page",
+      "title": "Masternode",
+      "slug": "masternode",
+      "legacy_path": "/masternode/",
+      "target_path": "/masternode/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "483",
+      "post_type": "page",
+      "title": "Mining",
+      "slug": "mining",
+      "legacy_path": "/mining/",
+      "target_path": "/mining/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "482",
+      "post_type": "page",
+      "title": "Wallet",
+      "slug": "wallet",
+      "legacy_path": "/wallet/",
+      "target_path": "/wallet/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1140",
+      "post_type": "post",
+      "title": "2024.2.20 Discord new server preparation after the hijack",
+      "slug": "2024-2-20-discord-new-server-preparation",
+      "legacy_path": "/2024-2-20-discord-new-server-preparation/",
+      "target_path": "/2024-2-20-discord-new-server-preparation/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1367",
+      "post_type": "post",
+      "title": "2024.2.24 The PepePOW Nation Rises Again! New discord server is open!",
+      "slug": "2024-2-24-the-pepepow-nation-rises-again-new-discord-server-open",
+      "legacy_path": "/2024-2-24-the-pepepow-nation-rises-again-new-discord-server-open/",
+      "target_path": "/2024-2-24-the-pepepow-nation-rises-again-new-discord-server-open/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1930",
+      "post_type": "post",
+      "title": "2024.3.16 News Update from PEPEPOW (PEPEW) Community!",
+      "slug": "2024-3-16-news-update-from-pepepow-pepew-community",
+      "legacy_path": "/2024-3-16-news-update-from-pepepow-pepew-community/",
+      "target_path": "/2024-3-16-news-update-from-pepepow-pepew-community/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2016",
+      "post_type": "post",
+      "title": "2024.3.24 CALL FOR DONATION: Help List PepePow on Vidulum App!",
+      "slug": "2024-3-24-call-for-donation-help-list-pepeow-on-vidulum-app",
+      "legacy_path": "/2024-3-24-call-for-donation-help-list-pepeow-on-vidulum-app/",
+      "target_path": "/2024-3-24-call-for-donation-help-list-pepeow-on-vidulum-app/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "289",
+      "post_type": "post",
+      "title": "2023.11.21 Exciting Developments, Wallet Solutions, Role Assignments, and Explorer Status",
+      "slug": "500k-market-cap-announcement-21-11-2023",
+      "legacy_path": "/500k-market-cap-announcement-21-11-2023/",
+      "target_path": "/500k-market-cap-announcement-21-11-2023/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3490",
+      "post_type": "post",
+      "title": "[Annoucement] PEPEPOW Network Update: Chain Stable After Hoohash Upgrade",
+      "slug": "annoucement-pepepow-network-update-chain-stable-after-hoohash-upgrade",
+      "legacy_path": "/annoucement-pepepow-network-update-chain-stable-after-hoohash-upgrade/",
+      "target_path": "/annoucement-pepepow-network-update-chain-stable-after-hoohash-upgrade/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2254",
+      "post_type": "post",
+      "title": "[Announcement] 2024.7.29 PEPEPOW mining tutorial video is now live !",
+      "slug": "announcement-2024-7-29-pepepow-mining-tutorial-video-is-now-live",
+      "legacy_path": "/announcement-2024-7-29-pepepow-mining-tutorial-video-is-now-live/",
+      "target_path": "/announcement-2024-7-29-pepepow-mining-tutorial-video-is-now-live/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3060",
+      "post_type": "post",
+      "title": "[Announcement] Community Collateral Poll is Live!",
+      "slug": "announcement-community-collateral-poll-is-live",
+      "legacy_path": "/announcement-community-collateral-poll-is-live/",
+      "target_path": "/announcement-community-collateral-poll-is-live/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3426",
+      "post_type": "post",
+      "title": "[Announcement] Dex-Trade Delisting Notice",
+      "slug": "announcement-dex-trade-delisting-notice",
+      "legacy_path": "/announcement-dex-trade-delisting-notice/",
+      "target_path": "/announcement-dex-trade-delisting-notice/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2249",
+      "post_type": "post",
+      "title": "[Announcement] Exciting News! We’ve Launched Our YouTube New Channel!",
+      "slug": "announcement-exciting-news-weve-launched-our-youtube-new-channel",
+      "legacy_path": "/announcement-exciting-news-weve-launched-our-youtube-new-channel/",
+      "target_path": "/announcement-exciting-news-weve-launched-our-youtube-new-channel/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3196",
+      "post_type": "post",
+      "title": "[Announcement] Experienced chain splits and stalled sync, now network recovery !",
+      "slug": "announcement-experienced-chain-splits-and-stalled-sync-now-network-recovery",
+      "legacy_path": "/announcement-experienced-chain-splits-and-stalled-sync-now-network-recovery/",
+      "target_path": "/announcement-experienced-chain-splits-and-stalled-sync-now-network-recovery/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3430",
+      "post_type": "post",
+      "title": "[Announcement] Hoohash Algorithm Upgrade – GPU Mining Returns (April 10, 2026)",
+      "slug": "announcement-hoohash-algorithm-upgrade-gpu-mining-returns-april-10-2026",
+      "legacy_path": "/announcement-hoohash-algorithm-upgrade-gpu-mining-returns-april-10-2026/",
+      "target_path": "/announcement-hoohash-algorithm-upgrade-gpu-mining-returns-april-10-2026/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3133",
+      "post_type": "post",
+      "title": "[Announcement] Important Update: Xeggex Insolvency",
+      "slug": "announcement-important-update-xeggex-insolvency",
+      "legacy_path": "/announcement-important-update-xeggex-insolvency/",
+      "target_path": "/announcement-important-update-xeggex-insolvency/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2923",
+      "post_type": "post",
+      "title": "[Announcement] Introducing our new 3D Pepe Miner logo!",
+      "slug": "announcement-introducing-our-new-3d-pepe-miner-logo",
+      "legacy_path": "/announcement-introducing-our-new-3d-pepe-miner-logo/",
+      "target_path": "/announcement-introducing-our-new-3d-pepe-miner-logo/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3521",
+      "post_type": "post",
+      "title": "[Announcement] Legacy PEPEPOW Web Wallet Retirement Notice",
+      "slug": "announcement-legacy-pepepow-web-wallet-retirement-notice",
+      "legacy_path": "/announcement-legacy-pepepow-web-wallet-retirement-notice/",
+      "target_path": "/announcement-legacy-pepepow-web-wallet-retirement-notice/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3558",
+      "post_type": "post",
+      "title": "[Announcement] Light Wallet is now available",
+      "slug": "announcement-light-wallet-is-now-available",
+      "legacy_path": "/announcement-light-wallet-is-now-available/",
+      "target_path": "/announcement-light-wallet-is-now-available/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3148",
+      "post_type": "post",
+      "title": "[Announcement ] MANDATORY UPGRADE: PePe-core v2.8.1.1",
+      "slug": "announcement-mandatory-upgrade-pepe-core-v2-8-1-1",
+      "legacy_path": "/announcement-mandatory-upgrade-pepe-core-v2-8-1-1/",
+      "target_path": "/announcement-mandatory-upgrade-pepe-core-v2-8-1-1/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3102",
+      "post_type": "post",
+      "title": "[Announcement]  Mine PEPEW on your Android phones !",
+      "slug": "announcement-mine-pepew-on-your-android-phones",
+      "legacy_path": "/announcement-mine-pepew-on-your-android-phones/",
+      "target_path": "/announcement-mine-pepew-on-your-android-phones/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3113",
+      "post_type": "post",
+      "title": "[Announcement] New wallet version - v2.7.1.7",
+      "slug": "announcement-new-wallet-version-v2-7-1-7",
+      "legacy_path": "/announcement-new-wallet-version-v2-7-1-7/",
+      "target_path": "/announcement-new-wallet-version-v2-7-1-7/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3204",
+      "post_type": "post",
+      "title": "[Announcement] Official partnership with Gemma Tipping Bot",
+      "slug": "announcement-official-partnership-with-gemma-tipping-bot",
+      "legacy_path": "/announcement-official-partnership-with-gemma-tipping-bot/",
+      "target_path": "/announcement-official-partnership-with-gemma-tipping-bot/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3322",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW Android Wallet Release !",
+      "slug": "announcement-pepepow-android-wallet-release",
+      "legacy_path": "/announcement-pepepow-android-wallet-release/",
+      "target_path": "/announcement-pepepow-android-wallet-release/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2975",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW Community Funding Survey – Have Your Say!",
+      "slug": "announcement-pepepow-community-funding-survey-have-your-say",
+      "legacy_path": "/announcement-pepepow-community-funding-survey-have-your-say/",
+      "target_path": "/announcement-pepepow-community-funding-survey-have-your-say/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2996",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW Community Funding Vote Results!",
+      "slug": "announcement-pepepow-community-funding-vote-results",
+      "legacy_path": "/announcement-pepepow-community-funding-vote-results/",
+      "target_path": "/announcement-pepepow-community-funding-vote-results/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2146",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW Community Update:  Discord Milestone Reached!",
+      "slug": "announcement-pepepow-community-update-discord-milestone-reached",
+      "legacy_path": "/announcement-pepepow-community-update-discord-milestone-reached/",
+      "target_path": "/announcement-pepepow-community-update-discord-milestone-reached/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3172",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW Crowdfunding for Nestex Exchange Listing!",
+      "slug": "announcement-pepepow-crowdfunding-for-nestex-exchange-listing",
+      "legacy_path": "/announcement-pepepow-crowdfunding-for-nestex-exchange-listing/",
+      "target_path": "/announcement-pepepow-crowdfunding-for-nestex-exchange-listing/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3005",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW Crowdfunding Has Started!",
+      "slug": "announcement-pepepow-crowdfunding-has-started",
+      "legacy_path": "/announcement-pepepow-crowdfunding-has-started/",
+      "target_path": "/announcement-pepepow-crowdfunding-has-started/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3052",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW Crowdfunding Vote Results & Vote for Exchange Selection",
+      "slug": "announcement-pepepow-crowdfunding-vote-results-vote-for-exchange-selection",
+      "legacy_path": "/announcement-pepepow-crowdfunding-vote-results-vote-for-exchange-selection/",
+      "target_path": "/announcement-pepepow-crowdfunding-vote-results-vote-for-exchange-selection/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3306",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW Development Progress & Roadmap Update",
+      "slug": "announcement-pepepow-development-progress-roadmap-update",
+      "legacy_path": "/announcement-pepepow-development-progress-roadmap-update/",
+      "target_path": "/announcement-pepepow-development-progress-roadmap-update/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3136",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW Exclusive Hybrid GPU/CPU Miner (Linux)– Alpha Release!",
+      "slug": "announcement-pepepow-exclusive-hybrid-gpu-cpu-miner-linux-alpha-release",
+      "legacy_path": "/announcement-pepepow-exclusive-hybrid-gpu-cpu-miner-linux-alpha-release/",
+      "target_path": "/announcement-pepepow-exclusive-hybrid-gpu-cpu-miner-linux-alpha-release/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3516",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW Explorer Update",
+      "slug": "announcement-pepepow-explorer-update",
+      "legacy_path": "/announcement-pepepow-explorer-update/",
+      "target_path": "/announcement-pepepow-explorer-update/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2860",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW IEO Has Officially Launched!",
+      "slug": "announcement-pepepow-ieo-has-officially-launched",
+      "legacy_path": "/announcement-pepepow-ieo-has-officially-launched/",
+      "target_path": "/announcement-pepepow-ieo-has-officially-launched/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2447",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW IEO on Dex-Trade !",
+      "slug": "announcement-pepepow-ieo-on-dex-trade",
+      "legacy_path": "/announcement-pepepow-ieo-on-dex-trade/",
+      "target_path": "/announcement-pepepow-ieo-on-dex-trade/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3191",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW IS NOW LISTED ON NESTEX!",
+      "slug": "announcement-pepepow-is-now-listed-on-nestex",
+      "legacy_path": "/announcement-pepepow-is-now-listed-on-nestex/",
+      "target_path": "/announcement-pepepow-is-now-listed-on-nestex/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3544",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW Lab Pool Is Now Live for Public Testing",
+      "slug": "announcement-pepepow-lab-pool-is-now-live-for-public-testing",
+      "legacy_path": "/announcement-pepepow-lab-pool-is-now-live-for-public-testing/",
+      "target_path": "/announcement-pepepow-lab-pool-is-now-live-for-public-testing/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3414",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW Mandatory Upgrade – Hoohash Hard Fork",
+      "slug": "announcement-pepepow-mandatory-upgrade-hoohash-hard-fork",
+      "legacy_path": "/announcement-pepepow-mandatory-upgrade-hoohash-hard-fork/",
+      "target_path": "/announcement-pepepow-mandatory-upgrade-hoohash-hard-fork/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3446",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW Mining Algorithm Upgrade Incoming",
+      "slug": "announcement-pepepow-mining-algorithm-upgrade-incoming",
+      "legacy_path": "/announcement-pepepow-mining-algorithm-upgrade-incoming/",
+      "target_path": "/announcement-pepepow-mining-algorithm-upgrade-incoming/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3511",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW Mining Continues to Improve !",
+      "slug": "announcement-pepepow-mining-continues-to-improve",
+      "legacy_path": "/announcement-pepepow-mining-continues-to-improve/",
+      "target_path": "/announcement-pepepow-mining-continues-to-improve/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3434",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW Network Monitor Page Released !",
+      "slug": "announcement-pepepow-network-monitor-page-released",
+      "legacy_path": "/announcement-pepepow-network-monitor-page-released/",
+      "target_path": "/announcement-pepepow-network-monitor-page-released/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3361",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW Non-Custodial Web Wallet Released",
+      "slug": "announcement-pepepow-non-custodial-web-wallet-released",
+      "legacy_path": "/announcement-pepepow-non-custodial-web-wallet-released/",
+      "target_path": "/announcement-pepepow-non-custodial-web-wallet-released/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2101",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW Now Available on FORSA Mobile Wallet",
+      "slug": "announcement-pepepow-now-available-on-forsa-mobile-wallet",
+      "legacy_path": "/announcement-pepepow-now-available-on-forsa-mobile-wallet/",
+      "target_path": "/announcement-pepepow-now-available-on-forsa-mobile-wallet/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2943",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW (PEPEW) is Now Listed on Dex-Trade!",
+      "slug": "announcement-pepepow-pepew-is-now-listed-on-dex-trade",
+      "legacy_path": "/announcement-pepepow-pepew-is-now-listed-on-dex-trade/",
+      "target_path": "/announcement-pepepow-pepew-is-now-listed-on-dex-trade/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2283",
+      "post_type": "post",
+      "title": "[Announcement] PePePow Survived Again!",
+      "slug": "announcement-pepepow-survived-again",
+      "legacy_path": "/announcement-pepepow-survived-again/",
+      "target_path": "/announcement-pepepow-survived-again/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3386",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW Telegram Wallet (Mini App) Now Available for Testing",
+      "slug": "announcement-pepepow-telegram-wallet-mini-app-now-available-for-testing",
+      "legacy_path": "/announcement-pepepow-telegram-wallet-mini-app-now-available-for-testing/",
+      "target_path": "/announcement-pepepow-telegram-wallet-mini-app-now-available-for-testing/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3404",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW Testnet Launch: Hoohash V110 Initial Run",
+      "slug": "announcement-pepepow-testnet-launch-hoohash-v110-initial-run",
+      "legacy_path": "/announcement-pepepow-testnet-launch-hoohash-v110-initial-run/",
+      "target_path": "/announcement-pepepow-testnet-launch-hoohash-v110-initial-run/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3408",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW Trade Suite for Exchanges Launch",
+      "slug": "announcement-pepepow-trade-suite-for-exchanges-launch",
+      "legacy_path": "/announcement-pepepow-trade-suite-for-exchanges-launch/",
+      "target_path": "/announcement-pepepow-trade-suite-for-exchanges-launch/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3065",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW Update: Voting Results & Testnet Launch",
+      "slug": "announcement-pepepow-update-voting-results-testnet-launch",
+      "legacy_path": "/announcement-pepepow-update-voting-results-testnet-launch/",
+      "target_path": "/announcement-pepepow-update-voting-results-testnet-launch/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2856",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW v2.6.3.2 Wallet Release ! – Upgrade Now!",
+      "slug": "announcement-pepepow-v2-6-3-2-wallet-release-upgrade-now",
+      "legacy_path": "/announcement-pepepow-v2-6-3-2-wallet-release-upgrade-now/",
+      "target_path": "/announcement-pepepow-v2-6-3-2-wallet-release-upgrade-now/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3382",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW Web Wallet Update: UTXO Consolidation Feature",
+      "slug": "announcement-pepepow-web-wallet-update-utxo-consolidation-feature",
+      "legacy_path": "/announcement-pepepow-web-wallet-update-utxo-consolidation-feature/",
+      "target_path": "/announcement-pepepow-web-wallet-update-utxo-consolidation-feature/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3526",
+      "post_type": "post",
+      "title": "[Announcement] PEPEPOW Whitepaper v2.1 Updated",
+      "slug": "announcement-pepepow-whitepaper-v2-1-updated",
+      "legacy_path": "/announcement-pepepow-whitepaper-v2-1-updated/",
+      "target_path": "/announcement-pepepow-whitepaper-v2-1-updated/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3554",
+      "post_type": "post",
+      "title": "[Announcement] PEPEW Light Service is now live",
+      "slug": "announcement-pepew-light-service-is-now-live",
+      "legacy_path": "/announcement-pepew-light-service-is-now-live/",
+      "target_path": "/announcement-pepew-light-service-is-now-live/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3564",
+      "post_type": "post",
+      "title": "[Announcement] PEPEW Wallet v1.0.0 Released for Android",
+      "slug": "announcement-pepew-wallet-v1-0-0-released-for-android",
+      "legacy_path": "/announcement-pepew-wallet-v1-0-0-released-for-android/",
+      "target_path": "/announcement-pepew-wallet-v1-0-0-released-for-android/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3244",
+      "post_type": "post",
+      "title": "[Announcement] PoW Algorithm Vote Results",
+      "slug": "announcement-pow-algorithm-vote-results",
+      "legacy_path": "/announcement-pow-algorithm-vote-results/",
+      "target_path": "/announcement-pow-algorithm-vote-results/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3401",
+      "post_type": "post",
+      "title": "[Announcement] PoW (Hoohash) Vote Result and Next Steps",
+      "slug": "announcement-pow-hoohash-vote-result-and-next-steps",
+      "legacy_path": "/announcement-pow-hoohash-vote-result-and-next-steps/",
+      "target_path": "/announcement-pow-hoohash-vote-result-and-next-steps/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3239",
+      "post_type": "post",
+      "title": "[Announcement] Proposal: Switch PoW to HooHash V110",
+      "slug": "announcement-proposal-switch-pow-to-hoohash-v110",
+      "legacy_path": "/announcement-proposal-switch-pow-to-hoohash-v110/",
+      "target_path": "/announcement-proposal-switch-pow-to-hoohash-v110/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2932",
+      "post_type": "post",
+      "title": "[Announcement] Slogan Vote Results, White Paper Update, and IEO Reminder",
+      "slug": "announcement-slogan-vote-results-white-paper-update-and-ieo-reminder",
+      "legacy_path": "/announcement-slogan-vote-results-white-paper-update-and-ieo-reminder/",
+      "target_path": "/announcement-slogan-vote-results-white-paper-update-and-ieo-reminder/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2257",
+      "post_type": "post",
+      "title": "[Announcement] Transition to XelisV2 Algorithm",
+      "slug": "announcement-transition-to-xelisv2-algorithm",
+      "legacy_path": "/announcement-transition-to-xelisv2-algorithm/",
+      "target_path": "/announcement-transition-to-xelisv2-algorithm/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3269",
+      "post_type": "post",
+      "title": "[Announcement] Upcoming Discussion & Voting Announcement",
+      "slug": "announcement-upcoming-discussion-voting-announcement",
+      "legacy_path": "/announcement-upcoming-discussion-voting-announcement/",
+      "target_path": "/announcement-upcoming-discussion-voting-announcement/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2261",
+      "post_type": "post",
+      "title": "[Announcement] Upgrade to v2.6.1.1 by 10:00 UTC on Aug 29, 2024 before SPORK 16 activates",
+      "slug": "announcement-upgrade-to-v2-6-1-1-by-1000-utc-on-aug-29-2024-before-spork-16-activates",
+      "legacy_path": "/announcement-upgrade-to-v2-6-1-1-by-1000-utc-on-aug-29-2024-before-spork-16-activates/",
+      "target_path": "/announcement-upgrade-to-v2-6-1-1-by-1000-utc-on-aug-29-2024-before-spork-16-activates/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2345",
+      "post_type": "post",
+      "title": "[Announcement] Welcome new CPU miners and thank you for developers and GPU miners support for updating",
+      "slug": "announcement-welcome-new-cpu-miners-and-thank-you-for-developers-and-gpu-miners-support-for-updating",
+      "legacy_path": "/announcement-welcome-new-cpu-miners-and-thank-you-for-developers-and-gpu-miners-support-for-updating/",
+      "target_path": "/announcement-welcome-new-cpu-miners-and-thank-you-for-developers-and-gpu-miners-support-for-updating/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3025",
+      "post_type": "post",
+      "title": "[Announcement] Xeggex Update : Successfully Restored its Platform",
+      "slug": "announcement-xeggex-updatesuccessfully-restored-its-platform",
+      "legacy_path": "/announcement-xeggex-updatesuccessfully-restored-its-platform/",
+      "target_path": "/announcement-xeggex-updatesuccessfully-restored-its-platform/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3069",
+      "post_type": "post",
+      "title": "[Announcemnt] MANDATORY UPGRADE — Deadline: Friday, 16 May 2025",
+      "slug": "announcemnt-mandatory-upgrade-deadline-friday-16-may-2025",
+      "legacy_path": "/announcemnt-mandatory-upgrade-deadline-friday-16-may-2025/",
+      "target_path": "/announcemnt-mandatory-upgrade-deadline-friday-16-may-2025/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3475",
+      "post_type": "post",
+      "title": "[Announcement] Algorithm Upgrade! Hard Fork at Height 4,354,200 / Emergency miner update",
+      "slug": "anouncement-algorithm-upgrade-hard-fork-at-height-4354200-emergency-miner-update",
+      "legacy_path": "/anouncement-algorithm-upgrade-hard-fork-at-height-4354200-emergency-miner-update/",
+      "target_path": "/anouncement-algorithm-upgrade-hard-fork-at-height-4354200-emergency-miner-update/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3091",
+      "post_type": "post",
+      "title": "[Anouncement] SPORK 17 Activated — Upgrade Successful!",
+      "slug": "anouncement",
+      "legacy_path": "/anouncement/",
+      "target_path": "/anouncement/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1087",
+      "post_type": "post",
+      "title": "2024.2.14 DISCORD server compromised (Feb 13th 2024)",
+      "slug": "discord-server-compromised-feb-13th-2024",
+      "legacy_path": "/discord-server-compromised-feb-13th-2024/",
+      "target_path": "/discord-server-compromised-feb-13th-2024/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2279",
+      "post_type": "post",
+      "title": "Emergency Announcement",
+      "slug": "emergency-announcement",
+      "legacy_path": "/emergency-announcement/",
+      "target_path": "/emergency-announcement/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "334",
+      "post_type": "post",
+      "title": "2023.11.27 Komodo Wallet Progress, Exchange Listing Votes, and New Mining Support",
+      "slug": "lets-get-listed",
+      "legacy_path": "/lets-get-listed/",
+      "target_path": "/lets-get-listed/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2647",
+      "post_type": "post",
+      "title": "[Masernode] Installation Guide for Masternode",
+      "slug": "masernode-installation-guide-for-masternode",
+      "legacy_path": "/masernode-installation-guide-for-masternode/",
+      "target_path": "/masernode-installation-guide-for-masternode/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1623",
+      "post_type": "post",
+      "title": "[Masternode] 2024.2.1 EMERGENCY RELEASE (1070288 block issue)",
+      "slug": "masternode-2024-2-1-emergency-release-1070288-block-issue",
+      "legacy_path": "/masternode-2024-2-1-emergency-release-1070288-block-issue/",
+      "target_path": "/masternode-2024-2-1-emergency-release-1070288-block-issue/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1610",
+      "post_type": "post",
+      "title": "[Masternode] 3rd party Masternode provider",
+      "slug": "masternode-3rd-party-masternode-provider",
+      "legacy_path": "/masternode-3rd-party-masternode-provider/",
+      "target_path": "/masternode-3rd-party-masternode-provider/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1608",
+      "post_type": "post",
+      "title": "[Masternode]  Free Internet Cloud Resources",
+      "slug": "masternode-free-internet-cloud-resources",
+      "legacy_path": "/masternode-free-internet-cloud-resources/",
+      "target_path": "/masternode-free-internet-cloud-resources/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1627",
+      "post_type": "post",
+      "title": "[Masternode] Installation Guide for Masternode on Windows",
+      "slug": "masternode-installation-guide-for-masternode-on-windows",
+      "legacy_path": "/masternode-installation-guide-for-masternode-on-windows/",
+      "target_path": "/masternode-installation-guide-for-masternode-on-windows/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1616",
+      "post_type": "post",
+      "title": "[Masternode] Masternode Setup Guide (Ubuntu/Linux)",
+      "slug": "masternode-masternode-setup-guide-ubuntu-linux",
+      "legacy_path": "/masternode-masternode-setup-guide-ubuntu-linux/",
+      "target_path": "/masternode-masternode-setup-guide-ubuntu-linux/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1625",
+      "post_type": "post",
+      "title": "[Masternode] Pecunia Platform",
+      "slug": "masternode-pecunia-platform",
+      "legacy_path": "/masternode-pecunia-platform/",
+      "target_path": "/masternode-pecunia-platform/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1614",
+      "post_type": "post",
+      "title": "[Masternode]  Reboot Workstation Without Losing Masternode",
+      "slug": "masternode-reboot-workstation-without-losing-masternode",
+      "legacy_path": "/masternode-reboot-workstation-without-losing-masternode/",
+      "target_path": "/masternode-reboot-workstation-without-losing-masternode/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1612",
+      "post_type": "post",
+      "title": "[Masternode] Useful Commands",
+      "slug": "masternode-useful-commands",
+      "legacy_path": "/masternode-useful-commands/",
+      "target_path": "/masternode-useful-commands/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1621",
+      "post_type": "post",
+      "title": "[Masternode] Wallet Update Process",
+      "slug": "masternode-wallet-update-process",
+      "legacy_path": "/masternode-wallet-update-process/",
+      "target_path": "/masternode-wallet-update-process/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "327",
+      "post_type": "post",
+      "title": "2023.11.25 Partnership with Gemfinder, Miner Update, and Community Engagement",
+      "slug": "memehash-is-the-way",
+      "legacy_path": "/memehash-is-the-way/",
+      "target_path": "/memehash-is-the-way/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1648",
+      "post_type": "post",
+      "title": "[Miming] A Beginner's Guide to Mining PepePoW (Memehash) on Window",
+      "slug": "miming-a-beginners-guide-to-mining-pepepow-memehash-on-window",
+      "legacy_path": "/miming-a-beginners-guide-to-mining-pepepow-memehash-on-window/",
+      "target_path": "/miming-a-beginners-guide-to-mining-pepepow-memehash-on-window/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3141",
+      "post_type": "post",
+      "title": "[Miner] PEPEPOW Hybrid GPU + CPU Miner Installation Guide (Linux and Hive OS)",
+      "slug": "miner-pepepow-hybrid-gpu-cpu-miner-installation-guide-linux-and-hive-os",
+      "legacy_path": "/miner-pepepow-hybrid-gpu-cpu-miner-installation-guide-linux-and-hive-os/",
+      "target_path": "/miner-pepepow-hybrid-gpu-cpu-miner-installation-guide-linux-and-hive-os/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1708",
+      "post_type": "post",
+      "title": "[Mining] Efficiency of mining PepePOW (PEPEW)",
+      "slug": "mining-efficiency-of-mining-pepepow-pepew",
+      "legacy_path": "/mining-efficiency-of-mining-pepepow-pepew/",
+      "target_path": "/mining-efficiency-of-mining-pepepow-pepew/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1644",
+      "post_type": "post",
+      "title": "[Mining] Enhancing Blockchain Security and Decentralization Through Hashrate Distribution",
+      "slug": "mining-enhancing-blockchain-security-and-decentralization-through-hashrate-distribution",
+      "legacy_path": "/mining-enhancing-blockchain-security-and-decentralization-through-hashrate-distribution/",
+      "target_path": "/mining-enhancing-blockchain-security-and-decentralization-through-hashrate-distribution/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1704",
+      "post_type": "post",
+      "title": "[Mining] GPU and mining hashrate",
+      "slug": "mining-gpu-and-mining-hashrate",
+      "legacy_path": "/mining-gpu-and-mining-hashrate/",
+      "target_path": "/mining-gpu-and-mining-hashrate/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3105",
+      "post_type": "post",
+      "title": "[Mining] Mining PEPEPOW on an Android Phone",
+      "slug": "mining-mining-pepepow-on-an-android-phone",
+      "legacy_path": "/mining-mining-pepepow-on-an-android-phone/",
+      "target_path": "/mining-mining-pepepow-on-an-android-phone/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1646",
+      "post_type": "post",
+      "title": "[Mining] WildRig Multi 0.40.5 Special New Year release",
+      "slug": "mining-wildrig-multi-0-40-5-special-new-year-release",
+      "legacy_path": "/mining-wildrig-multi-0-40-5-special-new-year-release/",
+      "target_path": "/mining-wildrig-multi-0-40-5-special-new-year-release/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2635",
+      "post_type": "post",
+      "title": "[Mining]Mining PEPEPOW: Step-by-Step Guide (2024.12.12)",
+      "slug": "miningmining-pepepow-step-by-step-guide-2024-12-12",
+      "legacy_path": "/miningmining-pepepow-step-by-step-guide-2024-12-12/",
+      "target_path": "/miningmining-pepepow-step-by-step-guide-2024-12-12/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "363",
+      "post_type": "post",
+      "title": "2023.12.20 Update on Crowdfunding Progress and DAO Operational Changes",
+      "slug": "reality-check",
+      "legacy_path": "/reality-check/",
+      "target_path": "/reality-check/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "315",
+      "post_type": "post",
+      "title": "2023.11.23 New Pool Partner, Wallet/Exchanges News, Social Media Guidelines",
+      "slug": "shared-master-nodes",
+      "legacy_path": "/shared-master-nodes/",
+      "target_path": "/shared-master-nodes/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "2358",
+      "post_type": "post",
+      "title": "[Small Reminder] Don’t forget the importance of risk management",
+      "slug": "small-reminder-dont-forget-the-importance-of-risk-management",
+      "legacy_path": "/small-reminder-dont-forget-the-importance-of-risk-management/",
+      "target_path": "/small-reminder-dont-forget-the-importance-of-risk-management/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "302",
+      "post_type": "post",
+      "title": "The PEPEPOW Story",
+      "slug": "the-pepepow-story",
+      "legacy_path": "/the-pepepow-story/",
+      "target_path": "/the-pepepow-story/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1688",
+      "post_type": "post",
+      "title": "[Update] 2024.2.29 PEPEPOW Wallet v2.4.7.1 Release: Mandatory Update & Important Notices",
+      "slug": "update-pepe-core-wallet-v2-4-7-1-release-mandatory-update-important-notices",
+      "legacy_path": "/update-pepe-core-wallet-v2-4-7-1-release-mandatory-update-important-notices/",
+      "target_path": "/update-pepe-core-wallet-v2-4-7-1-release-mandatory-update-important-notices/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1539",
+      "post_type": "post",
+      "title": "[Wallet] Exporting Address to Another Wallet",
+      "slug": "wallet-exporting-address-to-another-wallet",
+      "legacy_path": "/wallet-exporting-address-to-another-wallet/",
+      "target_path": "/wallet-exporting-address-to-another-wallet/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1537",
+      "post_type": "post",
+      "title": "[Wallet] How to Check Sync Status for QT Wallet",
+      "slug": "wallet-how-to-check-sync-status-for-qt-wallet",
+      "legacy_path": "/wallet-how-to-check-sync-status-for-qt-wallet/",
+      "target_path": "/wallet-how-to-check-sync-status-for-qt-wallet/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1548",
+      "post_type": "post",
+      "title": "[Wallet] Recovering Android Mobile Wallet on PC",

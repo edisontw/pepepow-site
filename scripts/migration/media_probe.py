@@ -98,6 +98,11 @@ def main() -> int:
     parser.add_argument("--timeout", type=float, default=12.0)
     parser.add_argument("--workers", type=int, default=8)
     parser.add_argument(
+        "--strict",
+        action="store_true",
+        help="Exit non-zero when one or more URLs remain unresolved.",
+    )
+    parser.add_argument(
         "--limit",
         type=int,
         default=0,
@@ -147,7 +152,7 @@ def main() -> int:
         f"Probed: {len(results)} | available: {available} | unresolved: {missing}"
     )
     print(f"Wrote: {args.output}")
-    return 0 if missing == 0 else 2
+    return 2 if args.strict and missing else 0
 
 
 if __name__ == "__main__":

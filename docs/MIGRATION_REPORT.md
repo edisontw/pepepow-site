@@ -1,6 +1,6 @@
 # PEPEPOW Migration Report
 
-Status: **Initial WXR inventory validated**  
+Status: **Phase 1 content recovery in progress**  
 Date: **2026-09-19**
 
 This report records reproducible migration findings only. Raw WordPress WXR files remain outside Git because they can contain account/author metadata that is not needed by the public site.
@@ -180,8 +180,8 @@ Not yet completed:
 - [x] convert the seven pages to normalized review-only site content
 - [x] convert representative posts (5 most recent published announcements recovered as review-only drafts)
 - [ ] validate old internal links
-- [ ] build final redirect map
-- [ ] batch migrate remaining posts
+- [x] build sanitized legacy route preservation map
+- [x] batch migrate remaining posts as review-only drafts
 
 ## Next migration slice
 
@@ -255,3 +255,43 @@ Media recovery precedence is therefore:
 4. only then obtain missing `wp-content/uploads/` material from the legacy host or another verified source
 
 This keeps the static archive as a recovery aid without treating its incomplete crawl as authoritative site content.
+
+
+## Full published-post recovery
+
+All **99 published WordPress posts** from the canonical 2026-09-18 WXR are now represented in GitHub `main` as review-only Markdown content.
+
+Repository classification:
+
+- **73 announcement/update/campaign/mining posts** in `src/content/announcements/`
+- **26 posts carrying the WordPress `Articles` category** in `src/content/articles/`
+
+The underscore-prefixed collection README files are not counted as content entries.
+
+All recovered posts retain:
+
+- original title
+- publish and modified dates
+- original slug
+- categories and tags
+- `legacy_url`
+- `source_url`
+- `status: draft`
+- `migration_review: true`
+
+No recovered historical post has been promoted to current authoritative guidance.
+
+The staging converter now supports `--all-posts` so the 99-post conversion can be reproduced locally from the canonical WXR.
+
+## Committed public migration manifests
+
+Sanitized migration metadata is now committed under `migration/public/`:
+
+- `legacy-routes.json` — **106 published legacy routes** (7 pages + 99 posts)
+- `media-manifest.json` — **296 WordPress attachment records** plus **9 referenced PDF URLs**
+
+The route map currently uses a same-path preservation strategy for every published legacy page/post. This records the intended URL contract; Astro runtime route wiring and link validation still remain to be completed.
+
+The manifests contain no WordPress author login/email fields and no raw post bodies.
+
+The media probe now exits successfully by default while recording unresolved URLs; `--strict` can be used when a non-zero exit is desired for validation gates.
