@@ -20,7 +20,7 @@ NS = {
     "wp": "http://wordpress.org/export/1.2/",
 }
 PDF_RE = re.compile(
-    r"https?://[^\\s\\\"'<>]+\\.pdf(?:\\?[^\\s\\\"'<>]*)?",
+    r"https?://[^\s\"'<>]+\.pdf(?:\?[^\s\"'<>]*)?",
     re.IGNORECASE,
 )
 

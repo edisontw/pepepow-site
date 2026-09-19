@@ -30,4 +30,4 @@ jobs:
         run: npm run build
 
       - name: Compile-check migration scripts
-        run: python3 -m py_compile scripts/migration/wxr_inventory.py scripts/migration/wxr_extract.py
+        run: python3 -m py_compile scripts/migration/wxr_inventory.py scripts/migration/wxr_extract.py scripts/migration/wxr_manifests.py
