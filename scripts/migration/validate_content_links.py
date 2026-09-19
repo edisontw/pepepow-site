@@ -23,13 +23,6 @@ SOURCE_ARTIFACTS = (
         "WordPress emoji CDN",
         re.compile(r"https://s\.w\.org/images/core/emoji/", re.IGNORECASE),
     ),
-    (
-        "internal migration review banner",
-        re.compile(
-            r"Migration candidate generated from the legacy WordPress export",
-            re.IGNORECASE,
-        ),
-    ),
 )
 SKIP_SCHEMES = {"mailto", "tel", "javascript", "data"}
 
@@ -127,10 +120,18 @@ def main() -> int:
     html_files = sorted(args.dist_root.rglob("*.html"))
 
     for html_path in html_files:
+        html_text = html_path.read_text(encoding="utf-8", errors="replace")
+        if "Migration candidate generated from the legacy WordPress export" in html_text:
+            generated_issues.add(
+                (
+                    html_path.as_posix(),
+                    "rendered internal migration banner",
+                    "Migration candidate generated from the legacy WordPress export",
+                )
+            )
+
         parser_instance = ReferenceParser()
-        parser_instance.feed(
-            html_path.read_text(encoding="utf-8", errors="replace")
-        )
+        parser_instance.feed(html_text)
         route = route_for_html(args.dist_root, html_path)
         base_url = f"https://site.invalid{route}"
 
