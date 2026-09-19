@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 Hey Pepepow Community! ? We've got an exciting opportunity ahead and we need your support to make it happen!
 We're aiming to list Pepeow on the Vidulum App, offering both a mobile and web wallet for our community members. This will provide easier access and seamless transactions for everyone involved in the Pepepow ecosystem.
 To achieve this goal, we're launching a \*\*one-week donation campaign\*\* with a target of \*\*$1000\*\*. This will cover the necessary expenses and fees associated with integrating Pepeow onto the Vidulum platform.
