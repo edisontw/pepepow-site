@@ -743,10 +743,9 @@ The migration pipeline now handles this in three layers:
 3. `scripts/migration/validate_content_links.py` now fails if the internal migration-banner text
    appears in generated HTML, so future rendering changes cannot accidentally expose it again.
 
-The source tree was then normalized in batch. **97 recovered Markdown files** that still contained
+The source tree was then normalized in batch. **106 recovered legacy Markdown files** that still contained
 the internal migration-review blockquote had that blockquote removed without changing their
-frontmatter, historical body text, dates, links, commands, or media references. The other content
-files did not contain this marker.
+frontmatter, historical body text, dates, links, commands, or media references. This covers the full set of **7 recovered pages + 99 recovered posts**. The six non-legacy content files did not contain this marker.
 
 The migration-review state remains explicit in frontmatter as `migration_review: true`, and
 `wxr_extract.py` no longer emits the public-facing blockquote on future restaging.
