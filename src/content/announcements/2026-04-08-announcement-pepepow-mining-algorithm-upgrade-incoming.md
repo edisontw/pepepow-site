@@ -19,7 +19,7 @@ Based on the current network monitor, activation is expected in around 2 days, a
 Around 75% of nodes on the network have already upgraded to the new version.
 This is a strong signal that the network is moving steadily toward activation, but the remaining nodes should still upgrade as soon as possible to reduce fork risk and ensure a smoother transition.
 ### Miner preparation
-Miners should prepare to switch to \*\*HTN Miner\*\*, which now supports PEPEPOW\_HOOHASH.
+Miners should prepare to switch to **HTN Miner**, which now supports PEPEPOW_HOOHASH.
 Miner downloads and usage:
 <https://htn.foztor.net/>
 At this stage, the recommended supported miner is **HTN Miner**.

@@ -22,7 +22,7 @@ After much development by Foztor and enthusiastic developers, the first hybrid G
 4. The GPU currently only handles part of the workload. At present, the hybrid mode is about 10–20% faster than pure CPU mining (example: Xeon 40 threads + 3070M gives about 2KH/s more than CPU alone), but performance will improve as the pipeline is optimized!
 5. Stability on risers is not guaranteed—using a direct x16 slot is recommended for testing.
 6. Both CPU and GPU modes support multithreading. Default is all logical cores; use `-t N` to set the number of threads.
-7. Download link: [[https://pepepow.foztor.net/beta/pepepow-miner](https://pepepow.foztor.net/beta/pepepow-miner "https://pepepow.foztor.net/beta/pepepow-miner")]
+7. Download link: [PEPEPOW hybrid miner](https://pepepow.foztor.net/beta/pepepow-miner)
 SHA256 for verification:
 
 ```

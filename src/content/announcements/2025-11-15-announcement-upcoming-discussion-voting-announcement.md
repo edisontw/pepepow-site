@@ -23,9 +23,9 @@ Starting next month, we will reopen community-wide discussions and may l**aunch 
 To ensure the voting process is meaningful and aligned with community needs, we will proceed in stages:
 **1. Open Discussion & Feedback Collection**
 We invite miners, node operators, developers, and long-term holders to share:
-\* Recommended or preferred algorithms (with brief reasoning)
-\* Current issues or pain points (e.g., sync problems, mining experience)
-\* Development priorities or tools you want to see built
+- Recommended or preferred algorithms (with brief reasoning)
+- Current issues or pain points (e.g., sync problems, mining experience)
+- Development priorities or tools you want to see built
 **2.  Drafting the Proposal Options**
 The dev team and community volunteers will consolidate all feedback into clear, structured proposals.
 **3. Formal Voting Expected Next Month**
@@ -36,9 +36,9 @@ Our goal: transparent decision-making driven by community consensus.
 - No hype — just real work, real consensus, and real development.
   If you’re a:
 
-\* Miner / Node Operator: Share your practical experience and issues
-\* Developer: Provide technical insights or feasible solutions
-\* Holder / Community Member: Help shape the long-term direction of PEPEPOW
+- Miner / Node Operator: Share your practical experience and issues
+- Developer: Provide technical insights or feasible solutions
+- Holder / Community Member: Help shape the long-term direction of PEPEPOW
 Share your thoughts in the channels.
 Your input may directly influence the next era of PEPEPOW.
 **No hype, just work.**
