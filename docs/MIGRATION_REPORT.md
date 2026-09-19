@@ -177,7 +177,7 @@ Not yet completed:
 - [ ] compare attachment URLs with the legacy static mirror
 - [ ] identify canonical original images vs WordPress resized variants
 - [ ] classify missing media
-- [ ] convert the seven pages to normalized site content
+- [x] convert the seven pages to normalized review-only site content
 - [x] convert representative posts (5 most recent published announcements recovered as review-only drafts)
 - [ ] validate old internal links
 - [ ] build final redirect map
@@ -204,7 +204,7 @@ All five recovered entries remain:
 
 This is intentional. Recovery establishes provenance and URL continuity first; it does not assert that historical service status, software versions, download links, or operational statements are still current.
 
-A dedicated `pages` content collection is also defined so the seven published legacy pages can be recovered as review-only drafts without prematurely exposing stale operational guidance.
+A dedicated `pages` content collection is defined, and all seven published legacy pages are now recovered under `src/content/pages/` as review-only drafts without prematurely exposing stale operational guidance.
 
 The migration tooling now includes `scripts/migration/wxr_manifests.py`, which reproducibly writes working manifests under the ignored `migration/work/` directory for:
 
@@ -217,5 +217,17 @@ Validation against the canonical 2026-09-18 WXR yields:
 - 106 published legacy routes = 7 pages + 99 posts
 - 296 attachment records
 - 9 referenced PDF URLs
+
+The recovered page set is:
+
+- Home (legacy `/`, WordPress slug `home-new`)
+- About (`/about/`)
+- Announcements (`/announcements/`)
+- Market (`/market/`)
+- Mining (`/mining/`)
+- Masternode (`/masternode/`)
+- Wallet (`/wallet/`)
+
+Every recovered page remains `status: draft` and `migration_review: true`. Historical operational claims and commands have not been promoted to current guidance.
 
 The raw WXR and generated working manifests remain outside Git.
