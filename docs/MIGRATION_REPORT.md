@@ -743,10 +743,13 @@ The migration pipeline now handles this in three layers:
 3. `scripts/migration/validate_content_links.py` now fails if the internal migration-banner text
    appears in generated HTML, so future rendering changes cannot accidentally expose it again.
 
-A small number of source Markdown files were also normalized while this issue was being traced.
-The remaining older source files do not need dozens of one-file Git commits merely to remove a
-non-rendered internal marker; the reproducible renderer/extractor rules are the authority going
-forward.
+The source tree was then normalized in batch. **97 recovered Markdown files** that still contained
+the internal migration-review blockquote had that blockquote removed without changing their
+frontmatter, historical body text, dates, links, commands, or media references. The other content
+files did not contain this marker.
+
+The migration-review state remains explicit in frontmatter as `migration_review: true`, and
+`wxr_extract.py` no longer emits the public-facing blockquote on future restaging.
 
 ### Historical external-link inventory
 
