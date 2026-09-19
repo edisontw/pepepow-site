@@ -342,6 +342,9 @@ Content:
 
 ## 5. Homepage design
 
+Staging implementation status: **initial custom homepage implemented**. Live Network Pulse data remains a later monitor/API integration; the current staging homepage uses only verified static entry points and build-time announcement data.
+
+
 The homepage must remain concise.
 
 Recommended information hierarchy:
