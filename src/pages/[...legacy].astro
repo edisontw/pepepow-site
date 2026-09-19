@@ -12,7 +12,11 @@ export async function getStaticPaths() {
   return groups
     .flat()
     .filter(
-      (entry) => !(entry.collection === 'pages' && entry.data.slug === 'announcements'),
+      (entry) =>
+        !(
+          entry.collection === 'pages' &&
+          (entry.data.slug === 'announcements' || entry.data.slug === 'home-new')
+        ),
     )
     .map((entry) => {
       const legacyUrl = entry.data.legacy_url;
