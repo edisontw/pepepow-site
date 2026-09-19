@@ -683,3 +683,29 @@ solely because they describe older reward eras.
 
 No production deployment or Nginx change was made in this slice.
 
+## Generated announcements archive — 2026-09-19
+
+The recovered WordPress `/announcements/` page was only a small archive snapshot containing four
+older post cards and should not be treated as the long-term news index now that all published posts
+have been recovered.
+
+The route has therefore been converted to a build-time Astro archive:
+
+- `src/pages/announcements/index.astro` reads the `announcements` content collection
+- announcements are sorted newest-first and grouped by publication year
+- each item links to its preserved same-path legacy route
+- the archive is generated statically; no database or client-side JavaScript is required
+- a visible historical-archive notice warns that older software, exchange, pool, service, and
+  network-status statements may no longer be current
+- the recovered `src/content/pages/announcements.md` remains in the repository as migration
+  provenance, but the public `/announcements/` route no longer renders that four-item WordPress
+  snapshot
+- `src/pages/[...legacy].astro` excludes only the recovered Announcements page entry so the
+  explicit generated archive owns `/announcements/` without changing any of the 99 post routes
+
+This change improves completeness and maintainability without rewriting historical announcement
+content. Historical individual posts remain `status: draft` / `migration_review: true` and keep
+their original dates, titles, categories, and legacy paths.
+
+No production deployment or Nginx change was made in this slice.
+
