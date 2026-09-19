@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import NetworkPulse from '../components/NetworkPulse.astro';
 
 const announcements = (await getCollection('announcements'))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
@@ -77,24 +78,7 @@ const quickLinks = [
         </div>
       </div>
 
-      <aside class="network-card" aria-labelledby="network-card-title">
-        <p class="eyebrow">Network at a glance</p>
-        <h2 id="network-card-title">Built to be verifiable.</h2>
-        <dl class="network-facts">
-          <div>
-            <dt>Proof of Work</dt>
-            <dd>HooHash V110</dd>
-          </div>
-          <div>
-            <dt>Software</dt>
-            <dd><a href="https://github.com/MattF42/PePe-core/releases">Open Core releases</a></dd>
-          </div>
-          <div>
-            <dt>Live status</dt>
-            <dd><a href="https://explorer.pepepow.org/">PEPEPOW Explorer</a></dd>
-          </div>
-        </dl>
-      </aside>
+      <NetworkPulse compact />
     </section>
 
     <section class="home-section" aria-labelledby="start-title">
