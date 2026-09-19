@@ -4,9 +4,9 @@ Official source repository for the next-generation PEPEPOW community website at 
 
 ## Status
 
-Migration and rebuild are in progress.
+The Astro site is live in production at `pepepow.net`. Core migration and Phase 2 site UX are complete; current work is moving into Phase 3 network-data integration and ongoing content/UX refinement.
 
-The new site replaces the legacy WordPress presentation with a maintainable static-first architecture while preserving useful PEPEPOW content, public URLs, media, documents, and historical announcements.
+The site replaces the legacy WordPress presentation with a maintainable static-first architecture while preserving useful PEPEPOW content, public URLs, media, documents, and historical announcements.
 
 ## Direction
 
