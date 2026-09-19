@@ -185,12 +185,21 @@ Not yet completed:
 
 ## Next migration slice
 
-1. Extract the seven published pages and a representative group of recent/older posts.
-2. Normalize WordPress/Elementor body markup into clean content.
-3. Create a media manifest and test automatic recovery from current public attachment URLs.
-4. Cross-check only unresolved media against `edisontw/web/portal/pepepow-org/` and its raw-asset mapping.
-5. Produce a missing-media list; only then request `wp-content/uploads/` from the old host if needed.
-6. Validate route preservation before batch migration.
+The mechanical recovery/link-routing gate is complete. The next work should not repeat media recovery,
+route wiring, or exact legacy-host link cleanup.
+
+Priority now:
+
+1. Review current-sensitive public pages (`home`, `about`, `mining`, `masternode`, `wallet`, `market`)
+   against current authoritative PEPEPOW repositories/services before treating operational claims as current.
+2. Verify software versions, download URLs, pool/explorer/exchange/service status, commands, and security-sensitive
+   instructions; preserve historical wording where it is clearly historical rather than silently modernizing it.
+3. Review the recovered Announcements page and historical posts for readability/formatting artifacts that require
+   human judgment, without changing historical claims merely to match today's state.
+4. Audit external links and embeds for availability and replace/remove only where the intended destination is clear.
+5. Keep content `status: draft` and `migration_review: true` until its current-sensitive material has been checked.
+6. After content review, proceed to staging visual/responsive/accessibility work. Production Nginx remains out of scope
+   until staging acceptance.
 
 
 ## Phase 1 recovery slice — 2026-09-19
