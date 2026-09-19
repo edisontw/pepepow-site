@@ -1,0 +1,191 @@
+---
+interface Props {
+  compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
+const endpoint = 'https://explorer.pepepow.net/monitor/api/public-summary';
+const titleId = compact ? 'home-network-pulse-title' : 'network-pulse-title';
+---
+
+<section
+  class:list={['network-pulse', { 'network-pulse-compact': compact }]}
+  data-network-pulse
+  data-endpoint={endpoint}
+  aria-labelledby={titleId}
+>
+  <header class="network-pulse-header">
+    <div>
+      <p class="eyebrow">Network Pulse</p>
+      <h2 id={titleId}>{compact ? 'Live network summary.' : 'Current network summary.'}</h2>
+    </div>
+    <span class="network-pulse-status is-checking" data-pulse-status aria-live="polite">
+      Checking…
+    </span>
+  </header>
+
+  <div class="network-pulse-grid">
+    <div class="network-pulse-metric">
+      <span>Block height</span>
+      <strong data-pulse-field="height">—</strong>
+    </div>
+    <div class="network-pulse-metric">
+      <span>Hashrate</span>
+      <strong data-pulse-field="hashrate">—</strong>
+    </div>
+    <div class="network-pulse-metric">
+      <span>Masternodes</span>
+      <strong data-pulse-field="masternodes">—</strong>
+    </div>
+    <div class="network-pulse-metric">
+      <span>Last block</span>
+      <strong data-pulse-field="last-block">—</strong>
+    </div>
+    <div class="network-pulse-metric pulse-secondary">
+      <span>8 min block avg.</span>
+      <strong data-pulse-field="block-time">—</strong>
+    </div>
+    <div class="network-pulse-metric pulse-secondary">
+      <span>Services</span>
+      <strong data-pulse-field="services">—</strong>
+    </div>
+  </div>
+
+  <p class="network-pulse-meta" data-pulse-meta aria-live="polite">
+    Live summary will appear when the cached monitor endpoint is available.
+    <a href="https://explorer.pepepow.org/">Open Explorer</a>
+  </p>
+
+  <div class="network-pulse-links">
+    <span>Proof of Work: <strong>HooHash V110</strong></span>
+    <a href="/network/">Network details</a>
+    <a href="https://explorer.pepepow.org/">Explorer ↗</a>
+  </div>
+</section>
+
+<script>
+  const formatInteger = (value) => {
+    const number = Number(value);
+    return Number.isFinite(number) ? Math.round(number).toLocaleString() : '—';
+  };
+
+  const formatSeconds = (value) => {
+    const number = Number(value);
+    if (!Number.isFinite(number)) return '—';
+    if (number < 60) return Math.max(0, Math.round(number)) + ' s';
+    const minutes = number / 60;
+    if (minutes < 60) return (minutes < 10 ? minutes.toFixed(1) : Math.round(minutes)) + ' min';
+    const hours = minutes / 60;
+    return (hours < 10 ? hours.toFixed(1) : Math.round(hours)) + ' h';
+  };
+
+  const formatStatus = (value) => {
+    const text = String(value || 'unknown').replaceAll('_', ' ');
+    return text.charAt(0).toUpperCase() + text.slice(1);
+  };
+
+  const bindPulse = (root) => {
+    if (!(root instanceof HTMLElement) || root.dataset.pulseBound === 'true') return;
+    root.dataset.pulseBound = 'true';
+
+    const endpoint = root.dataset.endpoint;
+    const statusNode = root.querySelector('[data-pulse-status]');
+    const metaNode = root.querySelector('[data-pulse-meta]');
+
+    const setField = (name, value) => {
+      const node = root.querySelector('[data-pulse-field="' + name + '"]');
+      if (node) node.textContent = value;
+    };
+
+    const setState = (state, label) => {
+      if (!statusNode) return;
+      statusNode.textContent = label;
+      statusNode.className = 'network-pulse-status is-' + state;
+      root.dataset.pulseState = state;
+    };
+
+    const render = (data) => {
+      setField('height', formatInteger(data.height));
+      setField('hashrate', data.hashrate_display || '—');
+      setField(
+        'masternodes',
+        formatInteger(data.masternode_enabled) + ' / ' + formatInteger(data.masternode_total),
+      );
+      setField('last-block', formatSeconds(data.last_block_age_seconds));
+      setField('block-time', formatSeconds(data.avg_block_time_8m));
+      setField('services', formatStatus(data.services?.overall_status));
+
+      const freshness = data.freshness || {};
+      const delayed =
+        Boolean(data.stale) ||
+        freshness.overall_status !== 'normal' ||
+        freshness.snapshot_status !== 'normal';
+
+      setState(delayed ? 'delayed' : 'live', delayed ? 'Delayed' : 'Live');
+
+      if (metaNode) {
+        const parts = [];
+        if (data.generated_at) {
+          const updated = new Date(data.generated_at);
+          if (!Number.isNaN(updated.valueOf())) {
+            parts.push('Updated ' + updated.toLocaleString());
+          }
+        }
+        if (Number.isFinite(Number(freshness.snapshot_age_seconds))) {
+          parts.push('snapshot age ' + formatSeconds(freshness.snapshot_age_seconds));
+        }
+        metaNode.textContent = parts.length ? parts.join(' · ') : 'Cached monitor summary received.';
+      }
+    };
+
+    const markUnavailable = () => {
+      setState('unavailable', 'Unavailable');
+      if (metaNode) {
+        metaNode.replaceChildren(
+          document.createTextNode('Live summary is temporarily unavailable. '),
+        );
+        const link = document.createElement('a');
+        link.href = 'https://explorer.pepepow.org/';
+        link.textContent = 'Open Explorer';
+        metaNode.append(link);
+      }
+    };
+
+    const refresh = async () => {
+      if (!endpoint || document.visibilityState === 'hidden') return;
+
+      const controller = new AbortController();
+      const timeout = window.setTimeout(() => controller.abort(), 5000);
+
+      try {
+        const response = await fetch(endpoint, {
+          method: 'GET',
+          cache: 'no-store',
+          credentials: 'omit',
+          signal: controller.signal,
+        });
+        if (!response.ok) throw new Error('network summary request failed');
+        render(await response.json());
+      } catch {
+        markUnavailable();
+      } finally {
+        window.clearTimeout(timeout);
+      }
+    };
+
+    refresh();
+    const interval = window.setInterval(refresh, 30000);
+
+    window.addEventListener(
+      'pagehide',
+      () => window.clearInterval(interval),
+      { once: true },
+    );
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') refresh();
+    });
+  };
+
+  document.querySelectorAll('[data-network-pulse]').forEach(bindPulse);
+</script>
