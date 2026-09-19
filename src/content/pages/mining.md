@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-# PEPEPOW Mining
-
 ## Earn and participate in the network through mining
 
 Join the Mining Community
