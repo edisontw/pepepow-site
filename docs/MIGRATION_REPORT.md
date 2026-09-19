@@ -295,3 +295,46 @@ The route map currently uses a same-path preservation strategy for every publish
 The manifests contain no WordPress author login/email fields and no raw post bodies.
 
 The media probe now exits successfully by default while recording unresolved URLs; `--strict` can be used when a non-zero exit is desired for validation gates.
+
+
+## Media availability probe — 2026-09-19
+
+The committed 296-attachment manifest was probed from GitHub Actions after URL/IRI normalization was added to the probe tool.
+
+Result:
+
+- **296** attachment URLs probed
+- **1** directly available
+- **295** blocked with HTTP 403 from `pepepow.org/wp-content/uploads/`
+- the one directly available item is an external WordPress Video MP4 at `videos.files.wordpress.com`
+
+The 295 HTTP 403 responses are classified as **blocked/unresolved**, not missing. A 403 response does not prove that the file no longer exists.
+
+The legacy static mirror was also enumerated recursively:
+
+- 559 files under `portal/pepepow-org/`
+- 2 image files, representing the same localized site logo in clean/raw copies
+- 0 PDF files
+- no exact attachment-basename matches against the 296 WXR attachment records
+
+Therefore the GitHub mirror cannot materially replace the missing WordPress uploads archive.
+
+### Targeted uploads recovery
+
+The WXR contains **295 unique canonical `_wp_attached_file` paths**. The remaining attachment is the externally hosted WordPress Video item.
+
+A precise recovery list is committed at:
+
+`migration/public/uploads-required.txt`
+
+A read-only helper is committed at:
+
+`scripts/migration/collect_uploads.py`
+
+This helper can be run against an existing WordPress `wp-content/uploads/` directory or mounted backup. It copies only the 295 required canonical files into a separate working directory and never modifies the WordPress source tree.
+
+Example dry run:
+
+`python3 scripts/migration/collect_uploads.py --uploads-root /path/to/wp-content/uploads --dry-run`
+
+This targeted approach avoids requesting or copying an entire WordPress backup when only the canonical attachment files are needed.
