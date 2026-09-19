@@ -338,3 +338,46 @@ Example dry run:
 `python3 scripts/migration/collect_uploads.py --uploads-root /path/to/wp-content/uploads --dry-run`
 
 This targeted approach avoids requesting or copying an entire WordPress backup when only the canonical attachment files are needed.
+
+
+## Edison2 legacy uploads recovery check — 2026-09-19
+
+The older WordPress installation currently present on `edison2` was checked against the 296-attachment migration manifest using:
+
+`/var/www/html/wordpress/wp-content/uploads`
+
+Dry-run result:
+
+- attachment records: **296**
+- canonical WordPress upload files found locally: **233**
+- canonical upload files missing locally: **62**
+- external attachment: **1**
+- invalid paths: **0**
+
+All 62 locally missing canonical uploads fall in **2025–2026**, consistent with the WordPress installation on `edison2` being an older backup rather than the final legacy-site media set.
+
+Missing canonical uploads by month:
+
+| Month | Missing |
+|---|---:|
+| 2025/01 | 7 |
+| 2025/02 | 6 |
+| 2025/03 | 1 |
+| 2025/04 | 2 |
+| 2025/05 | 3 |
+| 2025/06 | 3 |
+| 2025/07 | 5 |
+| 2025/08 | 1 |
+| 2025/09 | 1 |
+| 2025/11 | 8 |
+| 2025/12 | 1 |
+| 2026/01 | 3 |
+| 2026/02 | 3 |
+| 2026/03 | 4 |
+| 2026/04 | 4 |
+| 2026/05 | 5 |
+| 2026/06 | 1 |
+| 2026/07 | 3 |
+| 2026/08 | 1 |
+
+Recovery scope is therefore narrowed to these **62 exact canonical paths** from a newer legacy WordPress filesystem or verified backup. The existing 233 files on `edison2` do not need to be re-downloaded from the old site.
