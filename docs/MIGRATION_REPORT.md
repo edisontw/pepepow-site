@@ -190,12 +190,11 @@ route wiring, or exact legacy-host link cleanup.
 
 Priority now:
 
-1. Resolve the remaining current-consensus DevFee/funding description directly from PEPEPOW Core code.
-2. Audit external links inside historical announcements separately, preserving historical context.
-3. Review the recovered Announcements page and historical posts for readability/formatting artifacts that require
+1. Audit external links inside historical announcements separately, preserving historical context.
+2. Review the recovered Announcements page and historical posts for readability/formatting artifacts that require
    human judgment, without changing historical claims merely to match today's state.
-4. Keep content `status: draft` and `migration_review: true` until the remaining review gates are complete.
-5. After content review, proceed to staging visual/responsive/accessibility work. Production Nginx remains out of scope
+3. Keep content `status: draft` and `migration_review: true` until the remaining review gates are complete.
+4. After content review, proceed to staging visual/responsive/accessibility work. Production Nginx remains out of scope
    until staging acceptance.
 
 
@@ -548,9 +547,9 @@ Verified findings and resulting changes:
 - The PEPEPOW Explorer currently exposes market data for **NonKYC** and **NestEx**. Exbitron could
   not be independently confirmed during this check and is therefore no longer presented as a
   confirmed active venue.
-- The About page's exact current DevFee allocation remains deliberately unresolved. Historical
-  documents and release notes describe different funding eras; the draft now says this should be
-  documented directly from current consensus code before publishing a fixed present-day allocation.
+- The About page's exact current reward/funding split was initially left unresolved because historical
+  documents and release notes describe different funding eras. It was subsequently resolved in the
+  dedicated consensus-code verification below.
 
 All six pages remain `status: draft` and `migration_review: true`. This pass corrects
 high-confidence current operational errors but does not yet assert that every external link,
@@ -635,6 +634,52 @@ Remaining external-link work is intentionally narrower:
 2. periodically re-run live probes manually or in a future non-blocking scheduled workflow
 3. audit external links inside historical announcements separately, preserving historical context
 4. do not interpret a market-data aggregator's exchange list as authoritative service status
+
+No production deployment or Nginx change was made in this slice.
+
+## Current consensus reward/funding verification — 2026-09-19
+
+The remaining DevFee/foundation ambiguity was resolved by reading the current `MattF42/PePe-core`
+`master` implementation rather than relying on historical announcements or stale comments.
+
+Current executable reward path:
+
+- `src/validation.cpp::GetFoundationPayment()` returns **250 PEPEW** on mainnet after height
+  1,065,649 for a normal block.
+- The same function scales that foundation payment with PEPEPOW's special-block pattern:
+  **2×** when the relevant height matches the 100-block bonus condition and **5×** on the
+  corresponding 1000-block bonus condition.
+- `src/masternode-payments.cpp::FillBloc()` creates the foundation coinbase output and subtracts
+  that amount from the miner output before the rest of the payment construction completes.
+- `src/validation.cpp::GetMasternodePayment()` calculates the masternode payment as
+  **35% of (block reward − foundation payment)**.
+- `src/masternode-payments.cpp::FillBlockPayee()` assigns the miner the remainder:
+  **block reward − masternode payment − foundation payment**, and appends the selected masternode
+  output.
+- `src/spork.h` retains `SPORK_15_REQUIRE_FOUNDATION_FEE` with its historical 1 Feb 2024
+  activation default.
+
+This means the old public shorthand **65% miner / 35% masternode** is not an exact description of
+the current coinbase distribution. The current coinbase has three economic outputs in normal
+operation: miner, selected masternode, and foundation/development payment. The masternode's 35%
+is calculated after the foundation amount is removed; the miner receives the remainder.
+
+The source tree also contains older constants/comments such as a legacy `FOUNDATION` constant and
+older percentage wording. Those comments are not used as the website authority when they conflict
+with the currently executed `GetFoundationPayment()` / `GetMasternodePayment()` /
+`FillBloc()` / `FillBlockPayee()` path.
+
+Resulting content changes:
+
+- About no longer displays a `65% / 35%` metric as current consensus.
+- About explains the current three-output coinbase logic and the 250-PEPEW normal-block foundation
+  amount.
+- Homepage "Dual reward system" wording was replaced by current block-reward distribution wording.
+- Historical references to "DevFee" remain valid as historical terminology, while current
+  consensus-facing text uses **foundation/development payment** and explains the code-defined split.
+
+This closes the current-consensus funding/reward review gate. Historical posts are not rewritten
+solely because they describe older reward eras.
 
 No production deployment or Nginx change was made in this slice.
 
