@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 Big News for PEPEPOW!
 We're thrilled to announce our official partnership with **Gemma Tipping Bot** – the new tipping solution for Discord communities!
 Months back we discussed Tip.CC integration and many of you were really into this idea, however it turned out to be too expensive for PEPEW at the time. and not worth it for some users. Well I managed to get a great deal with Gemma's dev for 1/5th of what Tip.CC costs ( just $100, we were thinking of using the dev fee for this, poll and vote if you agree!)

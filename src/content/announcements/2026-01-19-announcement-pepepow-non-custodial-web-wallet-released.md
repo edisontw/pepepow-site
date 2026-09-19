@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 We are pleased to announce that the new **PEPEPOW Non-Custodial Web Wallet** has been completed and is now available for public testing.
 
 This wallet is designed with a security-first philosophy. Mnemonic phrases and private keys are generated and stored exclusively on the user side. All transaction signing is performed locally, ensuring that sensitive key material is never exposed to the server.

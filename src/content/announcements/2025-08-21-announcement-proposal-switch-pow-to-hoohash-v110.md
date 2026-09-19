@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 Foztor has spoken with Tonto (owner of HTN & HooHash). If PEPEPOW adopts HooHash V110, we would gain:
 CUDA miner (NVIDIA)
 OpenCL miner (AMD/Intel, to be extended by Tonto)

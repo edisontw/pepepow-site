@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 ## [MANDATORY UPGRADE: PePe-core v2.8.1.1]
 
 **Release:** [v2.8.1.1 on GitHub](https://github.com/MattF42/PePe-core/releases/tag/v2.8.1.1)

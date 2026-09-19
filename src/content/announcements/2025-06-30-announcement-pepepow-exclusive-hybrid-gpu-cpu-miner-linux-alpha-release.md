@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 **PEPEPOW Exclusive Hybrid GPU/CPU Miner (Linux)– Alpha Release!**
 After much development by Foztor and enthusiastic developers, the first hybrid GPU/CPU miner specifically for PEPEPOW is now in public alpha testing! All miners are welcome to test and share your performance results!
 **Key Notes & Testing Guidelines**

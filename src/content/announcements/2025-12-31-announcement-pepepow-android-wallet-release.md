@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 **Happy New Year 2026!**
 Wishing everyone a great year ahead.
 After extensive development, testing, and refinement,

@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 ## **PEPEPOW Development Progress & Roadmap Update**
 
 Hey everyone! Here’s an update on what has been completed so far and what’s coming next for the PEPEPOW ecosystem. A huge thank you to all contributors and community members pushing the project forward!
