@@ -4,9 +4,9 @@ Official source repository for the next-generation PEPEPOW community website at 
 
 ## Status
 
-Planning and migration are in progress.
+Migration and rebuild are in progress.
 
-The new site will replace the legacy WordPress presentation with a maintainable static-first architecture while preserving useful PEPEPOW content, public URLs, media, documents, and historical announcements.
+The new site replaces the legacy WordPress presentation with a maintainable static-first architecture while preserving useful PEPEPOW content, public URLs, media, documents, and historical announcements.
 
 ## Direction
 
@@ -17,6 +17,47 @@ The new site will replace the legacy WordPress presentation with a maintainable 
 - **Dynamic data:** small read-only public APIs only where needed
 - **Primary focus:** PEPEPOW information, tools, network visibility, mining, masternodes, wallets, community and education
 - **Secondary focus:** small, curated cryptocurrency news and reference information
+
+## Read first
+
+Before substantial website work, read:
+
+1. `CHATGPT_PROJECT_CONTEXT.md`
+2. `docs/WEBSITE_PLAN.md`
+3. `docs/MIGRATION_REPORT.md` when working on restored WordPress content/media
+
+## Local site development
+
+Current Astro requires Node.js 22.12 or newer. The repository includes `.nvmrc` for Node 22.
+
+```bash
+npm install
+npm run dev
+```
+
+Production-style static build:
+
+```bash
+npm run build
+```
+
+Output is written to `dist/`.
+
+## WordPress migration inventory
+
+Raw WXR exports are migration inputs and must remain outside Git.
+
+Run the privacy-conscious inventory tool against one or more local exports:
+
+```bash
+python3 scripts/migration/wxr_inventory.py \
+  /path/to/pepepowcommunityorganization.WordPress.2026-09-18.xml \
+  /path/to/pepepowcommunityorganization.WordPress.2026-09-19.xml
+```
+
+Local outputs are written to `migration/work/` and ignored by Git.
+
+See `docs/MIGRATION_REPORT.md` for the currently validated inventory.
 
 ## Migration sources
 
@@ -29,13 +70,6 @@ Migration sources are evidence/input only and are not future website authority:
 
 Do not copy WordPress/Elementor generated HTML as the long-term content architecture.
 
-## Read first
-
-Before substantial website work, read:
-
-1. `CHATGPT_PROJECT_CONTEXT.md`
-2. `docs/WEBSITE_PLAN.md`
-
 ## Security
 
 Do not commit:
@@ -46,6 +80,7 @@ Do not commit:
 - private keys or masternode secrets
 - `.env` files
 - raw WordPress exports containing author/account metadata
+- local migration inventories generated from private inputs
 
 The website must never require direct browser access to wallet/node RPC.
 
