@@ -54,6 +54,19 @@ def content_files(content_root: Path) -> list[Path]:
     return sorted(path for path in result if not path.name.startswith("_"))
 
 
+def referenced_legacy_upload_paths(content_root: Path) -> set[str]:
+    paths: set[str] = set()
+    for path in content_files(content_root):
+        content = path.read_text(encoding="utf-8")
+        for match in UPLOAD_URL_RE.finditer(content):
+            raw_path = unquote(
+                match.group("path").split("?", 1)[0].split("#", 1)[0]
+            ).lstrip("/")
+            if raw_path:
+                paths.add(raw_path)
+    return paths
+
+
 def resolve_upload_reference(
     raw_path: str,
     by_upload_path: dict[str, str],
@@ -224,6 +237,41 @@ def main() -> int:
 
         # Copying is performed after content-reference selection is known.
 
+    supplemental_records: list[dict[str, object]] = []
+    referenced_paths = referenced_legacy_upload_paths(args.content_root)
+
+    for raw_path in sorted(referenced_paths):
+        if resolve_upload_reference(raw_path, by_upload_path):
+            continue
+
+        try:
+            upload_path = safe_upload_path(raw_path)
+        except ValueError:
+            continue
+
+        source = args.recovered_root.joinpath(*upload_path.parts)
+        if not source.is_file():
+            continue
+
+        public_url = public_path_for(upload_path)
+        size_bytes = source.stat().st_size
+        record = {
+            "wordpress_id": "",
+            "title": upload_path.name,
+            "upload_path": raw_path,
+            "legacy_url": (
+                "https://pepepow.org/wp-content/uploads/" + raw_path
+            ),
+            "public_url": public_url,
+            "size_bytes": size_bytes,
+            "sha256": sha256_file(source),
+            "source_kind": "supplemental_content_reference",
+        }
+        supplemental_records.append(record)
+        records.append(record)
+        by_upload_path[raw_path] = public_url
+        total_bytes += size_bytes
+
     rewrite_report = rewrite_content(
         args.content_root,
         by_upload_path,
@@ -262,7 +310,8 @@ def main() -> int:
         "source_manifest": str(args.manifest),
         "recovered_root": str(args.recovered_root),
         "audit_only": args.audit_only,
-        "canonical_file_count": len(records),
+        "canonical_file_count": len(records) - len(supplemental_records),
+        "supplemental_file_count": len(supplemental_records),
         "external_attachment_count": len(external),
         "missing_count": len(missing),
         "invalid_count": len(invalid),
@@ -285,7 +334,9 @@ def main() -> int:
         )
 
     print(
-        f"Canonical files: {len(records)} | external: {len(external)} | "
+        f"Canonical files: {len(records) - len(supplemental_records)} | "
+        f"supplemental: {len(supplemental_records)} | "
+        f"external: {len(external)} | "
         f"missing: {len(missing)} | invalid: {len(invalid)}"
     )
     print(f"Total bytes: {total_bytes}")
@@ -297,6 +348,10 @@ def main() -> int:
         f"{rewrite_report['replacement_count']} resolvable | "
         f"{rewrite_report['unresolved_url_count']} unresolved"
     )
+    if rewrite_report["unresolved_urls"]:
+        print("Unresolved legacy upload URLs:")
+        for url in rewrite_report["unresolved_urls"]:
+            print(f"  {url}")
     if args.audit_only:
         print("Audit only: no files were copied and no content was modified.")
     else:

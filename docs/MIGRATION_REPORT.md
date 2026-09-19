@@ -435,3 +435,23 @@ Repository staging policy:
 4. keep historical installers/ZIPs and unreferenced source artwork out of the website repository unless there is a specific public-site requirement
 
 `scripts/migration/stage_recovered_media.py --audit-only --referenced-only` reports the exact referenced-file count and byte size before any copy occurs. It also prints unresolved legacy upload URLs for follow-up.
+
+
+### Referenced media audit
+
+A referenced-only audit against the recovered Markdown/MDX found:
+
+- canonical attachment files selected: **55**
+- selected canonical payload: **22,914,070 bytes** (about 21.9 MiB)
+- resolvable legacy upload URL occurrences: **63**
+- unresolved legacy upload URLs: **3**
+
+The three unresolved paths are:
+
+- `2024/02/thumb-1.jpg`
+- `2024/02/thumb-2.jpg`
+- `2024/02/thumb-3.jpg`
+
+These are referenced by the legacy Masternode page but are not present as canonical attachment records in the WXR manifest. They are therefore treated as **supplemental content-referenced media**, not silently promoted to WXR attachments.
+
+The staging tool now recognizes such supplemental files when they are placed at their original relative path under `migration/work/recovered-uploads/`. It reports them separately and can stage/rewrite them together with the 55 canonical referenced files.
