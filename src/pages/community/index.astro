@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const communityLinks = [
+  {
+    title: 'Discord',
+    text: 'The main public community discussion entry point currently referenced by the PEPEPOW site.',
+    href: 'https://discord.gg/sJgDVRkBcq',
+    label: 'Join Discord',
+  },
+  {
+    title: 'Website source',
+    text: 'Review or contribute to the source for pepepow.net. GitHub main is the public website authority.',
+    href: 'https://github.com/edisontw/pepepow-site',
+    label: 'Open site repository',
+  },
+  {
+    title: 'PEPEPOW Core',
+    text: 'Inspect the current node and wallet source, releases, issues, and technical history.',
+    href: 'https://github.com/MattF42/PePe-core',
+    label: 'Open Core repository',
+  },
+  {
+    title: 'Announcements',
+    text: 'Browse recovered project releases, network changes, community notices, and historical decisions.',
+    href: '/announcements/',
+    label: 'Browse announcements',
+  },
+  {
+    title: 'Explorer',
+    text: 'Check current public network information before treating an old announcement or guide as operationally current.',
+    href: 'https://explorer.pepepow.org/',
+    label: 'Open Explorer',
+  },
+  {
+    title: 'Community infrastructure',
+    text: 'Use the maintained community and lab pool entry points from the current mining guidance.',
+    href: '/mining/',
+    label: 'Open mining resources',
+  },
+];
+
+const participation = [
+  ['Verify before repeating', 'Prefer current source code, releases, Explorer data, and dated announcements over screenshots or copied instructions.'],
+  ['Protect keys and recovery material', 'Never post private keys, wallet.dat files, seed phrases, masternode private keys, or RPC credentials in public support channels.'],
+  ['Preserve historical context', 'Older announcements remain useful records, but software versions, exchange availability, pools, peer addresses, and recovery steps can become obsolete.'],
+  ['Contribute reproducibly', 'For website corrections, use the public repository so changes can be reviewed, traced, and rebuilt from source.'],
+];
+---
+
+<BaseLayout
+  title="Community"
+  description="PEPEPOW community links, contribution paths, source repositories, announcements, and safety guidance."
+>
+  <article class="hub-page">
+    <header class="hub-page-header">
+      <p class="eyebrow">Community</p>
+      <h1>Participate through verifiable public channels.</h1>
+      <p class="current-page-lede">
+        PEPEPOW is maintained across open repositories, public network services, announcements, and
+        community discussion. Use current sources when technical or financial details matter.
+      </p>
+      <div class="actions">
+        <a class="button" href="https://discord.gg/sJgDVRkBcq">Join Discord</a>
+        <a class="button secondary" href="https://github.com/edisontw/pepepow-site">Website source</a>
+        <a class="button secondary" href="https://github.com/MattF42/PePe-core">Core source</a>
+      </div>
+    </header>
+
+    <section class="hub-section" aria-labelledby="community-links-title">
+      <div class="section-heading">
+        <p class="eyebrow">Entry points</p>
+        <h2 id="community-links-title">Where to go.</h2>
+      </div>
+      <div class="hub-card-grid">
+        {communityLinks.map((item) => (
+          <article class="hub-card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+            <a class="text-action" href={item.href}>{item.label} →</a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="hub-section" aria-labelledby="participation-title">
+      <div class="section-heading">
+        <p class="eyebrow">Participation</p>
+        <h2 id="participation-title">Keep community work auditable and safe.</h2>
+      </div>
+      <dl class="hub-definition-list">
+        {participation.map(([term, description]) => (
+          <div>
+            <dt>{term}</dt>
+            <dd>{description}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+
+    <section class="hub-section" aria-labelledby="history-title">
+      <div class="section-heading">
+        <p class="eyebrow">History and governance</p>
+        <h2 id="history-title">Use the archive as evidence, not as a live status page.</h2>
+      </div>
+      <p class="hub-copy">
+        Community votes, funding discussions, service changes, releases, and incident updates are
+        preserved in the announcement archive. Search the site for a topic when you need the
+        original dated record, then verify current operational state through the relevant current
+        page, repository, or Explorer.
+      </p>
+      <div class="actions">
+        <a class="button secondary" href="/search/?q=vote">Search governance history</a>
+        <a class="button secondary" href="/announcements/">Announcement archive</a>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
