@@ -29,9 +29,11 @@ Inspired by the iconic Pepe meme, this platform has been created on f**irst laye
 
 The total supply is capped at **90** **billion** coins.
 
-### Dual reward system
+### Block reward distribution
 
-Both **miners** and **masternode** holders share the block rewards, incentivizing participation and maintaining network stability.
+PEPEPOW coinbase rewards are split between the **miner**, the selected **masternode**, and a **foundation/development output** defined by the current Core consensus code.
+
+For normal mainnet blocks, Core currently calculates the masternode payment as **35% of the block reward after subtracting the foundation payment**. The miner receives the remaining coinbase amount. The foundation payment is a fixed **250 PEPEW** on normal blocks and scales with PEPEPOW's 2× / 5× special-block reward pattern.
 
 ### Current Proof-of-Work
 
@@ -92,9 +94,9 @@ The PepePow whitepaper outlines a new blockchain project built around the popula
 
 PEPEPOW encountered a chain disconnection and subsequent death incident. Following this survival, the developer fee was suspended for an extended period.
 
-### Developer Fee Reinstated
+### Development funding
 
-Following the vote, the developer fee was reinstated, and the development process is progressing forward.
+Historical announcements often call this the **DevFee**. In the current Core code, the consensus-level output is named the **foundation payment**. Its amount and the miner/masternode split are defined by Core rather than by a simple fixed 65% / 35% headline ratio.
 
 ## PEPEPOW Development Roadmap
 
