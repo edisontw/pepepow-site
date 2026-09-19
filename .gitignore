@@ -12,9 +12,11 @@ dist/
 *.p12
 *.pfx
 
-# Private migration inputs
+# Private migration inputs / local working output
 *.WordPress.*.xml
 migration/private/
+migration/work/
+migration/downloads/
 private/
 secrets/
 
