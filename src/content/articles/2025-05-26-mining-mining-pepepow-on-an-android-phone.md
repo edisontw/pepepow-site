@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 Quick & Complete Guide – Mining PEPEPOW on Android
 
 ## Quick & Complete Guide – Mining **PEPEPOW** on an Android Phone

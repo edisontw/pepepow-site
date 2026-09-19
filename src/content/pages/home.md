@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 ![](/media/legacy/2024/12/PEPEPOW-sci.png)
 [Join new discord
 (since 2024.2.24)](https://discord.gg/sJgDVRkBcq)

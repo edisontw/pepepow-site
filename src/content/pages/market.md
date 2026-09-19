@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 # PEPEPOW Market
 
 Market Overview
@@ -46,7 +44,6 @@ Historical link: <https://app.exbitron.com/exchange/?market=PEPEW-USDT>
 
 - **XeggeX** — historical closed exchange; do not use for deposits.
 - **Dex-Trade** — PEPEW was delisted and should be treated as historical only.
-
 
 ### Market Focus
 

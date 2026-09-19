@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 ### **Step-by-Step Guide to Fix Blockchain Sync Stuck**
 
 If your PEPEPOW wallet is stuck at a certain block and not syncing further, follow these steps to troubleshoot and resolve the issue.

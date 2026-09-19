@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 # Understanding and Fixing the “Transaction Too Large” Issue on PEPEPOW
 
 The **“transaction too large”** error is a common issue on **UTXO-based blockchains**, including PEPEPOW.
