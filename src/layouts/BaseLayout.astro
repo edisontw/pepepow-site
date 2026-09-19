@@ -1,0 +1,45 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'PEPEPOW',
+  description = 'PEPEPOW community-powered Proof of Work.',
+} = Astro.props;
+
+const pageTitle = title === 'PEPEPOW' ? title : `${title} | PEPEPOW`;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={Astro.url} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/">PEPEPOW</a>
+      <nav aria-label="Primary">
+        <a href="/about/">PEPEPOW</a>
+        <a href="/network/">Network</a>
+        <a href="/mining/">Mining</a>
+        <a href="/masternode/">Masternode</a>
+        <a href="/wallet/">Wallets</a>
+        <a href="/announcements/">News</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <p>PEPEPOW community website · Open source · Community driven</p>
+    </footer>
+  </body>
+</html>
