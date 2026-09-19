@@ -480,6 +480,7 @@ Cleanup completed in this slice:
   the substantive Masternode setup content was retained
 - residual `skip render:` migration markers were removed
 - a legacy WordPress emoji-CDN image reference was converted to its Unicode emoji
+- the recovered About page had one unmatched Markdown code fence that caused its remaining roadmap/FAQ content to render as code; the fence was removed and one hidden malformed `h/media/...` image path was corrected
 - `scripts/migration/wxr_extract.py` now performs the reproducible portions of the same cleanup
   so a future WXR restage does not silently reintroduce those artifacts
 
@@ -496,6 +497,7 @@ Validated in GitHub Actions on PR #1:
 - content/link validation: **112 content files / 106 HTML files / 804 internal references checked**
 - content/link validation result: **0 source issues / 0 generated-link issues**
 - migration-script compile check: **PASS**
+- Markdown fence-balance validation: **PASS** after the About-page repair
 
 Recovered historical and current-sensitive material remains `status: draft` and
 `migration_review: true`; this cleanup does not promote it to current authoritative guidance.
