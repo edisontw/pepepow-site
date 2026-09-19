@@ -998,3 +998,71 @@
       "wordpress_id": "1548",
       "post_type": "post",
       "title": "[Wallet] Recovering Android Mobile Wallet on PC",
+      "slug": "wallet-recovering-android-mobile-wallet-on-pc",
+      "legacy_path": "/wallet-recovering-android-mobile-wallet-on-pc/",
+      "target_path": "/wallet-recovering-android-mobile-wallet-on-pc/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3275",
+      "post_type": "post",
+      "title": "[Wallet] Step-by-Step Guide to Fix Blockchain Sync Stuck",
+      "slug": "wallet-step-by-step-guide-to-fix-blockchain-sync-stuck-2",
+      "legacy_path": "/wallet-step-by-step-guide-to-fix-blockchain-sync-stuck-2/",
+      "target_path": "/wallet-step-by-step-guide-to-fix-blockchain-sync-stuck-2/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3023",
+      "post_type": "post",
+      "title": "[Wallet] Step-by-Step Guide to Fix Blockchain Sync Stuck",
+      "slug": "wallet-step-by-step-guide-to-fix-blockchain-sync-stuck",
+      "legacy_path": "/wallet-step-by-step-guide-to-fix-blockchain-sync-stuck/",
+      "target_path": "/wallet-step-by-step-guide-to-fix-blockchain-sync-stuck/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1546",
+      "post_type": "post",
+      "title": "[Wallet] Sync issue with block 1070288",
+      "slug": "wallet-sync-issue-with-block-1070288",
+      "legacy_path": "/wallet-sync-issue-with-block-1070288/",
+      "target_path": "/wallet-sync-issue-with-block-1070288/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "1544",
+      "post_type": "post",
+      "title": "[Wallet] Transaction too large (provided by mancrimson)",
+      "slug": "wallet-transaction-too-large",
+      "legacy_path": "/wallet-transaction-too-large/",
+      "target_path": "/wallet-transaction-too-large/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "3395",
+      "post_type": "post",
+      "title": "[Wallet] Understanding and Fixing the “Transaction Too Large” Issue on PEPEPOW",
+      "slug": "wallet-understanding-and-fixing-the-transaction-too-large-issue-on-pepepow",
+      "legacy_path": "/wallet-understanding-and-fixing-the-transaction-too-large-issue-on-pepepow/",
+      "target_path": "/wallet-understanding-and-fixing-the-transaction-too-large-issue-on-pepepow/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    },
+    {
+      "wordpress_id": "350",
+      "post_type": "post",
+      "title": "2023.12.12 Project Updates: Wallets, Exchanges, Mining, and Community Engagement",
+      "slug": "week-1-dec-23",
+      "legacy_path": "/week-1-dec-23/",
+      "target_path": "/week-1-dec-23/",
+      "route_mode": "same_path",
+      "content_state": "recovered_draft"
+    }
+  ]
+}
