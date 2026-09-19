@@ -13,6 +13,8 @@ featured: false
 migration_review: true
 ---
 
+> **Legacy safety warning:** This archived procedure targets the software and network state at its publication date. Do not run these commands verbatim on a current wallet or node. Verify the current PEPEPOW Core release and network state first. Stop the wallet cleanly and keep a separate backup of `wallet.dat` before file or blockchain changes. Never share private keys or recovery phrases. Treat hard-coded peers, block heights, download URLs, and services as historical, and inspect any remote script before executing it.
+
 Follow these steps to recover your Android mobile wallet on a PC wallet using a 12-word recovery phrase:
 1. Stop the wallet program. If there is an existing PC wallet, backup or rename the original PC wallet file `wallet.dat`. Skip this step if there is no previous PC wallet.
 2. Edit or create a file named `PEPEPOW.conf` in the wallet folder and add the following lines:

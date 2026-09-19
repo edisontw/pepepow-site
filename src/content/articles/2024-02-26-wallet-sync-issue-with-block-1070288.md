@@ -13,6 +13,8 @@ featured: false
 migration_review: true
 ---
 
+> **Legacy safety warning:** This archived procedure targets the software and network state at its publication date. Do not run these commands verbatim on a current wallet or node. Verify the current PEPEPOW Core release and network state first. Stop the wallet cleanly and keep a separate backup of `wallet.dat` before file or blockchain changes. Never share private keys or recovery phrases. Treat hard-coded peers, block heights, download URLs, and services as historical, and inspect any remote script before executing it.
+
 If you're experiencing sync problems with block 1070288, please follow these steps:
 1. Ensure you're using the latest wallet version (v2.4.7.1) for Windows. Download it from: [PEPEPOW-v2.4.7.1-release-x86\_64-w64-mingw32.zip](https://github.com/MattF42/PePe-core/releases/download/v2.4.7.1/PEPEPOW-v2.4.7.1--release-x86\_64-w64-mingw32.zip)
 2. Open the wallet and navigate to `Tools` >> `Debug Console`.

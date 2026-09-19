@@ -13,6 +13,8 @@ featured: false
 migration_review: true
 ---
 
+> **Legacy safety warning:** This archived procedure targets the software and network state at its publication date. Do not run these commands verbatim on a current wallet or node. Verify the current PEPEPOW Core release and network state first. Stop the wallet cleanly and keep a separate backup of `wallet.dat` before file or blockchain changes. Never share private keys or recovery phrases. Treat hard-coded peers, block heights, download URLs, and services as historical, and inspect any remote script before executing it.
+
 1. Obtain 10 million PEPEW coins.
 2. Install a new QT wallet and wait for synchronization. Find the wallet address under: File >> Receiving Addresses. Transfer exactly 10 million PEPEW coins in one transaction.
 3. Open Masternode setup: Settings >> Options >> Wallet >> Enable Masternode tab. Configure and restart the wallet.
