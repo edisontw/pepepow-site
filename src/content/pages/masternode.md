@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-# PEPEPOW Masternodes
-
 ## Masternodes play a crucial role
 
 Earning rewards from governance
@@ -45,7 +43,7 @@ Masternodes enable the implementation of advanced privacy features such as Priva
 
 Earning rewards from governance
 
-# PEPEPOW Masternode Setup Guide
+## PEPEPOW Masternode Setup Guide
 
 A clear and professional step-by-step guide for setting up a PEPEPOW Masternode on
 **Windows** or **Ubuntu/Linux**.
