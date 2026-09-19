@@ -138,10 +138,10 @@ constructive, contribution-oriented, and optimistic.
 These documents provide historical, governance, technical, roadmap, and visual references for the PEPEPOW community.
 
 [PEPEPOW White Paper v1.0 — 18 Sep 2023, Minus](https://docs.google.com/document/d/1FIs7lQo_7tjNhJ9n95_YrvuIGmLlSjmkKqEWIktlU5Q/edit?tab=t.0)
-[PEPEPOW DAO Reference — 25 Oct 2023, Minus](https://pepepow.org/wp-content/uploads/2023/10/pepepow-dao-op-policy-v1.0.0.pdf)
-[PEPEPOW White Paper v2.0 — 26 Jan 2025, Edison](https://pepepow.org/wp-content/uploads/2023/09/whitepaper-v1.0.1.pdf)
-[PEPEPOW Visual Reference Guideline v1.0 — 1 Jan 2026, Edison](https://pepepow.org/wp-content/uploads/2026/01/PEPEPOW-Visual-Reference-Guideline-v1.0.pdf)
-[PEPEPOW White Paper v2.1 — 31 May 2026, Edison](https://pepepow.org/wp-content/uploads/2026/05/PEPEPOW-Whitepaper-v2.1.pdf)
+[PEPEPOW DAO Reference — 25 Oct 2023, Minus](/docs/legacy/2023/10/pepepow-dao-op-policy-v1.0.0.pdf)
+[PEPEPOW White Paper v2.0 — 26 Jan 2025, Edison](/docs/legacy/2023/09/whitepaper-v1.0.1.pdf)
+[PEPEPOW Visual Reference Guideline v1.0 — 1 Jan 2026, Edison](/docs/legacy/2026/01/PEPEPOW-Visual-Reference-Guideline-v1.0.pdf)
+[PEPEPOW White Paper v2.1 — 31 May 2026, Edison](/docs/legacy/2026/05/PEPEPOW-Whitepaper-v2.1.pdf)
 
 ### Risk Reminder
 
@@ -162,7 +162,7 @@ and long-term community contributors. Learn, build, mine, document, improve, and
 [Join Discord](https://discord.gg/sJgDVRkBcq)
 
 ```
-![](https://pepepow.org/wp-content/uploads/2024/12/adminDAO-1024x576.png)
+![](/media/legacy/2024/12/adminDAO.png)
 Q Q2 2023
 Project Milestones
 
@@ -175,7 +175,7 @@ Project Milestones
 - Achieve 1st Exchange Listing
 - Fix PrivateSend
 
-![PEPEPOW Launch](https://pepepow.org/wp-content/uploads/2024/09/2d238ae8-b864-499b-99ce-687f49289298.jpg)
+![PEPEPOW Launch](/media/legacy/2024/09/2d238ae8-b864-499b-99ce-687f49289298.jpg)
 Q3 2023
 Project Direction Discussions
 
@@ -189,7 +189,7 @@ Project Direction Discussions
 - Initiate DAO Nominations
 - Launch PEPEW Faucet
 
-![community](https://pepepow.org/wp-content/uploads/2024/06/GObJzcKXQAAM_7D.jpg)
+![community](/media/legacy/2024/06/GObJzcKXQAAM_7D.jpg)
 Q4 2023
 Expansion Updates
 
@@ -201,7 +201,7 @@ Expansion Updates
 - Achieve 3rd Exchange Listing
 - Release Game: PEPE Quest (Alpha)
 
-![PEPEPOW growth](https://pepepow.org/wp-content/uploads/2024/09/PEPEPOW-Dragon-game.png)
+![PEPEPOW growth](/media/legacy/2024/09/PEPEPOW-Dragon-game.png)
 Q1 2024
 Operational Adjustments
 
@@ -212,7 +212,7 @@ Operational Adjustments
 - Launch New Discord Server
 - Host Masternodes Using Developer Fee
 
-![PEPEPOW Expansion](https://pepepow.org/wp-content/uploads/2024/09/PEPEPOW-discussion.webp)
+![PEPEPOW Expansion](/media/legacy/2024/09/PEPEPOW-discussion.webp)
 Q2 2024
 Listing on 3rd App Platforms
 
@@ -221,7 +221,7 @@ Listing on 3rd App Platforms
 - List on FORSA platform?Mobile wallet / Masternode holding / New explorer support?
 - Vidulum platform building?suspend?
 
-![PEPEPOW Launch](https://pepepow.org/wp-content/uploads/2024/09/PEPEPOW-mobile2.webp)
+![PEPEPOW Launch](/media/legacy/2024/09/PEPEPOW-mobile2.webp)
 Q3 2024
 New Algorithm Switch
 
@@ -231,7 +231,7 @@ New Algorithm Switch
 - Enable CPU Mining
 - Launch on Xeggex Exchange App
 
-![PEPEPOW Launch](https://pepepow.org/wp-content/uploads/2024/03/VIDULUM-APPjpg.jpg)
+![PEPEPOW Launch](/media/legacy/2024/03/VIDULUM-APPjpg.jpg)
 Q4 2024
 Start from New Algorithm
 
@@ -241,7 +241,7 @@ Start from New Algorithm
 - IEO on Dex-Trade
 - Social media update and expansion
 
-![PEPEPOW Launch](hhttps://pepepow.org/wp-content/uploads/2024/09/PEPEPOW-CPU-miner.webp)
+![PEPEPOW Launch](h/media/legacy/2024/09/PEPEPOW-CPU-miner.webp)
 Q1 2025
 Adoption and Expansion
 
@@ -252,7 +252,7 @@ Adoption and Expansion
 - Explore Bridging Possibility
 - Reinstate GPU mining support
 
-![PEPEPOW Launch](https://pepepow.org/wp-content/uploads/2024/09/PEPEPOW-desktop1.webp)
+![PEPEPOW Launch](/media/legacy/2024/09/PEPEPOW-desktop1.webp)
 Q2 2025
 Partnerships & Multichain
 
@@ -263,7 +263,7 @@ Partnerships & Multichain
 - Initiate DEX and bridging discussions
 - New Tiered Masternode is supported
 
-![PEPEPOW Launch](https://pepepow.org/wp-content/uploads/2024/07/pepepow-_jewel_adventure2.webp)
+![PEPEPOW Launch](/media/legacy/2024/07/pepepow-_jewel_adventure2.webp)
 Q3 2025
 Reliability Focus
 
@@ -273,7 +273,7 @@ Reliability Focus
 - Introduce basic DeFi features
 - Hybrid GPU/CPU miner specifically for PEPEPOW is supported
 
-![PEPEPOW Launch](https://pepepow.org/wp-content/uploads/2024/11/PEPEPOW-underwater-adventure.webp)
+![PEPEPOW Launch](/media/legacy/2024/11/PEPEPOW-underwater-adventure.webp)
 Q4 2025
 Governance & Wallets
 
@@ -282,7 +282,7 @@ Governance & Wallets
 - Add Komodo Wallet integration
 - Pilot basic governance tools via DAO voting
 
-![PEPEPOW Launch](https://pepepow.org/wp-content/uploads/2024/11/PEPEPOW-realistic-style.webp)
+![PEPEPOW Launch](/media/legacy/2024/11/PEPEPOW-realistic-style.webp)
 Q1 2026
 Program Expansion
 
@@ -292,7 +292,7 @@ Program Expansion
 - Onboard more community developers
 - Improve infrastructure for wallets and masternodes
 
-![PEPEPOW Launch](https://pepepow.org/wp-content/uploads/2024/08/PEPEPOW-Griffin3.webp)
+![PEPEPOW Launch](/media/legacy/2024/08/PEPEPOW-Griffin3.webp)
 Q2 2026
 Swaps & Bridge
 
@@ -301,7 +301,7 @@ Swaps & Bridge
 - Introduce basic token swapping through trusted platforms
 - Early-stage testing of bridging functionality
 
-![PEPEPOW Launch](https://pepepow.org/wp-content/uploads/2024/11/PEPEPOW-diving.webp)
+![PEPEPOW Launch](/media/legacy/2024/11/PEPEPOW-diving.webp)
 Q3 2026
 Adoption
 
@@ -311,7 +311,7 @@ Adoption
 - Plan for larger exchange listings based on feedback
 - Deployment and Liquidity Provision
 
-![PEPEPOW Launch](https://pepepow.org/wp-content/uploads/2024/11/pepepow-cyberpunk-future.webp)
+![PEPEPOW Launch](/media/legacy/2024/11/pepepow-cyberpunk-future.webp)
 Q4 2026
 Ecosystem Reliability
 
@@ -320,7 +320,7 @@ Ecosystem Reliability
 - Focus on ecosystem stability and reliability
 - Host a community-driven roadmap planning event
 
-![PEPEPOW Launch](https://pepepow.org/wp-content/uploads/2024/11/PepePow-sailor-adventurous-sea-voyage.webp)
+![PEPEPOW Launch](/media/legacy/2024/11/PepePow-sailor-adventurous-sea-voyage.webp)
 Q1: What is PepePow?
 
 A1: PepePow is a decentralized blockchain project that leverages the Pepe meme culture to create a platform for community collaboration, skill development, and global connections.

@@ -15,8 +15,8 @@ migration_review: true
 
 > Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
 
-![](https://pepepow.org/wp-content/uploads/2024/12/PEPEPOW-sci.png)
-[Join new discord  
+![](/media/legacy/2024/12/PEPEPOW-sci.png)
+[Join new discord
 (since 2024.2.24)](https://discord.gg/sJgDVRkBcq)
 
 skip render: ucaddon\_post\_blocks
@@ -39,8 +39,8 @@ Both **miners** and **masternode** holders share the block rewards, incentivizin
 
 The new XelisV2-PEPEW algorithm is CPU-friendly and energy-efficient supporting POW (proof of work)
 
-![](https://pepepow.org/wp-content/uploads/2024/02/a-graphy-pepepow.png)
-![](https://pepepow.org/wp-content/uploads/2024/02/P-coin4.png)
+![](/media/legacy/2024/02/a-graphy-pepepow.png)
+![](/media/legacy/2024/02/P-coin4.png)
 
 ### Superblocks
 
@@ -50,15 +50,15 @@ Random blocks with 2-5x higher rewards
 
 Fast 20 second block times: Quick and affordable transactions
 
-![](https://pepepow.org/wp-content/uploads/2024/02/PEPEPOW-helmet5.png)
+![](/media/legacy/2024/02/PEPEPOW-helmet5.png)
 
 ##### DAO (Decentralized Autonomous Organization)
 
 ## Community-driven program
 
-###### [PEPEPOW DAO reference (25 Otc 2023, Minus)](https://pepepow.org/wp-content/uploads/2023/10/pepepow-dao-op-policy-v1.0.0.pdf)
+###### [PEPEPOW DAO reference (25 Otc 2023, Minus)](/docs/legacy/2023/10/pepepow-dao-op-policy-v1.0.0.pdf)
 
-###### [PEPEPOW DAO structure (17 Jan 2024, Edison)](https://pepepow.org/wp-content/uploads/2023/10/pepepow-dao-op-policy-v1.0.0.pdf)
+###### [PEPEPOW DAO structure (17 Jan 2024, Edison)](/docs/legacy/2023/10/pepepow-dao-op-policy-v1.0.0.pdf)
 
 The project is overseen by a team of **community-elected members** dedicated to its development. They are actively involved in seeking, establishing, and maintaining partnerships to expand the network's reach and capabilities.
 
@@ -80,7 +80,7 @@ Referring to all opinions, and all decisions should be the greatest consensus.
 
 ## Proof-of-work network
 
-###### [PEPEPOW white paper V1.0 (18 Sep 2023, Minus)](https://pepepow.org/wp-content/uploads/2023/09/whitepaper-v1.0.1.pdf)
+###### [PEPEPOW white paper V1.0 (18 Sep 2023, Minus)](/docs/legacy/2023/09/whitepaper-v1.0.1.pdf)
 
 ###### [PEPEPOW Story ( 8 Otc 2023, Stevin)](https://github.com/MattF42/PePe-core/blob/master/doc/pepeproofofworkstory.md)
 
@@ -224,23 +224,23 @@ Completed
 
 Difficulty: Medium-High
 
-[![](https://pepepow.org/wp-content/uploads/2024/02/cc-logo-glyph-pngdark-300x253.png)](https://coincodex.com/crypto/pepepow/) 
-[![](https://pepepow.org/wp-content/uploads/2024/03/logo_m4p-300x90.jpg)](https://mining4people.com/) 
-[![](https://pepepow.org/wp-content/uploads/2024/03/logo_concheckup-300x77.jpg)](https://coincheckup.com/coins/pepepow/) 
-[![](https://pepepow.org/wp-content/uploads/2024/02/logotype-dark-on-light-color-1-300x22.png)](https://www.livecoinwatch.com/price/PEPEPOW-PEPEW) 
-[![](https://pepepow.org/wp-content/uploads/2024/03/nb_logo_monochrome_white-300x80.png)](https://nodehub.io/dashboard/view_coin?coin=pepepow) 
-[![](https://pepepow.org/wp-content/uploads/2025/11/pecunia-logo.jpg)](https://pecuniaplatform.io/coin-stats/PEPEPOW-100M) 
-[![](https://pepepow.org/wp-content/uploads/2024/02/Y3TI.png)](https://y3ti.uk/audits/PEPEPOW) 
-[![](https://pepepow.org/wp-content/uploads/2024/02/nonkyc_logo_exchange_yellow-300x95.png)](https://nonkyc.io/asset/pepew) 
-[![](https://pepepow.org/wp-content/uploads/2024/02/cropped-blockspot-logo-white-300x86.png)](https://blockspot.io/coin/pepepow/) 
-[![](https://pepepow.org/wp-content/uploads/2024/03/logo_coinpaprika.jpg)](https://coinpaprika.com/coin/pepew-pepe-pow/) 
-[![](https://pepepow.org/wp-content/uploads/2025/11/binance-logo.png)](https://www.binance.com/en/price/pepepow) 
-[![](https://pepepow.org/wp-content/uploads/2024/02/Caldera-logo-300x194.png)](https://discord.gg/kYeYbWu6Bm) 
-[![](https://pepepow.org/wp-content/uploads/2024/02/whattomine-300x57.png)](https://whattomine.com/coins/385-pepew-memehash) 
-[![](https://pepepow.org/wp-content/uploads/2025/11/MiningPoolStats-logo.jpg)](https://miningpoolstats.stream/pepepow) 
-[![](https://pepepow.org/wp-content/uploads/2025/11/mingpowerx-logo-1-300x51.png)](https://miningpower.eu/overview) 
-[![](https://pepepow.org/wp-content/uploads/2024/03/crypto.com_.jpg)](https://crypto.com/price/pepepow) 
-[![](https://pepepow.org/wp-content/uploads/2025/11/NestEx-logo.png)](https://trade.nestex.one/spot/PEPEW) 
-[![](https://pepepow.org/wp-content/uploads/2024/03/logo_coinCarp-300x96.jpg)](https://www.coincarp.com/currencies/pepepow/) 
-[![](https://pepepow.org/wp-content/uploads/2025/02/dex-trade-icon-1.jpg)](https://dex-trade.com/spot/trading/PEPEWUSDT) 
-[![](https://pepepow.org/wp-content/uploads/2024/06/coinbase.png)](https://www.coinbase.com/price/pepepow)
+[![](/media/legacy/2024/02/cc-logo-glyph-pngdark.png)](https://coincodex.com/crypto/pepepow/)
+[![](/media/legacy/2024/03/logo_m4p.jpg)](https://mining4people.com/)
+[![](/media/legacy/2024/03/logo_concheckup.jpg)](https://coincheckup.com/coins/pepepow/)
+[![](/media/legacy/2024/02/logotype-dark-on-light-color-1.png)](https://www.livecoinwatch.com/price/PEPEPOW-PEPEW)
+[![](/media/legacy/2024/03/nb_logo_monochrome_white.png)](https://nodehub.io/dashboard/view_coin?coin=pepepow)
+[![](/media/legacy/2025/11/pecunia-logo.jpg)](https://pecuniaplatform.io/coin-stats/PEPEPOW-100M)
+[![](/media/legacy/2024/02/Y3TI.png)](https://y3ti.uk/audits/PEPEPOW)
+[![](/media/legacy/2024/02/nonkyc_logo_exchange_yellow.png)](https://nonkyc.io/asset/pepew)
+[![](/media/legacy/2024/02/cropped-blockspot-logo-white.png)](https://blockspot.io/coin/pepepow/)
+[![](/media/legacy/2024/03/logo_coinpaprika.jpg)](https://coinpaprika.com/coin/pepew-pepe-pow/)
+[![](/media/legacy/2025/11/binance-logo.png)](https://www.binance.com/en/price/pepepow)
+[![](/media/legacy/2024/02/Caldera-logo.png)](https://discord.gg/kYeYbWu6Bm)
+[![](/media/legacy/2024/02/whattomine.png)](https://whattomine.com/coins/385-pepew-memehash)
+[![](/media/legacy/2025/11/MiningPoolStats-logo.jpg)](https://miningpoolstats.stream/pepepow)
+[![](/media/legacy/2025/11/mingpowerx-logo-1.png)](https://miningpower.eu/overview)
+[![](/media/legacy/2024/03/crypto.com_.jpg)](https://crypto.com/price/pepepow)
+[![](/media/legacy/2025/11/NestEx-logo.png)](https://trade.nestex.one/spot/PEPEW)
+[![](/media/legacy/2024/03/logo_coinCarp.jpg)](https://www.coincarp.com/currencies/pepepow/)
+[![](/media/legacy/2025/02/dex-trade-icon-1.jpg)](https://dex-trade.com/spot/trading/PEPEWUSDT)
+[![](/media/legacy/2024/06/coinbase.png)](https://www.coinbase.com/price/pepepow)

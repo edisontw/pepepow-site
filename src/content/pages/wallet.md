@@ -32,7 +32,7 @@ Choose the wallet that fits your needs: full-featured desktop wallet, lightweigh
 Official desktop wallet for Windows and Linux, with optional block file bootstrap.
 
 Main wallet
-![PEPEPOW Desktop Wallet](https://pepepow.org/wp-content/uploads/2024/09/PEPEPOW-desktop1.webp)
+![PEPEPOW Desktop Wallet](/media/legacy/2024/09/PEPEPOW-desktop1.webp)
 [PePecore Releases](https://github.com/MattF42/PePe-core/releases)
 [Download Block Files](https://pepepow.foztor.net/chain/pepepow-23Dec-24.zip)
 Windows
@@ -51,7 +51,7 @@ wget -c https://github.com/MattF42/PePe-core/releases/download/v2.9.0.5/PEPEPOW-
 Lightweight access for quick use. Includes a fully non-custodial option.
 
 Non-custodial
-![](https://pepepow.org/wp-content/uploads/2026/01/web-wallet1.png)
+![](/media/legacy/2026/01/web-wallet1.png)
 [Open Non-Custodial Web Wallet](https://light.pepepow.net/wallet/)
 
 This is a fully non-custodial web wallet. Your mnemonic and private keys are generated
@@ -64,7 +64,7 @@ and stored only on your device.
 The mobile wallet is for quick transfers and storing assets .
 
 New release
-![](https://pepepow.org/wp-content/uploads/2025/12/android-wallet-release.png)
+![](/media/legacy/2025/12/android-wallet-release.png)
 Download
 <https://github.com/edisontw/pepepow-android-wallet-v2/releases>
 3rd-Party Platforms

@@ -1,0 +1,2752 @@
+{
+  "source_manifest": "migration/public/media-manifest.json",
+  "recovered_root": "migration/work/recovered-uploads",
+  "audit_only": false,
+  "canonical_file_count": 295,
+  "supplemental_file_count": 0,
+  "external_attachment_count": 1,
+  "missing_count": 0,
+  "invalid_count": 0,
+  "total_bytes": 176017230,
+  "referenced_only": true,
+  "selected_file_count": 54,
+  "selected_bytes": 22896936,
+  "files": [
+    {
+      "wordpress_id": "6",
+      "title": "Placeholder Image",
+      "upload_path": "2023/08/70eac-img_5-min.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/08/70eac-img_5-min.png",
+      "public_url": "/media/legacy/2023/08/70eac-img_5-min.png",
+      "size_bytes": 340551,
+      "sha256": "d99310b987903631563f1d3b53192c71722d682d924b5f51be6d67b115245c3b"
+    },
+    {
+      "wordpress_id": "7",
+      "title": "Placeholder Image",
+      "upload_path": "2023/08/img_1-min.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/08/img_1-min.png",
+      "public_url": "/media/legacy/2023/08/img_1-min.png",
+      "size_bytes": 346734,
+      "sha256": "643c914c9e0af2751d1136b8bdc904f0f12b3fb3a32ab84d6b25b22112e6c17d"
+    },
+    {
+      "wordpress_id": "8",
+      "title": "Placeholder Image",
+      "upload_path": "2023/08/e19a3-img_6-min.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/08/e19a3-img_6-min.png",
+      "public_url": "/media/legacy/2023/08/e19a3-img_6-min.png",
+      "size_bytes": 338490,
+      "sha256": "8c6db5763f634f9efa4190dac1118c6a54076ac68c6a9da09771fcc7659e3c4e"
+    },
+    {
+      "wordpress_id": "9",
+      "title": "Placeholder Image",
+      "upload_path": "2023/08/f6f81-img_2-min.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/08/f6f81-img_2-min.png",
+      "public_url": "/media/legacy/2023/08/f6f81-img_2-min.png",
+      "size_bytes": 334890,
+      "sha256": "b22ef4f4ad4630d6418b10b7a2ecf174bf77736cd449e99df794d31f5ee32910"
+    },
+    {
+      "wordpress_id": "10",
+      "title": "Placeholder Image",
+      "upload_path": "2023/08/154d6-img_4-min.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/08/154d6-img_4-min.png",
+      "public_url": "/media/legacy/2023/08/154d6-img_4-min.png",
+      "size_bytes": 290716,
+      "sha256": "3babc9615137afc8b3f36c587abb2e24a4a11fed737ec81e565656964ead9d20"
+    },
+    {
+      "wordpress_id": "11",
+      "title": "Placeholder Image",
+      "upload_path": "2023/08/26a0c-img_3-min.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/08/26a0c-img_3-min.png",
+      "public_url": "/media/legacy/2023/08/26a0c-img_3-min.png",
+      "size_bytes": 346072,
+      "sha256": "f2bc616d380f2495d4558ae2e648d4f5b87f456bee135026974ae126fb946514"
+    },
+    {
+      "wordpress_id": "12",
+      "title": "site-logo",
+      "upload_path": "2023/08/site-logo.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/08/site-logo.png",
+      "public_url": "/media/legacy/2023/08/site-logo.png",
+      "size_bytes": 216224,
+      "sha256": "596665e56ad04d1875b24533f042c32397ba1cebac46a267565c3dd3b6a58e3f"
+    },
+    {
+      "wordpress_id": "13",
+      "title": "Placeholder Image",
+      "upload_path": "2023/08/f6f81-img_2-min-1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/08/f6f81-img_2-min-1.png",
+      "public_url": "/media/legacy/2023/08/f6f81-img_2-min-1.png",
+      "size_bytes": 334890,
+      "sha256": "b22ef4f4ad4630d6418b10b7a2ecf174bf77736cd449e99df794d31f5ee32910"
+    },
+    {
+      "wordpress_id": "14",
+      "title": "Placeholder Image",
+      "upload_path": "2023/08/154d6-img_4-min-1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/08/154d6-img_4-min-1.png",
+      "public_url": "/media/legacy/2023/08/154d6-img_4-min-1.png",
+      "size_bytes": 290716,
+      "sha256": "3babc9615137afc8b3f36c587abb2e24a4a11fed737ec81e565656964ead9d20"
+    },
+    {
+      "wordpress_id": "15",
+      "title": "Placeholder Image",
+      "upload_path": "2023/08/70eac-img_5-min-1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/08/70eac-img_5-min-1.png",
+      "public_url": "/media/legacy/2023/08/70eac-img_5-min-1.png",
+      "size_bytes": 340551,
+      "sha256": "d99310b987903631563f1d3b53192c71722d682d924b5f51be6d67b115245c3b"
+    },
+    {
+      "wordpress_id": "18",
+      "title": "green-grass-field-and-mountain-1034887.jpg",
+      "upload_path": "2020/04/green-grass-field-and-mountain-1034887.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2020/04/green-grass-field-and-mountain-1034887.jpg",
+      "public_url": "/media/legacy/2020/04/green-grass-field-and-mountain-1034887.jpg",
+      "size_bytes": 236960,
+      "sha256": "9bf8ba2f77c64db54fe15941ffc3e5a1f1097879c3dde1418d8dcb47e4c085b1"
+    },
+    {
+      "wordpress_id": "20",
+      "title": "mountain-and-lake-at-sunset-135157.jpg",
+      "upload_path": "2020/04/mountain-and-lake-at-sunset-135157.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2020/04/mountain-and-lake-at-sunset-135157.jpg",
+      "public_url": "/media/legacy/2020/04/mountain-and-lake-at-sunset-135157.jpg",
+      "size_bytes": 252483,
+      "sha256": "a0c56c2545b1d3bd4e2cd85e398fc91a714aa2a2225725826b357b8ccdae1fd5"
+    },
+    {
+      "wordpress_id": "95",
+      "title": "cc-logo-3",
+      "upload_path": "2023/08/cc-logo-3.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/08/cc-logo-3.png",
+      "public_url": "/media/legacy/2023/08/cc-logo-3.png",
+      "size_bytes": 22785,
+      "sha256": "34f488b51f95db3756ee4dbf80a8756aefc67f03ede46129295cc158d742ecce"
+    },
+    {
+      "wordpress_id": "99",
+      "title": "pepewicongiant1280x1280",
+      "upload_path": "2023/09/pepewicongiant1280x1280.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/pepewicongiant1280x1280.png",
+      "public_url": "/media/legacy/2023/09/pepewicongiant1280x1280.png",
+      "size_bytes": 1342745,
+      "sha256": "2930158e26e1dee00b766a82da346a3028a824dfb3802506824df9b3ef5058ff"
+    },
+    {
+      "wordpress_id": "100",
+      "title": "image",
+      "upload_path": "2023/09/image.jpeg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/image.jpeg",
+      "public_url": "/media/legacy/2023/09/image.jpeg",
+      "size_bytes": 95870,
+      "sha256": "a2328a44633f7e4e9328a98c6efe1668af2b7cf6ce641f1a65e92cffa20f3669"
+    },
+    {
+      "wordpress_id": "101",
+      "title": "image-1",
+      "upload_path": "2023/09/image-1.jpeg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/image-1.jpeg",
+      "public_url": "/media/legacy/2023/09/image-1.jpeg",
+      "size_bytes": 279478,
+      "sha256": "24d1e498f3b1a16870382310d59ebea3cbca439434702e9c0c1d59b44b479127"
+    },
+    {
+      "wordpress_id": "102",
+      "title": "cables connected to ethernet ports",
+      "upload_path": "2023/09/pexels-photo-2881232.jpeg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/pexels-photo-2881232.jpeg",
+      "public_url": "/media/legacy/2023/09/pexels-photo-2881232.jpeg",
+      "size_bytes": 156907,
+      "sha256": "6031adb1a8d50e3b09ba71e98e9246e091419c08880ba5cf295c081003eb573c"
+    },
+    {
+      "wordpress_id": "103",
+      "title": "xeggex_yellow_with_box",
+      "upload_path": "2023/09/xeggex_yellow_with_box.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/xeggex_yellow_with_box.png",
+      "public_url": "/media/legacy/2023/09/xeggex_yellow_with_box.png",
+      "size_bytes": 104389,
+      "sha256": "7cbed70fe8c5bff52f9b2d76210f74da5cdf547feb1eee8a74ded033971a4944"
+    },
+    {
+      "wordpress_id": "104",
+      "title": "xeggex_yellow_with_box-1",
+      "upload_path": "2023/09/xeggex_yellow_with_box-1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/xeggex_yellow_with_box-1.png",
+      "public_url": "/media/legacy/2023/09/xeggex_yellow_with_box-1.png",
+      "size_bytes": 104389,
+      "sha256": "7cbed70fe8c5bff52f9b2d76210f74da5cdf547feb1eee8a74ded033971a4944"
+    },
+    {
+      "wordpress_id": "105",
+      "title": "xeggex_blue_with_box",
+      "upload_path": "2023/09/xeggex_blue_with_box.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/xeggex_blue_with_box.png",
+      "public_url": "/media/legacy/2023/09/xeggex_blue_with_box.png",
+      "size_bytes": 102695,
+      "sha256": "d888d2a0ba3f151ceb890f4f2433648c3c9b4159181ea7d508159f293e970def"
+    },
+    {
+      "wordpress_id": "106",
+      "title": "x_logo_trans_540",
+      "upload_path": "2023/09/x_logo_trans_540.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/x_logo_trans_540.png",
+      "public_url": "/media/legacy/2023/09/x_logo_trans_540.png",
+      "size_bytes": 7420,
+      "sha256": "b78da341a057279b980c7fe113e6280471a4fcbaa6b1f835d970db4866d86216"
+    },
+    {
+      "wordpress_id": "107",
+      "title": "x_logo_540",
+      "upload_path": "2023/09/x_logo_540.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/x_logo_540.jpg",
+      "public_url": "/media/legacy/2023/09/x_logo_540.jpg",
+      "size_bytes": 66076,
+      "sha256": "f72cb90ec8f16770ba96f01b76bd8afb6f079ba06921fc3c300ffd7eee5883c3"
+    },
+    {
+      "wordpress_id": "108",
+      "title": "cc-logo-glyph-pngdark",
+      "upload_path": "2023/09/cc-logo-glyph-pngdark.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/cc-logo-glyph-pngdark.png",
+      "public_url": "/media/legacy/2023/09/cc-logo-glyph-pngdark.png",
+      "size_bytes": 15744,
+      "sha256": "73d092ad351abe174973b33f19a3b5ec81712556997624631c8836d285f8eda4"
+    },
+    {
+      "wordpress_id": "114",
+      "title": "pexels-pixabay-207580",
+      "upload_path": "2023/09/pexels-pixabay-207580.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/pexels-pixabay-207580.jpg",
+      "public_url": "/media/legacy/2023/09/pexels-pixabay-207580.jpg",
+      "size_bytes": 1109243,
+      "sha256": "b4c8a242e2edd724b08d601ef849a655f0bdd36b2b2dda3852003b207fc1ab76"
+    },
+    {
+      "wordpress_id": "115",
+      "title": "pexels-pixabay-207580-1",
+      "upload_path": "2023/09/pexels-pixabay-207580-1.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/pexels-pixabay-207580-1.jpg",
+      "public_url": "/media/legacy/2023/09/pexels-pixabay-207580-1.jpg",
+      "size_bytes": 1109243,
+      "sha256": "b4c8a242e2edd724b08d601ef849a655f0bdd36b2b2dda3852003b207fc1ab76"
+    },
+    {
+      "wordpress_id": "118",
+      "title": "pexels-markus-spiske-330771",
+      "upload_path": "2023/09/pexels-markus-spiske-330771.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/pexels-markus-spiske-330771.jpg",
+      "public_url": "/media/legacy/2023/09/pexels-markus-spiske-330771.jpg",
+      "size_bytes": 5785265,
+      "sha256": "22625a60a3cb53962f6de0c07d32481dea1a308834ab603ef5ff784135bf375f"
+    },
+    {
+      "wordpress_id": "120",
+      "title": "pexels-markus-spiske-2004161",
+      "upload_path": "2023/09/pexels-markus-spiske-2004161.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/pexels-markus-spiske-2004161.jpg",
+      "public_url": "/media/legacy/2023/09/pexels-markus-spiske-2004161.jpg",
+      "size_bytes": 3669925,
+      "sha256": "dbb5d4f2f8f23cbc3a4d72f1c68c2690def5a5016143cafe831cf5537b996d2f"
+    },
+    {
+      "wordpress_id": "139",
+      "title": "cp_logo_hor_300x500px",
+      "upload_path": "2023/09/cp_logo_hor_300x500px.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/cp_logo_hor_300x500px.png",
+      "public_url": "/media/legacy/2023/09/cp_logo_hor_300x500px.png",
+      "size_bytes": 7022,
+      "sha256": "8d8852b74f1ec27adc9132bb0edbfeea92d7f9851c8153cd4fc6c8f82bc9e36a"
+    },
+    {
+      "wordpress_id": "140",
+      "title": "logotype-light-on-dark-mono",
+      "upload_path": "2023/09/logotype-light-on-dark-mono.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/logotype-light-on-dark-mono.png",
+      "public_url": "/media/legacy/2023/09/logotype-light-on-dark-mono.png",
+      "size_bytes": 7718,
+      "sha256": "28b4042fc05ce502026ac875c9fa5f0484ecba61b7fdb2344cb7b5454c7c69f8"
+    },
+    {
+      "wordpress_id": "141",
+      "title": "logotype-dark-on-light-color",
+      "upload_path": "2023/09/logotype-dark-on-light-color.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/logotype-dark-on-light-color.png",
+      "public_url": "/media/legacy/2023/09/logotype-dark-on-light-color.png",
+      "size_bytes": 8034,
+      "sha256": "7812c48284fa4baaf990bd9753ce3e68266e0ae812c3cf3743208de512d57933"
+    },
+    {
+      "wordpress_id": "142",
+      "title": "logo-color",
+      "upload_path": "2023/09/logo-color.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/logo-color.png",
+      "public_url": "/media/legacy/2023/09/logo-color.png",
+      "size_bytes": 7376,
+      "sha256": "c1966fe5dfc7be9fdefbaad492969c0714241e8dc4be722a4efd262cc97d514d"
+    },
+    {
+      "wordpress_id": "143",
+      "title": "logo-black",
+      "upload_path": "2023/09/logo-black.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/logo-black.png",
+      "public_url": "/media/legacy/2023/09/logo-black.png",
+      "size_bytes": 7385,
+      "sha256": "879dda32f143de64f47fe9d4b658ed7a749654f63d10c123c55b59ddc5327e3a"
+    },
+    {
+      "wordpress_id": "144",
+      "title": "logotype-dark-on-light-mono",
+      "upload_path": "2023/09/logotype-dark-on-light-mono.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/logotype-dark-on-light-mono.png",
+      "public_url": "/media/legacy/2023/09/logotype-dark-on-light-mono.png",
+      "size_bytes": 7734,
+      "sha256": "018c35e42d5e9e1d3a524bb57cafc8d3a12c111f4e4878196dfaf4770ef144c4"
+    },
+    {
+      "wordpress_id": "145",
+      "title": "logotype-light-on-dark-color",
+      "upload_path": "2023/09/logotype-light-on-dark-color.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/logotype-light-on-dark-color.png",
+      "public_url": "/media/legacy/2023/09/logotype-light-on-dark-color.png",
+      "size_bytes": 8016,
+      "sha256": "db9df9c721ce53c76694bf76cdbf2a4ace518ff90fc1e9bcbd17fdd15e496a69"
+    },
+    {
+      "wordpress_id": "146",
+      "title": "logotype-dark-on-light-color-1",
+      "upload_path": "2023/09/logotype-dark-on-light-color-1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/logotype-dark-on-light-color-1.png",
+      "public_url": "/media/legacy/2023/09/logotype-dark-on-light-color-1.png",
+      "size_bytes": 8034,
+      "sha256": "7812c48284fa4baaf990bd9753ce3e68266e0ae812c3cf3743208de512d57933"
+    },
+    {
+      "wordpress_id": "150",
+      "title": "bitxonex",
+      "upload_path": "2023/09/bitxonex.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/bitxonex.png",
+      "public_url": "/media/legacy/2023/09/bitxonex.png",
+      "size_bytes": 11461,
+      "sha256": "69d2e5c89fb81894965069fa57395b9cc51149f18e5ba914d5736c2ae111aea9"
+    },
+    {
+      "wordpress_id": "166",
+      "title": "pepepow-9-15-2023",
+      "upload_path": "2023/09/pepepow-9-15-2023.gif",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/pepepow-9-15-2023.gif",
+      "public_url": "/media/legacy/2023/09/pepepow-9-15-2023.gif",
+      "size_bytes": 920951,
+      "sha256": "38b9788f673d21ec0f86b598ae42e306c09deacdefa882584d1d0a3a7a71fd4e"
+    },
+    {
+      "wordpress_id": "172",
+      "title": "Whitepaper V1",
+      "upload_path": "2023/09/whitepaper-v1-1.pdf",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/whitepaper-v1-1.pdf",
+      "public_url": "/docs/legacy/2023/09/whitepaper-v1-1.pdf",
+      "size_bytes": 1020648,
+      "sha256": "10569ebe864eeb5daae2e6287993de9e90f9c4102dcc4dee34795a1534709960"
+    },
+    {
+      "wordpress_id": "205",
+      "title": "logo1",
+      "upload_path": "2020/04/logo1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2020/04/logo1.png",
+      "public_url": "/media/legacy/2020/04/logo1.png",
+      "size_bytes": 3902,
+      "sha256": "965f6f39f2d3c49a2aa1b6fde251280765dbdadf1ecd1279b45c2f9653f26e76"
+    },
+    {
+      "wordpress_id": "206",
+      "title": "logo1@2x",
+      "upload_path": "2020/04/logo1@2x.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2020/04/logo1@2x.png",
+      "public_url": "/media/legacy/2020/04/logo1@2x.png",
+      "size_bytes": 7814,
+      "sha256": "51cef6fff1c26bef18dc3ffb62b0cde6c3bd32a33a4c9cc86224ed13ae3fd9b0"
+    },
+    {
+      "wordpress_id": "207",
+      "title": "logo1-dark",
+      "upload_path": "2020/04/logo1-dark.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2020/04/logo1-dark.png",
+      "public_url": "/media/legacy/2020/04/logo1-dark.png",
+      "size_bytes": 5347,
+      "sha256": "a29c92cdf3268ff1df947d9781e303d0836c3e43dfdfca43ae2415f9f4fc691e"
+    },
+    {
+      "wordpress_id": "208",
+      "title": "logo1-dark@2x",
+      "upload_path": "2020/04/logo1-dark@2x.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2020/04/logo1-dark@2x.png",
+      "public_url": "/media/legacy/2020/04/logo1-dark@2x.png",
+      "size_bytes": 9374,
+      "sha256": "9a08742d9b0e0385911821edd22a136ec0fbd7548e9e1d6caffacf3dd8691278"
+    },
+    {
+      "wordpress_id": "209",
+      "title": "favicon",
+      "upload_path": "2020/04/favicon.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2020/04/favicon.png",
+      "public_url": "/media/legacy/2020/04/favicon.png",
+      "size_bytes": 3358,
+      "sha256": "c4886b49b5c7eee865f49269dabfc5cc0a9fd0d8603877f1d84b56c4838232f2"
+    },
+    {
+      "wordpress_id": "210",
+      "title": "cropped-pepewicongiant1280x1280",
+      "upload_path": "2023/09/cropped-pepewicongiant1280x1280.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/cropped-pepewicongiant1280x1280.png",
+      "public_url": "/media/legacy/2023/09/cropped-pepewicongiant1280x1280.png",
+      "size_bytes": 552659,
+      "sha256": "73eda03a873627152bc04a698ae0e22d6d49dfed956ec173d600fa2f98d310a6"
+    },
+    {
+      "wordpress_id": "212",
+      "title": "demo-screenshot",
+      "upload_path": "2020/04/demo-screenshot.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2020/04/demo-screenshot.jpg",
+      "public_url": "/media/legacy/2020/04/demo-screenshot.jpg",
+      "size_bytes": 87961,
+      "sha256": "903737267711b6534f4f81c1f1d5cbc6bc35bd614773cec217083169fbdbe57a"
+    },
+    {
+      "wordpress_id": "218",
+      "title": "Whitepaper V1.0.1",
+      "upload_path": "2023/09/whitepaper-v1.0.1.pdf",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/whitepaper-v1.0.1.pdf",
+      "public_url": "/docs/legacy/2023/09/whitepaper-v1.0.1.pdf",
+      "size_bytes": 989887,
+      "sha256": "618ec94231373d39d583bf769a6c84de9894d2b89996a0aaef8823bbabf5fb6a"
+    },
+    {
+      "wordpress_id": "234",
+      "title": "nonkyc_logo_exchange_yellow",
+      "upload_path": "2023/09/nonkyc_logo_exchange_yellow.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/nonkyc_logo_exchange_yellow.png",
+      "public_url": "/media/legacy/2023/09/nonkyc_logo_exchange_yellow.png",
+      "size_bytes": 43530,
+      "sha256": "6d9d75f2630a71c7a8b992b0c0711015208dec9977d7e2d68bfb340691124862"
+    },
+    {
+      "wordpress_id": "260",
+      "title": "latestcoingecko_logo_with_white_text",
+      "upload_path": "2023/09/latestcoingecko_logo_with_white_text.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/09/latestcoingecko_logo_with_white_text.png",
+      "public_url": "/media/legacy/2023/09/latestcoingecko_logo_with_white_text.png",
+      "size_bytes": 17661,
+      "sha256": "ecbbe45ef4e14405f4db91cdd47bdb2d3da638e7f93b3836ae4635cb29b04610"
+    },
+    {
+      "wordpress_id": "266",
+      "title": "whitepaper-v1.0.1_zh-tw",
+      "upload_path": "2023/10/whitepaper-v1.0.1_zh-tw.pdf",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/10/whitepaper-v1.0.1_zh-tw.pdf",
+      "public_url": "/docs/legacy/2023/10/whitepaper-v1.0.1_zh-tw.pdf",
+      "size_bytes": 506987,
+      "sha256": "07a12fc3481dc9b2d5ec11f7faa9a63222aaf4f8aa88521a75ff8505e5c583e3"
+    },
+    {
+      "wordpress_id": "268",
+      "title": "whitepaper-v1.0.1_zh-cn",
+      "upload_path": "2023/10/whitepaper-v1.0.1_zh-cn.pdf",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/10/whitepaper-v1.0.1_zh-cn.pdf",
+      "public_url": "/docs/legacy/2023/10/whitepaper-v1.0.1_zh-cn.pdf",
+      "size_bytes": 489871,
+      "sha256": "4d7f6983f15b6bed114a93d97449fdb08640c9e2b1bd2099b062e7856605db88"
+    },
+    {
+      "wordpress_id": "273",
+      "title": "PEPEPOW DAO - Op Policy V1.0.0",
+      "upload_path": "2023/10/pepepow-dao-op-policy-v1.0.0.pdf",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/10/pepepow-dao-op-policy-v1.0.0.pdf",
+      "public_url": "/docs/legacy/2023/10/pepepow-dao-op-policy-v1.0.0.pdf",
+      "size_bytes": 1244057,
+      "sha256": "20a6370d629ef9217cd40bd69ffee2f7a52783f12857d61f2d53a1b34552bd88"
+    },
+    {
+      "wordpress_id": "275",
+      "title": "caldera-logo",
+      "upload_path": "2023/10/caldera-logo.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/10/caldera-logo.png",
+      "public_url": "/media/legacy/2023/10/caldera-logo.png",
+      "size_bytes": 15954,
+      "sha256": "f9706b73c24a47b77e0d2a369100ff28db38ad30dd5c136f8b8611a06768e6dc"
+    },
+    {
+      "wordpress_id": "282",
+      "title": "image",
+      "upload_path": "2023/11/image.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/11/image.png",
+      "public_url": "/media/legacy/2023/11/image.png",
+      "size_bytes": 7673,
+      "sha256": "11108332e8bdd90b7422268b7d7efcfb5ec31216abb15c23dca1aed4ee427d08"
+    },
+    {
+      "wordpress_id": "283",
+      "title": "cropped-blockspot-logo-white",
+      "upload_path": "2023/11/cropped-blockspot-logo-white.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/11/cropped-blockspot-logo-white.png",
+      "public_url": "/media/legacy/2023/11/cropped-blockspot-logo-white.png",
+      "size_bytes": 3218,
+      "sha256": "78f5ec7328200e29625935c1055abd3c0a3cdd1b725ac8187d19a92b417ce7a8"
+    },
+    {
+      "wordpress_id": "291",
+      "title": "Back on track banner wide",
+      "upload_path": "2023/11/back-on-track-banner-wide-.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/11/back-on-track-banner-wide-.png",
+      "public_url": "/media/legacy/2023/11/back-on-track-banner-wide-.png",
+      "size_bytes": 1560557,
+      "sha256": "ecacc0188159bd02b6fc05d2afbcbd3a6f81861424259273b799831627fc5c25"
+    },
+    {
+      "wordpress_id": "307",
+      "title": "mining-power",
+      "upload_path": "2023/11/mining-power.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/11/mining-power.png",
+      "public_url": "/media/legacy/2023/11/mining-power.png",
+      "size_bytes": 80458,
+      "sha256": "bcd76073b8f15c4c46b5823e82fd6685aa9a395ba739879eea267ec8ea103545"
+    },
+    {
+      "wordpress_id": "317",
+      "title": "back-on-track-banner-wide--1",
+      "upload_path": "2023/11/back-on-track-banner-wide--1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/11/back-on-track-banner-wide--1.png",
+      "public_url": "/media/legacy/2023/11/back-on-track-banner-wide--1.png",
+      "size_bytes": 1560557,
+      "sha256": "ecacc0188159bd02b6fc05d2afbcbd3a6f81861424259273b799831627fc5c25"
+    },
+    {
+      "wordpress_id": "323",
+      "title": "Back on track banner wide",
+      "upload_path": "2023/11/back-on-track-banner-wide-edited.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/11/back-on-track-banner-wide-edited.png",
+      "public_url": "/media/legacy/2023/11/back-on-track-banner-wide-edited.png",
+      "size_bytes": 1034204,
+      "sha256": "2d164625847167806e0fd567c2ef42c23b72aac271faff6a0fc24c3c8e7eaa36"
+    },
+    {
+      "wordpress_id": "324",
+      "title": "gemfinder",
+      "upload_path": "2023/11/gemfinder.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/11/gemfinder.png",
+      "public_url": "/media/legacy/2023/11/gemfinder.png",
+      "size_bytes": 5617,
+      "sha256": "51fa758a775bfcf2c06cdf7443b08b3a3744794d06cd4a1a60e982e24af037e9"
+    },
+    {
+      "wordpress_id": "341",
+      "title": "ihostmn",
+      "upload_path": "2023/12/ihostmn.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/12/ihostmn.webp",
+      "public_url": "/media/legacy/2023/12/ihostmn.webp",
+      "size_bytes": 6248,
+      "sha256": "b37f5d3c6940f545888569a3655faaee551cd19716048935c615f01f2a7401c3"
+    },
+    {
+      "wordpress_id": "345",
+      "title": "whattomine",
+      "upload_path": "2023/12/whattomine.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/12/whattomine.png",
+      "public_url": "/media/legacy/2023/12/whattomine.png",
+      "size_bytes": 22940,
+      "sha256": "3fae56b6795502e2a482c8ba113a873c925978a430a7722358e65af4af31c3fc"
+    },
+    {
+      "wordpress_id": "361",
+      "title": "Whitepaper V1.0.1_fr",
+      "upload_path": "2023/12/whitepaper-v1.0.1_fr.pdf",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/12/whitepaper-v1.0.1_fr.pdf",
+      "public_url": "/docs/legacy/2023/12/whitepaper-v1.0.1_fr.pdf",
+      "size_bytes": 1192342,
+      "sha256": "2a8d8a71985b975ab80bea9453f73ff81d41895474af0a7ddb94d6683f6d38ce"
+    },
+    {
+      "wordpress_id": "397",
+      "title": "Pow png sticker comic speech",
+      "upload_path": "2023/12/chjpdmf0zs9sci9pbwfnzxmvd2vic2l0zs8ymdiylta1l2pvyjcyos0wndqtcc5wbmc.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/12/chjpdmf0zs9sci9pbwfnzxmvd2vic2l0zs8ymdiylta1l2pvyjcyos0wndqtcc5wbmc.png",
+      "public_url": "/media/legacy/2023/12/chjpdmf0zs9sci9pbwfnzxmvd2vic2l0zs8ymdiylta1l2pvyjcyos0wndqtcc5wbmc.png",
+      "size_bytes": 224932,
+      "sha256": "aadb18e3e1b8b9f866d12ca70a6a13a4a87ab9ca1d75c641588090f017916bbe"
+    },
+    {
+      "wordpress_id": "398",
+      "title": "green woven pavement",
+      "upload_path": "2023/12/pexels-photo-570047.jpeg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/12/pexels-photo-570047.jpeg",
+      "public_url": "/media/legacy/2023/12/pexels-photo-570047.jpeg",
+      "size_bytes": 221942,
+      "sha256": "8894f07f687a9fe083171fc3ac3264969a43c87cc7f9c9596c50cc4f9b7f2c70"
+    },
+    {
+      "wordpress_id": "399",
+      "title": "black sand dunes",
+      "upload_path": "2023/12/pexels-photo-2387793.jpeg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/12/pexels-photo-2387793.jpeg",
+      "public_url": "/media/legacy/2023/12/pexels-photo-2387793.jpeg",
+      "size_bytes": 284455,
+      "sha256": "8130d39840455c5562de4d020495ee078e18e89e592150e8c8ddf36e4a2bb41b"
+    },
+    {
+      "wordpress_id": "400",
+      "title": "black sand dunes",
+      "upload_path": "2023/12/pexels-photo-2387793-1.jpeg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/12/pexels-photo-2387793-1.jpeg",
+      "public_url": "/media/legacy/2023/12/pexels-photo-2387793-1.jpeg",
+      "size_bytes": 284455,
+      "sha256": "8130d39840455c5562de4d020495ee078e18e89e592150e8c8ddf36e4a2bb41b"
+    },
+    {
+      "wordpress_id": "441",
+      "title": "_d2a9aa07-8f7b-481a-a275-3aca1f553cba",
+      "upload_path": "2024/02/d2a9aa07-8f7b-481a-a275-3aca1f553cba.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/d2a9aa07-8f7b-481a-a275-3aca1f553cba.jpg",
+      "public_url": "/media/legacy/2024/02/d2a9aa07-8f7b-481a-a275-3aca1f553cba.jpg",
+      "size_bytes": 163371,
+      "sha256": "9f256230ebe0057d96703863dcdc6ca5f08d7e1a6398564062ee266996a614a7"
+    },
+    {
+      "wordpress_id": "442",
+      "title": "_face00c1-031b-4302-a06c-1b1d0239aa08",
+      "upload_path": "2024/02/face00c1-031b-4302-a06c-1b1d0239aa08.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/face00c1-031b-4302-a06c-1b1d0239aa08.jpg",
+      "public_url": "/media/legacy/2024/02/face00c1-031b-4302-a06c-1b1d0239aa08.jpg",
+      "size_bytes": 236060,
+      "sha256": "ee7f4e8bee6192a928291be27253598bdf09ef60f98224ab9cc1ad8dbbda7a33"
+    },
+    {
+      "wordpress_id": "443",
+      "title": "OIG1.7MqX3E.D5b",
+      "upload_path": "2024/02/OIG1.7MqX3E.D5b.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/OIG1.7MqX3E.D5b.jpg",
+      "public_url": "/media/legacy/2024/02/OIG1.7MqX3E.D5b.jpg",
+      "size_bytes": 251398,
+      "sha256": "ecca97dc4f83e5bf8cccd3032a577e211c8832058b59f4fc783ac12b6b8e5cd2"
+    },
+    {
+      "wordpress_id": "444",
+      "title": "OIG1",
+      "upload_path": "2024/02/OIG1.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/OIG1.jpg",
+      "public_url": "/media/legacy/2024/02/OIG1.jpg",
+      "size_bytes": 259507,
+      "sha256": "3d9eb383c8ad7a09cb2095d5abd9a201e49929aa2222916c1ee7c5a3c388e921"
+    },
+    {
+      "wordpress_id": "445",
+      "title": "OIG3",
+      "upload_path": "2024/02/OIG3.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/OIG3.jpg",
+      "public_url": "/media/legacy/2024/02/OIG3.jpg",
+      "size_bytes": 43023,
+      "sha256": "351feb2e6372fce6ca247574ae8f85d5a9f2671eb871ccfe849705104525c427"
+    },
+    {
+      "wordpress_id": "446",
+      "title": "Pepepow banner 1.03",
+      "upload_path": "2024/02/Pepepow-banner-1.03.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/Pepepow-banner-1.03.png",
+      "public_url": "/media/legacy/2024/02/Pepepow-banner-1.03.png",
+      "size_bytes": 1368736,
+      "sha256": "4a48efd338ac65d1bd930393638a2a3f3e6551f0a70fc8a0d74f53131fa7bfdf"
+    },
+    {
+      "wordpress_id": "447",
+      "title": "Pepepow1",
+      "upload_path": "2024/02/Pepepow1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/Pepepow1.png",
+      "public_url": "/media/legacy/2024/02/Pepepow1.png",
+      "size_bytes": 556443,
+      "sha256": "cb7b46b9ee25a687465d08bb56fd3f92c8634c65511b5ba41847d3d6ca7e241f"
+    },
+    {
+      "wordpress_id": "448",
+      "title": "Pepepow2",
+      "upload_path": "2024/02/Pepepow2.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/Pepepow2.png",
+      "public_url": "/media/legacy/2024/02/Pepepow2.png",
+      "size_bytes": 545594,
+      "sha256": "a71009e0748be1f8162961bca5ad2c8a6baae782ccbe8938ce30e58a2127ac46"
+    },
+    {
+      "wordpress_id": "449",
+      "title": "Pepepow3",
+      "upload_path": "2024/02/Pepepow3.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/Pepepow3.png",
+      "public_url": "/media/legacy/2024/02/Pepepow3.png",
+      "size_bytes": 353075,
+      "sha256": "ed6700f2a088820a955416af3ecc27f54d6bb913a6271d760ef4ed382cf878b7"
+    },
+    {
+      "wordpress_id": "450",
+      "title": "Pepepow4",
+      "upload_path": "2024/02/Pepepow4.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/Pepepow4.png",
+      "public_url": "/media/legacy/2024/02/Pepepow4.png",
+      "size_bytes": 390416,
+      "sha256": "7708447558e42f106e489072de625eb5b78d70a6b2a615ca2036f16ae5650193"
+    },
+    {
+      "wordpress_id": "451",
+      "title": "Pepepow5",
+      "upload_path": "2024/02/Pepepow5.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/Pepepow5.png",
+      "public_url": "/media/legacy/2024/02/Pepepow5.png",
+      "size_bytes": 405216,
+      "sha256": "e1dcddc3ec26e8835d3908a66a6474b1bde41678cf96145f2cb52954ca9e262d"
+    },
+    {
+      "wordpress_id": "452",
+      "title": "Pepepow6",
+      "upload_path": "2024/02/Pepepow6.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/Pepepow6.png",
+      "public_url": "/media/legacy/2024/02/Pepepow6.png",
+      "size_bytes": 294798,
+      "sha256": "f64361b180bc2f32cf66033a4f56ad26beb8515516fbfcc3cd439217f80aaa02"
+    },
+    {
+      "wordpress_id": "453",
+      "title": "pepew holding hand2",
+      "upload_path": "2024/02/pepew-holding-hand2.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/pepew-holding-hand2.jpg",
+      "public_url": "/media/legacy/2024/02/pepew-holding-hand2.jpg",
+      "size_bytes": 219464,
+      "sha256": "32a769cc4df0c3a275aef773eed760f2ffca0341f459255b4bf1b7f2ff69fc06"
+    },
+    {
+      "wordpress_id": "454",
+      "title": "pepew holding hands",
+      "upload_path": "2024/02/pepew-holding-hands.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/pepew-holding-hands.jpg",
+      "public_url": "/media/legacy/2024/02/pepew-holding-hands.jpg",
+      "size_bytes": 198755,
+      "sha256": "f88f2596a8f3b2a647da9bce8553eeea546641e84267622a3c1d7b870b1c9ee1"
+    },
+    {
+      "wordpress_id": "455",
+      "title": "pepew rain",
+      "upload_path": "2024/02/pepew-rain.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/pepew-rain.jpg",
+      "public_url": "/media/legacy/2024/02/pepew-rain.jpg",
+      "size_bytes": 298106,
+      "sha256": "df398f0d0674b2b84b48cb92a2764cd121f986e8d9fc109addcd33c9dad7c154"
+    },
+    {
+      "wordpress_id": "456",
+      "title": "pepew rain2",
+      "upload_path": "2024/02/pepew-rain2.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/pepew-rain2.jpg",
+      "public_url": "/media/legacy/2024/02/pepew-rain2.jpg",
+      "size_bytes": 316055,
+      "sha256": "b78c4f66c30c1d1a5d64697c4256e75453e078695e034bb628e425c6b79e5bb0"
+    },
+    {
+      "wordpress_id": "457",
+      "title": "social",
+      "upload_path": "2024/02/social.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/social.jpg",
+      "public_url": "/media/legacy/2024/02/social.jpg",
+      "size_bytes": 234899,
+      "sha256": "f57389aaefade6a45330e72e7835cdb1a65759a3cea56e66eb1ae6c494102ee0"
+    },
+    {
+      "wordpress_id": "458",
+      "title": "team1",
+      "upload_path": "2024/02/team1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/team1.png",
+      "public_url": "/media/legacy/2024/02/team1.png",
+      "size_bytes": 371009,
+      "sha256": "fe5cb2b1ecca88167941767dc1a1421432ec698071016110a0f2d6dccf3ffb6d"
+    },
+    {
+      "wordpress_id": "459",
+      "title": "team2",
+      "upload_path": "2024/02/team2.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/team2.png",
+      "public_url": "/media/legacy/2024/02/team2.png",
+      "size_bytes": 438619,
+      "sha256": "b97690a38a15833c19cb3ce1786b821f0e7270fcc247ac6500c2b5bc20b89d73"
+    },
+    {
+      "wordpress_id": "460",
+      "title": "Pepepow1a",
+      "upload_path": "2024/02/Pepepow1a.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/Pepepow1a.png",
+      "public_url": "/media/legacy/2024/02/Pepepow1a.png",
+      "size_bytes": 431246,
+      "sha256": "6367ca151d1c3533961c6c73479ad2a68004d3b5d05e0d7837d45011d97dc191"
+    },
+    {
+      "wordpress_id": "461",
+      "title": "miner",
+      "upload_path": "2024/02/miner.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/miner.png",
+      "public_url": "/media/legacy/2024/02/miner.png",
+      "size_bytes": 467067,
+      "sha256": "b235035aaba79e2f7bcc126610db8394397f3cfda17bd88400b6c367dfa05ebe"
+    },
+    {
+      "wordpress_id": "462",
+      "title": "pepepowA",
+      "upload_path": "2024/02/pepepowA.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/pepepowA.png",
+      "public_url": "/media/legacy/2024/02/pepepowA.png",
+      "size_bytes": 490944,
+      "sha256": "181ff920f11932650856c12a889ef84167ee5ef4899efd73ae8fdeee7ee230dd"
+    },
+    {
+      "wordpress_id": "469",
+      "title": "1-4.png",
+      "upload_path": "2020/04/1-4.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2020/04/1-4.png",
+      "public_url": "/media/legacy/2020/04/1-4.png",
+      "size_bytes": 58438,
+      "sha256": "ecfc2fd9ca0f03a47cba47c12945a36126baf91970b94eca5d34b112a9e36d18"
+    },
+    {
+      "wordpress_id": "470",
+      "title": "landscape-mountains-sky-4843193.jpg",
+      "upload_path": "2020/04/landscape-mountains-sky-4843193.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2020/04/landscape-mountains-sky-4843193.jpg",
+      "public_url": "/media/legacy/2020/04/landscape-mountains-sky-4843193.jpg",
+      "size_bytes": 197556,
+      "sha256": "b63c00511edc588c03eb34fec54421dbd3e4a2c7e26c827bf37c4dcbab2d8bc1"
+    },
+    {
+      "wordpress_id": "471",
+      "title": "green-leafed-trees-during-fog-time-167684.jpg",
+      "upload_path": "2020/04/green-leafed-trees-during-fog-time-167684.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2020/04/green-leafed-trees-during-fog-time-167684.jpg",
+      "public_url": "/media/legacy/2020/04/green-leafed-trees-during-fog-time-167684.jpg",
+      "size_bytes": 195310,
+      "sha256": "9b5104878baddc292b6baea23524f85c12dc790469c721f36a952a72949d7194"
+    },
+    {
+      "wordpress_id": "472",
+      "title": "snowy-mountain-1287145.jpg",
+      "upload_path": "2020/04/snowy-mountain-1287145.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2020/04/snowy-mountain-1287145.jpg",
+      "public_url": "/media/legacy/2020/04/snowy-mountain-1287145.jpg",
+      "size_bytes": 227674,
+      "sha256": "2c1f35d60cd2ee1336fb71f0358d8d6306904982e8d576332ba003db910907fb"
+    },
+    {
+      "wordpress_id": "473",
+      "title": "photo-of-people-standing-on-top-of-mountain-near-grasses-733162.jpg",
+      "upload_path": "2020/04/photo-of-people-standing-on-top-of-mountain-near-grasses-733162.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2020/04/photo-of-people-standing-on-top-of-mountain-near-grasses-733162.jpg",
+      "public_url": "/media/legacy/2020/04/photo-of-people-standing-on-top-of-mountain-near-grasses-733162.jpg",
+      "size_bytes": 231023,
+      "sha256": "0cc132973090a2126a86be80718b3bf6eafb6c0042948ce8c164aa4951357a72"
+    },
+    {
+      "wordpress_id": "474",
+      "title": "fogs-on-green-mountain-1054222.jpg",
+      "upload_path": "2020/04/fogs-on-green-mountain-1054222.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2020/04/fogs-on-green-mountain-1054222.jpg",
+      "public_url": "/media/legacy/2020/04/fogs-on-green-mountain-1054222.jpg",
+      "size_bytes": 179993,
+      "sha256": "b8300715d64fa8bb849cc1270eedd82a7d270ee3fb88d89de252f61cd213a63b"
+    },
+    {
+      "wordpress_id": "475",
+      "title": "bird-s-eye-view-photography-of-green-forest-1208379.jpg",
+      "upload_path": "2020/04/bird-s-eye-view-photography-of-green-forest-1208379.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2020/04/bird-s-eye-view-photography-of-green-forest-1208379.jpg",
+      "public_url": "/media/legacy/2020/04/bird-s-eye-view-photography-of-green-forest-1208379.jpg",
+      "size_bytes": 92169,
+      "sha256": "543398b0ade7fecee18c6b36faf3bc0e4beec0da3336f2b4e0da6b040597cb42"
+    },
+    {
+      "wordpress_id": "477",
+      "title": "customer1",
+      "upload_path": "2020/04/customer1.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2020/04/customer1.jpg",
+      "public_url": "/media/legacy/2020/04/customer1.jpg",
+      "size_bytes": 7033,
+      "sha256": "1a1f1984e121c739b585dbcc187a992dfe895ef574c56444325814fe6b480541"
+    },
+    {
+      "wordpress_id": "478",
+      "title": "customer2",
+      "upload_path": "2020/04/customer2.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2020/04/customer2.jpg",
+      "public_url": "/media/legacy/2020/04/customer2.jpg",
+      "size_bytes": 6306,
+      "sha256": "c6ef6806f491540ea9853e29e6594483d483f677e5f21a91bfc64964e957c045"
+    },
+    {
+      "wordpress_id": "479",
+      "title": "customer3",
+      "upload_path": "2020/04/customer3.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2020/04/customer3.jpg",
+      "public_url": "/media/legacy/2020/04/customer3.jpg",
+      "size_bytes": 7839,
+      "sha256": "0a6d6fc67a8fb4ff350cfb0e10c2dc743661bd04b3dea4d0ea11ad2e4d3979bb"
+    },
+    {
+      "wordpress_id": "480",
+      "title": "customer4",
+      "upload_path": "2020/04/customer4.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2020/04/customer4.jpg",
+      "public_url": "/media/legacy/2020/04/customer4.jpg",
+      "size_bytes": 14010,
+      "sha256": "09884683b9a2c8f3768d97968ea75ce413867a32c6a2375e1b2720de656e166e"
+    },
+    {
+      "wordpress_id": "913",
+      "title": "landscape-mountains-sky-4843193.jpg",
+      "upload_path": "2024/02/landscape-mountains-sky-4843193.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/landscape-mountains-sky-4843193.jpg",
+      "public_url": "/media/legacy/2024/02/landscape-mountains-sky-4843193.jpg",
+      "size_bytes": 197556,
+      "sha256": "b63c00511edc588c03eb34fec54421dbd3e4a2c7e26c827bf37c4dcbab2d8bc1"
+    },
+    {
+      "wordpress_id": "914",
+      "title": "green-leafed-trees-during-fog-time-167684.jpg",
+      "upload_path": "2024/02/green-leafed-trees-during-fog-time-167684.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/green-leafed-trees-during-fog-time-167684.jpg",
+      "public_url": "/media/legacy/2024/02/green-leafed-trees-during-fog-time-167684.jpg",
+      "size_bytes": 195310,
+      "sha256": "9b5104878baddc292b6baea23524f85c12dc790469c721f36a952a72949d7194"
+    },
+    {
+      "wordpress_id": "915",
+      "title": "snowy-mountain-1287145.jpg",
+      "upload_path": "2024/02/snowy-mountain-1287145.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/snowy-mountain-1287145.jpg",
+      "public_url": "/media/legacy/2024/02/snowy-mountain-1287145.jpg",
+      "size_bytes": 227674,
+      "sha256": "2c1f35d60cd2ee1336fb71f0358d8d6306904982e8d576332ba003db910907fb"
+    },
+    {
+      "wordpress_id": "916",
+      "title": "photo-of-people-standing-on-top-of-mountain-near-grasses-733162.jpg",
+      "upload_path": "2024/02/photo-of-people-standing-on-top-of-mountain-near-grasses-733162.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/photo-of-people-standing-on-top-of-mountain-near-grasses-733162.jpg",
+      "public_url": "/media/legacy/2024/02/photo-of-people-standing-on-top-of-mountain-near-grasses-733162.jpg",
+      "size_bytes": 231023,
+      "sha256": "0cc132973090a2126a86be80718b3bf6eafb6c0042948ce8c164aa4951357a72"
+    },
+    {
+      "wordpress_id": "917",
+      "title": "fogs-on-green-mountain-1054222.jpg",
+      "upload_path": "2024/02/fogs-on-green-mountain-1054222.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/fogs-on-green-mountain-1054222.jpg",
+      "public_url": "/media/legacy/2024/02/fogs-on-green-mountain-1054222.jpg",
+      "size_bytes": 179993,
+      "sha256": "b8300715d64fa8bb849cc1270eedd82a7d270ee3fb88d89de252f61cd213a63b"
+    },
+    {
+      "wordpress_id": "918",
+      "title": "green-grass-field-and-mountain-1034887.jpg",
+      "upload_path": "2024/02/green-grass-field-and-mountain-1034887.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/green-grass-field-and-mountain-1034887.jpg",
+      "public_url": "/media/legacy/2024/02/green-grass-field-and-mountain-1034887.jpg",
+      "size_bytes": 236960,
+      "sha256": "9bf8ba2f77c64db54fe15941ffc3e5a1f1097879c3dde1418d8dcb47e4c085b1"
+    },
+    {
+      "wordpress_id": "919",
+      "title": "bird-s-eye-view-photography-of-green-forest-1208379.jpg",
+      "upload_path": "2024/02/bird-s-eye-view-photography-of-green-forest-1208379.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/bird-s-eye-view-photography-of-green-forest-1208379.jpg",
+      "public_url": "/media/legacy/2024/02/bird-s-eye-view-photography-of-green-forest-1208379.jpg",
+      "size_bytes": 92169,
+      "sha256": "543398b0ade7fecee18c6b36faf3bc0e4beec0da3336f2b4e0da6b040597cb42"
+    },
+    {
+      "wordpress_id": "920",
+      "title": "mountain-and-lake-at-sunset-135157.jpg",
+      "upload_path": "2024/02/mountain-and-lake-at-sunset-135157.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/mountain-and-lake-at-sunset-135157.jpg",
+      "public_url": "/media/legacy/2024/02/mountain-and-lake-at-sunset-135157.jpg",
+      "size_bytes": 252483,
+      "sha256": "a0c56c2545b1d3bd4e2cd85e398fc91a714aa2a2225725826b357b8ccdae1fd5"
+    },
+    {
+      "wordpress_id": "921",
+      "title": "construction",
+      "upload_path": "2024/02/consturction.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/consturction.jpg",
+      "public_url": "/media/legacy/2024/02/consturction.jpg",
+      "size_bytes": 119069,
+      "sha256": "c6f1913fb99decc102dc6a2369ef192675c0e5c1bc6c3583146ebafa84650187"
+    },
+    {
+      "wordpress_id": "1113",
+      "title": "Pepepow-banner-1.03-1024x341-1",
+      "upload_path": "2024/02/Pepepow-banner-1.03-1024x341-1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/Pepepow-banner-1.03-1024x341-1.png",
+      "public_url": "/media/legacy/2024/02/Pepepow-banner-1.03-1024x341-1.png",
+      "size_bytes": 612208,
+      "sha256": "f5c35be1b3749422c6cb6c835488c4490147d268e081e3c6ad3ad826103edd9c"
+    },
+    {
+      "wordpress_id": "1141",
+      "title": "msg-1001840957734-46",
+      "upload_path": "2024/02/msg-1001840957734-46.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/msg-1001840957734-46.jpg",
+      "public_url": "/media/legacy/2024/02/msg-1001840957734-46.jpg",
+      "size_bytes": 182190,
+      "sha256": "91d5d54fc1df7f0f896fe44bbd5db77dae9979d2983382b811cd08bc8eb25ee0"
+    },
+    {
+      "wordpress_id": "1171",
+      "title": "banner-2.jpg",
+      "upload_path": "2024/02/banner-2.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/banner-2.jpg",
+      "public_url": "/media/legacy/2024/02/banner-2.jpg",
+      "size_bytes": 478620,
+      "sha256": "1e3f2cfc82b4a2c375ca94503afe5cb692e4f751b41aff4836ca15d3fb5acc8b"
+    },
+    {
+      "wordpress_id": "1191",
+      "title": "feature-5.jpg",
+      "upload_path": "2024/02/feature-5.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/feature-5.jpg",
+      "public_url": "/media/legacy/2024/02/feature-5.jpg",
+      "size_bytes": 9588,
+      "sha256": "c6a9d0e41da62d47719afa2a0fc5386e9582c00c164d56fd7c1e850c02009230"
+    },
+    {
+      "wordpress_id": "1192",
+      "title": "feature-6.jpg",
+      "upload_path": "2024/02/feature-6.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/feature-6.jpg",
+      "public_url": "/media/legacy/2024/02/feature-6.jpg",
+      "size_bytes": 13128,
+      "sha256": "9e22f66c16d4544605c61ca702617424fa07768b685544142f2aa4d5dea04257"
+    },
+    {
+      "wordpress_id": "1193",
+      "title": "feature-4.jpg",
+      "upload_path": "2024/02/feature-4.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/feature-4.jpg",
+      "public_url": "/media/legacy/2024/02/feature-4.jpg",
+      "size_bytes": 10386,
+      "sha256": "2f3485b4a21b45b5cfcf3ed5fb01767486276d23e361d8660a0e62a00babdc98"
+    },
+    {
+      "wordpress_id": "1208",
+      "title": "Caldera-logo",
+      "upload_path": "2024/02/Caldera-logo.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/Caldera-logo.png",
+      "public_url": "/media/legacy/2024/02/Caldera-logo.png",
+      "size_bytes": 101623,
+      "sha256": "cf8c1953515277d2bd756b8341473c20d2aac709a3336137aa204a91806ad428"
+    },
+    {
+      "wordpress_id": "1209",
+      "title": "cc-logo-glyph-pngdark",
+      "upload_path": "2024/02/cc-logo-glyph-pngdark.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/cc-logo-glyph-pngdark.png",
+      "public_url": "/media/legacy/2024/02/cc-logo-glyph-pngdark.png",
+      "size_bytes": 15744,
+      "sha256": "73d092ad351abe174973b33f19a3b5ec81712556997624631c8836d285f8eda4"
+    },
+    {
+      "wordpress_id": "1210",
+      "title": "cropped-blockspot-logo-white",
+      "upload_path": "2024/02/cropped-blockspot-logo-white.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/cropped-blockspot-logo-white.png",
+      "public_url": "/media/legacy/2024/02/cropped-blockspot-logo-white.png",
+      "size_bytes": 3218,
+      "sha256": "78f5ec7328200e29625935c1055abd3c0a3cdd1b725ac8187d19a92b417ce7a8"
+    },
+    {
+      "wordpress_id": "1211",
+      "title": "gemfinder",
+      "upload_path": "2024/02/gemfinder.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/gemfinder.png",
+      "public_url": "/media/legacy/2024/02/gemfinder.png",
+      "size_bytes": 5617,
+      "sha256": "51fa758a775bfcf2c06cdf7443b08b3a3744794d06cd4a1a60e982e24af037e9"
+    },
+    {
+      "wordpress_id": "1212",
+      "title": "logoFull",
+      "upload_path": "2024/02/logoFull.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/logoFull.png",
+      "public_url": "/media/legacy/2024/02/logoFull.png",
+      "size_bytes": 5282,
+      "sha256": "6f57929ed36e4aae754a657ad0945d5410831e420f8a46e2ed94ad05910d0b9f"
+    },
+    {
+      "wordpress_id": "1213",
+      "title": "logotype-dark-on-light-color-1",
+      "upload_path": "2024/02/logotype-dark-on-light-color-1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/logotype-dark-on-light-color-1.png",
+      "public_url": "/media/legacy/2024/02/logotype-dark-on-light-color-1.png",
+      "size_bytes": 8034,
+      "sha256": "7812c48284fa4baaf990bd9753ce3e68266e0ae812c3cf3743208de512d57933"
+    },
+    {
+      "wordpress_id": "1214",
+      "title": "m4p",
+      "upload_path": "2024/02/m4p.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/m4p.jpg",
+      "public_url": "/media/legacy/2024/02/m4p.jpg",
+      "size_bytes": 3847,
+      "sha256": "a28896bde87556425823b30614ebaef90a532a9c3c5fff235545c0821d4330bb"
+    },
+    {
+      "wordpress_id": "1215",
+      "title": "mining-power",
+      "upload_path": "2024/02/mining-power.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/mining-power.png",
+      "public_url": "/media/legacy/2024/02/mining-power.png",
+      "size_bytes": 80458,
+      "sha256": "bcd76073b8f15c4c46b5823e82fd6685aa9a395ba739879eea267ec8ea103545"
+    },
+    {
+      "wordpress_id": "1216",
+      "title": "nonkyc_logo_exchange_yellow",
+      "upload_path": "2024/02/nonkyc_logo_exchange_yellow.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/nonkyc_logo_exchange_yellow.png",
+      "public_url": "/media/legacy/2024/02/nonkyc_logo_exchange_yellow.png",
+      "size_bytes": 43530,
+      "sha256": "6d9d75f2630a71c7a8b992b0c0711015208dec9977d7e2d68bfb340691124862"
+    },
+    {
+      "wordpress_id": "1217",
+      "title": "whattomine",
+      "upload_path": "2024/02/whattomine.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/whattomine.png",
+      "public_url": "/media/legacy/2024/02/whattomine.png",
+      "size_bytes": 22940,
+      "sha256": "3fae56b6795502e2a482c8ba113a873c925978a430a7722358e65af4af31c3fc"
+    },
+    {
+      "wordpress_id": "1218",
+      "title": "xeggex_yellow_with_box-1",
+      "upload_path": "2024/02/xeggex_yellow_with_box-1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/xeggex_yellow_with_box-1.png",
+      "public_url": "/media/legacy/2024/02/xeggex_yellow_with_box-1.png",
+      "size_bytes": 104389,
+      "sha256": "7cbed70fe8c5bff52f9b2d76210f74da5cdf547feb1eee8a74ded033971a4944"
+    },
+    {
+      "wordpress_id": "1219",
+      "title": "Y3TI",
+      "upload_path": "2024/02/Y3TI.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/Y3TI.png",
+      "public_url": "/media/legacy/2024/02/Y3TI.png",
+      "size_bytes": 385100,
+      "sha256": "77bdedcfad9f6a9d0f24f9dc2a1affef4af2a7a7a13a446fb0a4ce3f87274251"
+    },
+    {
+      "wordpress_id": "1220",
+      "title": "ihostmn",
+      "upload_path": "2024/02/ihostmn.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/ihostmn.jpg",
+      "public_url": "/media/legacy/2024/02/ihostmn.jpg",
+      "size_bytes": 2872,
+      "sha256": "b7427fe48a50d03a1daaf7032bf3ac2dc99538ea972f7377226983f19597f294"
+    },
+    {
+      "wordpress_id": "1221",
+      "title": "cp_logo_hor_300x500px",
+      "upload_path": "2024/02/cp_logo_hor_300x500px.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/cp_logo_hor_300x500px.png",
+      "public_url": "/media/legacy/2024/02/cp_logo_hor_300x500px.png",
+      "size_bytes": 7022,
+      "sha256": "8d8852b74f1ec27adc9132bb0edbfeea92d7f9851c8153cd4fc6c8f82bc9e36a"
+    },
+    {
+      "wordpress_id": "1306",
+      "title": "adminDAO",
+      "upload_path": "2024/02/adminDAO.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/adminDAO.png",
+      "public_url": "/media/legacy/2024/02/adminDAO.png",
+      "size_bytes": 380875,
+      "sha256": "8c8c364899f1b0f764cadacba05e52e685dbcb41ee0bcf8aa42672e6a4706547"
+    },
+    {
+      "wordpress_id": "1368",
+      "title": "2d238ae8-b864-499b-99ce-687f49289298",
+      "upload_path": "2024/02/2d238ae8-b864-499b-99ce-687f49289298.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/2d238ae8-b864-499b-99ce-687f49289298.jpg",
+      "public_url": "/media/legacy/2024/02/2d238ae8-b864-499b-99ce-687f49289298.jpg",
+      "size_bytes": 283550,
+      "sha256": "3937ad794b3b55a95b80a7c767cd6449082db76acddf6762b4be4ad148e92063"
+    },
+    {
+      "wordpress_id": "1373",
+      "title": "mobile2",
+      "upload_path": "2024/02/mobile2.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/mobile2.png",
+      "public_url": "/media/legacy/2024/02/mobile2.png",
+      "size_bytes": 358231,
+      "sha256": "f9b2548f56e131d5ef7000447e2e30c83cf1380f33584b81a4ecf9bf2fe5579e"
+    },
+    {
+      "wordpress_id": "1375",
+      "title": "fiction art1",
+      "upload_path": "2024/02/fiction-art1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/fiction-art1.png",
+      "public_url": "/media/legacy/2024/02/fiction-art1.png",
+      "size_bytes": 520690,
+      "sha256": "be40f5cd8fc5b77c61688b6cfcc93985769780049f3975f9f888f63638410217"
+    },
+    {
+      "wordpress_id": "1376",
+      "title": "pepeow white paper",
+      "upload_path": "2024/02/pepeow-white-paper.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/pepeow-white-paper.png",
+      "public_url": "/media/legacy/2024/02/pepeow-white-paper.png",
+      "size_bytes": 427275,
+      "sha256": "e593248c7a6e1f6cec913a47254702da91e4cddadfd6792bb2f789884ae01bc2"
+    },
+    {
+      "wordpress_id": "1380",
+      "title": "a graphy pepepow",
+      "upload_path": "2024/02/a-graphy-pepepow.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/a-graphy-pepepow.png",
+      "public_url": "/media/legacy/2024/02/a-graphy-pepepow.png",
+      "size_bytes": 409663,
+      "sha256": "05a59fddef4de3911e284b859062caffca32e384d315be1fdb913530ca698e3b"
+    },
+    {
+      "wordpress_id": "1383",
+      "title": "pepepow helmet",
+      "upload_path": "2024/02/pepepow-helmet.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/pepepow-helmet.png",
+      "public_url": "/media/legacy/2024/02/pepepow-helmet.png",
+      "size_bytes": 390455,
+      "sha256": "da0a56627c446bff20480bd76ade58d96c3850e4c196382b14c6681a47e18ca0"
+    },
+    {
+      "wordpress_id": "1384",
+      "title": "P coin4",
+      "upload_path": "2024/02/P-coin4.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/P-coin4.png",
+      "public_url": "/media/legacy/2024/02/P-coin4.png",
+      "size_bytes": 433891,
+      "sha256": "4ae125929635708928d086af184619c0ceaae9f2dc6435533c2bfccd89fdc6c1"
+    },
+    {
+      "wordpress_id": "1391",
+      "title": "PEPEPOW helmet5",
+      "upload_path": "2024/02/PEPEPOW-helmet5.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/PEPEPOW-helmet5.png",
+      "public_url": "/media/legacy/2024/02/PEPEPOW-helmet5.png",
+      "size_bytes": 441671,
+      "sha256": "3bcdc660bb7f39aa90740fe7002d7cb675b36dbbbf9d3d47ddb672e5b0e9325d"
+    },
+    {
+      "wordpress_id": "1452",
+      "title": "Pepepow_banner_1.04",
+      "upload_path": "2024/02/Pepepow_banner_1.04.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/Pepepow_banner_1.04.png",
+      "public_url": "/media/legacy/2024/02/Pepepow_banner_1.04.png",
+      "size_bytes": 1360040,
+      "sha256": "459498f1c95405f52800789abcb6cd500eba9e143473018ff110955f98dedcd9"
+    },
+    {
+      "wordpress_id": "1453",
+      "title": "pepepeow1500x500",
+      "upload_path": "2024/02/pepepeow1500x500.jpeg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/pepepeow1500x500.jpeg",
+      "public_url": "/media/legacy/2024/02/pepepeow1500x500.jpeg",
+      "size_bytes": 144751,
+      "sha256": "40d7049ff7d17e0a268ca277951201d77f24bf0c05f638507ee32ffd032dfacc"
+    },
+    {
+      "wordpress_id": "1499",
+      "title": "scam old pepepow",
+      "upload_path": "2024/02/scam-old-pepepow.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/scam-old-pepepow.jpg",
+      "public_url": "/media/legacy/2024/02/scam-old-pepepow.jpg",
+      "size_bytes": 23912,
+      "sha256": "695487e3b7f764dd25e1eec2223a4db2825edd7c7cdd1ae671105f14045ceb3f"
+    },
+    {
+      "wordpress_id": "1501",
+      "title": "bk3",
+      "upload_path": "2023/12/bk3.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/12/bk3.png",
+      "public_url": "/media/legacy/2023/12/bk3.png",
+      "size_bytes": 375446,
+      "sha256": "ea57dc0affe4d001efd608418974364de3fd0c276c53493ce8ea9bd571aa79a1"
+    },
+    {
+      "wordpress_id": "1502",
+      "title": "big wheel sence",
+      "upload_path": "2023/12/big-wheel-sence.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/12/big-wheel-sence.png",
+      "public_url": "/media/legacy/2023/12/big-wheel-sence.png",
+      "size_bytes": 483039,
+      "sha256": "8738f4317c7e4651fb404857e7a95e8c53e58b763d8129ebfb311aa0644359eb"
+    },
+    {
+      "wordpress_id": "1504",
+      "title": "bk2",
+      "upload_path": "2023/12/bk2.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/12/bk2.png",
+      "public_url": "/media/legacy/2023/12/bk2.png",
+      "size_bytes": 287321,
+      "sha256": "139d4be39d65467cea6a620492fe89ed6cb16875889f04cf9ef25ea7bc245fd9"
+    },
+    {
+      "wordpress_id": "1506",
+      "title": "bk1",
+      "upload_path": "2023/11/bk1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/11/bk1.png",
+      "public_url": "/media/legacy/2023/11/bk1.png",
+      "size_bytes": 379180,
+      "sha256": "753d4e2f51c81f072b4325d93958e6e7d930fbda3489cdb793b65361de422317"
+    },
+    {
+      "wordpress_id": "1507",
+      "title": "_bb8ab4b8-707a-4a97-b9f0-e9b5f82a22c5",
+      "upload_path": "2023/11/bb8ab4b8-707a-4a97-b9f0-e9b5f82a22c5.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/11/bb8ab4b8-707a-4a97-b9f0-e9b5f82a22c5.jpg",
+      "public_url": "/media/legacy/2023/11/bb8ab4b8-707a-4a97-b9f0-e9b5f82a22c5.jpg",
+      "size_bytes": 169133,
+      "sha256": "e9d7e8a7187d43b6e5a1023bc9c61e7d4de1ade2b04147069d16e5f47d548e1a"
+    },
+    {
+      "wordpress_id": "1511",
+      "title": "pepeow coin",
+      "upload_path": "2023/11/pepeow-coin.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/11/pepeow-coin.png",
+      "public_url": "/media/legacy/2023/11/pepeow-coin.png",
+      "size_bytes": 379432,
+      "sha256": "1eae3389182775a3a4f3b89b059b3fb0b471a847b8ae35e442362f6078198d6d"
+    },
+    {
+      "wordpress_id": "1514",
+      "title": "mobile1",
+      "upload_path": "2023/11/mobile1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2023/11/mobile1.png",
+      "public_url": "/media/legacy/2023/11/mobile1.png",
+      "size_bytes": 490797,
+      "sha256": "990e8dbdc3991d6f58d8b3028c35e675180c7926b2e8af0bd0e94b3ee81a5cfa"
+    },
+    {
+      "wordpress_id": "1561",
+      "title": "jane-smith.png",
+      "upload_path": "2024/02/jane-smith.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/jane-smith.png",
+      "public_url": "/media/legacy/2024/02/jane-smith.png",
+      "size_bytes": 16144,
+      "sha256": "dba891670bfb381baddcea8ccb5029d7a00886bc8d63089fee95c53494be1b4a"
+    },
+    {
+      "wordpress_id": "1578",
+      "title": "apple",
+      "upload_path": "2024/02/apple.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/apple.png",
+      "public_url": "/media/legacy/2024/02/apple.png",
+      "size_bytes": 408903,
+      "sha256": "6668fb791b5faf55210e2188608824bcc51ae49086978eac123ea44411ac5736"
+    },
+    {
+      "wordpress_id": "1579",
+      "title": "pc-wallet1",
+      "upload_path": "2024/02/pc-wallet1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/pc-wallet1.png",
+      "public_url": "/media/legacy/2024/02/pc-wallet1.png",
+      "size_bytes": 386867,
+      "sha256": "ef30a081dc203208a41678ac9ed959900f08282010aca20bd578c3bb9b37be18"
+    },
+    {
+      "wordpress_id": "1580",
+      "title": "mobile",
+      "upload_path": "2024/02/mobile.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/mobile.png",
+      "public_url": "/media/legacy/2024/02/mobile.png",
+      "size_bytes": 427515,
+      "sha256": "d4819b222f061a87822805dc9d5a35ed36cfbea2980ab08d854c4758e0e05c42"
+    },
+    {
+      "wordpress_id": "1600",
+      "title": "a27d4a8f-2cfb-4f6f-899b-5c601ebb696a",
+      "upload_path": "2024/02/a27d4a8f-2cfb-4f6f-899b-5c601ebb696a.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/a27d4a8f-2cfb-4f6f-899b-5c601ebb696a.jpg",
+      "public_url": "/media/legacy/2024/02/a27d4a8f-2cfb-4f6f-899b-5c601ebb696a.jpg",
+      "size_bytes": 299238,
+      "sha256": "4a73ea22591996de2a2e5097e5f9f8f65d1557fa474ce895679f8670b794e40d"
+    },
+    {
+      "wordpress_id": "1601",
+      "title": "_bf064b84-c06a-424e-8a24-6ab491069b49",
+      "upload_path": "2024/02/bf064b84-c06a-424e-8a24-6ab491069b49.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/bf064b84-c06a-424e-8a24-6ab491069b49.jpg",
+      "public_url": "/media/legacy/2024/02/bf064b84-c06a-424e-8a24-6ab491069b49.jpg",
+      "size_bytes": 213216,
+      "sha256": "680c457fef7f2bc98e349184b007de10a751127da6652884ea90fe8dd139e243"
+    },
+    {
+      "wordpress_id": "1602",
+      "title": "l9gm5s5gn07b1",
+      "upload_path": "2024/02/l9gm5s5gn07b1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/l9gm5s5gn07b1.png",
+      "public_url": "/media/legacy/2024/02/l9gm5s5gn07b1.png",
+      "size_bytes": 7031,
+      "sha256": "ff54af7887e11b45d9173e0cae290fbf7b084265df4a622551f6e08c9528e998"
+    },
+    {
+      "wordpress_id": "1603",
+      "title": "diamond_pepe",
+      "upload_path": "2024/02/diamond_pepe.jpeg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/diamond_pepe.jpeg",
+      "public_url": "/media/legacy/2024/02/diamond_pepe.jpeg",
+      "size_bytes": 9539,
+      "sha256": "0ac90c5ec2050669bae8702d89c6709a7b51354331f8afa3b304874d43b2b685"
+    },
+    {
+      "wordpress_id": "1604",
+      "title": "Pepepow_GTA_visual_3",
+      "upload_path": "2024/02/Pepepow_GTA_visual_3.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/Pepepow_GTA_visual_3.png",
+      "public_url": "/media/legacy/2024/02/Pepepow_GTA_visual_3.png",
+      "size_bytes": 4239010,
+      "sha256": "17b3eb1d75838290b6a557063a850006058451b1c2c280fcdbae427056630f64"
+    },
+    {
+      "wordpress_id": "1605",
+      "title": "pepeow3wish",
+      "upload_path": "2024/02/pepeow3wish.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/pepeow3wish.jpg",
+      "public_url": "/media/legacy/2024/02/pepeow3wish.jpg",
+      "size_bytes": 361683,
+      "sha256": "3bd2d66679e8bdc61241c664aca82efeb861ba04dd19ce3b864228d8b1f2eb4a"
+    },
+    {
+      "wordpress_id": "1606",
+      "title": "pepe-money",
+      "upload_path": "2024/02/pepe-money.gif",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/pepe-money.gif",
+      "public_url": "/media/legacy/2024/02/pepe-money.gif",
+      "size_bytes": 3946527,
+      "sha256": "141aa3133ffdb0810e24a2c01df83d1d58f1519c3a6f67d496ffa4c764917ac0"
+    },
+    {
+      "wordpress_id": "1607",
+      "title": "pepeow rain",
+      "upload_path": "2024/02/pepeow-rain.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/pepeow-rain.jpg",
+      "public_url": "/media/legacy/2024/02/pepeow-rain.jpg",
+      "size_bytes": 353888,
+      "sha256": "122adac912895b23fe179e3adf4c62f132334c30eeda9fda051daf1c795210e5"
+    },
+    {
+      "wordpress_id": "1634",
+      "title": "service-thumb-2.jpg",
+      "upload_path": "2024/02/service-thumb-2.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/service-thumb-2.jpg",
+      "public_url": "/media/legacy/2024/02/service-thumb-2.jpg",
+      "size_bytes": 17134,
+      "sha256": "9d3a08ddb0c1bd9e89197715ce4716691e1517ab8c05fa95226d7733f4be1b75"
+    },
+    {
+      "wordpress_id": "1658",
+      "title": "_7594bf0b-5b3a-4c0e-83b3-c6a3087eaa97",
+      "upload_path": "2024/02/7594bf0b-5b3a-4c0e-83b3-c6a3087eaa97.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/7594bf0b-5b3a-4c0e-83b3-c6a3087eaa97.jpg",
+      "public_url": "/media/legacy/2024/02/7594bf0b-5b3a-4c0e-83b3-c6a3087eaa97.jpg",
+      "size_bytes": 173390,
+      "sha256": "616d0cadaf02d336f23eeb72d16653fea228210b99349cbf687ba10557d25810"
+    },
+    {
+      "wordpress_id": "1659",
+      "title": "a27d4a8f-2cfb-4f6f-899b-5c601ebb696a",
+      "upload_path": "2024/02/a27d4a8f-2cfb-4f6f-899b-5c601ebb696a-1.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/a27d4a8f-2cfb-4f6f-899b-5c601ebb696a-1.jpg",
+      "public_url": "/media/legacy/2024/02/a27d4a8f-2cfb-4f6f-899b-5c601ebb696a-1.jpg",
+      "size_bytes": 299238,
+      "sha256": "4a73ea22591996de2a2e5097e5f9f8f65d1557fa474ce895679f8670b794e40d"
+    },
+    {
+      "wordpress_id": "1660",
+      "title": "P coin4",
+      "upload_path": "2024/02/P-coin4-1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/02/P-coin4-1.png",
+      "public_url": "/media/legacy/2024/02/P-coin4-1.png",
+      "size_bytes": 433891,
+      "sha256": "4ae125929635708928d086af184619c0ceaae9f2dc6435533c2bfccd89fdc6c1"
+    },
+    {
+      "wordpress_id": "1838",
+      "title": "nb_logo_monochrome_white",
+      "upload_path": "2024/03/nb_logo_monochrome_white.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/nb_logo_monochrome_white.png",
+      "public_url": "/media/legacy/2024/03/nb_logo_monochrome_white.png",
+      "size_bytes": 8709,
+      "sha256": "2f5e2947c558102341fd7d18a57cc9e4d540854e098af20057173c99dd65dd9a"
+    },
+    {
+      "wordpress_id": "1849",
+      "title": "BYBIT",
+      "upload_path": "2024/03/BYBIT.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/BYBIT.jpg",
+      "public_url": "/media/legacy/2024/03/BYBIT.jpg",
+      "size_bytes": 5261,
+      "sha256": "d1026c44e5398aabe7eea6033a54fa4c0e3268e05bdd8f00ef7d88ab619535c0"
+    },
+    {
+      "wordpress_id": "1891",
+      "title": "Layer 2",
+      "upload_path": "2024/03/Layer-2.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/Layer-2.png",
+      "public_url": "/media/legacy/2024/03/Layer-2.png",
+      "size_bytes": 2469369,
+      "sha256": "a4ea5fadc5193b544befa58ea2af252b7f4cc75e3fb0828867e371d18d7f19e6"
+    },
+    {
+      "wordpress_id": "1894",
+      "title": "first",
+      "upload_path": "2024/03/first.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/first.png",
+      "public_url": "/media/legacy/2024/03/first.png",
+      "size_bytes": 2648768,
+      "sha256": "15b539d45c85fe56bea1aaf969f0494610101003229e3cc79118d466fafb17a7"
+    },
+    {
+      "wordpress_id": "1902",
+      "title": "new discord server",
+      "upload_path": "2024/03/new-discord-server.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/new-discord-server.jpg",
+      "public_url": "/media/legacy/2024/03/new-discord-server.jpg",
+      "size_bytes": 20417,
+      "sha256": "1b39e46eeb45408c353bd6f206d7d951fbd4ff8a30ec41a69944ee6b518310c4"
+    },
+    {
+      "wordpress_id": "1936",
+      "title": "Gate.io",
+      "upload_path": "2024/03/Gate.io_.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/Gate.io_.png",
+      "public_url": "/media/legacy/2024/03/Gate.io_.png",
+      "size_bytes": 2250,
+      "sha256": "cb357d6c0b85a20f7628c85ca6bb41ce624f9020c0b58cbc195cb96c54fd51e6"
+    },
+    {
+      "wordpress_id": "1946",
+      "title": "wallet-prod-release_PEPEW",
+      "upload_path": "2024/03/wallet-prod-release_PEPEW.zip",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/wallet-prod-release_PEPEW.zip",
+      "public_url": "/media/legacy/2024/03/wallet-prod-release_PEPEW.zip",
+      "size_bytes": 19924296,
+      "sha256": "77926393e24ad903080ac54cd15e185033535ca537228a657b003a7209597b06"
+    },
+    {
+      "wordpress_id": "1947",
+      "title": "wallet-prod-release",
+      "upload_path": "2024/03/wallet-prod-release.zip",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/wallet-prod-release.zip",
+      "public_url": "/media/legacy/2024/03/wallet-prod-release.zip",
+      "size_bytes": 13453762,
+      "sha256": "eb94c2934ceba3ca5c520a583a3e4958b47c08e30b72d46e3e462a27ff7557f4"
+    },
+    {
+      "wordpress_id": "1949",
+      "title": "logo_coinscan",
+      "upload_path": "2024/03/logo_coinscan.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/logo_coinscan.jpg",
+      "public_url": "/media/legacy/2024/03/logo_coinscan.jpg",
+      "size_bytes": 3769,
+      "sha256": "ef998fdf9a9795d866b13066c9b1793430d7a6a912c96fd7eb35fccabe9d12db"
+    },
+    {
+      "wordpress_id": "1963",
+      "title": "logo_m4p",
+      "upload_path": "2024/03/logo_m4p.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/logo_m4p.jpg",
+      "public_url": "/media/legacy/2024/03/logo_m4p.jpg",
+      "size_bytes": 8849,
+      "sha256": "8e99a3bbf5ec3eb5290730390db0342c7d01727f9f31443fb9b25f06bc5b013f"
+    },
+    {
+      "wordpress_id": "1967",
+      "title": "logo_concheckup",
+      "upload_path": "2024/03/logo_concheckup.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/logo_concheckup.jpg",
+      "public_url": "/media/legacy/2024/03/logo_concheckup.jpg",
+      "size_bytes": 12820,
+      "sha256": "cac7edfd3ad30954dfeb8751bea61ec62258fabf416448491af69cd8c2fc4160"
+    },
+    {
+      "wordpress_id": "1968",
+      "title": "logo_coinpaprika",
+      "upload_path": "2024/03/logo_coinpaprika.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/logo_coinpaprika.jpg",
+      "public_url": "/media/legacy/2024/03/logo_coinpaprika.jpg",
+      "size_bytes": 5211,
+      "sha256": "59338e3b67aa774d5c2b9c0d915990e81c228796307ead0b010242591503b971"
+    },
+    {
+      "wordpress_id": "1970",
+      "title": "logo_coindataflow",
+      "upload_path": "2024/03/logo_coindataflow.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/logo_coindataflow.jpg",
+      "public_url": "/media/legacy/2024/03/logo_coindataflow.jpg",
+      "size_bytes": 16004,
+      "sha256": "ca09f61281150b8f55c11122bfe9e0606e3cb3fc5cbc485bbf4ce0da89dd50b5"
+    },
+    {
+      "wordpress_id": "1971",
+      "title": "logo_coinCarp",
+      "upload_path": "2024/03/logo_coinCarp.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/logo_coinCarp.jpg",
+      "public_url": "/media/legacy/2024/03/logo_coinCarp.jpg",
+      "size_bytes": 17281,
+      "sha256": "e148ad5a1d797e9176db5ea976a658e60edb8934fc7faf79aaf69e65ff360371"
+    },
+    {
+      "wordpress_id": "1972",
+      "title": "logo_minerstat",
+      "upload_path": "2024/03/logo_minerstat.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/logo_minerstat.jpg",
+      "public_url": "/media/legacy/2024/03/logo_minerstat.jpg",
+      "size_bytes": 15240,
+      "sha256": "9f0be9d68aa03fee79cac56e67afe45fb5a2d1b16c1c1aa0a56d8ad3f999ecda"
+    },
+    {
+      "wordpress_id": "1973",
+      "title": "logo_coinscan",
+      "upload_path": "2024/03/logo_coinscan-1.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/logo_coinscan-1.jpg",
+      "public_url": "/media/legacy/2024/03/logo_coinscan-1.jpg",
+      "size_bytes": 8647,
+      "sha256": "5be9d0c8172fd6a3c3791da9f3df59848e34b5c8df602cacade387301b913990"
+    },
+    {
+      "wordpress_id": "2007",
+      "title": "DALL·E 2024-03-20 23.58.18 - Design a character for the Pepepow cryptocurrency in the iconic Pepe coin style, blending meme aesthetics with cryptocurrency themes. This character i",
+      "upload_path": "2024/03/DALL·E-2024-03-20-23.58.18-Design-a-character-for-the-Pepepow-cryptocurrency-in-the-iconic-Pepe-coin-style-blending-meme-aesthetics-with-cryptocurrency-themes.-This-character-i.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/DALL·E-2024-03-20-23.58.18-Design-a-character-for-the-Pepepow-cryptocurrency-in-the-iconic-Pepe-coin-style-blending-meme-aesthetics-with-cryptocurrency-themes.-This-character-i.webp",
+      "public_url": "/media/legacy/2024/03/DALL·E-2024-03-20-23.58.18-Design-a-character-for-the-Pepepow-cryptocurrency-in-the-iconic-Pepe-coin-style-blending-meme-aesthetics-with-cryptocurrency-themes.-This-character-i.webp",
+      "size_bytes": 390132,
+      "sha256": "a1836c794be44247dbc8ee65d19e2a75e2992b2fd8973892e9b50e61eaed205f"
+    },
+    {
+      "wordpress_id": "2017",
+      "title": "VIDULUM APPjpg",
+      "upload_path": "2024/03/VIDULUM-APPjpg.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/VIDULUM-APPjpg.jpg",
+      "public_url": "/media/legacy/2024/03/VIDULUM-APPjpg.jpg",
+      "size_bytes": 130190,
+      "sha256": "ebe1676d1817f927ae86b6d24591978f97058b4a2c84d5ea509a867d5ebe1851"
+    },
+    {
+      "wordpress_id": "2028",
+      "title": "mobile3",
+      "upload_path": "2024/03/mobile3.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/mobile3.png",
+      "public_url": "/media/legacy/2024/03/mobile3.png",
+      "size_bytes": 457143,
+      "sha256": "91ffee042568ad2793e2d45e941585f0ecb76794cdd35d30f5d5cdd1e92c1e97"
+    },
+    {
+      "wordpress_id": "2033",
+      "title": "second",
+      "upload_path": "2024/03/second.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/second.png",
+      "public_url": "/media/legacy/2024/03/second.png",
+      "size_bytes": 1435231,
+      "sha256": "8af289bd1ebe0850743ea00713db22c8b5f0b1811625f91f4093e514c956bb4d"
+    },
+    {
+      "wordpress_id": "2034",
+      "title": "pepepow_miner",
+      "upload_path": "2024/03/pepepow_miner.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/pepepow_miner.jpg",
+      "public_url": "/media/legacy/2024/03/pepepow_miner.jpg",
+      "size_bytes": 254148,
+      "sha256": "403c32845cfef1a4e5b7c3d6ca921ee6171ac0592ae1006ce236d43dd44abe8b"
+    },
+    {
+      "wordpress_id": "2038",
+      "title": "crypto.com",
+      "upload_path": "2024/03/crypto.com_.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/crypto.com_.jpg",
+      "public_url": "/media/legacy/2024/03/crypto.com_.jpg",
+      "size_bytes": 8369,
+      "sha256": "0e14e5b8f30d3ceb6da47ec221279ccb9245a6e8d7117be81cef174bb4b6ce46"
+    },
+    {
+      "wordpress_id": "2057",
+      "title": "logo",
+      "upload_path": "2024/03/logo.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/logo.png",
+      "public_url": "/media/legacy/2024/03/logo.png",
+      "size_bytes": 2792487,
+      "sha256": "438651b876218c41e2ec01fcfa9a7ffaca29f69c2bea7cdaa398512ddf5bfadf"
+    },
+    {
+      "wordpress_id": "2058",
+      "title": "first generation_logo_400x400",
+      "upload_path": "2024/03/first-generation_logo_400x400.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/03/first-generation_logo_400x400.jpg",
+      "public_url": "/media/legacy/2024/03/first-generation_logo_400x400.jpg",
+      "size_bytes": 29178,
+      "sha256": "090817f67138e67f5d2cf78361968682fdc2c6e54efb0fd3ec506a4548379e62"
+    },
+    {
+      "wordpress_id": "2102",
+      "title": "forsa",
+      "upload_path": "2024/04/forsa.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/04/forsa.jpg",
+      "public_url": "/media/legacy/2024/04/forsa.jpg",
+      "size_bytes": 185282,
+      "sha256": "a166460483b22753f1061fd0e303d926b55f6054efd400b985b6c9139c6c502e"
+    },
+    {
+      "wordpress_id": "2138",
+      "title": "forsa_edit",
+      "upload_path": "2024/04/forsa_edit-1.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/04/forsa_edit-1.jpg",
+      "public_url": "/media/legacy/2024/04/forsa_edit-1.jpg",
+      "size_bytes": 89156,
+      "sha256": "831913db0f6617af30d4c4ef63323777f383e300d4786a57d26095b56c0cf5d9"
+    },
+    {
+      "wordpress_id": "2145",
+      "title": "pepewicongiant1280x1280",
+      "upload_path": "2024/05/pepewicongiant1280x1280.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/05/pepewicongiant1280x1280.webp",
+      "public_url": "/media/legacy/2024/05/pepewicongiant1280x1280.webp",
+      "size_bytes": 277664,
+      "sha256": "552f93602b9f850a527c3325ba8c0dad7230a98c330eb1f6ec27b796a62935a5"
+    },
+    {
+      "wordpress_id": "2147",
+      "title": "GObJzcKXQAAM_7D",
+      "upload_path": "2024/06/GObJzcKXQAAM_7D.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/06/GObJzcKXQAAM_7D.jpg",
+      "public_url": "/media/legacy/2024/06/GObJzcKXQAAM_7D.jpg",
+      "size_bytes": 316605,
+      "sha256": "204cc466f8dc888813552cf9e2c9aebd31853f1f78ecfb57fc7ce9c57abdb95a"
+    },
+    {
+      "wordpress_id": "2149",
+      "title": "new discord",
+      "upload_path": "2024/06/new-discord.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/06/new-discord.jpg",
+      "public_url": "/media/legacy/2024/06/new-discord.jpg",
+      "size_bytes": 21475,
+      "sha256": "09fb0bf5d2beb3f6e677ac17e6d63b713218622099ce228cb8734e15112dea4a"
+    },
+    {
+      "wordpress_id": "2164",
+      "title": "banner for PEPEPOW",
+      "upload_path": "2024/06/banner-for-PEPEPOW.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/06/banner-for-PEPEPOW.jpg",
+      "public_url": "/media/legacy/2024/06/banner-for-PEPEPOW.jpg",
+      "size_bytes": 433968,
+      "sha256": "639e88f542f6d400c5eeefe41173dd3d351e209085607b696ee258c554cde1de"
+    },
+    {
+      "wordpress_id": "2165",
+      "title": "DALL·E 2024-06-07 09.46.03 - A retro_vintage style banner for PEPEPOW, a cryptocurrency featuring a frog character wearing a yellow mining helmet. The design incorporates retro co",
+      "upload_path": "2024/06/DALL·E-2024-06-07-09.46.03-A-retro_vintage-style-banner-for-PEPEPOW-a-cryptocurrency-featuring-a-frog-character-wearing-a-yellow-mining-helmet.-The-design-incorporates-retro-co.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/06/DALL·E-2024-06-07-09.46.03-A-retro_vintage-style-banner-for-PEPEPOW-a-cryptocurrency-featuring-a-frog-character-wearing-a-yellow-mining-helmet.-The-design-incorporates-retro-co.webp",
+      "public_url": "/media/legacy/2024/06/DALL·E-2024-06-07-09.46.03-A-retro_vintage-style-banner-for-PEPEPOW-a-cryptocurrency-featuring-a-frog-character-wearing-a-yellow-mining-helmet.-The-design-incorporates-retro-co.webp",
+      "size_bytes": 839162,
+      "sha256": "2ba18824fc425cf5e5bb07c6f23f1cd568c2bb4737d7b0961b11659704973fbb"
+    },
+    {
+      "wordpress_id": "2167",
+      "title": "Upscales.ai_1718071676918",
+      "upload_path": "2024/06/Upscales.ai_1718071676918.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/06/Upscales.ai_1718071676918.webp",
+      "public_url": "/media/legacy/2024/06/Upscales.ai_1718071676918.webp",
+      "size_bytes": 58050,
+      "sha256": "c471d35ab90c67e5f90acab3cee391efd109b77c1552cfba47343d051d2dd78d"
+    },
+    {
+      "wordpress_id": "2186",
+      "title": "artwork2",
+      "upload_path": "2024/06/artwork2.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/06/artwork2.png",
+      "public_url": "/media/legacy/2024/06/artwork2.png",
+      "size_bytes": 305852,
+      "sha256": "19fb77786e453d1085a9cad9134c4d42b03bbfa938552309b8baf5bdfd7c41a7"
+    },
+    {
+      "wordpress_id": "2233",
+      "title": "2024pepepow_logoSVG",
+      "upload_path": "2024/06/2024pepepow_logoSVG.svg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/06/2024pepepow_logoSVG.svg",
+      "public_url": "/media/legacy/2024/06/2024pepepow_logoSVG.svg",
+      "size_bytes": 616,
+      "sha256": "d54d41dd9b18007e28eac4df6f1bb3f82fad75c0b9e0c081b3975937144a769f"
+    },
+    {
+      "wordpress_id": "2237",
+      "title": "pepepow-roadmap",
+      "upload_path": "2024/06/pepepow-roadmap.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/06/pepepow-roadmap.png",
+      "public_url": "/media/legacy/2024/06/pepepow-roadmap.png",
+      "size_bytes": 527192,
+      "sha256": "0d33c6e7d2b118f482a5cc81c9aa8fcb82f0b689631b1eb271cd88b7c0fc6030"
+    },
+    {
+      "wordpress_id": "2245",
+      "title": "coinbase",
+      "upload_path": "2024/06/coinbase.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/06/coinbase.png",
+      "public_url": "/media/legacy/2024/06/coinbase.png",
+      "size_bytes": 3241,
+      "sha256": "5b2af0e9dfd833c725bd5aa88ed6a3801d67e7833824c5034a6ba2fe578ddbcf"
+    },
+    {
+      "wordpress_id": "2250",
+      "title": "Create a YouTube banner for the PepePow cryptocurrency channel, featuring a green frog character similar to Pepe the Frog, wearing a yellow miner helm",
+      "upload_path": "2024/06/Create-a-YouTube-banner-for-the-PepePow-cryptocurrency-channel-featuring-a-green-frog-character-similar-to-Pepe-the-Frog-wearing-a-yellow-miner-helm.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/06/Create-a-YouTube-banner-for-the-PepePow-cryptocurrency-channel-featuring-a-green-frog-character-similar-to-Pepe-the-Frog-wearing-a-yellow-miner-helm.png",
+      "public_url": "/media/legacy/2024/06/Create-a-YouTube-banner-for-the-PepePow-cryptocurrency-channel-featuring-a-green-frog-character-similar-to-Pepe-the-Frog-wearing-a-yellow-miner-helm.png",
+      "size_bytes": 2986334,
+      "sha256": "4d5ed1f16f29fa01a3184181a924918e10251fbe2adffdee5aa1bb1b75bf4dcc"
+    },
+    {
+      "wordpress_id": "2255",
+      "title": "pepepow-_jewel_adventure2",
+      "upload_path": "2024/07/pepepow-_jewel_adventure2.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/07/pepepow-_jewel_adventure2.webp",
+      "public_url": "/media/legacy/2024/07/pepepow-_jewel_adventure2.webp",
+      "size_bytes": 147720,
+      "sha256": "9e5315dbe2e9b93f661786addccf1f3f2fc2ac64a09f47e834ac9b5777de570b"
+    },
+    {
+      "wordpress_id": "2262",
+      "title": "PEPEPOW-switch to xelisv2",
+      "upload_path": "2024/08/PEPEPOW-switch-to-xelisv2.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/08/PEPEPOW-switch-to-xelisv2.webp",
+      "public_url": "/media/legacy/2024/08/PEPEPOW-switch-to-xelisv2.webp",
+      "size_bytes": 815920,
+      "sha256": "2d28f469861b3e6e8de585de8ca87969771f1628e7e4e5d197133bd66278ed73"
+    },
+    {
+      "wordpress_id": "2280",
+      "title": "PEPEPOW-538 blocks left",
+      "upload_path": "2024/08/PEPEPOW-538-blocks-left.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/08/PEPEPOW-538-blocks-left.webp",
+      "public_url": "/media/legacy/2024/08/PEPEPOW-538-blocks-left.webp",
+      "size_bytes": 446378,
+      "sha256": "56ed6b676e09aac2a1f9409a1147b3f8a8901cbd23031053a7759e6d8d1dbaf6"
+    },
+    {
+      "wordpress_id": "2295",
+      "title": "2d238ae8-b864-499b-99ce-687f49289298",
+      "upload_path": "2024/09/2d238ae8-b864-499b-99ce-687f49289298.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/09/2d238ae8-b864-499b-99ce-687f49289298.jpg",
+      "public_url": "/media/legacy/2024/09/2d238ae8-b864-499b-99ce-687f49289298.jpg",
+      "size_bytes": 283550,
+      "sha256": "3937ad794b3b55a95b80a7c767cd6449082db76acddf6762b4be4ad148e92063"
+    },
+    {
+      "wordpress_id": "2297",
+      "title": "PEPEPOW-Dragon game",
+      "upload_path": "2024/09/PEPEPOW-Dragon-game.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/09/PEPEPOW-Dragon-game.png",
+      "public_url": "/media/legacy/2024/09/PEPEPOW-Dragon-game.png",
+      "size_bytes": 1297164,
+      "sha256": "fb9a6066b5be8d93aca6dc335f607db40d9502fe0bd957158f8e931f6d74f02f"
+    },
+    {
+      "wordpress_id": "2298",
+      "title": "PEPEPOW-discussion",
+      "upload_path": "2024/09/PEPEPOW-discussion.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/09/PEPEPOW-discussion.webp",
+      "public_url": "/media/legacy/2024/09/PEPEPOW-discussion.webp",
+      "size_bytes": 414120,
+      "sha256": "d54e8780e0133fa4eaa4da423ddfea38bee8bfe0929efe5b32077c183ce99110"
+    },
+    {
+      "wordpress_id": "2321",
+      "title": "PEPEPOW-mobile2",
+      "upload_path": "2024/09/PEPEPOW-mobile2.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/09/PEPEPOW-mobile2.webp",
+      "public_url": "/media/legacy/2024/09/PEPEPOW-mobile2.webp",
+      "size_bytes": 644192,
+      "sha256": "4fa17ad05f9c79a03470186cbf1b6efbdb344d5b7ffc36ac3084465598aa8704"
+    },
+    {
+      "wordpress_id": "2322",
+      "title": "PEPEPOW-desktop1",
+      "upload_path": "2024/09/PEPEPOW-desktop1.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/09/PEPEPOW-desktop1.webp",
+      "public_url": "/media/legacy/2024/09/PEPEPOW-desktop1.webp",
+      "size_bytes": 404166,
+      "sha256": "d384e909385509aa28ad82f88c6c05c348007570faa1e0d5e478de01268a5ecf"
+    },
+    {
+      "wordpress_id": "2327",
+      "title": "PEPEPOW-Griffin3",
+      "upload_path": "2024/08/PEPEPOW-Griffin3.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/08/PEPEPOW-Griffin3.webp",
+      "public_url": "/media/legacy/2024/08/PEPEPOW-Griffin3.webp",
+      "size_bytes": 812608,
+      "sha256": "b0b4a142d94c87d374de496f55943d576496d118072fe9f5a06564bad1b6cb85"
+    },
+    {
+      "wordpress_id": "2328",
+      "title": "PEPEPOW-programer",
+      "upload_path": "2024/08/PEPEPOW-programer.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/08/PEPEPOW-programer.webp",
+      "public_url": "/media/legacy/2024/08/PEPEPOW-programer.webp",
+      "size_bytes": 860186,
+      "sha256": "78e3a095838738671269927f36f86fe447470bd1cc6c5d08a4e1ac25f81dac70"
+    },
+    {
+      "wordpress_id": "2346",
+      "title": "PEPEPOW-CPU miner",
+      "upload_path": "2024/09/PEPEPOW-CPU-miner.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/09/PEPEPOW-CPU-miner.webp",
+      "public_url": "/media/legacy/2024/09/PEPEPOW-CPU-miner.webp",
+      "size_bytes": 498456,
+      "sha256": "0370838d90f0d9909b1e4c5b7fed84b0861e9ebe2691f8a1825efda6cb709d92"
+    },
+    {
+      "wordpress_id": "2359",
+      "title": "PEPEOW bull market",
+      "upload_path": "2024/11/PEPEOW-bull-market.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/11/PEPEOW-bull-market.webp",
+      "public_url": "/media/legacy/2024/11/PEPEOW-bull-market.webp",
+      "size_bytes": 429930,
+      "sha256": "23c60a751f8b7c94bda36961d5f97afdbaac5fdae4bcb119649bbf842bb58774"
+    },
+    {
+      "wordpress_id": "2366",
+      "title": "PepePow sailor adventurous sea voyage",
+      "upload_path": "2024/11/PepePow-sailor-adventurous-sea-voyage.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/11/PepePow-sailor-adventurous-sea-voyage.webp",
+      "public_url": "/media/legacy/2024/11/PepePow-sailor-adventurous-sea-voyage.webp",
+      "size_bytes": 826310,
+      "sha256": "64c20bfb6bc220463c6b0be173f99378d9e8763cb05bb5d33ea06fc060ff51c8"
+    },
+    {
+      "wordpress_id": "2367",
+      "title": "pepepow- cyberpunk future",
+      "upload_path": "2024/11/pepepow-cyberpunk-future.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/11/pepepow-cyberpunk-future.webp",
+      "public_url": "/media/legacy/2024/11/pepepow-cyberpunk-future.webp",
+      "size_bytes": 749806,
+      "sha256": "60d00675afa7414363a58bb5fdeb5aedd8f2acac712985588e6c530d9416331e"
+    },
+    {
+      "wordpress_id": "2368",
+      "title": "PEPEPOW-diving",
+      "upload_path": "2024/11/PEPEPOW-diving.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/11/PEPEPOW-diving.webp",
+      "public_url": "/media/legacy/2024/11/PEPEPOW-diving.webp",
+      "size_bytes": 470976,
+      "sha256": "16d46ca9fdc991e909d1a4f097a1240d145cda3fd58979087cb60e94b2a3f8c5"
+    },
+    {
+      "wordpress_id": "2370",
+      "title": "PEPEPOW-realistic style",
+      "upload_path": "2024/11/PEPEPOW-realistic-style.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/11/PEPEPOW-realistic-style.webp",
+      "public_url": "/media/legacy/2024/11/PEPEPOW-realistic-style.webp",
+      "size_bytes": 680454,
+      "sha256": "fabc2ea86dff47cd7e7150d072a6d3e6c049828f5a634f1c201b5ef8b362fce2"
+    },
+    {
+      "wordpress_id": "2371",
+      "title": "PEPEPOW-triumphant",
+      "upload_path": "2024/11/PEPEPOW-triumphant.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/11/PEPEPOW-triumphant.webp",
+      "public_url": "/media/legacy/2024/11/PEPEPOW-triumphant.webp",
+      "size_bytes": 450140,
+      "sha256": "b757f793dc679d2c7503d8de7d4360b1535f3725db7511098969693ecbbdbc74"
+    },
+    {
+      "wordpress_id": "2379",
+      "title": "PEPEPOW underwater adventure",
+      "upload_path": "2024/11/PEPEPOW-underwater-adventure.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/11/PEPEPOW-underwater-adventure.webp",
+      "public_url": "/media/legacy/2024/11/PEPEPOW-underwater-adventure.webp",
+      "size_bytes": 776972,
+      "sha256": "9e3141bc6d757120e32027d42a52312f178db47f0e310f0f233c5773453883d0"
+    },
+    {
+      "wordpress_id": "2411",
+      "title": "PEPEPOW-sci",
+      "upload_path": "2024/12/PEPEPOW-sci.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/12/PEPEPOW-sci.png",
+      "public_url": "/media/legacy/2024/12/PEPEPOW-sci.png",
+      "size_bytes": 1842174,
+      "sha256": "8f6064a05ecfcc749c0866d8b1aea21285a571c15a79bba20a593195e64f4bd4"
+    },
+    {
+      "wordpress_id": "2413",
+      "title": "48557fc5_mp4_hd.original",
+      "upload_path": "2024/12/48557fc5_mp4_hd.original.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/12/48557fc5_mp4_hd.original.jpg",
+      "public_url": "/media/legacy/2024/12/48557fc5_mp4_hd.original.jpg",
+      "size_bytes": 66841,
+      "sha256": "57f32e374a22f2bc276d41fc619664e8af9e19b1e24ea6fa2d187b6da95c369c"
+    },
+    {
+      "wordpress_id": "2439",
+      "title": "2024-pepewicongiant_no_bg 50X50",
+      "upload_path": "2024/12/2024-pepewicongiant_no_bg-50X50.svg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/12/2024-pepewicongiant_no_bg-50X50.svg",
+      "public_url": "/media/legacy/2024/12/2024-pepewicongiant_no_bg-50X50.svg",
+      "size_bytes": 592,
+      "sha256": "ae54808497d544eeb61ba8a1c0a7cf2d463e2bbefca65e500a3716f0f103c565"
+    },
+    {
+      "wordpress_id": "2441",
+      "title": "2024-pepewicongiant_no_bg 400X400",
+      "upload_path": "2024/12/2024-pepewicongiant_no_bg-400X400.svg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/12/2024-pepewicongiant_no_bg-400X400.svg",
+      "public_url": "/media/legacy/2024/12/2024-pepewicongiant_no_bg-400X400.svg",
+      "size_bytes": 594,
+      "sha256": "38373bf89b227bd3460e86d21baa26f8ce2e3d06b4678f052c965bcc4c1a636b"
+    },
+    {
+      "wordpress_id": "2443",
+      "title": "pepepow-discord",
+      "upload_path": "2024/12/pepepow-discord.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/12/pepepow-discord.jpg",
+      "public_url": "/media/legacy/2024/12/pepepow-discord.jpg",
+      "size_bytes": 15886,
+      "sha256": "38394b2bc1cbb45a2f027fdf7f2d45729bd861b454c0f82cb35a637c3a95a51a"
+    },
+    {
+      "wordpress_id": "2448",
+      "title": "PEPEPOW-IEO3",
+      "upload_path": "2024/12/PEPEPOW-IEO3.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/12/PEPEPOW-IEO3.webp",
+      "public_url": "/media/legacy/2024/12/PEPEPOW-IEO3.webp",
+      "size_bytes": 457356,
+      "sha256": "1f9e4327623740f4dd0e8ba4d454c6bb79351fede79b18aa327df2dd828287fd"
+    },
+    {
+      "wordpress_id": "2561",
+      "title": "adminDAO",
+      "upload_path": "2024/12/adminDAO.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/12/adminDAO.png",
+      "public_url": "/media/legacy/2024/12/adminDAO.png",
+      "size_bytes": 264797,
+      "sha256": "fbae8d2a3304c49fb80be1d187fd5a507d227c037806855bf4f9f86e468d6006"
+    },
+    {
+      "wordpress_id": "2603",
+      "title": "xeggex",
+      "upload_path": "2024/12/xeggex.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/12/xeggex.jpg",
+      "public_url": "/media/legacy/2024/12/xeggex.jpg",
+      "size_bytes": 4806,
+      "sha256": "12fae88a0cc61a95d82addc8c858739e3ef609cb925e603445c4bdeb8a01c49c"
+    },
+    {
+      "wordpress_id": "2604",
+      "title": "nonkyc",
+      "upload_path": "2024/12/nonkyc.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/12/nonkyc.jpg",
+      "public_url": "/media/legacy/2024/12/nonkyc.jpg",
+      "size_bytes": 4150,
+      "sha256": "6d9a5654dadd5ac0cb6cfb413be9d5fe231ecdba9b5f3f9610087314a55d6c97"
+    },
+    {
+      "wordpress_id": "2605",
+      "title": "exbitron",
+      "upload_path": "2024/12/exbitron.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/12/exbitron.jpg",
+      "public_url": "/media/legacy/2024/12/exbitron.jpg",
+      "size_bytes": 4638,
+      "sha256": "d712898cba767eb4a9d36083f69c1f24ab374f4a29b51d2244d6ff64daad9fe8"
+    },
+    {
+      "wordpress_id": "2673",
+      "title": "new_logo_PEPEPOW",
+      "upload_path": "2024/12/new_logo_PEPEPOW.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/12/new_logo_PEPEPOW.png",
+      "public_url": "/media/legacy/2024/12/new_logo_PEPEPOW.png",
+      "size_bytes": 130639,
+      "sha256": "a2598df1cc42901d7e3ca1b6ee51f54c6e522ba4a2c188ba810c727de44a2a80"
+    },
+    {
+      "wordpress_id": "2696",
+      "title": "PEPEW LOGO NEW by TrooperD",
+      "upload_path": "2024/12/PEPEW-LOGO-NEW-by-TrooperD.gif",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/12/PEPEW-LOGO-NEW-by-TrooperD.gif",
+      "public_url": "/media/legacy/2024/12/PEPEW-LOGO-NEW-by-TrooperD.gif",
+      "size_bytes": 117707,
+      "sha256": "0e3e48b28b9d980981852170c5e201293c4531b14e76f34b95a4dd37d034af3a"
+    },
+    {
+      "wordpress_id": "2703",
+      "title": "dex-trade",
+      "upload_path": "2024/12/dex-trade.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/12/dex-trade.png",
+      "public_url": "/media/legacy/2024/12/dex-trade.png",
+      "size_bytes": 3269,
+      "sha256": "f0347f5b12ba9fd9d4c439fa743a9de6491fa45d0ed7c4f6d3bb598d6214efda"
+    },
+    {
+      "wordpress_id": "2857",
+      "title": "PEPEPOW wallet update",
+      "upload_path": "2024/12/PEPEPOW-wallet-update.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/12/PEPEPOW-wallet-update.webp",
+      "public_url": "/media/legacy/2024/12/PEPEPOW-wallet-update.webp",
+      "size_bytes": 508698,
+      "sha256": "513bf9da1ff423efe48e2bcfed31d5ce66cbf1aa0aa987292dc319aafe6a063c"
+    },
+    {
+      "wordpress_id": "2861",
+      "title": "PEPEPOW IEO dex-trade",
+      "upload_path": "2024/12/PEPEPOW-IEO-dex-trade.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2024/12/PEPEPOW-IEO-dex-trade.webp",
+      "public_url": "/media/legacy/2024/12/PEPEPOW-IEO-dex-trade.webp",
+      "size_bytes": 343736,
+      "sha256": "68000909eff2096fad80ae5b90f09e821adf5f0b0de8e166fc6dc7f34dfa005e"
+    },
+    {
+      "wordpress_id": "2924",
+      "title": "mining2025",
+      "upload_path": "2025/01/mining2025.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/01/mining2025.webp",
+      "public_url": "/media/legacy/2025/01/mining2025.webp",
+      "size_bytes": 1160602,
+      "sha256": "a97e5540718a46cb54de4b3754527e9622f89677770574c08cc140f8605ff1ac"
+    },
+    {
+      "wordpress_id": "2927",
+      "title": "2025logo",
+      "upload_path": "2025/01/2025logo.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/01/2025logo.png",
+      "public_url": "/media/legacy/2025/01/2025logo.png",
+      "size_bytes": 968568,
+      "sha256": "e6d4e0fc8f2beb87e9a6a62c823d331763369f2f7a51e0b6dc42657321ef7e7d"
+    },
+    {
+      "wordpress_id": "2928",
+      "title": "cropped-2025logo.png",
+      "upload_path": "2025/01/cropped-2025logo.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/01/cropped-2025logo.png",
+      "public_url": "/media/legacy/2025/01/cropped-2025logo.png",
+      "size_bytes": 351654,
+      "sha256": "4dc8458741597e3e210ee7f8734ddda0cf120d22a02d31d18966cea021ef6852"
+    },
+    {
+      "wordpress_id": "2930",
+      "title": "2025_PEPEW_Logo_HQ_1800x1800",
+      "upload_path": "2025/01/2025_PEPEW_Logo_HQ_1800x1800.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/01/2025_PEPEW_Logo_HQ_1800x1800.png",
+      "public_url": "/media/legacy/2025/01/2025_PEPEW_Logo_HQ_1800x1800.png",
+      "size_bytes": 2851180,
+      "sha256": "b8348916a15941f488eb3050342131653838893f24569aecab3fbcbaf81acfb1"
+    },
+    {
+      "wordpress_id": "2933",
+      "title": "new white paper",
+      "upload_path": "2025/01/new-white-paper.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/01/new-white-paper.webp",
+      "public_url": "/media/legacy/2025/01/new-white-paper.webp",
+      "size_bytes": 396594,
+      "sha256": "b417ba9f95857b68165a0a341afec98dcd9c2ad071d7f91912b66ad0ad2b4756"
+    },
+    {
+      "wordpress_id": "2944",
+      "title": "dex-listing",
+      "upload_path": "2025/01/dex-listing.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/01/dex-listing.webp",
+      "public_url": "/media/legacy/2025/01/dex-listing.webp",
+      "size_bytes": 151828,
+      "sha256": "7e54e4e33fb46989bb88e3e0cfa25ad327b58de747a009e221aba7589930bfa3"
+    },
+    {
+      "wordpress_id": "2964",
+      "title": "PEPEPOW Whitepaper_v2.0",
+      "upload_path": "2025/01/PEPEPOW-Whitepaper_v2.0.pdf",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/01/PEPEPOW-Whitepaper_v2.0.pdf",
+      "public_url": "/docs/legacy/2025/01/PEPEPOW-Whitepaper_v2.0.pdf",
+      "size_bytes": 3399323,
+      "sha256": "30529c5fe9f9c5d9ffe5cd95a5f59e74d210cbe5d12762a51849b1f4c322ce6f"
+    },
+    {
+      "wordpress_id": "2976",
+      "title": "community-driven decision",
+      "upload_path": "2025/02/community-driven-decision.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/02/community-driven-decision.webp",
+      "public_url": "/media/legacy/2025/02/community-driven-decision.webp",
+      "size_bytes": 481350,
+      "sha256": "db3a471f146270100447c36768477c2b4ca9f98be4a2f9f005cbadd08f5762db"
+    },
+    {
+      "wordpress_id": "2987",
+      "title": "dex-trade-icon",
+      "upload_path": "2025/02/dex-trade-icon.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/02/dex-trade-icon.jpg",
+      "public_url": "/media/legacy/2025/02/dex-trade-icon.jpg",
+      "size_bytes": 4294,
+      "sha256": "c0b59e2b97ff988a4eaeb11bf1cd4a30a19e82c23f56f15fa4f51ba223659367"
+    },
+    {
+      "wordpress_id": "2992",
+      "title": "dex-trade-icon",
+      "upload_path": "2025/02/dex-trade-icon-1.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/02/dex-trade-icon-1.jpg",
+      "public_url": "/media/legacy/2025/02/dex-trade-icon-1.jpg",
+      "size_bytes": 4626,
+      "sha256": "2b317c0d7e308e4fbd9549421e386264dd618136ac20ca6be5dbb9d24eb79b92"
+    },
+    {
+      "wordpress_id": "2997",
+      "title": "vote",
+      "upload_path": "2025/02/vote.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/02/vote.webp",
+      "public_url": "/media/legacy/2025/02/vote.webp",
+      "size_bytes": 638058,
+      "sha256": "010d4290f4806e4426ac685d01d1be0edad951f26d3deee1e7d59b11ed68129b"
+    },
+    {
+      "wordpress_id": "3006",
+      "title": "crowdfunding",
+      "upload_path": "2025/02/crowdfunding.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/02/crowdfunding.webp",
+      "public_url": "/media/legacy/2025/02/crowdfunding.webp",
+      "size_bytes": 1129276,
+      "sha256": "15f6438ef14bc2aa3919648af91a0acc2ba3353098bff929a00dfc7a452735ee"
+    },
+    {
+      "wordpress_id": "3027",
+      "title": "xeggex_back",
+      "upload_path": "2025/02/xeggex_back.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/02/xeggex_back.webp",
+      "public_url": "/media/legacy/2025/02/xeggex_back.webp",
+      "size_bytes": 161842,
+      "sha256": "b746399cde6bcf4333a5cb003a8d1e67dac7b11f8628f6375c1f4c037519d904"
+    },
+    {
+      "wordpress_id": "3054",
+      "title": "voting exchange",
+      "upload_path": "2025/03/voting-exchange.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/03/voting-exchange.webp",
+      "public_url": "/media/legacy/2025/03/voting-exchange.webp",
+      "size_bytes": 547324,
+      "sha256": "f07c9aa7f1114ea8ececad234970c11de86ae3d40592b33645adaecbd6138a96"
+    },
+    {
+      "wordpress_id": "3061",
+      "title": "building2",
+      "upload_path": "2025/04/building2.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/04/building2.png",
+      "public_url": "/media/legacy/2025/04/building2.png",
+      "size_bytes": 3034826,
+      "sha256": "9d4f893bcf6682ceb4031651a5273f63abcc9d8fa592807cdfc1cfa7fc5e7f81"
+    },
+    {
+      "wordpress_id": "3066",
+      "title": "testnet_launch",
+      "upload_path": "2025/04/testnet_launch.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/04/testnet_launch.jpg",
+      "public_url": "/media/legacy/2025/04/testnet_launch.jpg",
+      "size_bytes": 397645,
+      "sha256": "9793f8398d0127a97849b837bb88686d4b6b371f3e0ceb321b8932d9861fd1a5"
+    },
+    {
+      "wordpress_id": "3070",
+      "title": "V2.7.1.6",
+      "upload_path": "2025/05/V2.7.1.6.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/05/V2.7.1.6.jpg",
+      "public_url": "/media/legacy/2025/05/V2.7.1.6.jpg",
+      "size_bytes": 321639,
+      "sha256": "a43a298af39cf761d9aa1951d0fdaaa71d6c88ba0fbe9edc604f508b83ffef0c"
+    },
+    {
+      "wordpress_id": "3099",
+      "title": "tierNodes",
+      "upload_path": "2025/05/tierNodes.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/05/tierNodes.png",
+      "public_url": "/media/legacy/2025/05/tierNodes.png",
+      "size_bytes": 1125956,
+      "sha256": "c8904185739047c6c2ad3e9725e6ffc63ca82b0ad1693f985e5d098e7168b4f7"
+    },
+    {
+      "wordpress_id": "3106",
+      "title": "CPU miner",
+      "upload_path": "2025/05/CPU-miner.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/05/CPU-miner.png",
+      "public_url": "/media/legacy/2025/05/CPU-miner.png",
+      "size_bytes": 2676252,
+      "sha256": "b3d44dfaa6a2173a3bab7b06526a219443c47d20bbd5eccfea2279e7e6740efa"
+    },
+    {
+      "wordpress_id": "3114",
+      "title": "v2.7.1.7",
+      "upload_path": "2025/06/v2.7.1.7.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/06/v2.7.1.7.png",
+      "public_url": "/media/legacy/2025/06/v2.7.1.7.png",
+      "size_bytes": 754453,
+      "sha256": "09127ab0bf22b0c854610f4acc05f972d0b097b169976af040845bc070252e6a"
+    },
+    {
+      "wordpress_id": "3134",
+      "title": "xeggex insolvency",
+      "upload_path": "2025/06/xeggex-insolvency.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/06/xeggex-insolvency.png",
+      "public_url": "/media/legacy/2025/06/xeggex-insolvency.png",
+      "size_bytes": 681261,
+      "sha256": "f258bc2036ab1ccf2359d72c87cfe75cb656e487d9c652a37042937de2248764"
+    },
+    {
+      "wordpress_id": "3137",
+      "title": "Hybrid GPUCPU Miner",
+      "upload_path": "2025/06/Hybrid-GPUCPU-Miner.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/06/Hybrid-GPUCPU-Miner.png",
+      "public_url": "/media/legacy/2025/06/Hybrid-GPUCPU-Miner.png",
+      "size_bytes": 746193,
+      "sha256": "1cc27e06995ae0d713e9e8a915ed9ad0e0f527fce26167c95af17923781ffeaf"
+    },
+    {
+      "wordpress_id": "3149",
+      "title": "MANDATORY updatev2.8.1.1",
+      "upload_path": "2025/07/MANDATORY-updatev2.8.1.1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/07/MANDATORY-updatev2.8.1.1.png",
+      "public_url": "/media/legacy/2025/07/MANDATORY-updatev2.8.1.1.png",
+      "size_bytes": 619067,
+      "sha256": "cc8f109fc7653eaa8ce70f69e090229bc10e3db9756fb74642c33b6cada97bea"
+    },
+    {
+      "wordpress_id": "3173",
+      "title": "crowdfunding202507",
+      "upload_path": "2025/07/crowdfunding202507.webp",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/07/crowdfunding202507.webp",
+      "public_url": "/media/legacy/2025/07/crowdfunding202507.webp",
+      "size_bytes": 410550,
+      "sha256": "9c4a0360477b7cbcf9f2c23fcf4b8b6f67fb640bc5e7e390a7c2f4e5a2de9768"
+    },
+    {
+      "wordpress_id": "3192",
+      "title": "list_on_Nestex",
+      "upload_path": "2025/07/list_on_Nestex.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/07/list_on_Nestex.png",
+      "public_url": "/media/legacy/2025/07/list_on_Nestex.png",
+      "size_bytes": 710117,
+      "sha256": "ae2ae47fdcb8625347da5fb8e875b2e5086a4a32eef6a63a7256cb4b1d5b41c3"
+    },
+    {
+      "wordpress_id": "3201",
+      "title": "v2813split fixed",
+      "upload_path": "2025/07/v2813split-fixed.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/07/v2813split-fixed.png",
+      "public_url": "/media/legacy/2025/07/v2813split-fixed.png",
+      "size_bytes": 956749,
+      "sha256": "d2b6750a87db1391a6d294283a515d4c29a6054c87e64c44980d9e4ac1e29936"
+    },
+    {
+      "wordpress_id": "3206",
+      "title": "gemma-pepepow7",
+      "upload_path": "2025/07/gemma-pepepow7.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/07/gemma-pepepow7.jpg",
+      "public_url": "/media/legacy/2025/07/gemma-pepepow7.jpg",
+      "size_bytes": 103958,
+      "sha256": "a78fe43e3ec30c2929bd1d2821d4517ba8cb3b71e0e81ce2d4c3e3a55971b737"
+    },
+    {
+      "wordpress_id": "3241",
+      "title": "poll hoohashv100",
+      "upload_path": "2025/08/poll-hoohashv100.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/08/poll-hoohashv100.png",
+      "public_url": "/media/legacy/2025/08/poll-hoohashv100.png",
+      "size_bytes": 758478,
+      "sha256": "58d3bf5e3dd11a18807824aefe363c5bd9d9012d6fa5e38a7d958464300579e9"
+    },
+    {
+      "wordpress_id": "3245",
+      "title": "votecloseresult",
+      "upload_path": "2025/09/votecloseresult.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/09/votecloseresult.png",
+      "public_url": "/media/legacy/2025/09/votecloseresult.png",
+      "size_bytes": 670168,
+      "sha256": "2c8461265cb2be15cf55ae4d52bf866d34a3d05999e7b00af2b022ffae836713"
+    },
+    {
+      "wordpress_id": "3271",
+      "title": "discussion-vote-algorithm",
+      "upload_path": "2025/11/discussion-vote-algorithm.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/11/discussion-vote-algorithm.png",
+      "public_url": "/media/legacy/2025/11/discussion-vote-algorithm.png",
+      "size_bytes": 526023,
+      "sha256": "5214b80e03d0dad40ccbfc0f18bd14b91814d891b82c41cba5380b4da919fbf2"
+    },
+    {
+      "wordpress_id": "3297",
+      "title": "pecunia-logo",
+      "upload_path": "2025/11/pecunia-logo.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/11/pecunia-logo.jpg",
+      "public_url": "/media/legacy/2025/11/pecunia-logo.jpg",
+      "size_bytes": 4682,
+      "sha256": "010d147955ff498bf5667bca8ae0551c47bca8c844398971b5005985387cf2fd"
+    },
+    {
+      "wordpress_id": "3298",
+      "title": "mingpowerx-logo",
+      "upload_path": "2025/11/mingpowerx-logo.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/11/mingpowerx-logo.png",
+      "public_url": "/media/legacy/2025/11/mingpowerx-logo.png",
+      "size_bytes": 8806,
+      "sha256": "99959ebb561aa95709a8cce82dce89ff5cfa18aba13467143f65a8440414c4c7"
+    },
+    {
+      "wordpress_id": "3299",
+      "title": "MiningPoolStats-logo",
+      "upload_path": "2025/11/MiningPoolStats-logo.jpg",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/11/MiningPoolStats-logo.jpg",
+      "public_url": "/media/legacy/2025/11/MiningPoolStats-logo.jpg",
+      "size_bytes": 5219,
+      "sha256": "f1633d4a424438860c151affd8ccdd7fd515a046516fee1e01868c1e03a0d4d4"
+    },
+    {
+      "wordpress_id": "3300",
+      "title": "mingpowerx-logo",
+      "upload_path": "2025/11/mingpowerx-logo-1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/11/mingpowerx-logo-1.png",
+      "public_url": "/media/legacy/2025/11/mingpowerx-logo-1.png",
+      "size_bytes": 17059,
+      "sha256": "1374ffff575013a65eace8412819368b8c41253715fd06d289e6110b4f5a30ae"
+    },
+    {
+      "wordpress_id": "3301",
+      "title": "binance-logo",
+      "upload_path": "2025/11/binance-logo.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/11/binance-logo.png",
+      "public_url": "/media/legacy/2025/11/binance-logo.png",
+      "size_bytes": 4008,
+      "sha256": "9b71549e611d0d17c405f67c1de3e8bbd83f02a607811d805d1c0b818d40c962"
+    },
+    {
+      "wordpress_id": "3302",
+      "title": "NestEx-logo",
+      "upload_path": "2025/11/NestEx-logo.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/11/NestEx-logo.png",
+      "public_url": "/media/legacy/2025/11/NestEx-logo.png",
+      "size_bytes": 16290,
+      "sha256": "4f8b92f746488086a5b1732ad3db820caf5cbf69ef75760c3c8092b4e081850e"
+    },
+    {
+      "wordpress_id": "3308",
+      "title": "futuristic semi-realistic cartoon",
+      "upload_path": "2025/11/futuristic-semi-realistic-cartoon.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/11/futuristic-semi-realistic-cartoon.png",
+      "public_url": "/media/legacy/2025/11/futuristic-semi-realistic-cartoon.png",
+      "size_bytes": 879390,
+      "sha256": "5913cb121081f6f73e7a89c882d5daa3f93f1205ca056047b6a3dff1d94dc1fa"
+    },
+    {
+      "wordpress_id": "3323",
+      "title": "android wallet release",
+      "upload_path": "2025/12/android-wallet-release.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2025/12/android-wallet-release.png",
+      "public_url": "/media/legacy/2025/12/android-wallet-release.png",
+      "size_bytes": 752008,
+      "sha256": "cb632b8a406982d4db50d135ea81c7d5178d51ae78dc8461176b0013fbc34209"
+    },
+    {
+      "wordpress_id": "3345",
+      "title": "PEPEPOW Visual Reference Guideline v1.0",
+      "upload_path": "2026/01/PEPEPOW-Visual-Reference-Guideline-v1.0.pdf",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/01/PEPEPOW-Visual-Reference-Guideline-v1.0.pdf",
+      "public_url": "/docs/legacy/2026/01/PEPEPOW-Visual-Reference-Guideline-v1.0.pdf",
+      "size_bytes": 127428,
+      "sha256": "2c63a7bddfc9cec5b43d9c88ec8a36d8a622912255db6154dc4d769179b2ee93"
+    },
+    {
+      "wordpress_id": "3362",
+      "title": "web wallet1",
+      "upload_path": "2026/01/web-wallet1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/01/web-wallet1.png",
+      "public_url": "/media/legacy/2026/01/web-wallet1.png",
+      "size_bytes": 919425,
+      "sha256": "a55acd3da6ca3221a4ef7858bb491a6f3bab6395019ea6796f7f203e3910e54c"
+    },
+    {
+      "wordpress_id": "3383",
+      "title": "Consolidation UTOXs",
+      "upload_path": "2026/01/Consolidation-UTOXs.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/01/Consolidation-UTOXs.png",
+      "public_url": "/media/legacy/2026/01/Consolidation-UTOXs.png",
+      "size_bytes": 868066,
+      "sha256": "1ca79bc291e14be249e05024591b09db92258c9dfc71a439cd41a92204aede13"
+    },
+    {
+      "wordpress_id": "3387",
+      "title": "aTelegram Wallet",
+      "upload_path": "2026/02/aTelegram-Wallet.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/02/aTelegram-Wallet.png",
+      "public_url": "/media/legacy/2026/02/aTelegram-Wallet.png",
+      "size_bytes": 854009,
+      "sha256": "6cc7882406e3c35379d551ac25de98e13781d71f847ea6fef93d4d824a21c8dc"
+    },
+    {
+      "wordpress_id": "3402",
+      "title": "hoohash",
+      "upload_path": "2026/02/hoohash.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/02/hoohash.png",
+      "public_url": "/media/legacy/2026/02/hoohash.png",
+      "size_bytes": 559715,
+      "sha256": "9fa3f560c381bd895ca31783c0e894819ddd9c84c434450ba552d17d1aab9e6f"
+    },
+    {
+      "wordpress_id": "3405",
+      "title": "testnet1",
+      "upload_path": "2026/02/testnet1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/02/testnet1.png",
+      "public_url": "/media/legacy/2026/02/testnet1.png",
+      "size_bytes": 590439,
+      "sha256": "7914b96b208a65832a8bc4f91c207b2ab906bc24401e49d950ce501e07e5c102"
+    },
+    {
+      "wordpress_id": "3409",
+      "title": "tradebot1",
+      "upload_path": "2026/03/tradebot1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/03/tradebot1.png",
+      "public_url": "/media/legacy/2026/03/tradebot1.png",
+      "size_bytes": 605370,
+      "sha256": "8bde371bb6c241cbb40fa506269c991685a0b1b3affe5f181de82389ccc07ad4"
+    },
+    {
+      "wordpress_id": "3415",
+      "title": "upgrade1",
+      "upload_path": "2026/03/upgrade1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/03/upgrade1.png",
+      "public_url": "/media/legacy/2026/03/upgrade1.png",
+      "size_bytes": 651054,
+      "sha256": "5707bc5d137daf58dfee781f821b8d931dad219da9abd76a5f8afe119638fa23"
+    },
+    {
+      "wordpress_id": "3427",
+      "title": "delist-dt",
+      "upload_path": "2026/03/delist-dt.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/03/delist-dt.png",
+      "public_url": "/media/legacy/2026/03/delist-dt.png",
+      "size_bytes": 566926,
+      "sha256": "a4539f3e939e39275ae10286b7ac4e4c9728ccf9875dcec848751a75d8e1db87"
+    },
+    {
+      "wordpress_id": "3431",
+      "title": "2-CPU + GPU mining",
+      "upload_path": "2026/03/2-CPU-GPU-mining.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/03/2-CPU-GPU-mining.png",
+      "public_url": "/media/legacy/2026/03/2-CPU-GPU-mining.png",
+      "size_bytes": 619691,
+      "sha256": "13a4c65f1aea04f4d108f20be127eb3d54e72fd9cdfb52cc76c8705ff08d8adf"
+    },
+    {
+      "wordpress_id": "3435",
+      "title": "monitor1",
+      "upload_path": "2026/04/monitor1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/04/monitor1.png",
+      "public_url": "/media/legacy/2026/04/monitor1.png",
+      "size_bytes": 643828,
+      "sha256": "58d10a025ae91eda9425176343fda3fef82917e24a8f89b563a2ab07d3fc177e"
+    },
+    {
+      "wordpress_id": "3447",
+      "title": "good2",
+      "upload_path": "2026/04/good2.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/04/good2.png",
+      "public_url": "/media/legacy/2026/04/good2.png",
+      "size_bytes": 150618,
+      "sha256": "347a97710c23939daf0d26d17ee37a794930031ce825812477ef416a7b0e6978"
+    },
+    {
+      "wordpress_id": "3476",
+      "title": "Hoohash-Pepew Fork",
+      "upload_path": "2026/04/Hoohash-Pepew-Fork.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/04/Hoohash-Pepew-Fork.png",
+      "public_url": "/media/legacy/2026/04/Hoohash-Pepew-Fork.png",
+      "size_bytes": 669844,
+      "sha256": "814179b1e750b8a08e262d271730bc46215eeb7e0fff9084f0f4159839a3e7e9"
+    },
+    {
+      "wordpress_id": "3492",
+      "title": "miner-pepew2026",
+      "upload_path": "2026/04/miner-pepew2026.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/04/miner-pepew2026.png",
+      "public_url": "/media/legacy/2026/04/miner-pepew2026.png",
+      "size_bytes": 822310,
+      "sha256": "9205ea7f9790d9962e70d3284a54301bb85a2685d6bd5eaa0225fdb843637679"
+    },
+    {
+      "wordpress_id": "3512",
+      "title": "Continues to Improve_PEPEW",
+      "upload_path": "2026/05/Continues-to-Improve_PEPEW.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/05/Continues-to-Improve_PEPEW.png",
+      "public_url": "/media/legacy/2026/05/Continues-to-Improve_PEPEW.png",
+      "size_bytes": 877533,
+      "sha256": "0c8502899da8486563afcfa998d1182ec15a3a55f1d1e6d095bb8d36a3978cb2"
+    },
+    {
+      "wordpress_id": "3517",
+      "title": "explorerupdate",
+      "upload_path": "2026/05/explorerupdate.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/05/explorerupdate.png",
+      "public_url": "/media/legacy/2026/05/explorerupdate.png",
+      "size_bytes": 885081,
+      "sha256": "00b5f3c1688c5672f52b0de67ca9be65369e78ddd2c29ff88a94c4a853e0bc24"
+    },
+    {
+      "wordpress_id": "3524",
+      "title": "legacy wallet retirement3",
+      "upload_path": "2026/05/legacy-wallet-retirement3-1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/05/legacy-wallet-retirement3-1.png",
+      "public_url": "/media/legacy/2026/05/legacy-wallet-retirement3-1.png",
+      "size_bytes": 1028228,
+      "sha256": "c41480427bbecb1f6b730559b13562bc0b1692bf33a41921053b05ebab76b304"
+    },
+    {
+      "wordpress_id": "3525",
+      "title": "PEPEPOW Whitepaper v2.1",
+      "upload_path": "2026/05/PEPEPOW-Whitepaper-v2.1.pdf",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/05/PEPEPOW-Whitepaper-v2.1.pdf",
+      "public_url": "/docs/legacy/2026/05/PEPEPOW-Whitepaper-v2.1.pdf",
+      "size_bytes": 3529195,
+      "sha256": "f92bd1bc7886b3ada64017f33844f63f18610ee5cbd9277bf6ea8f2dfad727c2"
+    },
+    {
+      "wordpress_id": "3527",
+      "title": "white paperv2.1",
+      "upload_path": "2026/05/white-paperv2.1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/05/white-paperv2.1.png",
+      "public_url": "/media/legacy/2026/05/white-paperv2.1.png",
+      "size_bytes": 934780,
+      "sha256": "bcdead3ea8557a2d2b5c507d681e69e86abfa179e747b615925ec7c071a5d2b2"
+    },
+    {
+      "wordpress_id": "3545",
+      "title": "pool-pepepow1",
+      "upload_path": "2026/06/pool-pepepow1.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/06/pool-pepepow1.png",
+      "public_url": "/media/legacy/2026/06/pool-pepepow1.png",
+      "size_bytes": 968226,
+      "sha256": "c0b92b883289c47fceebc955425be65fad916ab01c2dd643f67d4cfe093e6724"
+    },
+    {
+      "wordpress_id": "3557",
+      "title": "PEPEW light",
+      "upload_path": "2026/07/PEPEW-light.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/07/PEPEW-light.png",
+      "public_url": "/media/legacy/2026/07/PEPEW-light.png",
+      "size_bytes": 527906,
+      "sha256": "da4574e85cdd178e330f2b01a602c663a4ff0b52713a44aa132c9923a3524441"
+    },
+    {
+      "wordpress_id": "3560",
+      "title": "light-wallet",
+      "upload_path": "2026/07/light-wallet.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/07/light-wallet.png",
+      "public_url": "/media/legacy/2026/07/light-wallet.png",
+      "size_bytes": 710058,
+      "sha256": "a9852a9c22f0357545ea3ff202db6c2383dc67d447f09a4992af791d8ab0e25b"
+    },
+    {
+      "wordpress_id": "3563",
+      "title": "light-wallet2",
+      "upload_path": "2026/07/light-wallet2.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/07/light-wallet2.png",
+      "public_url": "/media/legacy/2026/07/light-wallet2.png",
+      "size_bytes": 710058,
+      "sha256": "a9852a9c22f0357545ea3ff202db6c2383dc67d447f09a4992af791d8ab0e25b"
+    },
+    {
+      "wordpress_id": "3565",
+      "title": "pepepw-android-wallet11",
+      "upload_path": "2026/08/pepepw-android-wallet11.png",
+      "legacy_url": "https://pepepow.org/wp-content/uploads/2026/08/pepepw-android-wallet11.png",
+      "public_url": "/media/legacy/2026/08/pepepw-android-wallet11.png",
+      "size_bytes": 997526,
+      "sha256": "271fbebb60c33327eecab6e22be41cab2a430e3344130f03c7184158dfe208e8"
+    }
+  ],
+  "external_attachments": [
+    {
+      "wordpress_id": "2412",
+      "attachment_url": "https://videos.files.wordpress.com/IkFo50Te/48557fc5.mp4"
+    }
+  ],
+  "missing": [],
+  "invalid": [],
+  "content_rewrite": {
+    "apply": true,
+    "replacement_count": 62,
+    "changed_file_count": 7,
+    "changed_files": [
+      "src/content/announcements/2026-05-31-announcement-pepepow-whitepaper-v2-1-updated.md",
+      "src/content/pages/about.md",
+      "src/content/pages/announcements.md",
+      "src/content/pages/home.md",
+      "src/content/pages/masternode.md",
+      "src/content/pages/mining.md",
+      "src/content/pages/wallet.md"
+    ],
+    "referenced_canonical_file_count": 54,
+    "referenced_upload_paths": [
+      "2023/09/whitepaper-v1.0.1.pdf",
+      "2023/10/pepepow-dao-op-policy-v1.0.0.pdf",
+      "2024/02/7594bf0b-5b3a-4c0e-83b3-c6a3087eaa97.jpg",
+      "2024/02/Caldera-logo.png",
+      "2024/02/P-coin4-1.png",
+      "2024/02/P-coin4.png",
+      "2024/02/PEPEPOW-helmet5.png",
+      "2024/02/Pepepow1a.png",
+      "2024/02/Y3TI.png",
+      "2024/02/a-graphy-pepepow.png",
+      "2024/02/a27d4a8f-2cfb-4f6f-899b-5c601ebb696a-1.jpg",
+      "2024/02/cc-logo-glyph-pngdark.png",
+      "2024/02/cropped-blockspot-logo-white.png",
+      "2024/02/logotype-dark-on-light-color-1.png",
+      "2024/02/nonkyc_logo_exchange_yellow.png",
+      "2024/02/whattomine.png",
+      "2024/03/VIDULUM-APPjpg.jpg",
+      "2024/03/crypto.com_.jpg",
+      "2024/03/logo_coinCarp.jpg",
+      "2024/03/logo_coinpaprika.jpg",
+      "2024/03/logo_concheckup.jpg",
+      "2024/03/logo_m4p.jpg",
+      "2024/03/nb_logo_monochrome_white.png",
+      "2024/06/GObJzcKXQAAM_7D.jpg",
+      "2024/06/coinbase.png",
+      "2024/07/pepepow-_jewel_adventure2.webp",
+      "2024/08/PEPEPOW-Griffin3.webp",
+      "2024/09/2d238ae8-b864-499b-99ce-687f49289298.jpg",
+      "2024/09/PEPEPOW-CPU-miner.webp",
+      "2024/09/PEPEPOW-Dragon-game.png",
+      "2024/09/PEPEPOW-desktop1.webp",
+      "2024/09/PEPEPOW-discussion.webp",
+      "2024/09/PEPEPOW-mobile2.webp",
+      "2024/11/PEPEOW-bull-market.webp",
+      "2024/11/PEPEPOW-diving.webp",
+      "2024/11/PEPEPOW-realistic-style.webp",
+      "2024/11/PEPEPOW-triumphant.webp",
+      "2024/11/PEPEPOW-underwater-adventure.webp",
+      "2024/11/PepePow-sailor-adventurous-sea-voyage.webp",
+      "2024/11/pepepow-cyberpunk-future.webp",
+      "2024/12/PEPEPOW-IEO3.webp",
+      "2024/12/PEPEPOW-sci.png",
+      "2024/12/PEPEW-LOGO-NEW-by-TrooperD.gif",
+      "2024/12/adminDAO.png",
+      "2025/02/dex-trade-icon-1.jpg",
+      "2025/11/MiningPoolStats-logo.jpg",
+      "2025/11/NestEx-logo.png",
+      "2025/11/binance-logo.png",
+      "2025/11/mingpowerx-logo-1.png",
+      "2025/11/pecunia-logo.jpg",
+      "2025/12/android-wallet-release.png",
+      "2026/01/PEPEPOW-Visual-Reference-Guideline-v1.0.pdf",
+      "2026/01/web-wallet1.png",
+      "2026/05/PEPEPOW-Whitepaper-v2.1.pdf"
+    ],
+    "unresolved_url_count": 0,
+    "unresolved_urls": []
+  }
+}

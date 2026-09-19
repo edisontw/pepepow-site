@@ -322,4 +322,4 @@ We’re happy to announce that SPORK...
 [3](https://pepepow.org/wp-admin/admin-ajax.php/page/3/)
 [4](https://pepepow.org/wp-admin/admin-ajax.php/page/4/)
 [5](https://pepepow.org/wp-admin/admin-ajax.php/page/5/)
-![](https://pepepow.org/wp-content/uploads/2024/09/PEPEPOW-discussion-300x300.webp)
+![](/media/legacy/2024/09/PEPEPOW-discussion.webp)

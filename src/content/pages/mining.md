@@ -27,25 +27,25 @@ Become a part of the PEPEPOW Crypocions mining community and contribute to the d
 
 ## Start Mining
 
-![](https://pepepow.org/wp-content/uploads/2024/02/Pepepow1a.png)
+![](/media/legacy/2024/02/Pepepow1a.png)
 
 ### How Mining Works
 
 Mining involves solving complex mathematical puzzles to validate transactions and create new blocks. Miners compete to find the solution to these puzzles, and the first miner to solve it is rewarded with a block reward in PEPEPOW Crypocions.
 
-![](https://pepepow.org/wp-content/uploads/2024/02/P-coin4-1.png)
+![](/media/legacy/2024/02/P-coin4-1.png)
 
 ### Mining Pools
 
 Due to the competitive nature of mining, many miners join mining pools to combine their resources and increase their chances of successfully mining blocks. Mining pools distribute rewards among participants based on their contribution to the pool's computational power..
 
-![](https://pepepow.org/wp-content/uploads/2024/02/7594bf0b-5b3a-4c0e-83b3-c6a3087eaa97.jpg)
+![](/media/legacy/2024/02/7594bf0b-5b3a-4c0e-83b3-c6a3087eaa97.jpg)
 
 ### Mining Equipment
 
 To participate in mining PEPEPOW Crypocions, miners typically use specialized hardware called mining rigs. These rigs are equipped with powerful centeral processor units (CPUs) or graphics cards (GPUs) specifically high performance for mining cryptocurrencies.
 
-![](https://pepepow.org/wp-content/uploads/2024/02/a27d4a8f-2cfb-4f6f-899b-5c601ebb696a-1.jpg)
+![](/media/legacy/2024/02/a27d4a8f-2cfb-4f6f-899b-5c601ebb696a-1.jpg)
 
 ### Rewards
 
@@ -234,4 +234,4 @@ If a new HTN Miner version is released, the safest way in HiveOS is to create a 
 
 skip render: ucaddon\_post\_blocks
 skip render: ucaddon\_archive\_pagination
-![](https://pepepow.org/wp-content/uploads/2024/11/PEPEPOW-triumphant-300x300.webp)
+![](/media/legacy/2024/11/PEPEPOW-triumphant.webp)

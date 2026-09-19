@@ -21,5 +21,5 @@ The update also uses more cautious wording around market access, wallet safety, 
 **Community feedback is welcome**. If you notice anything that should be corrected, improved, or expanded, please share your suggestions through PEPEPOW community channels.
 Contributors are also welcome. Useful areas include **mining tools, pool infrastructure, wallets, explorers, APIs, SDKs, AI-assisted monitoring, documentation, translation, design, and community outreach**.
 PEPEPOW is a **community-driven Proof-of-Work** project. Its future depends on continued participation, practical development, and steady ecosystem building.
-<https://pepepow.org/wp-content/uploads/2026/05/PEPEPOW-Whitepaper-v2.1.pdf>
+</docs/legacy/2026/05/PEPEPOW-Whitepaper-v2.1.pdf>
 <https://docs.google.com/document/d/1zeSVPZAJx6A5azjBvSGmbDs1xx8lTxoebCtDZuQhv3I/edit>
