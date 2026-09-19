@@ -62,7 +62,7 @@ Astro static build
         ↓
 dist/
         ↓
-Nginx
+Apache
         ↓
 pepepow.net
 ```
@@ -834,7 +834,7 @@ Store/display only sanitized fields such as:
 
 ### HTTP/security headers
 
-Production Nginx should eventually include suitable:
+Production Apache should eventually include suitable:
 
 - HSTS after HTTPS is confirmed stable
 - Content-Security-Policy
@@ -873,39 +873,63 @@ Do not assume old WordPress media can automatically be redistributed under the r
 
 ## 16. Deployment direction
 
-Production deployment should remain static-first:
+Production is now verified as a static Astro deployment served by **Apache 2.4.52 (Ubuntu)** on `edison2`.
+
+Verified production baseline on 2026-09-19:
+
+- Node.js `v22.23.2`
+- npm `10.9.8`
+- Git `2.34.1`
+- repository already cloned at `~/pepepow-site`
+- Astro build output: `dist/`
+- public document root: `/var/www/pepepow.net/current`
+- Apache vhost: `/etc/apache2/sites-available/pepepow.net.conf`
+- HTTPS uses the existing Let's Encrypt certificate for `pepepow.net`
+- the previous WordPress tree remains at `/var/www/html/wordpress` for rollback/reference
+- local `game.pepepow.net` Apache vhosts are disabled because the hostname is served elsewhere
+- `rsync` is not assumed installed
+
+Normal deployment flow:
 
 ```text
 GitHub main
    ↓
-production pull
+git pull --ff-only origin main
    ↓
 npm ci
    ↓
-Astro build
+npm run build
    ↓
-new dist directory
+dist/
    ↓
-atomic/current symlink or equivalent
+timestamped static release
    ↓
-Nginx
+/var/www/pepepow.net/current
+   ↓
+Apache
 ```
 
 Deployment must not:
 
-- restart the PEPEPOW wallet/node
+- restart or reconfigure the PEPEPOW wallet/node
 - alter wallet/node systemd services
-- touch blockchain data
-- reboot the server
+- touch `wallet.dat` or blockchain data
+- expose or reuse PEPEPOWd RPC
+- reboot the server for a normal website release
 
-For production Nginx changes:
+Verified service boundaries include PEPEPOWd P2P on TCP 8833 and RPC on loopback TCP 8834. They are not part of the website deployment path.
 
-1. back up the current config
-2. write/change only the website server block needed
-3. validate configuration
-4. reload Nginx only after successful validation
+For production Apache changes:
 
-Consider low-priority build scheduling (`nice` / `ionice`) on resource-constrained production hosts.
+1. back up the current Apache configuration or affected vhost
+2. change only the website vhost/document-root configuration required
+3. run `sudo apache2ctl configtest`
+4. inspect `sudo apache2ctl -S` when vhost routing changes
+5. reload with `sudo systemctl reload apache2` only after successful validation
+
+Do not install Nginx merely for this website; Apache is the current verified production server. See `docs/DEPLOYMENT.md` for the operational baseline and commands.
+
+Consider low-priority build scheduling (`nice` / `ionice`) only if production resource pressure makes it necessary.
 
 ---
 
@@ -1064,7 +1088,7 @@ Before switching traffic:
 - staging validation
 - old/new URL comparison
 - media verification
-- HTTPS/Nginx validation
+- HTTPS/Apache validation
 - backup current production config
 - deployment rollback procedure
 - confirm wallet/node isolation
