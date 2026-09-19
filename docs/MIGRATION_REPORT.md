@@ -939,3 +939,39 @@ rather than querying wallet/node RPC or creating a duplicate collector.
 
 No production deployment or Nginx change was made in this slice.
 
+
+
+## Phase 2 current-page and Network UX — 2026-09-19
+
+The first Phase 2 core-page refinement replaces the raw migrated-page presentation with a reusable
+current-information shell while keeping the recovered Markdown as the maintainable content source.
+
+Current operational page treatment:
+
+- `/about/`, `/wallet/`, `/mining/`, `/masternode/`, and `/market/` now render through
+  `src/components/CurrentPage.astro`
+- each page receives a consistent current-page header, concise orientation text, high-value action
+  links, a visible last-reviewed date, and an automatically generated H2 section navigator
+- the five source documents retain their substantive content; only redundant WordPress-era top-level
+  headings were normalized so the generated pages have a clearer heading hierarchy
+- code blocks, tables, images, long URLs, and page navigation receive responsive styling without
+  adding a client-side framework or JavaScript dependency
+- historical announcements/articles continue to use `LegacyContent.astro` and keep their historical
+  and technical-safety notices
+
+A new static `/network/` page is now part of the primary information architecture:
+
+- the page explains the current PEPEPOW network visibility path and links directly to the live Explorer
+- HooHash V110 is presented as a static current protocol fact; changing block height, hashrate,
+  masternode count, price, and other live values are deliberately not fabricated or copied into the
+  static build
+- common network metrics are explained for users without implying a live reading
+- the future Network Pulse integration is explicitly constrained to the existing centralized monitor
+  plus a minimal cached read-only summary endpoint
+- the browser is not connected to wallet/node RPC and no second blockchain collector was introduced
+
+Navigation now includes Network, and the homepage Explore Network action leads to the local
+`/network/` orientation page while the Explorer remains the live-data destination.
+
+No production deployment, Nginx change, WordPress retirement, wallet/node configuration change, or
+RPC access was performed in this slice.

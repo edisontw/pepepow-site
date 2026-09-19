@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const metricGuides = [
+  ['Block height', 'The latest block number seen by a network data source. A moving height is one basic sign that the chain is progressing.'],
+  ['Last block age', 'How long it has been since the latest observed block. This is more useful than a height alone when checking freshness.'],
+  ['Block time', 'PEPEPOW targets an average block interval; individual blocks can arrive sooner or later.'],
+  ['Hashrate', 'An estimate of the mining work securing the network. It can vary as miners enter, leave, or switch hardware.'],
+  ['Masternodes', 'Network service nodes that participate in PEPEPOW masternode functions and reward selection. Counts and states change over time.'],
+];
+
+const entryPoints = [
+  {
+    title: 'Explorer',
+    text: 'Use the PEPEPOW Explorer for current chain, block, network, masternode, and collected market information.',
+    href: 'https://explorer.pepepow.org/',
+    label: 'Open Explorer',
+  },
+  {
+    title: 'Mining',
+    text: 'Current PEPEPOW mining uses HooHash V110. Use the mining page for current miner and pool entry points.',
+    href: '/mining/',
+    label: 'Mining guide',
+  },
+  {
+    title: 'Masternodes',
+    text: 'Use the masternode page for current collateral tiers, setup guidance, release references, and operational checks.',
+    href: '/masternode/',
+    label: 'Masternode guide',
+  },
+];
+---
+
+<BaseLayout
+  title="Network"
+  description="PEPEPOW network visibility, Explorer entry points, metric explanations, and the static shell for future Network Pulse data."
+>
+  <article class="network-page">
+    <header class="network-page-header">
+      <p class="eyebrow">Network</p>
+      <h1>See what the PEPEPOW network is doing.</h1>
+      <p class="current-page-lede">
+        This site does not query a wallet or node directly. For live values today, use the PEPEPOW
+        Explorer. A compact Network Pulse can be added here later from the existing cached read-only
+        monitor service.
+      </p>
+      <div class="actions">
+        <a class="button" href="https://explorer.pepepow.org/">Open Live Explorer</a>
+        <a class="button secondary" href="https://explorer.pepepow.org/network">Network Details</a>
+      </div>
+    </header>
+
+    <section class="network-status-panel" aria-labelledby="status-title">
+      <div>
+        <p class="eyebrow">Live data</p>
+        <h2 id="status-title">Explorer is the current live source.</h2>
+        <p>
+          Block height, recent blocks, hashrate, masternodes, and other changing network values are
+          intentionally not copied into this static page until a cached public summary endpoint is
+          connected.
+        </p>
+      </div>
+      <dl class="network-static-facts">
+        <div>
+          <dt>Proof of Work</dt>
+          <dd>HooHash V110</dd>
+        </div>
+        <div>
+          <dt>Live network source</dt>
+          <dd><a href="https://explorer.pepepow.org/">PEPEPOW Explorer</a></dd>
+        </div>
+        <div>
+          <dt>Website data path</dt>
+          <dd>Cached read-only summary planned</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="network-page-section" aria-labelledby="entry-title">
+      <div class="section-heading">
+        <p class="eyebrow">Entry points</p>
+        <h2 id="entry-title">Use the right source for the task.</h2>
+      </div>
+      <div class="network-entry-grid">
+        {entryPoints.map((item) => (
+          <article class="network-entry-card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+            <a class="text-action" href={item.href}>{item.label} →</a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="network-page-section" aria-labelledby="metrics-title">
+      <div class="section-heading">
+        <p class="eyebrow">Reading the network</p>
+        <h2 id="metrics-title">What the common metrics mean.</h2>
+      </div>
+      <dl class="metric-guide-list">
+        {metricGuides.map(([term, description]) => (
+          <div>
+            <dt>{term}</dt>
+            <dd>{description}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+
+    <section class="network-page-section" aria-labelledby="pulse-title">
+      <div class="section-heading">
+        <p class="eyebrow">Future Network Pulse</p>
+        <h2 id="pulse-title">Static-first, isolated from wallet/node operation.</h2>
+      </div>
+      <p class="network-copy">
+        The existing PEPEPOW monitor already centralizes upstream collection. When a minimal public
+        summary endpoint is available, this page can consume cached read-only fields such as block
+        freshness, hashrate, masternode count, service state, and recent anomalies. The browser
+        should never connect directly to wallet/node RPC, and this website should not create a
+        second blockchain collector.
+      </p>
+    </section>
+  </article>
+</BaseLayout>

@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-# PEPEPOW Wallets
-
 Use a wallet that matches your needs and verify the official project URL before entering a recovery phrase or moving funds.
 
 ## Recommended Wallet Options
