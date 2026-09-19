@@ -312,3 +312,212 @@ h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); }
     animation-iteration-count: 1 !important;
   }
 }
+
+/* Staging homepage */
+.home-shell {
+  padding-bottom: 2rem;
+}
+.home-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(17rem, .75fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: end;
+  padding: clamp(4rem, 10vw, 8rem) 0 clamp(3rem, 7vw, 5rem);
+}
+.home-hero-copy {
+  max-width: 48rem;
+}
+.home-hero h1 {
+  max-width: 10ch;
+  margin-block: .5rem 1.25rem;
+}
+.home-hero-lede {
+  max-width: 42rem;
+  margin: 0;
+  color: #c8d3c9;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  line-height: 1.7;
+}
+.text-action {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  padding: .55rem .2rem;
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+.text-action:hover {
+  text-decoration: underline;
+}
+.network-card {
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: .75rem;
+  background:
+    linear-gradient(145deg, rgba(120, 223, 104, .08), transparent 60%),
+    var(--surface);
+}
+.network-card h2 {
+  margin: .3rem 0 1.25rem;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+}
+.network-facts {
+  display: grid;
+  gap: 0;
+  margin: 0;
+}
+.network-facts > div {
+  display: grid;
+  grid-template-columns: minmax(7rem, .8fr) minmax(0, 1.2fr);
+  gap: 1rem;
+  padding: .85rem 0;
+  border-top: 1px solid var(--border);
+}
+.network-facts dt {
+  color: var(--muted);
+}
+.network-facts dd {
+  margin: 0;
+  font-weight: 700;
+}
+.network-facts a {
+  color: var(--accent);
+}
+.home-section {
+  padding: clamp(2.5rem, 6vw, 4.5rem) 0;
+  border-top: 1px solid var(--border);
+}
+.section-heading {
+  max-width: 46rem;
+  margin-bottom: 1.5rem;
+}
+.section-heading-row {
+  max-width: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem 2rem;
+}
+.section-heading h2 {
+  margin: .25rem 0 0;
+}
+.start-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .75rem;
+}
+.start-card {
+  position: relative;
+  min-height: 13rem;
+  padding: 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: .65rem;
+  background: var(--surface);
+  text-decoration: none;
+  transition: border-color .15s ease, background-color .15s ease, transform .15s ease;
+}
+.start-card h3 {
+  margin: 2.25rem 0 .55rem;
+  font-size: 1.3rem;
+}
+.start-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.card-arrow {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+.start-card:focus-visible {
+  border-color: var(--accent);
+}
+.latest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .75rem;
+}
+.latest-card {
+  padding: 1.15rem;
+  border: 1px solid var(--border);
+  border-radius: .65rem;
+  background: var(--surface);
+}
+.latest-card h3 {
+  margin: .45rem 0 0;
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+.latest-card h3 a {
+  text-decoration-thickness: .08em;
+  text-underline-offset: .2em;
+}
+.card-meta,
+.archive-context {
+  color: var(--muted);
+  font-size: .88rem;
+}
+.card-meta {
+  margin: 0;
+}
+.archive-context {
+  max-width: 48rem;
+  margin: 1.2rem 0 0;
+  line-height: 1.6;
+}
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+}
+.quick-links a {
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  padding: .55rem .8rem;
+  border: 1px solid var(--border);
+  border-radius: .45rem;
+  background: var(--surface);
+  color: #d8e0d8;
+  text-decoration: none;
+}
+.quick-links a:hover,
+.quick-links a:focus-visible {
+  border-color: var(--accent);
+  color: #fff;
+  background: var(--surface-raised);
+}
+@media (hover: hover) {
+  .start-card:hover {
+    border-color: #3b493d;
+    background: var(--surface-raised);
+    transform: translateY(-2px);
+  }
+}
+@media (max-width: 56rem) {
+  .home-hero {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+  .network-card { max-width: 38rem; }
+  .start-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .latest-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 38rem) {
+  .home-hero { padding-top: 3rem; }
+  .start-grid { grid-template-columns: 1fr; }
+  .start-card { min-height: auto; }
+  .section-heading-row {
+    align-items: start;
+    flex-direction: column;
+  }
+  .network-facts > div {
+    grid-template-columns: 1fr;
+    gap: .2rem;
+  }
+}
+
