@@ -860,5 +860,14 @@ instructions.
 CI runs this validation together with the existing route, content-link, external-link, and migration
 script checks.
 
+Final CI result for this pass:
+
+- legacy articles scanned: **26**
+- articles matching high-risk patterns: **10**
+- high-risk articles missing or placing the safety warning after the risky command: **0**
+- legacy routes: **106 / 106**
+- content source issues: **0**
+- generated internal-link issues: **0**
+
 No production deployment or Nginx change was made in this slice.
 
