@@ -94,8 +94,10 @@ Target flow:
 edit
 → commit/push main
 → server pull
+→ npm ci
 → Astro build
-→ Nginx serve dist/
+→ publish static release
+→ Apache serve /var/www/pepepow.net/current
 ```
 
 Production website changes must not stop, reconfigure, or otherwise interfere with the PEPEPOW wallet/node running on the host.
