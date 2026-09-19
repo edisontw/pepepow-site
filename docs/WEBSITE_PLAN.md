@@ -1041,7 +1041,7 @@ Exit criteria:
 
 ### Phase 3 — Network integration
 
-Status: **next implementation phase**. Reuse the existing PEPEPOW monitor and add only a minimal allowlisted cached public summary; do not add a second collector or browser-to-RPC access.
+Status: **Network Pulse v1 implemented in source; production deployment pending**. The website consumes only a minimal allowlisted cached public summary from the existing PEPEPOW monitor. No second collector or browser-to-RPC access is introduced.
 
 Deliver:
 
