@@ -1,0 +1,77 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const announcements = (await getCollection('announcements'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const years = Array.from(
+  new Set(announcements.map((entry) => entry.data.date.getUTCFullYear())),
+).sort((a, b) => b - a);
+
+const routeFor = (entry: (typeof announcements)[number]) => {
+  if (entry.data.legacy_url) {
+    return new URL(entry.data.legacy_url).pathname;
+  }
+
+  const slug = entry.data.slug || entry.id.replace(/\.mdx?$/, '');
+  return `/${slug.replace(/^\/+|\/+$/g, '')}/`;
+};
+---
+
+<BaseLayout
+  title="Announcements"
+  description="PEPEPOW announcements, releases, network updates, and historical community notices."
+>
+  <article class="news-archive">
+    <header class="news-archive-header">
+      <p class="eyebrow">PEPEPOW News</p>
+      <h1>Announcements</h1>
+      <p class="lede">
+        Releases, network changes, wallet and mining updates, community notices, and the recovered
+        PEPEPOW announcement archive.
+      </p>
+      <aside class="archive-note">
+        <strong>Historical archive:</strong>
+        Older posts are preserved with their original publication dates and may describe software,
+        exchanges, pools, services, or network conditions that are no longer current. Use the
+        current Wallet, Mining, Masternode, Market, and Explorer pages for operational information.
+      </aside>
+      <p class="archive-count">{announcements.length} recovered announcements</p>
+    </header>
+
+    {years.map((year) => {
+      const items = announcements.filter(
+        (entry) => entry.data.date.getUTCFullYear() === year,
+      );
+
+      return (
+        <section class="archive-year" aria-labelledby={`year-${year}`}>
+          <h2 id={`year-${year}`}>{year}</h2>
+          <div class="archive-list">
+            {items.map((entry) => {
+              const date = entry.data.date.toISOString().slice(0, 10);
+              const categories = entry.data.categories.filter(
+                (category) => category !== 'Announcements',
+              );
+
+              return (
+                <article class="archive-item">
+                  <p class="archive-item-meta">
+                    <time datetime={date}>{date}</time>
+                    {categories.length > 0 && (
+                      <span> · {categories.slice(0, 3).join(' · ')}</span>
+                    )}
+                  </p>
+                  <h3>
+                    <a href={routeFor(entry)}>{entry.data.title}</a>
+                  </h3>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+      );
+    })}
+  </article>
+</BaseLayout>
