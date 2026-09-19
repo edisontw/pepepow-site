@@ -82,9 +82,9 @@ Referring to all opinions, and all decisions should be the greatest consensus.
 
 ###### [PEPEPOW Story ( 8 Otc 2023, Stevin)](https://github.com/MattF42/PePe-core/blob/master/doc/pepeproofofworkstory.md)
 
-###### [PEPEPOW white paper V2.0 (26 Jan 2025, Edison)](https://docs.google.com/document/d/1FIs7lQo_7tjNhJ9n95_YrvuIGmLlSjmkKqEWIktlU5Q/edit?tab=t.0)
+###### [PEPEPOW white paper V2.0 (26 Jan 2025, Edison)](/docs/legacy/2025/01/PEPEPOW-Whitepaper_v2.0.pdf)
 
-###### [PEPEPOW white paper V2.1 (31 may 2026, Edison)](https://docs.google.com/document/d/1zeSVPZAJx6A5azjBvSGmbDs1xx8lTxoebCtDZuQhv3I/edit)
+###### [PEPEPOW white paper V2.1 (31 May 2026, Edison)](/docs/legacy/2026/05/PEPEPOW-Whitepaper-v2.1.pdf)
 
 The PepePow whitepaper outlines a new blockchain project built around the popular Pepe meme. PepePow aims to provide a platform for community collaboration, skill development, and forming global connections. The network is secured through proof-of-work mining and incentivized by both miners and masternodes.
 
@@ -222,23 +222,19 @@ Completed
 
 Difficulty: Medium-High
 
-[![](/media/legacy/2024/02/cc-logo-glyph-pngdark.png)](https://coincodex.com/crypto/pepepow/)
-[![](/media/legacy/2024/03/logo_m4p.jpg)](https://mining4people.com/)
-[![](/media/legacy/2024/03/logo_concheckup.jpg)](https://coincheckup.com/coins/pepepow/)
-[![](/media/legacy/2024/02/logotype-dark-on-light-color-1.png)](https://www.livecoinwatch.com/price/PEPEPOW-PEPEW)
-[![](/media/legacy/2024/03/nb_logo_monochrome_white.png)](https://nodehub.io/dashboard/view_coin?coin=pepepow)
-[![](/media/legacy/2025/11/pecunia-logo.jpg)](https://pecuniaplatform.io/coin-stats/PEPEPOW-100M)
-[![](/media/legacy/2024/02/Y3TI.png)](https://y3ti.uk/audits/PEPEPOW)
-[![](/media/legacy/2024/02/nonkyc_logo_exchange_yellow.png)](https://nonkyc.io/asset/pepew)
-[![](/media/legacy/2024/02/cropped-blockspot-logo-white.png)](https://blockspot.io/coin/pepepow/)
-[![](/media/legacy/2024/03/logo_coinpaprika.jpg)](https://coinpaprika.com/coin/pepew-pepe-pow/)
-[![](/media/legacy/2025/11/binance-logo.png)](https://www.binance.com/en/price/pepepow)
-[![](/media/legacy/2024/02/Caldera-logo.png)](https://discord.gg/kYeYbWu6Bm)
-[![](/media/legacy/2024/02/whattomine.png)](https://whattomine.com/coins/385-pepew-memehash)
-[![](/media/legacy/2025/11/MiningPoolStats-logo.jpg)](https://miningpoolstats.stream/pepepow)
-[![](/media/legacy/2025/11/mingpowerx-logo-1.png)](https://miningpower.eu/overview)
-[![](/media/legacy/2024/03/crypto.com_.jpg)](https://crypto.com/price/pepepow)
-[![](/media/legacy/2025/11/NestEx-logo.png)](https://trade.nestex.one/spot/PEPEW)
-[![](/media/legacy/2024/03/logo_coinCarp.jpg)](https://www.coincarp.com/currencies/pepepow/)
-[![](/media/legacy/2025/02/dex-trade-icon-1.jpg)](https://dex-trade.com/spot/trading/PEPEWUSDT)
-[![](/media/legacy/2024/06/coinbase.png)](https://www.coinbase.com/price/pepepow)
+## Current useful links
+
+The old WordPress homepage contained a large logo wall mixing exchanges, trackers, mining sites, masternode services, and historical partners. The migration keeps a smaller set of currently useful references here; specialized links belong on the relevant Wallet, Mining, Masternode, or Market page.
+
+- [PEPEPOW Explorer](https://explorer.pepepow.org/)
+- [PEPEPOW Core releases](https://github.com/MattF42/PePe-core/releases)
+- [PEPEW Light Wallet](https://light.pepepow.net/wallet/)
+- [HTN Miner](https://htn.foztor.net/)
+- [PEPEPOW Community Pool](https://community-pool.pepepow.org/)
+- [PEPEPOW Lab Pool](https://pool.pepepow.net/)
+- [MiningPoolStats — PEPEPOW](https://miningpoolstats.stream/pepepow)
+- [NonKYC — PEPEW](https://nonkyc.io/asset/PEPEW)
+- [NestEx — PEPEW](https://trade.nestex.one/spot/PEPEW)
+- [CoinCodex — PEPEPOW](https://coincodex.com/crypto/pepepow/)
+- [CoinPaprika — PEPEPOW](https://coinpaprika.com/coin/pepew-pepe-pow/)
+- [PEPEPOW Discord](https://discord.gg/sJgDVRkBcq)
