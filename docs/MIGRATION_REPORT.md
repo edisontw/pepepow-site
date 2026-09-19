@@ -179,7 +179,7 @@ Not yet completed:
 - [ ] classify missing media
 - [x] convert the seven pages to normalized review-only site content
 - [x] convert representative posts (5 most recent published announcements recovered as review-only drafts)
-- [ ] validate old internal links
+- [x] validate old internal links
 - [x] build sanitized legacy route preservation map
 - [x] batch migrate remaining posts as review-only drafts
 
@@ -464,3 +464,41 @@ The three content-referenced but non-WXR paths `2024/02/thumb-1.jpg`, `thumb-2.j
 These files were used only as decorative images in the legacy Masternode “Benefits” section. The remaining canonical sibling image `service-thumb-2.jpg` served the same decorative role. To avoid preserving an incomplete/inconsistent legacy decoration set, all four Benefits thumbnails were deliberately removed from the migration draft while retaining the substantive text.
 
 The future Astro presentation may render these benefits as consistent accessible cards/icons rather than reproducing the old WordPress thumbnails.
+
+## Legacy internal-link and WordPress-artifact cleanup — 2026-09-19
+
+The recovered content body was audited separately from provenance frontmatter. The original
+`legacy_url` and `source_url` fields remain unchanged so migration provenance is preserved.
+
+Cleanup completed in this slice:
+
+- same-site links that still targeted the exact legacy host `pepepow.org` were converted to
+  root-relative Astro paths where the corresponding preserved route exists
+- legacy WordPress category navigation and `wp-admin/admin-ajax.php` pagination chrome were
+  removed from the recovered Announcements page
+- the WordPress-generated related-post/archive block appended to the Masternode page was removed;
+  the substantive Masternode setup content was retained
+- residual `skip render:` migration markers were removed
+- a legacy WordPress emoji-CDN image reference was converted to its Unicode emoji
+- `scripts/migration/wxr_extract.py` now performs the reproducible portions of the same cleanup
+  so a future WXR restage does not silently reintroduce those artifacts
+
+A new read-only validation gate is committed at
+`scripts/migration/validate_content_links.py`. It intentionally ignores provenance frontmatter,
+then checks migrated content bodies for exact legacy-site URLs and known WordPress artifacts. After
+Astro builds, it parses generated HTML and verifies that rendered internal `href`/`src` targets
+resolve to files in `dist/`, while leaving external services and PEPEPOW subdomains external.
+
+Validated in GitHub Actions on PR #1:
+
+- Astro build: **106 pages**
+- legacy route validation: **106 routes / 106 unique targets / 106 generated / 0 errors**
+- content/link validation: **112 content files / 106 HTML files / 804 internal references checked**
+- content/link validation result: **0 source issues / 0 generated-link issues**
+- migration-script compile check: **PASS**
+
+Recovered historical and current-sensitive material remains `status: draft` and
+`migration_review: true`; this cleanup does not promote it to current authoritative guidance.
+
+No production deployment or Nginx change was made in this slice.
+
