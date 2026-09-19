@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import LegacyContent from '../components/LegacyContent.astro';
+import CurrentPage from '../components/CurrentPage.astro';
 
 export async function getStaticPaths() {
   const groups = await Promise.all([
@@ -39,4 +40,4 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 ---
 
-<LegacyContent entry={entry} />
+{entry.collection === 'pages' ? <CurrentPage entry={entry} /> : <LegacyContent entry={entry} />}
