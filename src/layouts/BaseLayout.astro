@@ -12,30 +12,53 @@ const {
 } = Astro.props;
 
 const pageTitle = title === 'PEPEPOW' ? title : `${title} | PEPEPOW`;
+const currentPath = Astro.url.pathname;
+const navItems = [
+  { href: '/about/', label: 'PEPEPOW' },
+  { href: '/mining/', label: 'Mining' },
+  { href: '/masternode/', label: 'Masternode' },
+  { href: '/wallet/', label: 'Wallets' },
+  { href: '/market/', label: 'Market' },
+  { href: '/announcements/', label: 'News' },
+];
+
+const isCurrent = (href: string) =>
+  href === '/' ? currentPath === '/' : currentPath.startsWith(href);
 ---
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#111411" />
     <link rel="canonical" href={Astro.url} />
     <title>{pageTitle}</title>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
-      <a class="brand" href="/">PEPEPOW</a>
-      <nav aria-label="Primary">
-        <a href="/about/">PEPEPOW</a>
-        <a href="/mining/">Mining</a>
-        <a href="/masternode/">Masternode</a>
-        <a href="/wallet/">Wallets</a>
-        <a href="/market/">Market</a>
-        <a href="/announcements/">News</a>
+      <a
+        class="brand"
+        href="/"
+        aria-label="PEPEPOW home"
+        aria-current={currentPath === '/' ? 'page' : undefined}
+      >
+        PEPEPOW
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            aria-current={isCurrent(item.href) ? 'page' : undefined}
+          >
+            {item.label}
+          </a>
+        ))}
       </nav>
     </header>
-    <main>
+    <main id="main-content" tabindex="-1">
       <slot />
     </main>
     <footer class="site-footer">
