@@ -1,0 +1,25 @@
+# Dependencies / build output
+node_modules/
+dist/
+.astro/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Private migration inputs
+*.WordPress.*.xml
+migration/private/
+private/
+secrets/
+
+# Local tooling / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
