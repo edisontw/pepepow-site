@@ -82,7 +82,7 @@ Referring to all opinions, and all decisions should be the greatest consensus.
 
 ###### [PEPEPOW Story ( 8 Otc 2023, Stevin)](https://github.com/MattF42/PePe-core/blob/master/doc/pepeproofofworkstory.md)
 
-###### [PEPEPOW white paper V2.0 (26 Jan 2025, Edison)](/docs/legacy/2025/01/PEPEPOW-Whitepaper_v2.0.pdf)
+###### [PEPEPOW white paper V2.0 (26 Jan 2025, Edison)](https://docs.google.com/document/d/1FIs7lQo_7tjNhJ9n95_YrvuIGmLlSjmkKqEWIktlU5Q/edit?tab=t.0)
 
 ###### [PEPEPOW white paper V2.1 (31 May 2026, Edison)](/docs/legacy/2026/05/PEPEPOW-Whitepaper-v2.1.pdf)
 
