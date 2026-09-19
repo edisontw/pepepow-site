@@ -21,7 +21,7 @@ GitHub → source of truth
 Astro → site architecture
 Markdown / MDX → announcements and normal content
 generated JSON → low-frequency automated data
-Nginx → static production serving
+Apache → static production serving
 ```
 
 The site is primarily about PEPEPOW. General cryptocurrency information is secondary and should support miners, masternode operators, holders/traders, ordinary users, and people learning about PEPEPOW or cryptocurrency.
@@ -94,6 +94,26 @@ Avoid introducing for ordinary site requirements:
 - a second blockchain collector
 - unnecessary backend infrastructure
 
+## Verified production baseline
+
+Verified on 2026-09-19:
+
+- production host role/name: `edison2`
+- web server: Apache 2.4.52 (Ubuntu), not Nginx
+- Node.js: v22.23.2
+- npm: 10.9.8
+- Git: 2.34.1
+- repository already exists at `~/pepepow-site`; routine deployment is pull + build, not clone
+- Astro production root: `/var/www/pepepow.net/current`
+- Apache vhost: `/etc/apache2/sites-available/pepepow.net.conf`
+- HTTP redirects to HTTPS; TLS uses the existing Let's Encrypt certificate
+- old local `game.pepepow.net` Apache vhosts are disabled because that hostname is served elsewhere
+- previous WordPress tree at `/var/www/html/wordpress` is retained for rollback/reference
+- `rsync` is not assumed installed; `cp -a` is an acceptable release copy path
+- PEPEPOWd TCP 8833 and loopback RPC 8834 are outside website deployment scope and must not be changed
+
+Read `docs/DEPLOYMENT.md` before production deployment or Apache changes.
+
 ## Production safety
 
 Website work must not interfere with the PEPEPOW wallet/node.
@@ -107,7 +127,7 @@ Never:
 - expose masternode/private keys
 - reboot the host just for a website deployment
 
-Before production Nginx changes:
+Before production Apache changes:
 
 1. back up the current configuration
 2. validate the new configuration
@@ -125,7 +145,7 @@ edit
 → commit/push GitHub main
 → production server pull
 → Astro build
-→ Nginx serve dist/
+→ publish static release under /var/www/pepepow.net\n→ Apache serve /var/www/pepepow.net/current
 ```
 
 Use coherent commits. Keep migration scripts reproducible.
