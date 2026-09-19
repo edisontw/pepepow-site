@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-# PEPEPOW Market
-
 Market Overview
 
 ## PEPEPOW Exchange & Market Status
