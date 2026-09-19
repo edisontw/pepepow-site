@@ -397,3 +397,6 @@ The origin path returned **HTTP 403** with:
 This confirms that the public-URL probe cannot distinguish file existence for the 295 legacy-host attachments because Cloudflare is challenging non-browser requests. These records remain **blocked/unresolved**, not missing.
 
 Do not add bypass logic to the migration scripts. Recovery should use an authorized browser/WordPress-admin path, Cloudflare configuration if the account owner has access, or a verified filesystem backup.
+
+
+Browser verification of the challenged sample URL was also performed. After completing Cloudflare's browser security check, the requested image was displayed successfully. This confirms that at least the tested 2025 canonical upload still exists behind the Cloudflare challenge. The remaining 62 edison2-local misses should therefore be treated as **blocked but potentially recoverable**, not presumed deleted.
