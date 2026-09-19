@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 Dear PEPEPOW Community,
 We’re excited to welcome **new CPU miners** to the community and **appreciate some familiar faces from our GPU mining** days continuing to support us during this transition. We understand that some members, especially our GPU miners, have been eagerly awaiting updates regarding support for the new algorithm. The issue has been raised from the start of algorithm switching, but unfortunately, **we haven’t received any promising news since then**. While we are still hopeful that the miner developers will release support soon, we also understand the frustration that comes with waiting.
 We acknowledge that the recent shift in the algorithm may not have been as smooth as we initially hoped, and we are aware that some disappointment has emerged. Your contributions are incredibly valuable to us, and we want to assure you that we are working hard to address these concerns and improve the market expansion.

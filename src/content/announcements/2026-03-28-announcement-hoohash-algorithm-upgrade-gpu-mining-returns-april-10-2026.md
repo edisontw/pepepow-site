@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 The PEPEPOW network is preparing for an upcoming upgrade to the hoohash algorithm, with activation expected around **April 10, 2026**.
 
 This change represents a significant shift from the current CPU-only mining model toward a more flexible and efficient Proof of Work system that supports both **CPU and GPU mining**.

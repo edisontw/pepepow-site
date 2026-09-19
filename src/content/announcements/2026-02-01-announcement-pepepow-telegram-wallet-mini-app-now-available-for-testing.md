@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 We are pleased to announce that the **PEPEPOW Telegram Wallet (Mini App)** is now open for public testing.
 Telegram: @pepepow\_walletbot
 This wallet is built on the same non-custodial architecture as the PEPEPOW Web Wallet. *Private keys and mnemonic phrases are generated and stored exclusively on the user’s device, and all transactions are signed locall*y.

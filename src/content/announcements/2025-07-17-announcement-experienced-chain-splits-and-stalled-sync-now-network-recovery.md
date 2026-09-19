@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 Dear PEPEPOW Community,
 Over the past 24 hours, our blockchain experienced a major network disruption caused by a combination of outdated masternode payment data, stalled masternode sync, and issues related to SPORK21’s blacklist mechanism during initial block download (IBD). This resulted in chain splits, stalled sync, and some nodes ending up on different forks.
 How We Fixed It:
