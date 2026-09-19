@@ -400,3 +400,22 @@ Do not add bypass logic to the migration scripts. Recovery should use an authori
 
 
 Browser verification of the challenged sample URL was also performed. After completing Cloudflare's browser security check, the requested image was displayed successfully. This confirms that at least the tested 2025 canonical upload still exists behind the Cloudflare challenge. The remaining 62 edison2-local misses should therefore be treated as **blocked but potentially recoverable**, not presumed deleted.
+
+
+## Canonical media recovery completed — 2026-09-19
+
+The WordPress Media Library export was obtained through the authorized legacy WordPress administration interface and compared with the 62 files that were absent from the older `edison2` WordPress backup.
+
+Recovery result:
+
+- previously recovered from `edison2`: **233**
+- requested from Media Library export: **62**
+- recovered from Media Library export: **62**
+- unresolved: **0**
+- ambiguous filename matches: **0**
+- total local canonical WordPress upload files recovered: **295 / 295**
+- external attachment records: **1**
+
+The previously missing `2025/01/PEPEPOW-Whitepaper_v2.0.pdf` was also verified locally after recovery.
+
+The canonical WordPress media-recovery gate is therefore complete. The next step is to audit total repository payload size, stage PDFs under `public/docs/legacy/`, stage other canonical media under `public/media/legacy/`, generate a checksum-backed URL map, and rewrite resolvable legacy upload URLs in recovered Markdown.
