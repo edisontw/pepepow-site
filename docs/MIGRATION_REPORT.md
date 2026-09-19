@@ -734,14 +734,18 @@ A migration-only blockquote had been inserted into many recovered Markdown files
 
 That text is useful to the migration process but should never be public website content.
 
-The migration pipeline now handles this in three layers:
+The migration pipeline now handles this at the source/validation level:
 
 1. `scripts/migration/wxr_extract.py` no longer writes the migration-review blockquote into newly
    staged Markdown; review state remains in frontmatter as `migration_review: true`.
-2. `scripts/markdown/remove-migration-banner.mjs` is an Astro remark plugin that removes the
-   legacy internal blockquote from older recovered Markdown during rendering.
-3. `scripts/migration/validate_content_links.py` now fails if the internal migration-banner text
-   appears in generated HTML, so future rendering changes cannot accidentally expose it again.
+2. all 106 recovered legacy Markdown documents were normalized so the internal blockquote is absent
+   from the committed source
+3. `scripts/migration/validate_content_links.py` rejects that banner if it reappears in source
+   content
+
+An attempted remark-plugin approach was deliberately discarded because the current Astro Markdown
+processor would have required an unnecessary additional dependency. The final implementation keeps
+the default Astro Markdown stack unchanged.
 
 The source tree was then normalized in batch. **106 recovered legacy Markdown files** that still contained
 the internal migration-review blockquote had that blockquote removed without changing their
@@ -772,11 +776,9 @@ This closes the first historical-announcement hygiene gate without altering hist
 
 Remaining content-review work:
 
-1. inspect recurring formatting artifacts that affect readability but not meaning (lost emoji
-   placeholders, over-escaped Markdown, malformed old link titles)
-2. review the smaller `articles` collection for security-sensitive legacy wallet/node commands
-3. after content hygiene, move to staging responsive/accessibility/visual review
-4. keep production Nginx/deployment out of scope until staging acceptance
+1. review the smaller `articles` collection for security-sensitive legacy wallet/node commands
+2. after content hygiene, move to staging responsive/accessibility/visual review
+3. keep production Nginx/deployment out of scope until staging acceptance
 
 No production deployment or Nginx change was made in this slice.
 
@@ -815,6 +817,48 @@ No historical facts were intentionally altered by this pass.
 
 The validator remains the final authority for whether recurring artifact patterns still exist; any
 remaining files identified by CI should be normalized rather than weakening the validation rule.
+
+No production deployment or Nginx change was made in this slice.
+
+## Legacy technical article safety review — 2026-09-19
+
+The recovered `articles` collection contains **26 historical articles**. Several are operational
+wallet, masternode, mining, or incident-recovery guides with commands that were valid only for a
+specific software/network state.
+
+The site now distinguishes these documents from current operational guides in two layers:
+
+- every migrated historical article receives an additional **Legacy technical guide** notice in
+  `LegacyContent.astro`
+- articles containing especially sensitive or destructive procedures must also contain a visible
+  `> **Legacy safety warning:**` before the first risky command
+
+The technical notice tells readers that old software versions, block heights, peer IPs, download
+URLs, paths, and third-party services may be obsolete. It also directs users to stop the wallet
+cleanly, keep a separate `wallet.dat` backup before file/blockchain changes, never share private
+keys or recovery phrases, and inspect remote install scripts before execution.
+
+A new validator at:
+
+`scripts/migration/validate_legacy_article_safety.py`
+
+scans all legacy articles and requires the inline warning before any of these high-risk patterns:
+
+- `dumpprivkey` / `importprivkey`
+- mnemonic/recovery-phrase configuration
+- deleting the wallet data directory or `rm -rf`
+- `invalidateblock` / `reconsiderblock`
+- remote `curl ... | sh/bash` installation
+- `masternodeprivkey` configuration
+- hard-coded peer IP recovery via `addnode`
+
+The historical commands themselves are preserved as archival evidence. This gate prevents them from
+being presented without explicit context; it does not silently rewrite incident-specific block
+hashes, old peer addresses, private-key workflow history, or obsolete miner installers into current
+instructions.
+
+CI runs this validation together with the existing route, content-link, external-link, and migration
+script checks.
 
 No production deployment or Nginx change was made in this slice.
 
