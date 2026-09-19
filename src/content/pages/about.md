@@ -29,8 +29,8 @@ DAO governance, mining infrastructure, and practical development focused on long
 
 **20 sec**
 Target average block time
-**65% / 35%**
-Block rewards to miners and masternodes
+**3 outputs**
+Miner · Masternode · Foundation
 **90B**
 Long-term supply target before tail Super Blocks
 
@@ -45,12 +45,14 @@ This transition created a new mining phase and required updated wallet, mining, 
 
 #### Proof-of-Work Mining
 
-Miners help secure the network and receive 65% of each block reward.
+Miners help secure the network through HooHash V110. Under the current Core coinbase logic, the miner receives the remainder after the foundation/development output and the masternode payment are calculated. The exact percentage therefore depends on the current block reward rather than being a permanent fixed 65%.
+
 Current mining belongs to the HooHash V110 era, with mining tools and pool infrastructure continuing to improve.
 
 #### Masternodes and Governance
 
-Masternodes receive 35% of block rewards and help support governance, transaction services, and network stability.
+Masternodes help support governance, transaction services, and network stability. Current Core code calculates the masternode payment as **35% of the block reward remaining after the foundation payment is subtracted**, rather than 35% of the original total coinbase amount.
+
 PEPEPOW uses tiered masternode collateral levels of **10M, 25M, 50M, and 100M PEPEW**. Higher tiers receive proportionally higher reward-selection frequency.
 
 #### DAO-Based Development
@@ -58,9 +60,13 @@ PEPEPOW uses tiered masternode collateral levels of **10M, 25M, 50M, and 100M PE
 PEPEPOW uses DAO-oriented governance through branches such as adminDAO, miningDAO, nodeDAO, marketDAO, and devDAO.
 Community discussion and transparent decision-making remain central to the ecosystem.
 
-#### Development Funding History
+#### Development Funding and Foundation Payment
 
-PEPEPOW's development-funding model has changed over time. A 2024 community decision reintroduced developer/DAO funding, and later Core release notes continue to refer to a DevFee. Historical documents describe different reward/funding eras, so this migration draft does not present one fixed current DevFee allocation until the active consensus implementation is documented directly from current Core code.
+PEPEPOW's development-funding model has changed over time. Historical community material often uses the term **DevFee**, while the current Core consensus code calls the coinbase output a **foundation payment**.
+
+For current mainnet blocks, `GetFoundationPayment()` returns **250 PEPEW** after the 2024 activation height. The amount follows PEPEPOW's special-block pattern, becoming 2× or 5× on the corresponding higher-reward blocks. Core adds this foundation output to the coinbase, calculates the masternode payment as 35% of the remaining block reward, and assigns the rest to the miner.
+
+This code-based description supersedes the old simplified 65% miner / 35% masternode wording for current operation. Historical posts may still use older percentages because they describe earlier reward/funding eras.
 
 ### The Journey So Far
 
@@ -329,7 +335,7 @@ A2: PEPEPOW currently uses **HooHash V110** for Proof-of-Work mining. The networ
 
 Q3: How are block rewards distributed in PepePow?
 
-A3: PepePow uses a dual reward system where 65% of the block reward goes to miners and 35% goes to masternode operators.
+A3: Current Core code creates coinbase outputs for the miner, the selected masternode, and the foundation/development payment. The masternode amount is calculated as 35% of the block reward after the foundation payment is subtracted; the miner receives the remainder.
 
 Q4: What is the total supply of PepePow?
 
