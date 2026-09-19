@@ -145,7 +145,8 @@ edit
 → commit/push GitHub main
 → production server pull
 → Astro build
-→ publish static release under /var/www/pepepow.net\n→ Apache serve /var/www/pepepow.net/current
+→ publish static release under /var/www/pepepow.net
+→ Apache serve /var/www/pepepow.net/current
 ```
 
 Use coherent commits. Keep migration scripts reproducible.
