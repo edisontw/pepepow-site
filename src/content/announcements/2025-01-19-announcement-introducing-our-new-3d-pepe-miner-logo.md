@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 Dear PEPEPOW Community,
 We are excited to share the results of our logo vote! The new logo—a stunning 3D design of Pepe the Frog as a cheerful miner, complete with a yellow helmet, glowing headlamp, and pickaxe—perfectly reflects PEPEPOW’s innovative spirit and hardworking ethos.
 What’s Next?

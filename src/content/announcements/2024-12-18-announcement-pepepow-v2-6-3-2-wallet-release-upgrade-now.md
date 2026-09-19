@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 **The PEPEPOW development team proudly announces the release of PEPEPOW Wallet v2.6.3.2!**
 **What’s New?**
 

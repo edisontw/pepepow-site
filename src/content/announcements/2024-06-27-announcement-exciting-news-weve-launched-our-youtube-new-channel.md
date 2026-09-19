@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 Hello everyone,
 We're excited to announce the launch of our new YouTube channel! Our first video, "How to Set Up a PepePow Masternode: Step-by-Step Guide," is now live. We invite you all to check it out and leave your feedback. Your opinions are crucial to us as we strive to create content that is both informative and engaging.
 Next time when someone asks how to create a masternode, just show him the link! Join us on this exciting journey as we dive deep into the world of PepePow, covering everything from mining to masternodes and beyond. Your support and participation mean the world to us, and we look forward to building a vibrant and knowledgeable community together.

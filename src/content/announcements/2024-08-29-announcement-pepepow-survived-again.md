@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 We're thrilled to announce that PePePow has successfully overcome a significant challenge during our switch to the XelisV2-pepew algorithm. The blockchain paused for a while, but thanks to the swift actions of Foztor and our developers, , and the valuable feedback from the community, we've resolved the issue.
 **What's New?**
 - Updated Wallet Released: A new wallet update has been released. Please update your node wallet to the latest version here: [PePePow Wallet Update](https://github.com/MattF42/PePe-core/releases). Pool operators are also requested to update their software accordingly.

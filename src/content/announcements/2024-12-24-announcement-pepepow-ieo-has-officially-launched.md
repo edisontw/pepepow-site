@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 **? PEPEPOW IEO Has Officially Launched! ?**
 
 We’re thrilled to announce the launch of the **PEPEPOW IEO on Dex-Trade** starting today, **12/24**! This is a key milestone for our project, and we appreciate your support.
