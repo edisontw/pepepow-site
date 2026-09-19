@@ -77,6 +77,7 @@ def rewrite_content(
 ) -> dict[str, object]:
     changed_files: list[str] = []
     unresolved: set[str] = set()
+    referenced_upload_paths: set[str] = set()
     replacements = 0
 
     for path in content_files(root):
@@ -89,6 +90,13 @@ def rewrite_content(
                 unresolved.add(match.group(0))
                 return match.group(0)
             replacements += 1
+            raw_path = unquote(match.group("path").split("?", 1)[0].split("#", 1)[0]).lstrip("/")
+            if raw_path in by_upload_path:
+                referenced_upload_paths.add(raw_path)
+            else:
+                candidate = THUMBNAIL_SUFFIX_RE.sub("", raw_path)
+                if candidate in by_upload_path:
+                    referenced_upload_paths.add(candidate)
             return resolved
 
         updated = UPLOAD_URL_RE.sub(replace, original)
@@ -102,6 +110,8 @@ def rewrite_content(
         "replacement_count": replacements,
         "changed_file_count": len(changed_files),
         "changed_files": changed_files,
+        "referenced_canonical_file_count": len(referenced_upload_paths),
+        "referenced_upload_paths": sorted(referenced_upload_paths),
         "unresolved_url_count": len(unresolved),
         "unresolved_urls": sorted(unresolved),
     }
@@ -143,6 +153,11 @@ def main() -> int:
         "--rewrite-content",
         action="store_true",
         help="Rewrite resolvable legacy upload URLs in Markdown/MDX.",
+    )
+    parser.add_argument(
+        "--referenced-only",
+        action="store_true",
+        help="Stage only canonical files actually referenced by recovered Markdown/MDX.",
     )
     parser.add_argument(
         "--overwrite",
@@ -207,16 +222,41 @@ def main() -> int:
         records.append(record)
         by_upload_path[upload_value] = public_url
 
-        if not args.audit_only:
-            destination.parent.mkdir(parents=True, exist_ok=True)
-            if args.overwrite or not destination.exists():
-                shutil.copy2(source, destination)
+        # Copying is performed after content-reference selection is known.
 
     rewrite_report = rewrite_content(
         args.content_root,
         by_upload_path,
-        apply=args.rewrite_content and not args.audit_only,
+        apply=False,
     )
+
+    selected_paths = set(
+        rewrite_report.get("referenced_upload_paths", [])
+        if args.referenced_only
+        else by_upload_path.keys()
+    )
+
+    selected_records = [
+        record for record in records
+        if str(record["upload_path"]) in selected_paths
+    ]
+    selected_bytes = sum(int(record["size_bytes"]) for record in selected_records)
+
+    if not args.audit_only:
+        for record in selected_records:
+            upload_path = safe_upload_path(str(record["upload_path"]))
+            source = args.recovered_root.joinpath(*upload_path.parts)
+            destination = args.public_root / str(record["public_url"]).lstrip("/")
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            if args.overwrite or not destination.exists():
+                shutil.copy2(source, destination)
+
+        if args.rewrite_content:
+            rewrite_report = rewrite_content(
+                args.content_root,
+                by_upload_path,
+                apply=True,
+            )
 
     output = {
         "source_manifest": str(args.manifest),
@@ -227,6 +267,9 @@ def main() -> int:
         "missing_count": len(missing),
         "invalid_count": len(invalid),
         "total_bytes": total_bytes,
+        "referenced_only": args.referenced_only,
+        "selected_file_count": len(selected_records),
+        "selected_bytes": selected_bytes,
         "files": records,
         "external_attachments": external,
         "missing": missing,
@@ -246,6 +289,9 @@ def main() -> int:
         f"missing: {len(missing)} | invalid: {len(invalid)}"
     )
     print(f"Total bytes: {total_bytes}")
+    print(
+        f"Selected files: {len(selected_records)} | selected bytes: {selected_bytes}"
+    )
     print(
         "Content URLs: "
         f"{rewrite_report['replacement_count']} resolvable | "

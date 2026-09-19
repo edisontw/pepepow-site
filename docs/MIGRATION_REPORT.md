@@ -419,3 +419,19 @@ Recovery result:
 The previously missing `2025/01/PEPEPOW-Whitepaper_v2.0.pdf` was also verified locally after recovery.
 
 The canonical WordPress media-recovery gate is therefore complete. The next step is to audit total repository payload size, stage PDFs under `public/docs/legacy/`, stage other canonical media under `public/media/legacy/`, generate a checksum-backed URL map, and rewrite resolvable legacy upload URLs in recovered Markdown.
+
+
+### Repository payload decision
+
+The complete recovered canonical media set on `edison2` is approximately **169 MiB** (176,017,230 bytes). The largest files include historical wallet ZIP archives of approximately 20 MiB and 13 MiB plus several multi-megabyte legacy artwork/source images.
+
+The full 295-file recovery set is therefore treated as a **migration archive/source**, not an automatic Git repository payload.
+
+Repository staging policy:
+
+1. keep the complete 295-file recovered set under ignored `migration/work/recovered-uploads/`
+2. identify canonical files actually referenced by recovered Markdown/MDX
+3. commit only the files needed by the static website plus deliberately retained documents/assets
+4. keep historical installers/ZIPs and unreferenced source artwork out of the website repository unless there is a specific public-site requirement
+
+`scripts/migration/stage_recovered_media.py --audit-only --referenced-only` reports the exact referenced-file count and byte size before any copy occurs. It also prints unresolved legacy upload URLs for follow-up.
