@@ -142,6 +142,21 @@ The migration inventory tool intentionally does **not** export:
 
 Raw WXR files remain outside Git.
 
+## Staging conversion validation
+
+The reviewed-content staging converter is now available at:
+
+`scripts/migration/wxr_extract.py`
+
+It was tested against the 2026-09-18 WXR and successfully staged:
+
+- all **7 published pages**
+- the **5 most recent published posts** as representative samples
+
+The generated candidates are intentionally written under `migration/work/staged/`, which is ignored by Git.
+
+The test confirmed that the conversion can remove most WordPress/Elementor presentation code while preserving useful headings, paragraphs, links, images, lists and code blocks. It also confirmed that staged content must not be auto-published: current page bodies still contain historical software versions, download URLs, operational commands and other statements that require review before becoming authoritative new-site content.
+
 ## Current validation status
 
 Completed:
