@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 ## PEPEW Light Wallet is now available
 
 Following the launch of the PEPEW Light service, the PEPEW Light Wallet is now available.

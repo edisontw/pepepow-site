@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 **Pecunia** [https://www.pecuniaplatform.io/coin-stats/PEPEPOW](https://www.pecuniaplatform.io/coin-stats/PEPEPOW "https://www.pecuniaplatform.io/coin-stats/PEPEPOW")
 
 **Miningpower** [https://masternodes.miningpower.eu/home](https://masternodes.miningpower.eu/home "https://masternodes.miningpower.eu/home")

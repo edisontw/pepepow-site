@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 **NEWS**
 
 Partnership We are excited to share that we have entered into a new partnership with *Gemfinder*. Your support is valuable, and we kindly request you to visit their website and vote to assist in increasing the visibility of our beloved PEPEW to a wider audience. This partnership will play a significant role in expanding the reach of the project and promoting its presence among others.  

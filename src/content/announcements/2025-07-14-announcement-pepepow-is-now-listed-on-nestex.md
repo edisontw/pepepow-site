@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 Thanks to TrooperD for all the hard work and the awesome support of our community, we achieved our listing goal in record time!
 PEPEPOW is now officially tradable on Nestex, a promising new exchange with lots of potential.
 You can trade here:

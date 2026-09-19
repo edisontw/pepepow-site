@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 **From the recent voting trends**, it’s clear that the majority of the community agrees on listing PEPEPOW on **Dex-Trade**, and the IEO price should align with the current XeggeX price. To **accelerate the process**, we are excited to announce the following:
 ---
 **IEO Details**

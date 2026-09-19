@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 Special New Year release for those who have Intel Arc gpu's ?
 \*\*WildRig Multi 0.40.5\*\*
 - huge improvement of \*\*memehash\*\* on \*\*Intel\*\* gpu's

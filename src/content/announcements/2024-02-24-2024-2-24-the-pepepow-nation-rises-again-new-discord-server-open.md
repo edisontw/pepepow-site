@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 #### **Dear PepePOW Community,**
 
 Despite Discord's attempts to silence us, our spirit remains unbreakable! We are thrilled to unveil the official launch of our new backup server, a testament to our resilience and unwavering dedication to our community.

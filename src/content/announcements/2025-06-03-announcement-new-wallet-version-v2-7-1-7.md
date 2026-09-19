@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 It's release o'clock
 [https://github.com/MattF42/PePe-core/releases/tag/v2.7.1.7](https://github.com/MattF42/PePe-core/releases/tag/v2.7.1.7 "https://github.com/MattF42/PePe-core/releases/tag/v2.7.1.7")
 Strictly speaking this release is OPTIONAL, however if you are a MasterNode operator then you MUST apply this release.

@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 The PEPEPOW network remains stable after the transition to the **Hoohash mining ecosystem**. Blocks are flowing normally, and community miners are actively helping test, optimize, and improve mining performance across different hardware and platforms.
 
 - Several areas have already shown meaningful progress:

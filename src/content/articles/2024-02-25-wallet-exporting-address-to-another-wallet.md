@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 1. Use the CLI or debug console to execute the command:
 - `dumpprivkey "PEPEPOWaddress"`
 2. In a new wallet, import the private key:

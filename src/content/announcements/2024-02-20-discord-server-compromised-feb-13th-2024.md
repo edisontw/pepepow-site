@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 ###### We are aware that out main developer Foztor account was compromised, which allowed unauthorized access to the PEPEPOW DISCORD community and resulted in spam being sent.
 
 #### **Do not click on any links!!!**

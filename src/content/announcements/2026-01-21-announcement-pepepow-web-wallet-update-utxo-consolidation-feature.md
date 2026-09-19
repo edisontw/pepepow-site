@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 The PEPEPOW Web Wallet has been updated with a new **UTXO Consolidation feature**.
 This feature allows users to combine multiple small unspent outputs into a single output, reducing transaction size and preventing failures caused by the “TRANSACTION TOO LARGE” error.
 Such errors typically occur when a wallet accumulates a large number of small UTXOs over time, for example from mining rewards or frequent small transactions. Consolidation improves transaction reliability and overall wallet usability.

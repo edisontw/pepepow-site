@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 The PEPEPOW community has received confirmation from Dex-Trade that the exchange will **begin the delisting process for PEPEW** due to insufficient trading activity.
 
 Trading on Dex-Trade will be discontinued. Users will be notified directly by the exchange and will be able to withdraw their funds safely within the withdrawal period provided.

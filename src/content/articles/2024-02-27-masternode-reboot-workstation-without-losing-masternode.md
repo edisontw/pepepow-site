@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 To reboot your PC or switch to masternode CLI from GUI without losing the masternode timer:
 1. In the GUI, navigate to the masternode pane and watch the timer for your masternode, which updates in 10-minute intervals.
 2. As soon as the timer updates, close the GUI.

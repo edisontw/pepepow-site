@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 **Don't need to do this if there's no sysnc problem**
 In case of sync issues with block 1070288, follow these steps:
 1. Update to the new wallet version

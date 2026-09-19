@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 Easily top up your balance with $6 for a 50% discount over six months.
 Follow platform instructions.
 Setup required with local wallet.

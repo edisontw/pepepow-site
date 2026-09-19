@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 It’s been a quiet period, but PEPEPOW has never stopped evolving.
 Starting next month, we will reopen community-wide discussions and may l**aunch a new round of voting based on the feedback collected**. Topics include (but are not limited to):
 

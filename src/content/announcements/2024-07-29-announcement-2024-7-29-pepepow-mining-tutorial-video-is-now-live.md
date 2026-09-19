@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 Hello PEPEPOW Community!
 We are excited to announce that our new mining tutorial video is now complete and uploaded to YouTube. This video is designed to help newcomers get started with PEPEPOW mining and to attract more attention to our community.
 You can watch the tutorial on our YouTube channel [https://youtu.be/rGCsLBmFALI](https://youtu.be/rGCsLBmFALI "https://youtu.be/rGCsLBmFALI") We have also made one on Twitter [https://x.com/i/status/1817582110540288291](https://x.com/i/status/1817582110540288291 "https://x.com/i/status/1817582110540288291") and will be trying out some advertisements to reach a wider audience.

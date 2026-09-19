@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 **The Bull Market is Thriving – Stay Cautious!**  
 The cryptocurrency bull market is an exciting time filled with opportunities, but it’s also a period that demands careful consideration and risk management. At **PEPEPOW**, we remind our community to invest wisely, act with caution, and prioritize long-term success over short-term gains.
 

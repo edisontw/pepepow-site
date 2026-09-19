@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 The **PEPEPOW explorer** has been updated and the main explorer domain now points to the improved community-maintained explorer:
 <https://explorer.pepepow.org/>
 Common explorer paths should continue working normally, including transaction, block, blockhash, address, and rich list pages.

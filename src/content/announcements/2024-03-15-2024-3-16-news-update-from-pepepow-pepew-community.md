@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 \*\*Hey PepePow Pals and Crypto Enthusiasts!\*\*
 We've got some fantastic updates to share with you all! Our community is buzzing with excitement, and we couldn't wait to fill you in on the latest happenings:
 \*\*New Discord Growing Strong:\*\* Our new Discord server is now over 100 members strong and growing by the day! Join the conversation, meet fellow Pepe enthusiasts, and stay updated on all things PEPEPOW. Let's keep this momentum going!

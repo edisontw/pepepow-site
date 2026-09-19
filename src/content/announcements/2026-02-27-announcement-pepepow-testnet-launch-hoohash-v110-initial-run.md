@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 ### PEPEPOW Testnet Launch: Hoohash V110 Initial Run
 
 The PEPEPOW testnet is now ready for its first public run using the **Hoohash V110** algorithm. Community participation is encouraged to validate stability and performance before mainnet activation.

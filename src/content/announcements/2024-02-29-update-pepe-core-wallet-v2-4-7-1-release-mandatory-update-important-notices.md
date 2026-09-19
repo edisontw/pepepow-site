@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 ? It's release time! ?
 We're excited to announce the release of version 2.4.7.1 of the PePe-core wallet! This is a \*\*mandatory update\*\* for all users.
 ? \*\*Upgrade Deadline\*\*: Please upgrade before 19:00 UTC on March 11th, 2024, to avoid being SPORK'd off the main chain.

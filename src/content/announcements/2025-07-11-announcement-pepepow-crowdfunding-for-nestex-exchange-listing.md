@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 **PEPEPOW Crowdfunding for Nestex Exchange Listing!**
 We’re launching our crowdfunding campaign to list PEPEPOW on Nestex Exchange!
 Nestex is a new exchange with a lot of potential and a very affordable listing fee. Community feedback was overwhelmingly positive (18 for, 1 against), so let’s make it happen!

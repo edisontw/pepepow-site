@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 If your **PEPEPOW wallet** stops syncing at a specific block and won’t move forward, follow these steps to safely recover full synchronization.
 
 ### **Step 1: Check Debug Log for Errors**

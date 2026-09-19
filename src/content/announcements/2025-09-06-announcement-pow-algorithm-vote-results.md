@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 The community vote on whether to switch PEPEPOW’s Proof of Work algorithm from XelisV2-pepew to HooHash V110 has now concluded.
 **Voting Results (2025/8/21 – 2025/9/4):**
 

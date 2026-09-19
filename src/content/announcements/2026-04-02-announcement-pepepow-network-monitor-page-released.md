@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 A new monitoring page has been deployed to provide visibility into the current state of the PEPEPOW network:
 <https://explorer.pepepow.net/monitor/>
 This tool is designed to assist the community in tracking network conditions, particularly during periods of upgrades and consensus changes.

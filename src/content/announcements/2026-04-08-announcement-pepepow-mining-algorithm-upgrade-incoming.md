@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 The PEPEPOW network is approaching the transition to the **hoohash-pepew** mining algorithm.
 Based on the current network monitor, activation is expected in around 2 days, although the exact timing may still vary slightly depending on block production. Node operators and miners should begin preparing now.
 ### Network readiness

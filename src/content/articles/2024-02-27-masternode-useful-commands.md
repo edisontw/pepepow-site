@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 In CMD window:
 - `PEPEPOW-cli mnsync status`: Shows masternode status during startup.
 - `PEPEPOW-cli masternode status`: Indicates if you need to run start-all.

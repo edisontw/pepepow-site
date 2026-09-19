@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 Thank you to everyone who participated! Here’s a quick summary:
 Community Vote Results
 - Discord: Choose exchange first (84.6%)

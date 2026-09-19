@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 1. Establish SSH connection to the virtual machine using the private key obtained during creation:
 ssh -i XXXXX.key user@ip
 2. Download and extract the latest wallet files (v2.6.2.12):

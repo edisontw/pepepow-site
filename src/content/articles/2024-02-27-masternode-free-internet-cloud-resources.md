@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 I've set up masternodes for free on OCI (Oracle Cloud Infrastructure), AWS (Amazon Web Services), GCP (Google Cloud Platform), Vultr, and Azure (Microsoft). Here's the information: (OCI and GCP are recommended)
 
 - OCI: Always free with 4 cores and 24GB RAM (Canonical Ubuntu 22.04 Minimal aarch64)

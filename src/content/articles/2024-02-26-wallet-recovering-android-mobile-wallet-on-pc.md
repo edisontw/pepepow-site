@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 Follow these steps to recover your Android mobile wallet on a PC wallet using a 12-word recovery phrase:
 1. Stop the wallet program. If there is an existing PC wallet, backup or rename the original PC wallet file `wallet.dat`. Skip this step if there is no previous PC wallet.
 2. Edit or create a file named `PEPEPOW.conf` in the wallet folder and add the following lines:

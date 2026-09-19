@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 **Dear PEPEPOW Community,**
 We are excited to announce a proposed change to our Proof of Work (PoW) algorithm from memehash to XelisV2. This new algorithm offers enhanced security and aligns with the latest standards in PoW technology.
 **Development Overview**:

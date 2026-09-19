@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 To ensure transparency and community-driven decision-making, we are conducting a funding survey to determine how to allocate resources for the future growth of PEPEPOW!
 How You Can Participate:
 **Vote on funding priorities** – Choose which projects should be prioritized.

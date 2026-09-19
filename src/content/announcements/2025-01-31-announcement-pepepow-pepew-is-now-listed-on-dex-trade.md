@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 PEPEPOW (PEPEW) is Now Listed on Dex-Trade!
 We are excited to announce that PEPEPOW (PEPEW) is officially listed on Dex-Trade! This marks a significant milestone in our journey, taking us one step closer to greater growth, liquidity, and wider market adoption.
 Built for fun, innovation, and a strong community, PEPEPOW continues to push forward, and we can’t wait to see what’s next!

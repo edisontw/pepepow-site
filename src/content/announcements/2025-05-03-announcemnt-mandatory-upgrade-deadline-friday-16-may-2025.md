@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 PEPEPOW v2.7.1.6 is now live — this is a **required update** for all masternode operators, mining pools, and full node users.
 
 Key changes:

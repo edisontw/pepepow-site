@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 The PEPEPOW whitepaper has been revised to better reflect the current state of the project and its future development direction.
 This version includes updated sections on the **HooHash V110** transition, the post-hard-fork mining ecosystem, mining software and pool infrastructure development, AI-assisted development and operations, visual identity, community media, and the updated roadmap.
 The update also uses more cautious wording around market access, wallet safety, project risk, and future changes. The goal is to make the whitepaper more accurate, practical, and easier for new users, miners, node operators, builders, and contributors to understand.

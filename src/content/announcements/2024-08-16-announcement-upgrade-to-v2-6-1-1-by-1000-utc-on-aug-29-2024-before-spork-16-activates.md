@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 The community has spoken, and we have a brand new release!!
 [https://github.com/MattF42/PePe-core/releases/tag/v2.6.1.1](https://github.com/MattF42/PePe-core/releases/tag/v2.6.1.1 "https://github.com/MattF42/PePe-core/releases/tag/v2.6.1.1")
 Please upgrade before 10:00 UTC 29th August 2024 when SPORK 16 will activate in preparation for the change to XelisV2 as our hashing algorithm at blockheight 1930001 , which is anticipated to be in the evening (UTC) of 30th August 2024. Block rewards will also be subject to a bonus 24 months to celebrate our adoption of XelishashV2. The block reward will increase to 17000 from the current 5000. This will reduce every 129600 blocks (or roughly 30 days) by 500 until the reward has reduced back to 5000 per block. Superblocks remain, and the split between miners, masternodes and the devfee is unchanged.

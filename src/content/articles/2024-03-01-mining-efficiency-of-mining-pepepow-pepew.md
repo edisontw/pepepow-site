@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 | Graphics Card | Efficiency (Mh/W) |
 |-------------------|-------------------|
 | RTX 4070 Ti | 0.96 |

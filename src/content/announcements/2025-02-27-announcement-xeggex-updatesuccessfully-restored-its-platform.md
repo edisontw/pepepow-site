@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 Dear **PEPEPOW Community**,
 Xeggex, one of **PEPEPOW’s key partners**, has successfully restored its platform.
 

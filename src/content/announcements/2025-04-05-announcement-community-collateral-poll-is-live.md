@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 **Community Collateral Poll is Live!**
 Following recent discussions in our community, we’re now holding a **two-week vote** to decide the future of **masternode collateral requirements**.
 Cast your vote here:

@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 The voting for development and **crowdfunding priorities** has officially ended! You can review the full results here:
 [[Voting Results](https://docs.google.com/spreadsheets/d/1S7Odq3udhztYkOOY4Y3_0LBVqZDfcuXacriZinpYI7I/edit?gid=717508221#gid=717508221)]
 Since some votes were anonymous, the donation amounts should be used as a reference only.
