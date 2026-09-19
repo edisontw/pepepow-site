@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 **Crowdfund**
 
 It's been two weeks, and donations have been slow. Since the call to action for the potential MEXC listing, we have only managed to pool $450. I commend the community for their efforts and enthusiasm.
