@@ -13,7 +13,7 @@ The new site replaces the legacy WordPress presentation with a maintainable stat
 - **Source of truth:** this repository (`edisontw/pepepow-site`, branch `main`)
 - **Framework:** Astro
 - **Content:** Markdown / MDX and structured data
-- **Production serving:** Nginx serving the generated `dist/`
+- **Production serving:** Apache serving the generated Astro static release
 - **Dynamic data:** small read-only public APIs only where needed
 - **Primary focus:** PEPEPOW information, tools, network visibility, mining, masternodes, wallets, community and education
 - **Secondary focus:** small, curated cryptocurrency news and reference information
@@ -86,7 +86,7 @@ The website must never require direct browser access to wallet/node RPC.
 
 ## Deployment
 
-Production deployment will be introduced after migration and staging validation.
+Production static serving is active on the existing Apache host. See `docs/DEPLOYMENT.md` for the verified production baseline.
 
 Target flow:
 
@@ -94,8 +94,10 @@ Target flow:
 edit
 → commit/push main
 → server pull
+→ npm ci
 → Astro build
-→ Nginx serve dist/
+→ publish static release
+→ Apache serve /var/www/pepepow.net/current
 ```
 
 Production website changes must not stop, reconfigure, or otherwise interfere with the PEPEPOW wallet/node running on the host.

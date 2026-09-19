@@ -975,3 +975,31 @@ Navigation now includes Network, and the homepage Explore Network action leads t
 
 No production deployment, Nginx change, WordPress retirement, wallet/node configuration change, or
 RPC access was performed in this slice.
+
+
+## Production Astro cutover — 2026-09-19
+
+The static Astro site was deployed on the existing `edison2` production host after the Phase 2 core-page work.
+
+Verified environment:
+
+- Apache 2.4.52 (Ubuntu) is the production web server; Nginx is not installed or required
+- Node.js v22.23.2, npm 10.9.8, Git 2.34.1
+- repository is already cloned at `~/pepepow-site`
+- Apache serves the Astro release through `/var/www/pepepow.net/current`
+- HTTP for `pepepow.net` / `www.pepepow.net` redirects to HTTPS
+- HTTPS uses the existing Let's Encrypt certificate
+- the previous WordPress tree at `/var/www/html/wordpress` remains in place for rollback/reference
+- the old local `game.pepepow.net` Apache vhosts were disabled because that hostname is now served by another host
+- the deployment does not depend on `rsync`; static releases can be copied with `cp -a`
+
+Local production verification returned HTTP 200 for at least:
+
+- `/about/`
+- `/network/`
+- `/announcements/`
+- `/wallet/`
+
+The website cutover did not stop or reconfigure PEPEPOWd. The observed PEPEPOWd P2P service on TCP 8833 and loopback RPC on TCP 8834 remain outside the website deployment path.
+
+The previously planned Nginx production assumption is superseded by the verified Apache deployment. Operational details are documented in `docs/DEPLOYMENT.md`.
