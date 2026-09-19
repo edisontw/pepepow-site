@@ -1,0 +1,55 @@
+name: Migration media probe
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - migration/public/media-manifest.json
+      - scripts/migration/media_probe.py
+      - .github/workflows/migration-media-probe.yml
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Probe legacy media URLs
+        run: |
+          python3 scripts/migration/media_probe.py \
+            migration/public/media-manifest.json \
+            --output migration/work/media-probe.json \
+            --workers 12 \
+            --timeout 15
+
+      - name: Write probe summary
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          payload = json.loads(Path("migration/work/media-probe.json").read_text())
+          summary = (
+              "## Legacy media probe\n\n"
+              f"- Probed: {payload['probed']}\n"
+              f"- Available: {payload['available']}\n"
+              f"- Unresolved: {payload['unresolved']}\n"
+          )
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as handle:
+              handle.write(summary)
+          PY
+
+      - name: Upload probe result
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: migration-media-probe
+          path: migration/work/media-probe.json
+          if-no-files-found: error
+          retention-days: 7
