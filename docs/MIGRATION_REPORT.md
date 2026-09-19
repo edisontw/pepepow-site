@@ -1003,3 +1003,38 @@ Local production verification returned HTTP 200 for at least:
 The website cutover did not stop or reconfigure PEPEPOWd. The observed PEPEPOWd P2P service on TCP 8833 and loopback RPC on TCP 8834 remain outside the website deployment path.
 
 The previously planned Nginx production assumption is superseded by the verified Apache deployment. Operational details are documented in `docs/DEPLOYMENT.md`.
+
+
+## Phase 2 discovery and static search — 2026-09-20
+
+The first post-cutover refinement closes the remaining Phase 2 discovery gaps without adding a
+database, server-side search service, or new blockchain collector.
+
+New public routes:
+
+- `/community/` — current community, repository, Explorer, announcement, and participation entry
+  points with explicit key/recovery-material safety guidance
+- `/learn/` — practical learning paths through the existing current Network, Wallet, Mining,
+  Masternode, Market, and historical announcement content
+- `/tools/` — a compact directory for the Explorer, wallet releases, miner/pools, market
+  references, and site search
+- `/search/` — a static build-time search index covering current pages, recovered announcements,
+  and historical technical articles
+
+Search architecture remains static-first:
+
+- the index is assembled from Astro content collections at build time
+- only the search page uses a small browser-side script to rank locally embedded records
+- matching is weighted toward titles, categories, and tags while retaining body-text discovery
+- results preserve the existing current-page versus historical-content distinction
+- query strings such as `/search/?q=wallet` are supported without creating server state
+- no external search provider, database, Node.js production service, wallet RPC, or API credential
+  is required
+
+Primary navigation and homepage discovery now expose Learn, Tools, Community, and Search. The
+homepage Start Here grid also includes Learn and uses a responsive auto-fit layout.
+
+This completes the Phase 2 baseline after production cutover. The next implementation phase is
+Network Pulse: expose a minimal allowlisted cached summary from the existing PEPEPOW monitor and
+consume it on the homepage/network page with explicit stale/offline handling. The website must not
+duplicate the monitor collector or connect browser code directly to wallet/node RPC.

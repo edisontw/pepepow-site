@@ -13,6 +13,7 @@ const {
 
 const pageTitle = title === 'PEPEPOW' ? title : `${title} | PEPEPOW`;
 const currentPath = Astro.url.pathname;
+const canonicalUrl = new URL(currentPath, Astro.url.origin);
 const navItems = [
   { href: '/about/', label: 'PEPEPOW' },
   { href: '/network/', label: 'Network' },
@@ -21,6 +22,10 @@ const navItems = [
   { href: '/wallet/', label: 'Wallets' },
   { href: '/market/', label: 'Market' },
   { href: '/announcements/', label: 'News' },
+  { href: '/learn/', label: 'Learn' },
+  { href: '/tools/', label: 'Tools' },
+  { href: '/community/', label: 'Community' },
+  { href: '/search/', label: 'Search' },
 ];
 
 const isCurrent = (href: string) =>
@@ -34,7 +39,7 @@ const isCurrent = (href: string) =>
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#111411" />
-    <link rel="canonical" href={Astro.url} />
+    <link rel="canonical" href={canonicalUrl} />
     <title>{pageTitle}</title>
   </head>
   <body>
