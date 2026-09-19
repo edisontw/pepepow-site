@@ -190,15 +190,12 @@ route wiring, or exact legacy-host link cleanup.
 
 Priority now:
 
-1. Review current-sensitive public pages (`home`, `about`, `mining`, `masternode`, `wallet`, `market`)
-   against current authoritative PEPEPOW repositories/services before treating operational claims as current.
-2. Verify software versions, download URLs, pool/explorer/exchange/service status, commands, and security-sensitive
-   instructions; preserve historical wording where it is clearly historical rather than silently modernizing it.
+1. Run a systematic external-link/service health audit for the reviewed public pages and important announcement links.
+2. Resolve the remaining current-consensus DevFee/funding description directly from PEPEPOW Core code.
 3. Review the recovered Announcements page and historical posts for readability/formatting artifacts that require
    human judgment, without changing historical claims merely to match today's state.
-4. Audit external links and embeds for availability and replace/remove only where the intended destination is clear.
-5. Keep content `status: draft` and `migration_review: true` until its current-sensitive material has been checked.
-6. After content review, proceed to staging visual/responsive/accessibility work. Production Nginx remains out of scope
+4. Keep content `status: draft` and `migration_review: true` until its current-sensitive and external-link review is complete.
+5. After content review, proceed to staging visual/responsive/accessibility work. Production Nginx remains out of scope
    until staging acceptance.
 
 
@@ -510,6 +507,62 @@ Validated in GitHub Actions on PR #1:
 
 Recovered historical and current-sensitive material remains `status: draft` and
 `migration_review: true`; this cleanup does not promote it to current authoritative guidance.
+
+No production deployment or Nginx change was made in this slice.
+
+## Current-sensitive public-page verification — 2026-09-19
+
+An initial current-state verification pass was completed for the six operational public pages:
+`home`, `about`, `mining`, `masternode`, `wallet`, and `market`.
+
+Authoritative/current sources used for this pass included the PEPEPOW Core repository/releases,
+the PEPEPOW Explorer, the HTN Miner download/release page, PEPEW Light, the Android wallet
+repository, the Foztor community pool, and current PEPEPOW announcements.
+
+Verified findings and resulting changes:
+
+- PEPEPOW currently uses **HooHash V110**; stale homepage/FAQ references that presented
+  XelisV2-pepew as the current algorithm were corrected.
+- PEPEPOW Core **v2.9.0.5** is the latest release reviewed in this pass. The wallet page now
+  uses v2.9.0.5 consistently and no longer mixes v2.9.0.4 download commands into the current guide.
+- The old wallet page had Linux x86_64/AARCH64 download examples crossed between architectures;
+  the current guide now uses the correct v2.9.0.5 artifacts.
+- Dated blockchain-bootstrap ZIP links were removed from the default wallet path because those
+  archives age quickly and should not be presented as the normal current download.
+- Wallet recovery guidance no longer recommends broadly deleting the data directory while retaining
+  only `wallet.dat`; the page now requires a clean shutdown and separate wallet backup before any
+  destructive recovery step.
+- PEPEW Light Wallet is documented as the recommended browser entry and remains described as
+  **public beta** / non-custodial.
+- The Android wallet is now documented as a released **v1.0.0** non-custodial wallet rather than
+  "under development".
+- The current HTN download page lists **v1.4.22**. Since HTN v1.4.19, a valid PEPEPOW address can
+  be auto-detected, so the old site's claim that `--pepepow` is mandatory was removed.
+- The mining guide no longer hard-codes older Mining4People/Zpool Stratum settings as confirmed
+  current configuration. The verified Foztor pool and PEPEPOW Lab Pool are linked, and users are
+  directed to each pool's live connection instructions.
+- Tiered masternode collateral is documented as **10M / 25M / 50M / 100M PEPEW** rather than
+  treating 10M as the only collateral level.
+- Fixed "first reward in around 24 hours" wording was removed; masternode reward timing is now
+  described as dependent on tier, active-node count, queue position, and network conditions.
+- The PEPEPOW Explorer currently exposes market data for **NonKYC** and **NestEx**. Exbitron could
+  not be independently confirmed during this check and is therefore no longer presented as a
+  confirmed active venue.
+- The About page's exact current DevFee allocation remains deliberately unresolved. Historical
+  documents and release notes describe different funding eras; the draft now says this should be
+  documented directly from current consensus code before publishing a fixed present-day allocation.
+
+All six pages remain `status: draft` and `migration_review: true`. This pass corrects
+high-confidence current operational errors but does not yet assert that every external link,
+historical governance statement, or third-party service is current.
+
+Next content gate:
+
+1. run a systematic external-link/service health audit for the six public pages and important
+   announcement links
+2. resolve the remaining current-consensus DevFee/funding description from Core code
+3. perform a rendered readability/editing pass on the recovered pages and historical posts
+4. only after those gates consider promoting reviewed current pages out of migration-review state
 
 No production deployment or Nginx change was made in this slice.
 
