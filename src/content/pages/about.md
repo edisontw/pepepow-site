@@ -138,7 +138,7 @@ These documents provide historical, governance, technical, roadmap, and visual r
 
 [PEPEPOW White Paper v1.0 — 18 Sep 2023, Minus](/docs/legacy/2023/09/whitepaper-v1.0.1.pdf)
 [PEPEPOW DAO Reference — 25 Oct 2023, Minus](/docs/legacy/2023/10/pepepow-dao-op-policy-v1.0.0.pdf)
-[PEPEPOW White Paper v2.0 — 26 Jan 2025, Edison](/docs/legacy/2025/01/PEPEPOW-Whitepaper_v2.0.pdf)
+[PEPEPOW White Paper v2.0 — 26 Jan 2025, Edison](https://docs.google.com/document/d/1FIs7lQo_7tjNhJ9n95_YrvuIGmLlSjmkKqEWIktlU5Q/edit?tab=t.0)
 [PEPEPOW Visual Reference Guideline v1.0 — 1 Jan 2026, Edison](/docs/legacy/2026/01/PEPEPOW-Visual-Reference-Guideline-v1.0.pdf)
 [PEPEPOW White Paper v2.1 — 31 May 2026, Edison](/docs/legacy/2026/05/PEPEPOW-Whitepaper-v2.1.pdf)
 
