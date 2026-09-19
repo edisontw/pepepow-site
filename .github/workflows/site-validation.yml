@@ -38,6 +38,9 @@ jobs:
       - name: Validate legacy article safety
         run: python3 scripts/migration/validate_legacy_article_safety.py
 
+      - name: Validate accessibility basics
+        run: python3 scripts/migration/validate_accessibility_basics.py
+
       - name: Inventory current external links
         run: python3 scripts/migration/audit_external_links.py --inventory-only
 
@@ -49,4 +52,4 @@ jobs:
           --output migration/work/announcement-external-link-audit.json
 
       - name: Compile-check migration scripts
-        run: python3 -m py_compile scripts/migration/wxr_inventory.py scripts/migration/wxr_extract.py scripts/migration/wxr_manifests.py scripts/migration/media_probe.py scripts/migration/collect_uploads.py scripts/migration/stage_recovered_media.py scripts/migration/validate_legacy_routes.py scripts/migration/validate_content_links.py scripts/migration/validate_legacy_article_safety.py scripts/migration/audit_external_links.py
+        run: python3 -m py_compile scripts/migration/wxr_inventory.py scripts/migration/wxr_extract.py scripts/migration/wxr_manifests.py scripts/migration/media_probe.py scripts/migration/collect_uploads.py scripts/migration/stage_recovered_media.py scripts/migration/validate_legacy_routes.py scripts/migration/validate_content_links.py scripts/migration/validate_legacy_article_safety.py scripts/migration/validate_accessibility_basics.py scripts/migration/audit_external_links.py
