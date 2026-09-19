@@ -709,3 +709,72 @@ their original dates, titles, categories, and legacy paths.
 
 No production deployment or Nginx change was made in this slice.
 
+## Historical post hygiene and link inventory — 2026-09-19
+
+The next migration-review gate focused on historical announcements/articles as archived records rather
+than trying to rewrite old posts into current operational documentation.
+
+Key decisions:
+
+- Historical external links are preserved when they are part of the original record. A 2024/2025
+  Dex-Trade, Xeggex, XelisV2, Memehash, miner, or pool link is not silently replaced with a 2026
+  service simply because the old service is now inactive.
+- Direct readers still need protection from mistaking an archived post for current instructions.
+  `LegacyContent.astro` now renders a visible **Historical content** notice for migrated
+  announcements/articles and points readers to the current Wallet, Mining, Masternode, Market, and
+  Explorer entry points.
+- The generated `/announcements/` archive already carries the same historical-context principle;
+  this pass extends it to every individual migrated announcement/article route.
+
+### Internal migration-review text
+
+A migration-only blockquote had been inserted into many recovered Markdown files:
+
+`Migration candidate generated from the legacy WordPress export...`
+
+That text is useful to the migration process but should never be public website content.
+
+The migration pipeline now handles this in three layers:
+
+1. `scripts/migration/wxr_extract.py` no longer writes the migration-review blockquote into newly
+   staged Markdown; review state remains in frontmatter as `migration_review: true`.
+2. `scripts/markdown/remove-migration-banner.mjs` is an Astro remark plugin that removes the
+   legacy internal blockquote from older recovered Markdown during rendering.
+3. `scripts/migration/validate_content_links.py` now fails if the internal migration-banner text
+   appears in generated HTML, so future rendering changes cannot accidentally expose it again.
+
+A small number of source Markdown files were also normalized while this issue was being traced.
+The remaining older source files do not need dozens of one-file Git commits merely to remove a
+non-rendered internal marker; the reproducible renderer/extractor rules are the authority going
+forward.
+
+### Historical external-link inventory
+
+The existing external-link audit tool is now also run against every file under
+`src/content/announcements/*.md` in CI using `--inventory-only`.
+
+This historical inventory is intentionally separate from the current public-page inventory:
+
+- current operational pages are candidates for link replacement/removal after verification
+- historical posts preserve original destinations unless a migration/rendering problem makes the
+  link unusable as historical evidence
+- anti-bot responses or an inactive service today do not invalidate the historical statement that
+  the service existed when the post was published
+
+The historical inventory is written to the ignored
+`migration/work/announcement-external-link-audit.json` during CI/local validation. Live network
+probing remains non-blocking and should be used as a review aid rather than as a reason to
+automatically delete historical links.
+
+This closes the first historical-announcement hygiene gate without altering historical claims.
+
+Remaining content-review work:
+
+1. inspect recurring formatting artifacts that affect readability but not meaning (lost emoji
+   placeholders, over-escaped Markdown, malformed old link titles)
+2. review the smaller `articles` collection for security-sensitive legacy wallet/node commands
+3. after content hygiene, move to staging responsive/accessibility/visual review
+4. keep production Nginx/deployment out of scope until staging acceptance
+
+No production deployment or Nginx change was made in this slice.
+
