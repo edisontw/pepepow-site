@@ -190,11 +190,11 @@ route wiring, or exact legacy-host link cleanup.
 
 Priority now:
 
-1. Run a systematic external-link/service health audit for the reviewed public pages and important announcement links.
-2. Resolve the remaining current-consensus DevFee/funding description directly from PEPEPOW Core code.
+1. Resolve the remaining current-consensus DevFee/funding description directly from PEPEPOW Core code.
+2. Audit external links inside historical announcements separately, preserving historical context.
 3. Review the recovered Announcements page and historical posts for readability/formatting artifacts that require
    human judgment, without changing historical claims merely to match today's state.
-4. Keep content `status: draft` and `migration_review: true` until its current-sensitive and external-link review is complete.
+4. Keep content `status: draft` and `migration_review: true` until the remaining review gates are complete.
 5. After content review, proceed to staging visual/responsive/accessibility work. Production Nginx remains out of scope
    until staging acceptance.
 
@@ -563,6 +563,76 @@ Next content gate:
 2. resolve the remaining current-consensus DevFee/funding description from Core code
 3. perform a rendered readability/editing pass on the recovered pages and historical posts
 4. only after those gates consider promoting reviewed current pages out of migration-review state
+
+No production deployment or Nginx change was made in this slice.
+
+## External-link and service-health audit — 2026-09-19
+
+A focused external-link audit was performed after the first current-sensitive content review. The
+audit covered the six operational public pages rather than treating every historical post link as a
+current service endorsement.
+
+The review uses conservative status rules:
+
+- a successful fetch/search can support keeping a current link
+- HTTP 401/403/429, anti-bot behavior, or a crawler failure does **not** prove a service is dead
+- a legacy link is removed from a current entry point only when its purpose is clearly obsolete,
+  misleading, or no longer appropriate
+- historical links may remain in historical content when they are part of the record
+
+Findings and changes:
+
+- HTN Miner, PEPEPOW Community Pool, PEPEPOW Lab Pool, the main Explorer, MiningPoolStats,
+  Mining4People's PEPEW pool, and NestEx all had current public pages that could be identified.
+- The current Mining4People PEPEW page still presents HooHash pool information, so Mining4People
+  is now linked directly from the Mining page rather than treated only as an old endpoint.
+- The PEPEPOW Discord invite `sJgDVRkBcq` is still repeated by current/recent PEPEPOW and
+  Mining4People public references and remains the community link.
+- NonKYC direct pages were not reliably fetchable by the crawler, but current PEPEPOW Explorer and
+  independent market-reference data still report active NonKYC PEPEW markets. The link therefore
+  remains, rather than being incorrectly classified as dead from an anti-bot/fetch failure.
+- The legacy WhatToMine URL identifies itself as **PepePow-old** and still uses the old Memehash
+  context. It was removed from the current homepage.
+- Dex-Trade is already treated as a historical delisted venue and was removed from the current
+  homepage resource set.
+- MiningPower's public overview was reachable but showed no currently listed projects in the
+  audited view. It is no longer presented as a current PEPEPOW homepage resource.
+- NodeHub's public explorer still lists PEPEPOW, but that does not by itself prove current paid
+  hosting terms. The Masternode page now tells users to verify service terms before use.
+- Pecunia remains a legacy service reference, but its current PEPEPOW product page could not be
+  independently verified in this audit. It is explicitly labeled for re-verification before use.
+- The old WordPress homepage's large mixed logo wall was replaced with a concise set of current
+  PEPEPOW resources. Specialized market/mining/masternode references now live on their relevant
+  pages rather than implying homepage endorsement.
+- The About page's **White Paper v2.0** link was found to point incorrectly to the local v1.0.1
+  PDF. It now points to the recovered canonical
+  `/docs/legacy/2025/01/PEPEPOW-Whitepaper_v2.0.pdf`.
+- Homepage White Paper v2.0/v2.1 links now use the recovered local PDFs, reducing dependence on
+  editable external Google Docs for canonical website reading.
+- The Market page now uses the PEPEPOW Explorer as the preferred PEPEPOW-specific market reference
+  and keeps a smaller secondary tracker set: CoinCodex, LiveCoinWatch, CoinPaprika, Blockspot, and
+  CoinCarp. Third-party tracker metadata is explicitly non-authoritative because some trackers lag
+  protocol or exchange changes.
+
+A reproducible external-link audit helper is now available at:
+
+`scripts/migration/audit_external_links.py`
+
+By default it inventories/probes links from `home`, `about`, `mining`, `masternode`,
+`wallet`, and `market`, writes the detailed result to the ignored
+`migration/work/external-link-audit.json`, and classifies results as available, blocked, missing,
+or unresolved. Only confirmed HTTP 404/410 results are eligible for the optional
+`--strict-missing` failure mode; blocked/network failures remain review items.
+
+CI runs the tool in `--inventory-only` mode so extraction remains regression-tested without
+making the normal site build depend on flaky third-party network availability.
+
+Remaining external-link work is intentionally narrower:
+
+1. re-verify Pecunia's current PEPEPOW service status before presenting it as active
+2. periodically re-run live probes manually or in a future non-blocking scheduled workflow
+3. audit external links inside historical announcements separately, preserving historical context
+4. do not interpret a market-data aggregator's exchange list as authoritative service status
 
 No production deployment or Nginx change was made in this slice.
 
