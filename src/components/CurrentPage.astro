@@ -6,11 +6,13 @@ const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
 
 const pageConfigs: Record<string, {
+  title: string;
   eyebrow: string;
   intro: string;
   actions: Array<{ label: string; href: string; primary?: boolean }>;
 }> = {
   about: {
+    title: 'About PEPEPOW',
     eyebrow: 'PEPEPOW',
     intro: 'What PEPEPOW is, how the network evolved, and where to verify its current software, history, and community references.',
     actions: [
@@ -20,6 +22,7 @@ const pageConfigs: Record<string, {
     ],
   },
   wallet: {
+    title: 'PEPEPOW Wallets',
     eyebrow: 'Wallets',
     intro: 'Choose a PEPEW wallet, verify official sources, and follow current backup, update, and recovery guidance.',
     actions: [
@@ -29,6 +32,7 @@ const pageConfigs: Record<string, {
     ],
   },
   mining: {
+    title: 'PEPEPOW Mining',
     eyebrow: 'Mining',
     intro: 'Current HooHash V110 mining entry points, miner software, pool references, and setup guidance.',
     actions: [
@@ -38,6 +42,7 @@ const pageConfigs: Record<string, {
     ],
   },
   masternode: {
+    title: 'PEPEPOW Masternode',
     eyebrow: 'Masternode',
     intro: 'Current masternode requirements, setup flow, operational checks, reward context, and security reminders.',
     actions: [
@@ -47,6 +52,7 @@ const pageConfigs: Record<string, {
     ],
   },
   market: {
+    title: 'PEPEPOW Market',
     eyebrow: 'Market',
     intro: 'Current PEPEW market references, confirmed venues, and exchange-risk context without price predictions.',
     actions: [
@@ -59,6 +65,7 @@ const pageConfigs: Record<string, {
 
 const slug = entry.data.slug || entry.id.replace(/\.mdx?$/, '');
 const config = pageConfigs[slug] ?? {
+  title: entry.data.title,
   eyebrow: 'PEPEPOW',
   intro: entry.data.description || 'Current PEPEPOW community information and operational references.',
   actions: [],
@@ -73,7 +80,7 @@ const description = entry.data.description || config.intro;
   <article class="current-page">
     <header class="current-page-header">
       <p class="eyebrow">{config.eyebrow}</p>
-      <h1>{entry.data.title === 'Wallet' ? 'PEPEPOW Wallets' : entry.data.title}</h1>
+      <h1>{config.title}</h1>
       <p class="current-page-lede">{config.intro}</p>
       {config.actions.length > 0 && (
         <div class="actions current-page-actions">
