@@ -109,6 +109,12 @@ def main() -> int:
             if match:
                 source_issues.append((path.as_posix(), label, match.group(0)))
 
+        fence_count = len(re.findall(r"^\\s*\x60\x60\x60", body, re.MULTILINE))
+        if fence_count % 2:
+            source_issues.append(
+                (path.as_posix(), "unbalanced fenced code block", str(fence_count))
+            )
+
     generated_issues: set[tuple[str, str, str]] = set()
     references_checked = 0
     html_files = sorted(args.dist_root.rglob("*.html"))
