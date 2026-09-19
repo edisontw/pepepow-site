@@ -28,4 +28,4 @@ If you are mining PEPEPOW, update now and reconnect to your pool using the new m
 Miner:
 <https://htn.foztor.net/>
 Mining Setup Full configuration guide:
-<https://pepepow.org/mining/>
+[PEPEPOW Mining](/mining/)
