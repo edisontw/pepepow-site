@@ -1,6 +1,6 @@
 # PEPEPOW Website Plan
 
-Status: **Migration validation / staging preparation**  
+Status: **Production online / Phase 2 completion**  
 Target: **https://pepepow.net**  
 Repository authority: **edisontw/pepepow-site `main`**
 
@@ -342,7 +342,7 @@ Content:
 
 ## 5. Homepage design
 
-Staging implementation status: **initial custom homepage implemented**. Live Network Pulse data remains a later monitor/API integration; the current staging homepage uses only verified static entry points and build-time announcement data.
+Production implementation status: **custom homepage and Phase 2 discovery UX implemented**. Live Network Pulse data remains the next monitor/API integration; the current homepage uses verified static entry points, build-time announcement data, and links to Learn, Tools, Community, and static site search.
 
 
 The homepage must remain concise.
@@ -1018,6 +1018,8 @@ Exit criteria:
 
 ### Phase 2 — Core site UX
 
+Status: **baseline complete 2026-09-20**. The production site now includes the core operational pages, responsive/accessibility baseline, Community, Learn, Tools, and a build-time static search index. Further visual/content refinement remains iterative rather than a migration gate.
+
 Deliver:
 
 - responsive global layout
@@ -1038,6 +1040,8 @@ Exit criteria:
 - historical posts are usable
 
 ### Phase 3 — Network integration
+
+Status: **next implementation phase**. Reuse the existing PEPEPOW monitor and add only a minimal allowlisted cached public summary; do not add a second collector or browser-to-RPC access.
 
 Deliver:
 
