@@ -161,7 +161,6 @@ and long-term community contributors. Learn, build, mine, document, improve, and
 [GitHub](https://github.com/MattF42/PePe-core)
 [Join Discord](https://discord.gg/sJgDVRkBcq)
 
-```
 ![](/media/legacy/2024/12/adminDAO.png)
 Q Q2 2023
 Project Milestones
@@ -241,7 +240,7 @@ Start from New Algorithm
 - IEO on Dex-Trade
 - Social media update and expansion
 
-![PEPEPOW Launch](h/media/legacy/2024/09/PEPEPOW-CPU-miner.webp)
+![PEPEPOW Launch](/media/legacy/2024/09/PEPEPOW-CPU-miner.webp)
 Q1 2025
 Adoption and Expansion
 
