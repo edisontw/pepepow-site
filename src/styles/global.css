@@ -1,0 +1,70 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #111411;
+  color: #eef4ee;
+  --surface: #181d18;
+  --border: #2b342c;
+  --muted: #aeb8af;
+  --accent: #78df68;
+  --max-width: 72rem;
+}
+
+* { box-sizing: border-box; }
+html, body { background: #111411; }
+body { margin: 0; min-height: 100vh; color: #eef4ee; }
+a { color: inherit; }
+.site-header, .site-footer, main {
+  width: min(calc(100% - 2rem), var(--max-width));
+  margin-inline: auto;
+}
+.site-header {
+  min-height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.brand {
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-decoration: none;
+}
+nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover, nav a:focus-visible { color: #fff; }
+.hero { padding: clamp(4rem, 10vw, 8rem) 0 3rem; max-width: 52rem; }
+.eyebrow { color: var(--accent); font-weight: 700; letter-spacing: .14em; }
+h1 {
+  margin: .4rem 0 1rem;
+  font-size: clamp(2.6rem, 7vw, 5.6rem);
+  line-height: .98;
+  letter-spacing: -.04em;
+}
+h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); }
+.lede, .section p { color: var(--muted); font-size: 1.125rem; line-height: 1.7; }
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+.button {
+  display: inline-block;
+  padding: .8rem 1.1rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #0f140f;
+  border-radius: .45rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+.button.secondary { background: transparent; color: #eef4ee; border-color: var(--border); }
+.section { padding: 2rem 0 5rem; border-top: 1px solid var(--border); max-width: 52rem; }
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0 3rem;
+  color: var(--muted);
+  font-size: .9rem;
+}
+@media (max-width: 48rem) {
+  .site-header { align-items: flex-start; flex-direction: column; padding: 1rem 0; }
+  nav { gap: .65rem 1rem; }
+}
