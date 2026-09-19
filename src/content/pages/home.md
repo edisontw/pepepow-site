@@ -2,7 +2,7 @@
 title: "Home"
 description: ""
 date: "2024-12-13 16:19:47"
-updated: "2026-05-31 10:50:43"
+updated: "2026-09-19 20:25:51"
 slug: "home-new"
 categories: []
 tags: []
@@ -19,7 +19,7 @@ migration_review: true
 [Join new discord
 (since 2024.2.24)](https://discord.gg/sJgDVRkBcq)
 
-#### Running on Xelish2-pepew
+#### Running on HooHash V110
 
 ## A decentralized blockchain project
 
@@ -33,9 +33,9 @@ The total supply is capped at **90** **billion** coins.
 
 Both **miners** and **masternode** holders share the block rewards, incentivizing participation and maintaining network stability.
 
-### Energy-efficient POW
+### Current Proof-of-Work
 
-The new XelisV2-PEPEW algorithm is CPU-friendly and energy-efficient supporting POW (proof of work)
+PEPEPOW currently uses **HooHash V110** for Proof-of-Work mining. Current mining tooling supports CPU and GPU participation through the HooHash ecosystem.
 
 ![](/media/legacy/2024/02/a-graphy-pepepow.png)
 ![](/media/legacy/2024/02/P-coin4.png)

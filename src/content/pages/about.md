@@ -2,7 +2,7 @@
 title: "About"
 description: ""
 date: "2024-12-14 07:50:58"
-updated: "2026-06-11 10:44:57"
+updated: "2026-09-19 20:25:51"
 slug: "about"
 categories: []
 tags: []
@@ -51,17 +51,16 @@ Current mining belongs to the HooHash V110 era, with mining tools and pool infra
 #### Masternodes and Governance
 
 Masternodes receive 35% of block rewards and help support governance, transaction services, and network stability.
-A masternode requires 10,000,000 PEPEW collateral.
+PEPEPOW uses tiered masternode collateral levels of **10M, 25M, 50M, and 100M PEPEW**. Higher tiers receive proportionally higher reward-selection frequency.
 
 #### DAO-Based Development
 
 PEPEPOW uses DAO-oriented governance through branches such as adminDAO, miningDAO, nodeDAO, marketDAO, and devDAO.
 Community discussion and transparent decision-making remain central to the ecosystem.
 
-#### DevFee for Growth
+#### Development Funding History
 
-From wallet version v2.4.4.2, a 5% DevFee was implemented:
-1% for main developers and 4% for DAO escrow participants to support project development and integrations.
+PEPEPOW's development-funding model has changed over time. A 2024 community decision reintroduced developer/DAO funding, and later Core release notes continue to refer to a DevFee. Historical documents describe different reward/funding eras, so this migration draft does not present one fixed current DevFee allocation until the active consensus implementation is documented directly from current Core code.
 
 ### The Journey So Far
 
@@ -326,7 +325,7 @@ A1: PepePow is a decentralized blockchain project that leverages the Pepe meme c
 
 Q2: What algorithm does PepePow use?
 
-A2: PepePow uses the XelisV2-pepew proof-of-work algorithm, which is designed to be optimized for CPU mining.
+A2: PEPEPOW currently uses **HooHash V110** for Proof-of-Work mining. The network switched from XelisV2-pepew at block height 4,354,200.
 
 Q3: How are block rewards distributed in PepePow?
 
@@ -346,7 +345,7 @@ A6: After the 90 billion supply cap is reached, only superblocks will provide bl
 
 Q7: How is PepePow governed?
 
-A7: PepePow will initially be governed by an intermediary organization that is obligated to fulfill prescribed objectives based on decentralization principles. Masternode holders can participate in governance through voting.
+A7: PEPEPOW uses community discussion together with DAO- and masternode-oriented governance mechanisms. The practical governance process has changed over time, so historical DAO documents should be read as policy/history rather than assumed to describe every current procedure.
 
 Q8: What is the purpose of masternodes in PepePow?
 
