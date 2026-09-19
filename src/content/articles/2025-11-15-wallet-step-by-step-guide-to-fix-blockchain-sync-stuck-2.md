@@ -13,6 +13,8 @@ featured: false
 migration_review: true
 ---
 
+> **Legacy safety warning:** This archived procedure targets the software and network state at its publication date. Do not run these commands verbatim on a current wallet or node. Verify the current PEPEPOW Core release and network state first. Stop the wallet cleanly and keep a separate backup of `wallet.dat` before file or blockchain changes. Never share private keys or recovery phrases. Treat hard-coded peers, block heights, download URLs, and services as historical, and inspect any remote script before executing it.
+
 If your **PEPEPOW wallet** stops syncing at a specific block and won’t move forward, follow these steps to safely recover full synchronization.
 
 ### **Step 1: Check Debug Log for Errors**

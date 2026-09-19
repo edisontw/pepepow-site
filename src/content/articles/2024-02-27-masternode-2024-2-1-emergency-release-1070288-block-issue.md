@@ -13,6 +13,8 @@ featured: false
 migration_review: true
 ---
 
+> **Legacy safety warning:** This archived procedure targets the software and network state at its publication date. Do not run these commands verbatim on a current wallet or node. Verify the current PEPEPOW Core release and network state first. Stop the wallet cleanly and keep a separate backup of `wallet.dat` before file or blockchain changes. Never share private keys or recovery phrases. Treat hard-coded peers, block heights, download URLs, and services as historical, and inspect any remote script before executing it.
+
 **Don't need to do this if there's no sysnc problem**
 In case of sync issues with block 1070288, follow these steps:
 1. Update to the new wallet version
