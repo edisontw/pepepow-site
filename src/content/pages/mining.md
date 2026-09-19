@@ -2,7 +2,7 @@
 title: "Mining"
 description: ""
 date: "2020-04-13 11:18:48"
-updated: "2026-06-21 15:30:28"
+updated: "2026-09-19 20:25:51"
 slug: "mining"
 categories: []
 tags: []
@@ -53,183 +53,114 @@ Miners receive rewards in the form of newly minted PEPEPOW Crypocions and transa
 
 ## PEPEPOW Mining Quick Guide
 
-Follow these steps to start mining PEPEPOW using HTN Miner. CPU and GPU examples are included below, along with ready-to-run pool commands.
+Current operational details below were reviewed against the HooHash/HTN miner documentation on **19 Sep 2026**.
 
-Algorithm: **Hoohash-pepew**
-Miner: **HTN Miner (CPU / GPU)**
-Required flag: **--pepepow**
+- **Algorithm:** HooHash V110 (PEPEPOW variant)
+- **Recommended miner source:** [HTN Miner downloads](https://htn.foztor.net/)
+- **Current HTN release shown by the download site:** v1.4.22
+- **Current PEPEPOW detection:** HTN Miner v1.4.19 and later can automatically detect PEPEPOW from a valid PEPEPOW wallet address. The older `--pepepow` flag is no longer required for current releases.
+
+### Miner Options
+
+HTN currently provides several builds:
+
+- `hoo_cpu` — x86_64 CPU miner; AVX2 is required
+- `hoo_gpu` — NVIDIA CUDA GPU miner
+- `hoo_gpu_amd` — AMD GPU miner
+- `hoo_cpu_arm` — ARM64 CPU miner, including supported Linux/Termux environments
+
+Always use the current download page rather than copying an old versioned binary from a historical announcement.
 
 ### Download Mining Software
 
-Official HTN
-[Download HTN CPU Miner](https://htn.foztor.net/hoo_cpu.tar.gz)
-[Download HTN GPU Miner](https://htn.foztor.net/hoo_gpu.tar.gz)
-
 #### HTN CPU Miner
 
-wget -c https://htn.foztor.net/hoo\_cpu.tar.gz -O - | tar -xz
-cd hoo\_cpu
+```bash
+wget -c https://htn.foztor.net/hoo_cpu.tar.gz -O - | tar -xz
+cd hoo_cpu
+```
 
-#### HTN GPU Miner
+#### HTN NVIDIA GPU Miner
 
-wget -c https://htn.foztor.net/hoo\_gpu.tar.gz -O - | tar -xz
-cd hoo\_gpu
-?? SRBMiner and Xelis-based miners are no longer supported after the Hoohash upgrade. Please use HTN Miner with `--pepepow`.
+```bash
+wget -c https://htn.foztor.net/hoo_gpu.tar.gz -O - | tar -xz
+cd hoo_gpu
+```
 
-### Steps to Start Mining
+For AMD or ARM64, use the matching current package from the [HTN Miner download page](https://htn.foztor.net/).
 
-Beginner friendly
-1 Download or Create a Wallet
+### Basic Mining Flow
 
-**Options:** Core wallet or web wallet
+1. Create or choose a PEPEPOW wallet.
+2. Copy your own PEPEW receiving address.
+3. Choose a currently operating PEPEPOW pool and confirm its current Stratum endpoint.
+4. Download the current HTN Miner build for your hardware.
+5. Start the miner with your pool URL and wallet address.
+6. Confirm accepted shares on the pool dashboard before leaving the miner unattended.
 
-**Purpose:** Store your mined PEPEPOW earnings
+Example CPU command:
 
-2 Get Your Wallet Address
+```bash
+./hoo_cpu -o stratum+tcp://YOUR_POOL_HOST:PORT \
+  -u YOUR_WALLET_ADDRESS -p x
+```
 
-This address will be used to receive mining rewards.
+Example NVIDIA GPU command:
 
-3 Choose a Mining Pool
+```bash
+./hoo_gpu -o stratum+tcp://YOUR_POOL_HOST:PORT \
+  -u YOUR_WALLET_ADDRESS -p x --gpu-id 0
+```
 
-**Example:** `stratum-eu.pepepow.foztor.net:13232`
+List available NVIDIA GPUs:
 
-See pool list: [miningpoolstats.stream/pepepow](https://miningpoolstats.stream/pepepow)
+```bash
+./hoo_gpu --list-gpu
+```
 
-4 Run HTN Miner
+### Pool Status
 
-- **Required miner:** HTN Miner
-- **Algorithm:** Hoohash-pepew
-- **Important:** Must include `--pepepow`
+#### Foztor Community Pool
 
-CPU Mining Example
-./hoo\_cpu -o stratum+tcp://stratum-eu.pepepow.foztor.net:13232
--u YOUR\_WALLET\_ADDRESS -t 1 -p x --pepepow
-GPU Mining Example
-export LD\_LIBRARY\_PATH=$LD\_LIBRARY\_PATH:~/hoo\_gpu/libs
-./hoo\_gpu -o stratum+tcp://stratum-eu.pepepow.foztor.net:13232
--u YOUR\_WALLET\_ADDRESS -gpu-id 0 -p x --pepepow
-List Available GPUs
-./hoo\_gpu --list-gpu
-5 Start Mining
+[Open PEPEPOW Community Pool](https://community-pool.pepepow.org/)
 
-Run the miner and begin earning PEPEPOW rewards.
+The community pool currently exposes a HooHash V110 PEPEW pool and active miner statistics. Use its **Connect** page for the current Stratum configuration instead of relying on an old copied port.
 
-Tip: Replace **YOUR\_WALLET\_ADDRESS** before running commands.
+#### PEPEPOW Lab Pool
 
-### Supported Mining Pools
+[Open PEPEPOW Lab Pool](https://pool.pepepow.net/)
 
-Copy & run
+The Lab Pool is a community development/testing pool. Confirm its current status and connection instructions on the pool itself before mining.
 
-#### Community Pool
+#### Other Pools
 
-**Pool:** `stratum-eu.pepepow.foztor.net:13232`
+[MiningPoolStats — PEPEPOW](https://miningpoolstats.stream/pepepow)
 
-[Visit Community Pool](https://community-pool.pepepow.org/)
+Mining4People, Zpool, and other third-party endpoints have changed over time. They should not be treated as current merely because they appear in an older PEPEPOW guide. Verify the pool page, algorithm, wallet format, fee, payout policy, and Stratum endpoint before connecting.
 
-./hoo\_cpu -o stratum+tcp://stratum-eu.pepepow.foztor.net:13232
--u YOUR\_WALLET\_ADDRESS -t 1 -p x --pepepow
+### HiveOS
 
-#### Mining4people PPLNS
+Use **Custom Miner** with the current HTN Miner package rather than an old Xelis/SRBMiner preset.
 
-**Pool:** `na2.mining4people.com:4176`
+Suggested baseline:
 
-[Open PPLNS Pool](https://mining4people.com/pool/pepecoin-pplns/)
-
-./hoo\_cpu -o stratum+tcp://na2.mining4people.com:4176
--u pepew:YOUR\_WALLET\_ADDRESS -p x --pepepow
-
-#### Mining4people Solo
-
-**Pool:** `See pool page`
-
-[Open Solo Pool](https://mining4people.com/pool/pepecoin-solo/)
-
-Check the latest solo pool connection details on the Mining4people solo page before mining.
-
-#### Zpool
-
-**Pool:** `xelisv2-pepew.na.mine.zpool.ca:4833`
-
-[Open Zpool](http://zpool.ca/)
-
-./hoo\_cpu -o stratum+tcp://xelisv2-pepew.na.mine.zpool.ca:4833
--u YOUR\_WALLET\_ADDRESS -p c=PEPEW --pepepow
-
-#### GPU Selection
-
-Use this command to view all available GPUs before starting GPU mining.
-
-./hoo\_gpu --list-gpu
-
-#### Important Reminder
-
-Use your own wallet address, or you will mine for someone else.
-
-Required flag: --pepepow
-
-### HiveOS Custom Miner Setup
-
-HTN Miner / Hoohash-pepew
-
-PEPEPOW on HiveOS should be configured with **Custom Miner** using **HTN Miner**.
-Do not use old SRBMiner or Xelis-based presets. The miner must connect with the
-**stratum+tcp** pool URL and include the required `--pepepow` flag.
-
-Important: leave **Hash algorithm** empty or set to **empty**. Do not select old Xelis or preset algo templates.
-
-|  |  |
+| Setting | Value |
 | --- | --- |
-| Miner name | `hoo_cpu` |
-| Installation URL | `https://htn.foztor.net/hoo_cpu.tar.gz` |
-| Hash algorithm | leave empty |
-| Wallet and worker template | `%WAL%.%WORKER_NAME%` |
-| Pool URL | `stratum+tcp://stratum-eu.pepepow.foztor.net:13232` |
-| Pass | `x` |
-| Extra config arguments | `--pepepow` |
+| Miner package | current `hoo_cpu`, `hoo_gpu`, or other matching HTN build |
+| Installation source | `https://htn.foztor.net/` |
+| Pool URL | current PEPEPOW Stratum URL from the selected pool |
+| Wallet | your PEPEW receiving address |
+| Password | pool-specific; often `x` |
+| `--pepepow` | not required on current HTN releases with address auto-detection |
 
-#### Flight Sheet
+If HiveOS shows an old Xelis algorithm, unsupported-algorithm message, or rewrites the connection to a legacy WebSocket/Xelis preset, the worker is using the wrong miner configuration.
 
-**Coin:** PEPEW
+### Safety Reminder
 
-**Wallet:** your PEPEPOW wallet
-
-**Pool:** Configure in miner
-
-**Miner:** Custom
-
-**Name:** choose any name for this flight sheet
-
-#### What Each Setting Means
-
-**Miner name** is the executable package HiveOS installs and runs.
-
-**Pool URL** must include `stratum+tcp://`.
-
-**Extra config arguments** passes the required PEPEPOW flag to HTN Miner.
-
-**Wallet and worker template** automatically inserts your wallet and worker name.
-
-The resulting connection will be equivalent to running HTN Miner with your wallet, worker name, pool URL, password, and the `--pepepow` flag.
-
-#### Setup Steps
-
-1. Create or select your PEPEPOW wallet in HiveOS.
-2. Create a new Flight Sheet and choose **Custom** as miner.
-3. Open **Setup Miner Config**.
-4. Fill in the fields exactly as shown above.
-5. Keep **Hash algorithm** empty.
-6. Save the config and update the Flight Sheet.
-7. Apply the Flight Sheet to your worker and check miner logs.
-
-If you see messages such as `UNSUPPORTED ALGO`, `XELIS WebSocket`, or automatic conversion to a websocket URL, the rig is still using an old preset or an incorrect wrapper path.
-Example values
-Miner name: hoo\_cpu
-Installation URL: https://htn.foztor.net/hoo\_cpu.tar.gz
-Hash algorithm:
-Wallet and worker template: %WAL%.%WORKER\_NAME%
-Pool URL: stratum+tcp://stratum-eu.pepepow.foztor.net:13232
-Pass: x
-Extra config arguments: --pepepow
-If a new HTN Miner version is released, the safest way in HiveOS is to create a new custom miner name for the updated version, such as `hoo_cpu_v147` or `hoo_gpu_v147`. This avoids old cached files being reused.
+- Use your own wallet address.
+- Verify accepted shares on the pool dashboard.
+- Download miners only from the current trusted project source.
+- Re-check pool status before reusing an old flight sheet or command.
+- Historical PEPEPOW mining posts may describe Memehash or XelisV2 and must not be used as current HooHash setup instructions.
 
 ![](/media/legacy/2024/11/PEPEPOW-triumphant.webp)
