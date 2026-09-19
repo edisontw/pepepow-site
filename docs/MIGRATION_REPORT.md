@@ -185,17 +185,18 @@ Not yet completed:
 
 ## Next migration slice
 
-The mechanical recovery/link-routing gate is complete. The next work should not repeat media recovery,
-route wiring, or exact legacy-host link cleanup.
+The mechanical recovery, current-sensitive public-page review, historical-link/readability cleanup,
+and legacy technical-article safety gates are complete.
 
 Priority now:
 
-1. Audit external links inside historical announcements separately, preserving historical context.
-2. Review the recovered Announcements page and historical posts for readability/formatting artifacts that require
-   human judgment, without changing historical claims merely to match today's state.
-3. Keep content `status: draft` and `migration_review: true` until the remaining review gates are complete.
-4. After content review, proceed to staging visual/responsive/accessibility work. Production Nginx remains out of scope
-   until staging acceptance.
+1. continue staging responsive/accessibility/visual refinement
+2. replace the recovered legacy homepage presentation with the concise information hierarchy defined
+   in `docs/WEBSITE_PLAN.md`, while keeping the recovered source page for provenance
+3. add current release/network summary surfaces only through static/build-time data or isolated
+   cached read-only APIs
+4. perform staging review before changing any production Nginx configuration
+5. keep production deployment out of scope until staging acceptance
 
 
 ## Phase 1 recovery slice — 2026-09-19
@@ -868,6 +869,42 @@ Final CI result for this pass:
 - legacy routes: **106 / 106**
 - content source issues: **0**
 - generated internal-link issues: **0**
+
+No production deployment or Nginx change was made in this slice.
+
+## Staging responsive/accessibility baseline — 2026-09-19
+
+With the major content-migration gates complete, the first staging presentation pass now establishes
+a stronger site-wide responsive and accessibility baseline without changing production deployment.
+
+Global layout improvements:
+
+- a keyboard-visible **Skip to content** link targets `main#main-content`
+- the brand and primary navigation expose `aria-current="page"` for the current section
+- the primary navigation has an explicit accessible label and larger touch targets
+- mobile navigation switches to a compact grid at narrow widths rather than relying only on wrapped
+  inline links
+- all interactive elements receive a clear `:focus-visible` outline
+- long links, code blocks, and legacy content can wrap/scroll without forcing horizontal page overflow
+- wide legacy tables and code blocks retain local horizontal scrolling on touch devices
+- historical technical safety notices receive distinct visual emphasis
+- animation/transition duration is minimized for users requesting reduced motion
+
+A new generated-HTML validator is committed at:
+
+`scripts/migration/validate_accessibility_basics.py`
+
+It checks every built HTML file for:
+
+- a non-empty `html[lang]`
+- exactly one `main#main-content`
+- a skip link targeting `#main-content`
+- a primary navigation landmark with `aria-label="Primary"`
+- an `alt` attribute on every image (empty alt remains valid for intentionally decorative images)
+
+The validator is part of the normal Site validation workflow. This is intentionally a basic,
+deterministic static gate rather than a substitute for later browser-based keyboard, responsive,
+screen-reader, and visual staging review.
 
 No production deployment or Nginx change was made in this slice.
 
