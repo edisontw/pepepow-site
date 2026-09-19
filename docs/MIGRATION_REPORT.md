@@ -780,3 +780,41 @@ Remaining content-review work:
 
 No production deployment or Nginx change was made in this slice.
 
+## Historical Markdown readability cleanup — 2026-09-19
+
+A focused readability pass was added after historical-content context and link inventory were in place.
+
+The pass deliberately distinguishes between **formatting artifacts** and **historical meaning**:
+
+- formatting artifacts may be normalized when the intended Markdown structure is unambiguous
+- missing emoji are not guessed; stray replacement `?` characters are removed only where the
+  surrounding sentence remains complete without them
+- historical software versions, pool/exchange destinations, governance outcomes, commands, and
+  claims are not modernized merely because they are now obsolete
+
+Recurring migration artifacts now handled reproducibly by `wxr_extract.py`:
+
+- escaped bold markers such as `\*\*text\*\*` → `**text**`
+- escaped line-leading bullets such as `\* item` → Markdown list items
+- malformed double-bracket links produced during conversion, including
+  `[[label](url)]` and `[[label]](url)`
+
+`validate_content_links.py` now rejects those three artifact classes in source content so a future
+restage cannot silently reintroduce them.
+
+The first manual cleanup batch also fixed high-confidence one-off artifacts such as:
+
+- broken emoji placeholders around headings and sentence endings
+- duplicate punctuation from conversion
+- redundant WordPress-generated Markdown link titles
+- malformed double-bracket Google Docs / Discord / miner links
+- escaped bold/list syntax in several historical announcements
+- a duplicated comma in the August 2024 recovery announcement
+
+No historical facts were intentionally altered by this pass.
+
+The validator remains the final authority for whether recurring artifact patterns still exist; any
+remaining files identified by CI should be normalized rather than weakening the validation rule.
+
+No production deployment or Nginx change was made in this slice.
+
