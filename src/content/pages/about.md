@@ -157,7 +157,7 @@ operating nodes, or building services around PEPEPOW.
 PEPEPOW grows through builders, miners, node operators, developers, artists, testers, writers,
 and long-term community contributors. Learn, build, mine, document, improve, and help shape the next chapter.
 
-[Visit Website](https://pepepow.org)
+[Visit Website](/)
 [GitHub](https://github.com/MattF42/PePe-core)
 [Join Discord](https://discord.gg/sJgDVRkBcq)
 

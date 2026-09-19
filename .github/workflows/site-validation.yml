@@ -32,5 +32,8 @@ jobs:
       - name: Validate legacy routes
         run: python3 scripts/migration/validate_legacy_routes.py
 
+      - name: Validate migrated content links
+        run: python3 scripts/migration/validate_content_links.py
+
       - name: Compile-check migration scripts
-        run: python3 -m py_compile scripts/migration/wxr_inventory.py scripts/migration/wxr_extract.py scripts/migration/wxr_manifests.py scripts/migration/media_probe.py scripts/migration/collect_uploads.py scripts/migration/stage_recovered_media.py scripts/migration/validate_legacy_routes.py
+        run: python3 -m py_compile scripts/migration/wxr_inventory.py scripts/migration/wxr_extract.py scripts/migration/wxr_manifests.py scripts/migration/media_probe.py scripts/migration/collect_uploads.py scripts/migration/stage_recovered_media.py scripts/migration/validate_legacy_routes.py scripts/migration/validate_content_links.py

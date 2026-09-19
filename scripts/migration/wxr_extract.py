@@ -37,6 +37,24 @@ DROP_TAGS = {
 }
 ALLOWED_ATTRS = {"a": {"href", "title"}, "img": {"src", "alt", "title"}}
 WHITESPACE_LINES = re.compile(r"\n{3,}")
+LEGACY_HOST_RE = re.compile(
+    r"https?://(?:www\.)?pepepow\.org(?P<path>/[^\s<>\)\"']*)?",
+    re.IGNORECASE,
+)
+WORDPRESS_EMOJI_RE = re.compile(
+    r"!\[[^\]]*\]\("
+    r"https://s\.w\.org/images/core/emoji/[^)]+/svg/"
+    r"(?P<codepoints>[0-9a-fA-F-]+)\.svg"
+    r"\)"
+)
+OBSOLETE_WORDPRESS_PATHS = (
+    "/wp-admin/",
+    "/wp-includes/",
+    "/wp-json/",
+    "/category/",
+    "/tag/",
+    "/author/",
+)
 
 
 @dataclass
@@ -117,6 +135,47 @@ def clean_html(html: str) -> str:
     return str(soup)
 
 
+def _wordpress_emoji(match: re.Match[str]) -> str:
+    try:
+        return "".join(
+            chr(int(codepoint, 16))
+            for codepoint in match.group("codepoints").split("-")
+        )
+    except (ValueError, OverflowError):
+        return ""
+
+
+def _localize_legacy_url(match: re.Match[str]) -> str:
+    path = match.group("path") or "/"
+    if path.startswith("/wp-content/") or path.startswith(OBSOLETE_WORDPRESS_PATHS):
+        return match.group(0)
+    return path
+
+
+def sanitize_migration_markdown(markdown: str) -> str:
+    """Remove reproducible WordPress chrome and localize same-site public links."""
+    markdown = markdown.replace("\xa0", " ")
+    markdown = WORDPRESS_EMOJI_RE.sub(_wordpress_emoji, markdown)
+
+    clean_lines: list[str] = []
+    for line in markdown.splitlines():
+        stripped = line.strip().lower()
+        if stripped.startswith("skip render:"):
+            continue
+        lowered = line.lower()
+        if any(
+            f"pepepow.org{prefix}" in lowered
+            for prefix in ("/wp-admin/", "/category/", "/tag/")
+        ):
+            continue
+        clean_lines.append(line)
+
+    markdown = "\n".join(clean_lines)
+    markdown = LEGACY_HOST_RE.sub(_localize_legacy_url, markdown)
+    markdown = WHITESPACE_LINES.sub("\n\n", markdown)
+    return markdown.strip()
+
+
 def markdown_from_html(html: str) -> str:
     cleaned = clean_html(html)
     markdown = to_markdown(
@@ -125,10 +184,7 @@ def markdown_from_html(html: str) -> str:
         bullets="-",
         strip=["span"],
     )
-    markdown = markdown.replace("\xa0", " ")
-    markdown = WHITESPACE_LINES.sub("\n\n", markdown)
-    return markdown.strip()
-
+    return sanitize_migration_markdown(markdown)
 
 def yaml_string(value: str) -> str:
     escaped = (

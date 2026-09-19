@@ -16,7 +16,7 @@ migration_review: true
 > Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
 
 We are excited to announce a significant development for our community: \*\*PEPEPOW\*\* is now listed on the \*\*FORSA\*\* non-custodial wallet! This milestone is a big leap forward, offering a secure and straightforward platform for managing your PEPEW assets.
-![?](https://s.w.org/images/core/emoji/15.0.3/svg/1f680.svg) PEPEPOW Now Available on FORSA Mobile Wallet ![?](https://s.w.org/images/core/emoji/15.0.3/svg/1f680.svg)
+🚀 PEPEPOW Now Available on FORSA Mobile Wallet 🚀
 #### Why FORSA?
 FORSA makes it simpler and safer than ever to:
 - \*\*Securely hold your coins\*\*

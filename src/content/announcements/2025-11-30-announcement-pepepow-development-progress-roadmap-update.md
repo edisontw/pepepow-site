@@ -31,7 +31,7 @@ Hey everyone! Here’s an update on what has been completed so far and what’s 
 - API Server – *near completion*
 - Mobile Wallet v1 – *near completion*
 
-More details:<https://pepepow.org>
+More details: [pepepow.net](/)
 
 ### **Next Phase Development Focus**
 

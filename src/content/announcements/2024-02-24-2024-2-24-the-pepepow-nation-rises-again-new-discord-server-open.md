@@ -26,7 +26,7 @@ Despite Discord's attempts to silence us, our spirit remains unbreakable! We are
 
 **Join the Fight:** Claim your place in history by joining us on our new server! ? **Join Now:** <https://discord.com/invite/sJgDVRkBcq>
 
-**Stay Informed:** In the event of a communication blackout, our official website [pepepow.org](http://pepepow.org/) will serve as a vital lifeline for keeping the public informed. Be sure to bookmark it now!
+**Stay Informed:** In the event of a communication blackout, our official website [pepepow.org](/) will serve as a vital lifeline for keeping the public informed. Be sure to bookmark it now!
 
 **Security Alert: Beware of Scams!**
 

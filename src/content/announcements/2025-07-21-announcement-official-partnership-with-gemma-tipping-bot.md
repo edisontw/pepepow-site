@@ -26,7 +26,7 @@ Run giveaways and rewards in style
 No complicated setup
 Invite Gemma Bot to your server and start tipping PEPEPOW today!
 [gemmabot.com](http://gemmabot.com)
-[pepepow.org](http://pepepow.org)
+[pepepow.org](/)
 Important Notes This is a third party application. Our brother @Edison Huang reminds you that:
 \* This is a custodial wallet — you don’t control the private keys.
 \* Do not deposit large amounts of crypto. Withdraw regularly to your personal wallet.

@@ -19,8 +19,6 @@ migration_review: true
 [Join new discord
 (since 2024.2.24)](https://discord.gg/sJgDVRkBcq)
 
-skip render: ucaddon\_post\_blocks
-
 #### Running on Xelish2-pepew
 
 ## A decentralized blockchain project
