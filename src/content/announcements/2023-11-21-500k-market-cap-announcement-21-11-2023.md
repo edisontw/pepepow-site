@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 **New chapter for PEPEPOW**
 
 I trust it has been an exciting week for everyone. The recent price discovery is a testament to the hard work put in by the team, and we couldn't have done it without the community.
