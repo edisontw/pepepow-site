@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 Exciting times for PEPEPOW! The community has spoken — **multi-level Masternode collateral is coming**!
 **Voting Completed:**
 We’re moving forward with tiered Masternode staking, where rewards scale with collateral size.

@@ -13,8 +13,6 @@ featured: false
 migration_review: true
 ---
 
-> Migration candidate generated from the legacy WordPress export. Review facts, links, software versions, commands, and media before publishing.
-
 (Posted by Foztor on Discord)
 Mining on ARM takes a big step forward today!
 I have made some significant performance improvements with NEON/SIMD.
