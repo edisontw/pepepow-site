@@ -5,6 +5,8 @@ export const verifiedLinks = {
   coreReleases: 'https://github.com/MattF42/PePe-core/releases',
   pepewLight: 'https://light.pepepow.net/',
   pepewLightWallet: 'https://light.pepepow.net/wallet/',
+  pepewLightStatusApi: 'https://light.pepepow.net/api/status',
+  explorerPublicSummaryApi: 'https://explorer.pepepow.net/monitor/api/public-summary',
   androidWalletReleases: 'https://github.com/edisontw/pepepow-android-wallet-v2/releases',
   htnMiner: 'https://htn.foztor.net/',
   communityPool: 'https://community-pool.pepepow.org/',
