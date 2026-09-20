@@ -18,14 +18,17 @@ const handdrawnTheme = theme === 'handdrawn';
 const pageTitle = title === 'PEPEPOW' ? title : `${title} | PEPEPOW`;
 const currentPath = Astro.url.pathname;
 const canonicalUrl = new URL(currentPath, Astro.url.origin);
-const navItems = [
-  { href: '/about/', label: 'PEPEPOW' },
+const primaryNavItems = [
   { href: '/network/', label: 'Network' },
+  { href: '/wallet/', label: 'Wallets' },
   { href: '/mining/', label: 'Mining' },
   { href: '/masternode/', label: 'Masternode' },
-  { href: '/wallet/', label: 'Wallets' },
   { href: '/market/', label: 'Market' },
   { href: '/announcements/', label: 'News' },
+];
+
+const utilityNavItems = [
+  { href: '/about/', label: 'About' },
   { href: '/learn/', label: 'Learn' },
   { href: '/tools/', label: 'Tools' },
   { href: '/community/', label: 'Community' },
@@ -57,16 +60,28 @@ const isCurrent = (href: string) =>
       >
         PEPEPOW
       </a>
-      <nav class="primary-nav" aria-label="Primary">
-        {navItems.map((item) => (
-          <a
-            href={item.href}
-            aria-current={isCurrent(item.href) ? 'page' : undefined}
-          >
-            {item.label}
-          </a>
-        ))}
-      </nav>
+      <div class="site-navigation">
+        <nav class="primary-nav" aria-label="Primary">
+          {primaryNavItems.map((item) => (
+            <a
+              href={item.href}
+              aria-current={isCurrent(item.href) ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+        <nav class="utility-nav" aria-label="Utility">
+          {utilityNavItems.map((item) => (
+            <a
+              href={item.href}
+              aria-current={isCurrent(item.href) ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+      </div>
     </header>
     <main id="main-content" tabindex="-1">
       <slot />
