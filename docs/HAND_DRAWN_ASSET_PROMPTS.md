@@ -1,6 +1,6 @@
 # PEPEPOW Hand-Drawn Asset Generation Prompts
 
-Status: Batches 01–04 generated and uploaded / Batch 05 pending generation
+Status: Batches 01–05 generated and uploaded / Batch 05 integrated into About, Market, Mining, and homepage navigation
 Related specification: docs/HAND_DRAWN_VISUAL_REFRESH_PLAN.md
 Batch rule: maximum 10 generated images per production batch
 
