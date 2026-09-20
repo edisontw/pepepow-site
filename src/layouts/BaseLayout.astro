@@ -4,12 +4,16 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  theme?: 'default' | 'handdrawn';
 }
 
 const {
   title = 'PEPEPOW',
   description = 'PEPEPOW community-powered Proof of Work.',
+  theme = 'default',
 } = Astro.props;
+
+const handdrawnTheme = theme === 'handdrawn';
 
 const pageTitle = title === 'PEPEPOW' ? title : `${title} | PEPEPOW`;
 const currentPath = Astro.url.pathname;
@@ -38,11 +42,11 @@ const isCurrent = (href: string) =>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
-    <meta name="theme-color" content="#111411" />
+    <meta name="theme-color" content={handdrawnTheme ? '#f7f5eb' : '#111411'} />
     <link rel="canonical" href={canonicalUrl} />
     <title>{pageTitle}</title>
   </head>
-  <body>
+  <body class:list={{ 'handdrawn-theme': handdrawnTheme }}>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <a
