@@ -17,15 +17,15 @@ migration_review: true
 
 Join the Mining Community
 
-Mining is the process by which new PEPEPOW (PEPEW) are created and transactions are validated and added to the blockchain. As a decentralized network, PEPEPOW (PEPEW) relies on miners to secure and maintain its blockchain.
+Mining is the process by which new PEPEW coins are created and transactions are validated and added to the blockchain. As a decentralized network, PEPEPOW relies on miners to secure and maintain its blockchain.
 
-Become a part of the PEPEPOW (PEPEW) mining community and contribute to the decentralized network's security and stability. Whether you're a novice miner or an experienced enthusiast, mining PEPEPOW (PEPEW) offers opportunities for participation and potential rewards.
+Become part of the PEPEPOW mining community and contribute to the network's security and stability. Whether you're a new miner or an experienced operator, mining PEPEW provides a direct way to participate in Proof of Work.
 
 ## Start Mining
 
 ### How Mining Works
 
-Mining involves solving complex mathematical puzzles to validate transactions and create new blocks. Miners compete to find the solution to these puzzles, and the first miner to solve it is rewarded with a block reward in PEPEPOW (PEPEW).
+Mining performs Proof-of-Work computations to validate transactions and create new blocks. Miners compete to find valid blocks, and a successful block earns the applicable PEPEW block reward.
 
 ![](/media/legacy/2024/02/P-coin4-1.png)
 
@@ -35,11 +35,11 @@ Due to the competitive nature of mining, many miners join mining pools to combin
 
 ### Mining Equipment
 
-To participate in mining PEPEPOW (PEPEW), miners typically use specialized hardware called mining rigs. These rigs use central processing units (CPUs) or graphics processing units (GPUs), depending on the miner build and hardware.
+To mine PEPEW, miners use suitable CPU or GPU hardware according to the miner build. These rigs use central processing units (CPUs) or graphics processing units (GPUs), depending on the miner build and hardware.
 
 ### Rewards
 
-Miners receive rewards in the form of newly minted PEPEPOW (PEPEW) and transaction fees for successfully mining blocks. These rewards serve as an incentive for miners to contribute their computational power to secure the network.
+Miners receive PEPEW block rewards and applicable transaction fees for successfully mined blocks. These rewards serve as an incentive for miners to contribute their computational power to secure the network.
 
 ## PEPEPOW Mining Quick Guide
 
