@@ -91,17 +91,60 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <input id="announcement-tags" name="tags" type="text" maxlength="300" placeholder="release, hoohash, wallet" />
         </label>
 
-        <label>
-          <span>Announcement</span>
-          <textarea
-            id="announcement-body"
-            name="body"
-            rows="20"
-            maxlength="100000"
-            required
-            placeholder="Write in Markdown. Links, headings, lists, images, and code blocks are supported."
-          ></textarea>
-        </label>
+        <div class="publisher-compose">
+          <div class="publisher-compose-header">
+            <div>
+              <span class="publisher-field-label">Announcement</span>
+              <small>Use the toolbar for common formatting, or edit Markdown directly.</small>
+            </div>
+            <div class="publisher-view-switch" role="group" aria-label="Editor view">
+              <button class="publisher-view-button is-active" type="button" data-view="write" aria-pressed="true">Write</button>
+              <button class="publisher-view-button" type="button" data-view="split" aria-pressed="false">Split</button>
+              <button class="publisher-view-button" type="button" data-view="preview" aria-pressed="false">Preview</button>
+            </div>
+          </div>
+
+          <div class="publisher-toolbar" role="toolbar" aria-label="Markdown formatting">
+            <button type="button" data-format="h2" title="Heading">H2</button>
+            <button type="button" data-format="bold" title="Bold"><strong>B</strong></button>
+            <button type="button" data-format="italic" title="Italic"><em>I</em></button>
+            <button type="button" data-format="link" title="Link">Link</button>
+            <button type="button" data-format="image" title="Image">Image</button>
+            <span class="publisher-toolbar-divider" aria-hidden="true"></span>
+            <button type="button" data-format="bullets" title="Bulleted list">• List</button>
+            <button type="button" data-format="numbers" title="Numbered list">1. List</button>
+            <button type="button" data-format="quote" title="Quote">Quote</button>
+            <button type="button" data-format="code" title="Inline code">&lt;/&gt;</button>
+            <button type="button" data-format="codeblock" title="Code block">Code block</button>
+          </div>
+
+          <div id="publisher-compose-panels" class="publisher-compose-panels" data-view="write">
+            <div class="publisher-write-panel">
+              <label class="publisher-visually-hidden" for="announcement-body">Announcement Markdown</label>
+              <textarea
+                id="announcement-body"
+                name="body"
+                rows="22"
+                maxlength="100000"
+                required
+                spellcheck="true"
+                placeholder="Write your announcement. The toolbar inserts Markdown for you."
+              ></textarea>
+            </div>
+
+            <article id="publisher-live-preview" class="publisher-live-preview" aria-label="Announcement preview">
+              <header class="publisher-live-preview-header">
+                <p class="eyebrow">Preview</p>
+                <h1 id="publisher-live-title">Untitled announcement</h1>
+                <p id="publisher-live-meta" class="publisher-live-meta"></p>
+                <p id="publisher-live-description" class="publisher-live-description"></p>
+              </header>
+              <div id="publisher-live-body" class="publisher-live-body">
+                <p class="publisher-preview-empty">Start writing to see the rendered preview.</p>
+              </div>
+            </article>
+          </div>
+        </div>
 
         <label class="publisher-check publisher-featured">
           <input id="announcement-featured" name="featured" type="checkbox" />
@@ -109,7 +152,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </label>
 
         <div class="publisher-actions">
-          <button id="publisher-preview-button" class="button secondary" type="button">Preview source</button>
+          <button id="publisher-source-button" class="button secondary" type="button">View Markdown source</button>
           <button id="publisher-publish-button" class="button" type="submit">Publish</button>
         </div>
 
@@ -142,9 +185,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     const editor = document.querySelector('#publisher-editor');
     const form = document.querySelector('#publisher-form');
     const result = document.querySelector('#publisher-result');
-    const previewButton = document.querySelector('#publisher-preview-button');
+    const sourceButton = document.querySelector('#publisher-source-button');
     const preview = document.querySelector('#publisher-preview');
     const previewCode = document.querySelector('#publisher-preview-code');
+    const composePanels = document.querySelector('#publisher-compose-panels');
+    const livePreview = document.querySelector('#publisher-live-preview');
+    const liveTitle = document.querySelector('#publisher-live-title');
+    const liveMeta = document.querySelector('#publisher-live-meta');
+    const liveDescription = document.querySelector('#publisher-live-description');
+    const liveBody = document.querySelector('#publisher-live-body');
+    const viewButtons = Array.from(document.querySelectorAll('.publisher-view-button'));
+    const formatButtons = Array.from(document.querySelectorAll('[data-format]'));
 
     const titleInput = document.querySelector('#announcement-title');
     const descriptionInput = document.querySelector('#announcement-description');
@@ -155,9 +206,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     const featuredInput = document.querySelector('#announcement-featured');
 
     const requiredElements = [
-      authStatus, loginLink, logoutButton, editor, form, result, previewButton, preview,
-      previewCode, titleInput, descriptionInput, dateInput, slugInput, tagsInput, bodyInput,
-      featuredInput,
+      authStatus, loginLink, logoutButton, editor, form, result, sourceButton, preview,
+      previewCode, composePanels, livePreview, liveTitle, liveMeta, liveDescription, liveBody,
+      titleInput, descriptionInput, dateInput, slugInput, tagsInput, bodyInput, featuredInput,
     ];
 
     const ready = requiredElements.every(Boolean);
@@ -269,6 +320,272 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       ].join('\n');
     };
 
+    const escapeHtml = (value) =>
+      String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+
+    const safeUrl = (value, image = false) => {
+      const url = String(value || '').trim();
+      if (!url) return '';
+      if (/^(https?:\/\/|\/|\.\/|\.\.\/|#)/i.test(url)) return url;
+      if (!image && /^mailto:/i.test(url)) return url;
+      return '';
+    };
+
+    const renderInlineMarkdown = (value) => {
+      const codeSpans = [];
+      let text = String(value || '').replace(/`([^`\n]+)`/g, (_, code) => {
+        const key = `%%CODE${codeSpans.length}%%`;
+        codeSpans.push(`<code>${escapeHtml(code)}</code>`);
+        return key;
+      });
+
+      text = escapeHtml(text);
+
+      text = text.replace(/!\[([^\]]*)\]\(([^\s)]+)(?:\s+"([^"]*)")?\)/g, (_, alt, rawUrl, title) => {
+        const url = safeUrl(rawUrl, true);
+        if (!url) return escapeHtml(alt);
+        const titleAttr = title ? ` title="${escapeHtml(title)}"` : '';
+        return `<img src="${escapeHtml(url)}" alt="${escapeHtml(alt)}"${titleAttr} loading="lazy" />`;
+      });
+
+      text = text.replace(/\[([^\]]+)\]\(([^\s)]+)(?:\s+"([^"]*)")?\)/g, (_, label, rawUrl, title) => {
+        const url = safeUrl(rawUrl);
+        if (!url) return label;
+        const titleAttr = title ? ` title="${escapeHtml(title)}"` : '';
+        return `<a href="${escapeHtml(url)}"${titleAttr} rel="noopener noreferrer">${label}</a>`;
+      });
+
+      text = text
+        .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+        .replace(/__([^_]+)__/g, '<strong>$1</strong>')
+        .replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<em>$2</em>')
+        .replace(/(^|[^_])_([^_\n]+)_/g, '$1<em>$2</em>')
+        .replace(/~~([^~]+)~~/g, '<del>$1</del>');
+
+      codeSpans.forEach((html, index) => {
+        text = text.replace(`%%CODE${index}%%`, html);
+      });
+
+      return text;
+    };
+
+    const renderMarkdown = (source) => {
+      const lines = String(source || '').replace(/\r\n?/g, '\n').split('\n');
+      const html = [];
+      let paragraph = [];
+      let listType = '';
+      let listItems = [];
+      let inCode = false;
+      let codeLang = '';
+      let codeLines = [];
+
+      const flushParagraph = () => {
+        if (!paragraph.length) return;
+        html.push(`<p>${renderInlineMarkdown(paragraph.join(' '))}</p>`);
+        paragraph = [];
+      };
+
+      const flushList = () => {
+        if (!listItems.length || !listType) return;
+        html.push(`<${listType}>${listItems.map((item) => `<li>${renderInlineMarkdown(item)}</li>`).join('')}</${listType}>`);
+        listItems = [];
+        listType = '';
+      };
+
+      const flushCode = () => {
+        const languageClass = /^[a-z0-9_-]+$/i.test(codeLang) && codeLang
+          ? ` class="language-${escapeHtml(codeLang)}"`
+          : '';
+        html.push(`<pre><code${languageClass}>${escapeHtml(codeLines.join('\n'))}</code></pre>`);
+        codeLines = [];
+        codeLang = '';
+      };
+
+      for (const line of lines) {
+        const fence = line.match(/^\s*```\s*([^\s]*)\s*$/);
+        if (fence) {
+          if (inCode) {
+            flushCode();
+            inCode = false;
+          } else {
+            flushParagraph();
+            flushList();
+            inCode = true;
+            codeLang = fence[1] || '';
+          }
+          continue;
+        }
+
+        if (inCode) {
+          codeLines.push(line);
+          continue;
+        }
+
+        if (!line.trim()) {
+          flushParagraph();
+          flushList();
+          continue;
+        }
+
+        const heading = line.match(/^(#{1,6})\s+(.+)$/);
+        if (heading) {
+          flushParagraph();
+          flushList();
+          const level = heading[1].length;
+          html.push(`<h${level}>${renderInlineMarkdown(heading[2])}</h${level}>`);
+          continue;
+        }
+
+        if (/^\s*(?:---+|___+|\*\*\*+)\s*$/.test(line)) {
+          flushParagraph();
+          flushList();
+          html.push('<hr />');
+          continue;
+        }
+
+        const quote = line.match(/^>\s?(.*)$/);
+        if (quote) {
+          flushParagraph();
+          flushList();
+          html.push(`<blockquote><p>${renderInlineMarkdown(quote[1])}</p></blockquote>`);
+          continue;
+        }
+
+        const unordered = line.match(/^\s*[-+*]\s+(.+)$/);
+        if (unordered) {
+          flushParagraph();
+          if (listType && listType !== 'ul') flushList();
+          listType = 'ul';
+          listItems.push(unordered[1]);
+          continue;
+        }
+
+        const ordered = line.match(/^\s*\d+[.)]\s+(.+)$/);
+        if (ordered) {
+          flushParagraph();
+          if (listType && listType !== 'ol') flushList();
+          listType = 'ol';
+          listItems.push(ordered[1]);
+          continue;
+        }
+
+        flushList();
+        paragraph.push(line.trim());
+      }
+
+      if (inCode) flushCode();
+      flushParagraph();
+      flushList();
+      return html.join('');
+    };
+
+    const updateLivePreview = () => {
+      liveTitle.textContent = titleInput.value.trim() || 'Untitled announcement';
+      liveDescription.textContent = descriptionInput.value.trim();
+
+      const date = dateInput.value ? new Date(dateInput.value) : null;
+      const categories = selectedCategories();
+      const meta = [];
+      if (date && !Number.isNaN(date.getTime())) {
+        meta.push(new Intl.DateTimeFormat(undefined, { dateStyle: 'medium', timeStyle: 'short' }).format(date));
+      }
+      if (categories.length) meta.push(categories.join(' · '));
+      liveMeta.textContent = meta.join(' — ');
+
+      const body = bodyInput.value.trim();
+      if (!body) {
+        liveBody.innerHTML = '<p class="publisher-preview-empty">Start writing to see the rendered preview.</p>';
+      } else {
+        liveBody.innerHTML = renderMarkdown(body);
+      }
+    };
+
+    const setEditorView = (view) => {
+      const allowed = new Set(['write', 'split', 'preview']);
+      const next = allowed.has(view) ? view : 'write';
+      composePanels.dataset.view = next;
+      for (const button of viewButtons) {
+        const active = button.dataset.view === next;
+        button.classList.toggle('is-active', active);
+        button.setAttribute('aria-pressed', active ? 'true' : 'false');
+      }
+      if (next !== 'write') updateLivePreview();
+    };
+
+    const replaceSelection = (before, after = before, placeholder = '') => {
+      const start = bodyInput.selectionStart;
+      const end = bodyInput.selectionEnd;
+      const selected = bodyInput.value.slice(start, end) || placeholder;
+      bodyInput.setRangeText(`${before}${selected}${after}`, start, end, 'end');
+      bodyInput.focus();
+      saveDraft();
+      updateLivePreview();
+    };
+
+    const prefixSelectedLines = (prefixer) => {
+      const start = bodyInput.selectionStart;
+      const end = bodyInput.selectionEnd;
+      const value = bodyInput.value;
+      const lineStart = value.lastIndexOf('\n', Math.max(0, start - 1)) + 1;
+      const nextNewline = value.indexOf('\n', end);
+      const lineEnd = nextNewline === -1 ? value.length : nextNewline;
+      const block = value.slice(lineStart, lineEnd);
+      const lines = block.split('\n');
+      const replacement = lines.map((line, index) => `${prefixer(index)}${line}`).join('\n');
+      bodyInput.setRangeText(replacement, lineStart, lineEnd, 'select');
+      bodyInput.focus();
+      saveDraft();
+      updateLivePreview();
+    };
+
+    const applyFormat = (format) => {
+      switch (format) {
+        case 'h2':
+          prefixSelectedLines(() => '## ');
+          break;
+        case 'bold':
+          replaceSelection('**', '**', 'bold text');
+          break;
+        case 'italic':
+          replaceSelection('*', '*', 'italic text');
+          break;
+        case 'link': {
+          const selected = bodyInput.value.slice(bodyInput.selectionStart, bodyInput.selectionEnd) || 'link text';
+          const url = window.prompt('Link URL (https://… or site-relative /path/):', 'https://');
+          if (!url) return;
+          replaceSelection('[', `](${url})`, selected);
+          break;
+        }
+        case 'image': {
+          const url = window.prompt('Image URL (https://… or site-relative /media/…):', '/media/');
+          if (!url) return;
+          const alt = window.prompt('Image description (alt text):', 'Image') || 'Image';
+          replaceSelection(`![${alt}](`, ')', url);
+          break;
+        }
+        case 'bullets':
+          prefixSelectedLines(() => '- ');
+          break;
+        case 'numbers':
+          prefixSelectedLines((index) => `${index + 1}. `);
+          break;
+        case 'quote':
+          prefixSelectedLines(() => '> ');
+          break;
+        case 'code':
+          replaceSelection('`', '`', 'code');
+          break;
+        case 'codeblock':
+          replaceSelection('```\n', '\n```', 'code');
+          break;
+      }
+    };
+
     const setAuthenticated = (session) => {
       authStatus.textContent = `Signed in as GitHub user @${session.login}.`;
       loginLink.hidden = true;
@@ -311,19 +628,33 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     if (ready) {
       restoreDraft();
 
-      form.addEventListener('input', saveDraft);
-      form.addEventListener('change', saveDraft);
+      form.addEventListener('input', () => {
+        saveDraft();
+        updateLivePreview();
+      });
+      form.addEventListener('change', () => {
+        saveDraft();
+        updateLivePreview();
+      });
+
+      for (const button of viewButtons) {
+        button.addEventListener('click', () => setEditorView(button.dataset.view || 'write'));
+      }
+
+      for (const button of formatButtons) {
+        button.addEventListener('click', () => applyFormat(button.dataset.format || ''));
+      }
 
       titleInput.addEventListener('blur', () => {
         if (!slugInput.value.trim()) slugInput.value = slugify(titleInput.value);
         saveDraft();
       });
 
-      previewButton.addEventListener('click', () => {
+      sourceButton.addEventListener('click', () => {
         try {
           previewCode.textContent = generatedMarkdown();
           preview.open = true;
-          preview.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          preview.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         } catch {
           result.textContent = 'Enter a valid publication date before previewing.';
         }
@@ -403,6 +734,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           dateInput.value = localDateTimeValue();
           preview.open = false;
           previewCode.textContent = '';
+          setEditorView('write');
+          updateLivePreview();
         } catch {
           result.textContent = 'Publication failed because the publisher API could not be reached.';
         } finally {
@@ -411,13 +744,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         }
       });
 
+      updateLivePreview();
       void loadSession();
     }
   </script>
 
   <style>
     .publisher-page {
-      max-width: 58rem;
+      max-width: 76rem;
       margin: 0 auto;
       padding: clamp(3rem, 7vw, 5.5rem) 0 5rem;
     }
@@ -596,6 +930,266 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       padding: .25rem 0;
     }
 
+    .publisher-compose {
+      display: grid;
+      gap: .65rem;
+    }
+
+    .publisher-compose-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: .75rem 1rem;
+    }
+
+    .publisher-compose-header > div:first-child {
+      display: grid;
+      gap: .2rem;
+    }
+
+    .publisher-field-label {
+      color: #243128;
+      font-weight: 700;
+    }
+
+    .publisher-compose-header small {
+      color: #748078;
+      font-weight: 500;
+    }
+
+    .publisher-view-switch {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: .2rem;
+      padding: .22rem;
+      border: 1px solid #d7ddcf;
+      border-radius: .58rem;
+      background: #f4f6ee;
+    }
+
+    .publisher-view-button,
+    .publisher-toolbar button {
+      border: 0;
+      border-radius: .4rem;
+      background: transparent;
+      color: #405047;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .publisher-view-button {
+      padding: .38rem .62rem;
+      font-size: .86rem;
+      font-weight: 700;
+    }
+
+    .publisher-view-button:hover,
+    .publisher-view-button:focus-visible,
+    .publisher-view-button.is-active {
+      background: #fffdf8;
+      color: #24683a;
+      box-shadow: 0 0 0 1px #d7ddcf;
+      outline: none;
+    }
+
+    .publisher-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .28rem;
+      padding: .42rem;
+      border: 1px solid #d7ddcf;
+      border-radius: .62rem;
+      background: #f4f6ee;
+    }
+
+    .publisher-toolbar button {
+      min-height: 2.1rem;
+      padding: .34rem .54rem;
+      font-size: .88rem;
+      font-weight: 650;
+    }
+
+    .publisher-toolbar button:hover,
+    .publisher-toolbar button:focus-visible {
+      background: #fffdf8;
+      color: #24683a;
+      outline: 2px solid rgba(77, 147, 96, .18);
+      outline-offset: 0;
+    }
+
+    .publisher-toolbar-divider {
+      width: 1px;
+      align-self: stretch;
+      margin: .15rem .16rem;
+      background: #ccd5c8;
+    }
+
+    .publisher-compose-panels {
+      display: grid;
+      gap: 1rem;
+      min-width: 0;
+    }
+
+    .publisher-compose-panels[data-view="split"] {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+
+    .publisher-compose-panels[data-view="write"] .publisher-live-preview {
+      display: none;
+    }
+
+    .publisher-compose-panels[data-view="preview"] .publisher-write-panel {
+      display: none;
+    }
+
+    .publisher-write-panel {
+      min-width: 0;
+    }
+
+    #announcement-body {
+      min-height: 31rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: .94rem;
+      tab-size: 2;
+    }
+
+    .publisher-live-preview {
+      min-width: 0;
+      min-height: 31rem;
+      padding: clamp(1rem, 2vw, 1.4rem);
+      border: 1px solid #d7ddcf;
+      border-radius: .62rem;
+      background: #fffdf8;
+      overflow-wrap: anywhere;
+    }
+
+    .publisher-live-preview-header {
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #e2e7dc;
+    }
+
+    .publisher-live-preview-header .eyebrow {
+      margin: 0 0 .28rem;
+    }
+
+    .publisher-live-preview h1 {
+      margin: 0;
+      color: #1f3025;
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      line-height: 1.08;
+    }
+
+    .publisher-live-meta,
+    .publisher-live-description {
+      color: #657269;
+    }
+
+    .publisher-live-meta {
+      margin: .65rem 0 0;
+      font-size: .82rem;
+      font-weight: 700;
+    }
+
+    .publisher-live-description {
+      margin: .6rem 0 0;
+      line-height: 1.55;
+    }
+
+    .publisher-live-body {
+      color: #2d3b32;
+      line-height: 1.7;
+    }
+
+    .publisher-live-body > :first-child {
+      margin-top: 0;
+    }
+
+    .publisher-live-body > :last-child {
+      margin-bottom: 0;
+    }
+
+    .publisher-live-body h1,
+    .publisher-live-body h2,
+    .publisher-live-body h3,
+    .publisher-live-body h4,
+    .publisher-live-body h5,
+    .publisher-live-body h6 {
+      color: #22372a;
+      line-height: 1.22;
+    }
+
+    .publisher-live-body h2 {
+      margin-top: 1.8rem;
+      font-size: 1.5rem;
+    }
+
+    .publisher-live-body h3 {
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+    }
+
+    .publisher-live-body a {
+      color: #2d7444;
+      text-decoration-thickness: .08em;
+      text-underline-offset: .14em;
+    }
+
+    .publisher-live-body img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 1rem auto;
+      border-radius: .55rem;
+    }
+
+    .publisher-live-body blockquote {
+      margin: 1rem 0;
+      padding: .2rem 0 .2rem 1rem;
+      border-left: .24rem solid #83a88d;
+      color: #52645a;
+    }
+
+    .publisher-live-body pre {
+      overflow: auto;
+      padding: .9rem;
+      border: 1px solid #d5ddd0;
+      border-radius: .5rem;
+      background: #eef3e9;
+      font-size: .85rem;
+    }
+
+    .publisher-live-body code {
+      padding: .08rem .25rem;
+      border-radius: .25rem;
+      background: #eef3e9;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: .9em;
+    }
+
+    .publisher-live-body pre code {
+      padding: 0;
+      background: transparent;
+    }
+
+    .publisher-preview-empty {
+      color: #879188;
+      font-style: italic;
+    }
+
+    .publisher-visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
     .publisher-actions {
       justify-content: flex-end;
       padding-top: .5rem;
@@ -662,8 +1256,18 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         flex-direction: column;
       }
 
-      .publisher-two-column {
+      .publisher-two-column,
+      .publisher-compose-panels[data-view="split"] {
         grid-template-columns: 1fr;
+      }
+
+      .publisher-compose-header {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .publisher-view-switch {
+        width: fit-content;
       }
 
       .publisher-check-grid {
