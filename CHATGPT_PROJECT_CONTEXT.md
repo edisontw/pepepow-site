@@ -169,3 +169,10 @@ content recovery/completeness
 ## Current planning authority
 
 Read `docs/WEBSITE_PLAN.md` before broad implementation work and update it when architecture or scope decisions materially change.
+
+For visual design, illustration, asset generation, or homepage visual-refresh work, also read:
+
+- `docs/HAND_DRAWN_VISUAL_REFRESH_PLAN.md`
+- `docs/HAND_DRAWN_ASSET_PROMPTS.md`
+
+The current visual direction is a bright hand-drawn editorial illustration system with restrained handwritten accents layered onto the existing Astro site. Generated assets must remain reusable rather than replacing whole pages with raster images. Image generation is intentionally limited to batches of no more than 10 images. Any frog mascot must be a small, secondary, original PEPEPOW miner-frog character with a yellow miner helmet and visibly distinct design from recognizable third-party Pepe artwork.
