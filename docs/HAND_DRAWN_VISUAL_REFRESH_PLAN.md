@@ -1,6 +1,6 @@
 # PEPEPOW Hand-Drawn Visual Refresh Specification
 
-Status: Homepage + six page-header visual slices implemented / production review
+Status: Production review fixes implemented / Batch 05 asset gaps queued
 Target: https://pepepow.net
 Repository authority: edisontw/pepepow-site main
 Last aligned: 2026-09-20
@@ -613,6 +613,10 @@ As of 2026-09-20:
 - the first homepage slice uses the scenic hero, signpost, lettering, and selected Start Here icons
 - six page-header illustrations are now wired into Mining, Wallets, Masternode, Community, Learn, and Network
 - those six pages use the same scoped bright editorial theme while their semantic content and operational controls remain HTML
-- the homepage hero typography was tightened after the first production visual review to avoid an awkward desktop break in “Community-powered”
-- the next visual review should focus on real-device responsive behavior, header crop quality, and whether any page needs a dedicated secondary spot illustration
+- the homepage hero was corrected after production review so the title cannot overlap the scenic illustration at intermediate desktop widths
+- current pages without a table of contents now collapse to a true single-column content layout instead of leaving a narrow empty grid column
+- About and Market now use the bright editorial theme even before their dedicated header artwork is available
+- three unattractive legacy Mining illustrations were removed while retaining the requested second introductory image
+- Batch 05 prompts are queued for About and Market headers, a dedicated Market icon, About/Market editorial spots, and a current-mining setup spot
+- after those assets are generated and uploaded, wire the About and Market headers, replace the temporary homepage Market icon, and review whether the remaining legacy Mining inline art should be replaced
 - mascot assets remain unreferenced in production until a manual visual/provenance review

@@ -446,7 +446,68 @@ Create a transparent asset sheet of pale green hand-painted brush shapes for sub
 
 ---
 
-## 7. Regeneration rules
+## 7. Batch 05 — Production-review gaps
+
+Goal: fill the specific visual gaps found after the first production rollout. Generate this batch only after reviewing the live homepage and core pages. These assets should match the accepted bright hand-drawn system rather than introducing a new style.
+
+### 41 — P-07 About page header
+
+Suggested ratio: 8:3  
+Suggested output: headers/header-about-v1
+
+Prompt:
+
+Create a wide PEPEPOW About page header illustration in the established bright hand-drawn editorial style. Show a calm mountain-and-valley landscape with a winding path, bridge, small workshop or village, and subtle signs of long-term building and resilience. The scene should suggest PEPEPOW's journey, community participation, open-source development, adaptation, and persistence without becoming a historical infographic. Use warm white, natural greens, pale sky blue, muted mountain blue-grey, warm wood, and dark ink linework. Keep the composition airy and suitable for cropping inside an 8:3 website header. No words, no fake UI, no dominant mascot. If a miner-frog appears at all, keep it tiny, secondary, and wearing the yellow miner helmet.
+
+### 42 — P-08 Market page header
+
+Suggested ratio: 8:3  
+Suggested output: headers/header-market-v1
+
+Prompt:
+
+Create a wide PEPEPOW Market page header illustration in the established bright hand-drawn editorial style. Depict practical market navigation rather than speculative trading: a calm junction or small market-reference scene with a wallet, route markers, a wooden signpost, simple coin or exchange-access cues, and a clear path between verified destinations. Communicate caution, verification, and third-party access. Use restrained green, warm wood, cream, pale blue, and dark ink. Keep the composition clean and suitable for the right side of a website header. Do not draw candlestick charts, exchange dashboards, casino imagery, neon, hype graphics, price arrows, or readable words. No dominant mascot.
+
+### 43 — I-11 Market reference icon
+
+Suggested ratio: 1:1  
+Transparent background  
+Suggested output: icons/icon-market-v1
+
+Prompt:
+
+Create a standalone hand-drawn website icon for Market in the established PEPEPOW icon family. Use a simple wallet or coin paired with a small route marker, signpost, or two-way exchange path to suggest verified market access. Keep the silhouette minimal and readable at small size. Dark ink outlines, restrained PEPEPOW green, warm neutral accents, transparent background. Avoid candlestick charts, speculative price arrows, casino styling, exchange logos, and text.
+
+### 44 — S-05 About journey editorial spot
+
+Suggested ratio: 4:3  
+Suggested output: spots/spot-about-journey-v1
+
+Prompt:
+
+Create a small PEPEPOW editorial spot illustration representing journey, resilience, and gradual community growth. Show a winding path crossing a simple bridge toward a modest village or shared workshop, with a few milestone stones or construction cues. Use the established bright hand-drawn ink-and-watercolor style, white-integrated background, restrained detail, no words, and no dominant character.
+
+### 45 — S-06 Verified market venues editorial spot
+
+Suggested ratio: 4:3  
+Suggested output: spots/spot-market-verified-venues-v1
+
+Prompt:
+
+Create a small PEPEPOW editorial spot illustration for verified market access and third-party risk. Use a wallet, a simple map or route, two or three destination markers, and a small verification/check motif. The mood should be cautious, practical, and trustworthy rather than promotional. Bright hand-drawn editorial style, white-integrated background, no charts, no exchange logos, no words, no mascot.
+
+### 46 — S-07 Current mining setup editorial spot
+
+Suggested ratio: 4:3  
+Suggested output: spots/spot-mining-setup-v1
+
+Prompt:
+
+Create a small PEPEPOW editorial spot illustration for the current HooHash V110 mining guide. Show a compact CPU/GPU workstation, a pickaxe as a secondary metaphor, a wallet destination, and a simple connection path toward a mining pool node. Keep it instructional and calm rather than dramatic. Use the established bright hand-drawn editorial style with dark ink and restrained green/earth fills. No fake terminal text, no logos, no words, no mascot.
+
+---
+
+## 8. Regeneration rules
 
 Regenerate an item if any of the following occurs:
 
@@ -465,7 +526,7 @@ For text-bearing assets, exact spelling matters. If text generation remains unre
 
 ---
 
-## 8. Production note
+## 9. Production note
 
 Do not commit generated assets merely because they were produced. Only accepted, reviewed, optimized assets belong under public/media/visual/handdrawn/.
 

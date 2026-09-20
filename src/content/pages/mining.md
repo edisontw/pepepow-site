@@ -17,35 +17,29 @@ migration_review: true
 
 Join the Mining Community
 
-Mining is the process by which new PEPEPOW Crypocions are created and transactions are validated and added to the blockchain. As a decentralized network, PEPEPOW Crypocions relies on miners to secure and maintain its blockchain.
+Mining is the process by which new PEPEPOW (PEPEW) are created and transactions are validated and added to the blockchain. As a decentralized network, PEPEPOW (PEPEW) relies on miners to secure and maintain its blockchain.
 
-Become a part of the PEPEPOW Crypocions mining community and contribute to the decentralized network's security and stability. Whether you're a novice miner or an experienced enthusiast, mining PEPEPOW Crypocions offers opportunities for participation and potential rewards.
+Become a part of the PEPEPOW (PEPEW) mining community and contribute to the decentralized network's security and stability. Whether you're a novice miner or an experienced enthusiast, mining PEPEPOW (PEPEW) offers opportunities for participation and potential rewards.
 
 ## Start Mining
 
-![](/media/legacy/2024/02/Pepepow1a.png)
-
 ### How Mining Works
 
-Mining involves solving complex mathematical puzzles to validate transactions and create new blocks. Miners compete to find the solution to these puzzles, and the first miner to solve it is rewarded with a block reward in PEPEPOW Crypocions.
+Mining involves solving complex mathematical puzzles to validate transactions and create new blocks. Miners compete to find the solution to these puzzles, and the first miner to solve it is rewarded with a block reward in PEPEPOW (PEPEW).
 
 ![](/media/legacy/2024/02/P-coin4-1.png)
 
 ### Mining Pools
 
-Due to the competitive nature of mining, many miners join mining pools to combine their resources and increase their chances of successfully mining blocks. Mining pools distribute rewards among participants based on their contribution to the pool's computational power..
-
-![](/media/legacy/2024/02/7594bf0b-5b3a-4c0e-83b3-c6a3087eaa97.jpg)
+Due to the competitive nature of mining, many miners join mining pools to combine their resources and increase their chances of successfully mining blocks. Mining pools distribute rewards among participants based on their contribution to the pool's computational power.
 
 ### Mining Equipment
 
-To participate in mining PEPEPOW Crypocions, miners typically use specialized hardware called mining rigs. These rigs are equipped with powerful centeral processor units (CPUs) or graphics cards (GPUs) specifically high performance for mining cryptocurrencies.
-
-![](/media/legacy/2024/02/a27d4a8f-2cfb-4f6f-899b-5c601ebb696a-1.jpg)
+To participate in mining PEPEPOW (PEPEW), miners typically use specialized hardware called mining rigs. These rigs use central processing units (CPUs) or graphics processing units (GPUs), depending on the miner build and hardware.
 
 ### Rewards
 
-Miners receive rewards in the form of newly minted PEPEPOW Crypocions and transaction fees for successfully mining blocks. These rewards serve as an incentive for miners to contribute their computational power to secure the network.
+Miners receive rewards in the form of newly minted PEPEPOW (PEPEW) and transaction fees for successfully mining blocks. These rewards serve as an incentive for miners to contribute their computational power to secure the network.
 
 ## PEPEPOW Mining Quick Guide
 

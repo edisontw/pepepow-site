@@ -1305,9 +1305,15 @@ body.handdrawn-theme {
 }
 
 .handdrawn-theme .home-hero h1 {
-  max-width: 9.6ch;
+  max-width: 11.5ch;
   color: #1d2b21;
+  font-size: clamp(3rem, 5.2vw, 4rem);
+  line-height: .98;
   text-wrap: balance;
+}
+
+.home-hero-title-line {
+  display: block;
 }
 
 .handdrawn-theme .home-hero-lede {
@@ -1542,19 +1548,31 @@ body.handdrawn-theme {
 /* Hand-drawn internal page rollout */
 @media (min-width: 64rem) {
   .handdrawn-theme .home-hero {
-    grid-template-columns: minmax(0, .96fr) minmax(24rem, 1.04fr);
-    gap: clamp(2.25rem, 4vw, 3.75rem);
+    grid-template-columns: minmax(0, 1.02fr) minmax(24rem, .98fr);
+    gap: clamp(2.25rem, 4vw, 3.5rem);
   }
 
   .handdrawn-theme .home-hero h1 {
-    max-width: 18ch;
-    font-size: clamp(3.35rem, 4.4vw, 4.25rem);
+    max-width: 11.5ch;
+    font-size: clamp(3rem, 4vw, 3.8rem);
     line-height: .98;
   }
+}
 
-  .home-hero-nowrap {
-    white-space: nowrap;
-  }
+.current-page-layout--single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.current-page-layout--single .current-page-body {
+  max-width: 68rem;
+}
+
+.handdrawn-theme .current-page-header {
+  max-width: 60rem;
+}
+
+.handdrawn-theme .current-page-header h1 {
+  color: #1d2b21;
 }
 
 .illustrated-page-header {

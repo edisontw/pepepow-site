@@ -82,9 +82,11 @@ const reviewed = (entry.data.updated ?? entry.data.date).toISOString().slice(0, 
 const tocHeadings = headings.filter((heading) => heading.depth === 2).slice(0, 10);
 const description = entry.data.description || config.intro;
 const headerImage = visualHeaders[slug];
+const usesHanddrawnTheme = ['about', 'wallet', 'mining', 'masternode', 'market'].includes(slug);
+const hasToc = tocHeadings.length >= 3;
 ---
 
-<BaseLayout title={entry.data.title} description={description} theme={headerImage ? 'handdrawn' : 'default'}>
+<BaseLayout title={entry.data.title} description={description} theme={usesHanddrawnTheme ? 'handdrawn' : 'default'}>
   <article class="current-page">
     {headerImage ? (
       <IllustratedPageHeader
@@ -113,8 +115,8 @@ const headerImage = visualHeaders[slug];
       </header>
     )}
 
-    <div class="current-page-layout">
-      {tocHeadings.length >= 3 && (
+    <div class:list={{ 'current-page-layout': true, 'current-page-layout--single': !hasToc }}>
+      {hasToc && (
         <nav class="page-toc" aria-label="On this page">
           <p class="page-toc-title">On this page</p>
           <ol>
