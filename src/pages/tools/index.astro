@@ -1,11 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { verifiedLinks } from '../../data/verified-links';
 
 const tools = [
   {
     title: 'PEPEPOW Explorer',
     text: 'Current public chain, block, network, masternode, and collected market information.',
-    href: 'https://explorer.pepepow.org/',
+    href: verifiedLinks.explorer,
     label: 'Open Explorer',
   },
   {
@@ -17,37 +18,37 @@ const tools = [
   {
     title: 'PEPEW Light',
     text: 'Current lightweight PEPEW wallet entry point referenced by the site.',
-    href: 'https://light.pepepow.net/wallet/',
+    href: verifiedLinks.pepewLightWallet,
     label: 'Open PEPEW Light',
   },
   {
     title: 'Core releases',
     text: 'Official PEPEPOW Core release artifacts and version history.',
-    href: 'https://github.com/MattF42/PePe-core/releases',
+    href: verifiedLinks.coreReleases,
     label: 'Open Core releases',
   },
   {
     title: 'Android releases',
     text: 'Android wallet release artifacts maintained in the current PEPEPOW Android repository.',
-    href: 'https://github.com/edisontw/pepepow-android-wallet-v2/releases',
+    href: verifiedLinks.androidWalletReleases,
     label: 'Open Android releases',
   },
   {
     title: 'HTN Miner',
     text: 'Current miner entry point referenced by the PEPEPOW mining page.',
-    href: 'https://htn.foztor.net/',
+    href: verifiedLinks.htnMiner,
     label: 'Open HTN Miner',
   },
   {
     title: 'Community Pool',
     text: 'Community mining pool entry point referenced by current mining guidance.',
-    href: 'https://community-pool.pepepow.org/',
+    href: verifiedLinks.communityPool,
     label: 'Open Community Pool',
   },
   {
     title: 'Lab Pool',
     text: 'PEPEPOW lab pool entry point referenced by current mining guidance.',
-    href: 'https://pool.pepepow.net/',
+    href: verifiedLinks.labPool,
     label: 'Open Lab Pool',
   },
   {
@@ -80,7 +81,7 @@ const safetyNotes = [
         RPC, store keys, or create a second blockchain collector.
       </p>
       <div class="actions">
-        <a class="button" href="https://explorer.pepepow.org/">Open Explorer</a>
+        <a class="button" href={verifiedLinks.explorer}>Open Explorer</a>
         <a class="button secondary" href="/search/">Search the site</a>
       </div>
     </header>
