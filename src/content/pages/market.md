@@ -1,8 +1,8 @@
 ---
 title: "Market"
-description: ""
+description: "Current PEPEW market references, confirmed venues, historical listings, independent trackers, and exchange-risk guidance."
 date: "2024-12-14 07:46:06"
-updated: "2026-09-19 20:25:51"
+updated: "2026-09-20 14:30:00"
 slug: "market"
 categories: []
 tags: []
@@ -13,70 +13,50 @@ featured: false
 migration_review: true
 ---
 
-Market Overview
+## Current market access
 
-## PEPEPOW Exchange & Market Status
+Market access can change quickly. During the latest migration review, the PEPEPOW Explorer exposed PEPEW market data for **NonKYC** and **NestEx**. These are therefore the two venues treated as currently confirmed on this page.
 
-Market access can change quickly. The PEPEPOW Explorer currently exposes PEPEW market data for **NonKYC** and **NestEx**; these are the two venues treated as currently confirmed in this migration review.
+This page is a factual access reference. It does not provide price predictions or trading recommendations.
 
-### Currently Confirmed Venues
+### NonKYC
 
-#### NonKYC
+- [PEPEW asset page](https://nonkyc.io/asset/PEPEW)
+- [PEPEW / USD market](https://nonkyc.io/market/PEPEW_USD)
 
-- PEPEW asset page: <https://nonkyc.io/asset/PEPEW>
-- PEPEW market page: <https://nonkyc.io/market/PEPEW_USD>
+### NestEx
 
-#### NestEx
+- [PEPEW market](https://trade.nestex.one/spot/PEPEW)
 
-- PEPEW market page: <https://trade.nestex.one/spot/PEPEW>
+## Historical or unverified venue references
 
-### Unverified / Historical Venue References
+### Exbitron
 
-#### Exbitron
+The old site listed an Exbitron PEPEW-USDT market, but its current PEPEW status was not independently verified during the **19 Sep 2026** migration check. Treat it as historical until re-verified.
 
-The old site listed an Exbitron PEPEW-USDT market, but its current PEPEW market status could not be independently verified during the 19 Sep 2026 migration check. It should **not** be presented as a confirmed active PEPEW venue until re-verified.
+- [Historical Exbitron reference](https://app.exbitron.com/exchange/?market=PEPEW-USDT)
 
-Historical link: <https://app.exbitron.com/exchange/?market=PEPEW-USDT>
-
-#### Inactive / Historical Listings
+### Inactive historical listings
 
 - **XeggeX** — historical closed exchange; do not use for deposits.
 - **Dex-Trade** — PEPEW was delisted and should be treated as historical only.
 
-### Market Focus
+## Before using an exchange
 
-#### Improve Market Stability
+Third-party exchange status can change without notice. Before depositing or trading:
 
-Encourage healthier trading depth, reduce fragmentation, and support more sustainable market activity over time.
+- confirm that the venue is still operating normally;
+- verify PEPEW deposits and withdrawals are currently enabled;
+- check the current market pair and wallet status;
+- use a small test transfer before moving a larger amount;
+- avoid sending funds to closed, delisted, or unverified services;
+- keep long-term holdings in a wallet you control when appropriate for your use case.
 
-#### Expand Liquidity Options
+## Market data references
 
-Explore additional exchange opportunities, including long-term DEX and community liquidity paths where practical.
+The [PEPEPOW Explorer](https://explorer.pepepow.org/) is the preferred PEPEPOW-specific market reference because it combines collected market information with current network context.
 
-#### Support Ongoing Development
-
-Continue strengthening infrastructure, mining, wallets, and ecosystem tools to improve trust and usability.
-
-### Exchange Risk Reminder
-
-Always verify that an exchange is still operating normally before depositing funds.
-
-- Check whether deposits and withdrawals are active.
-- Confirm current trading activity and wallet status.
-- Avoid sending funds to closed or delisted platforms.
-- Use small test transfers first when using a new venue.
-
-### Quick Links
-
-[NonKYC Market](https://nonkyc.io/market/PEPEW_USD)
-[NestEx Market](https://trade.nestex.one/spot/PEPEW)
-PEPEPOW remains a community-driven project. Market access may change over time, so users should always confirm the latest exchange status directly before trading or depositing funds.
-
-## Market Data References
-
-The [PEPEPOW Explorer](https://explorer.pepepow.org/) is the preferred PEPEPOW-specific market reference because it shows the currently collected NonKYC and NestEx data alongside network information.
-
-Additional independent reference pages that were reachable during the migration audit:
+Independent reference pages that were reachable during the migration audit include:
 
 - [CoinCodex — PEPEPOW](https://coincodex.com/crypto/pepepow/)
 - [LiveCoinWatch — PEPEW](https://www.livecoinwatch.com/price/PEPEPOW-PEPEW)
@@ -84,4 +64,12 @@ Additional independent reference pages that were reachable during the migration 
 - [Blockspot — PEPEPOW](https://blockspot.io/coin/pepepow/)
 - [CoinCarp — PEPEPOW](https://www.coincarp.com/currencies/pepepow/)
 
-Third-party trackers can lag protocol upgrades or retain stale exchange/algorithm metadata. Use them as secondary references, not as authority for wallet downloads, mining configuration, or whether an exchange currently accepts deposits and withdrawals.
+Third-party trackers may lag protocol upgrades or retain stale exchange and algorithm metadata. Use them as secondary references, not as authority for wallet downloads, mining configuration, or whether an exchange currently accepts deposits and withdrawals.
+
+## Related PEPEPOW references
+
+- [Network Pulse](/network/)
+- [Wallets](/wallet/)
+- [Mining](/mining/)
+- [Announcements](/announcements/)
+- [Site search](/search/)

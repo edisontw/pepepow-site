@@ -616,6 +616,8 @@ As of 2026-09-20:
 - the homepage hero was corrected after production review so the title cannot overlap the scenic illustration at intermediate desktop widths
 - current pages without a table of contents now collapse to a true single-column content layout instead of leaving a narrow empty grid column
 - About and Market now use the bright editorial theme even before their dedicated header artwork is available
+- the current About page was rewritten into a concise, structured project overview; the old image-heavy roadmap/FAQ tail was removed from the live current page while its source media remain in the migration archive
+- the Market page was simplified into confirmed access, historical/unverified references, exchange-risk checks, and data references rather than promotional market-goal copy
 - three unattractive legacy Mining illustrations were removed while retaining the requested second introductory image
 - Batch 05 prompts are queued for About and Market headers, a dedicated Market icon, About/Market editorial spots, and a current-mining setup spot
 - after those assets are generated and uploaded, wire the About and Market headers, replace the temporary homepage Market icon, and review whether the remaining legacy Mining inline art should be replaced

@@ -1,8 +1,8 @@
 ---
 title: "About"
-description: ""
+description: "PEPEPOW project overview, Proof-of-Work network design, masternodes, governance, history, current references, and community direction."
 date: "2024-12-14 07:50:58"
-updated: "2026-09-19 20:25:51"
+updated: "2026-09-20 14:30:00"
 slug: "about"
 categories: []
 tags: []
@@ -13,390 +13,112 @@ featured: false
 migration_review: true
 ---
 
-Community-Driven Proof of Work
+## Community-Driven Proof of Work
 
-## A Journey of Resilience and Growth
+PEPEPOW is a community-driven cryptocurrency ecosystem built around Proof-of-Work participation, masternode support, decentralized governance, and continued adaptation. The project launched its Genesis Block on **12 May 2023** and has since moved through several mining and infrastructure eras.
 
-## Building the future of decentralized finance through community, mining, and adaptation.
+### At a glance
 
-PEPEPOW launched its Genesis Block on May 12, 2023, inspired by meme culture and the principles of decentralized currency.
-What began as a small blockchain experiment has continued to evolve through community participation, technical upgrades,
-DAO governance, mining infrastructure, and practical development focused on long-term resilience.
+- **Genesis Block:** 12 May 2023
+- **Current Proof-of-Work era:** HooHash V110
+- **Target average block time:** 20 seconds
+- **Coinbase outputs:** Miner · Masternode · Foundation
+- **Long-term supply target:** 90B PEPEW before tail Super Blocks
 
-**20 sec**
-Target average block time
-**3 outputs**
-Miner · Masternode · Foundation
-**90B**
-Long-term supply target before tail Super Blocks
+## How the network works
 
-### What Is PEPEPOW?
+### Proof-of-Work mining
 
-PEPEPOW is a community-driven cryptocurrency ecosystem built around Proof-of-Work participation,
-masternode support, decentralized governance, and continuous adaptation. It was originally adapted from
-Dash-inspired technology and later evolved through multiple algorithm and network upgrades.
+Miners help secure PEPEPOW through HooHash V110. The network previously used Memehash and later XelisV2-pepew before entering the current HooHash era.
 
-The network has moved from its early Memehash phase to XelisV2-pepew and then into the HooHash V110 era.
-This transition created a new mining phase and required updated wallet, mining, pool, and node software.
+Under the current Core coinbase logic, the miner receives the remainder after the foundation payment and masternode payment are calculated. The miner share therefore varies with the block reward rather than remaining a permanent fixed percentage.
 
-#### Proof-of-Work Mining
+For current miner software and pool entry points, use the [Mining page](/mining/).
 
-Miners help secure the network through HooHash V110. Under the current Core coinbase logic, the miner receives the remainder after the foundation/development output and the masternode payment are calculated. The exact percentage therefore depends on the current block reward rather than being a permanent fixed 65%.
+### Masternodes
 
-Current mining belongs to the HooHash V110 era, with mining tools and pool infrastructure continuing to improve.
+Masternodes support PEPEPOW governance and network services. Current Core code calculates the masternode payment as **35% of the block reward remaining after the foundation payment is subtracted**.
 
-#### Masternodes and Governance
+PEPEPOW currently uses tiered masternode collateral levels of **10M, 25M, 50M, and 100M PEPEW**. Higher tiers receive proportionally higher reward-selection frequency.
 
-Masternodes help support governance, transaction services, and network stability. Current Core code calculates the masternode payment as **35% of the block reward remaining after the foundation payment is subtracted**, rather than 35% of the original total coinbase amount.
+For current setup and maintenance guidance, use the [Masternode page](/masternode/).
 
-PEPEPOW uses tiered masternode collateral levels of **10M, 25M, 50M, and 100M PEPEW**. Higher tiers receive proportionally higher reward-selection frequency.
+### Development funding
 
-#### DAO-Based Development
+Historical PEPEPOW material often uses the term **DevFee**. Current Core consensus code describes the corresponding coinbase output as a **foundation payment**.
 
-PEPEPOW uses DAO-oriented governance through branches such as adminDAO, miningDAO, nodeDAO, marketDAO, and devDAO.
-Community discussion and transparent decision-making remain central to the ecosystem.
+For current mainnet blocks, `GetFoundationPayment()` returns **250 PEPEW** after the 2024 activation height. The amount follows PEPEPOW's special-block pattern and can become 2× or 5× on the corresponding higher-reward blocks.
 
-#### Development Funding and Foundation Payment
+This current code-based description supersedes the older simplified 65% miner / 35% masternode wording for present operation.
 
-PEPEPOW's development-funding model has changed over time. Historical community material often uses the term **DevFee**, while the current Core consensus code calls the coinbase output a **foundation payment**.
+### Governance and community development
 
-For current mainnet blocks, `GetFoundationPayment()` returns **250 PEPEW** after the 2024 activation height. The amount follows PEPEPOW's special-block pattern, becoming 2× or 5× on the corresponding higher-reward blocks. Core adds this foundation output to the coinbase, calculates the masternode payment as 35% of the remaining block reward, and assigns the rest to the miner.
+PEPEPOW has used DAO-oriented governance structures including adminDAO, miningDAO, nodeDAO, marketDAO, and devDAO. The practical governance process has changed over time, so older DAO documents should be read as historical policy references rather than assumed to describe every current procedure.
 
-This code-based description supersedes the old simplified 65% miner / 35% masternode wording for current operation. Historical posts may still use older percentages because they describe earlier reward/funding eras.
+Community discussion, public repositories, dated announcements, and verifiable network data remain important parts of the project's operating model.
 
-### The Journey So Far
+## A journey of resilience and growth
 
-PEPEPOW’s early days were marked by strong community interest, active mining, and rapid experimentation.
-The project also faced serious challenges, including chain instability, the end of original developer maintenance,
-and security incidents affecting community communication channels.
+PEPEPOW began as a small blockchain experiment inspired by meme culture and decentralized currency. The project later faced chain instability, changes in original developer maintenance, service disruptions, and security incidents affecting community communication.
 
-Instead of disappearing, community contributors stepped in to maintain wallets, restore momentum, improve infrastructure,
-update documentation, support miners and node operators, and continue development. This history shaped PEPEPOW into a
-practical community experiment in persistence, recovery, and decentralized contribution.
+Community contributors continued maintaining wallets, mining infrastructure, documentation, pools, explorers, monitoring services, and node support. That history shaped the project around persistence, practical maintenance, and decentralized contribution.
 
-2023/05/12
-Genesis Block launched.
-2023/08/10
-First hard fork; the community agreed to remove founder fees and update the core wallet.
-2023/09/25
-Listed on CoinGecko, improving market visibility.
-2023/10
-DAO nominations and appointments marked a new stage of community governance.
-2024/01/14
-Community vote approved a 5% developer fee for development and integration needs.
-2024/02/24
-A new Discord server was launched to improve community security and communication.
-2024/08/29
-Algorithm updated to XelisV2-pepew to improve mining and block production.
-2026/04
-Mandatory HooHash V110 hard fork introduced a new mining era for PEPEPOW.
+Selected milestones:
 
-### Looking Ahead
+- **2023-05-12:** Genesis Block launched.
+- **2023-08-10:** First hard fork; the community agreed to remove founder fees and update Core.
+- **2023-09-25:** CoinGecko listing improved external market visibility.
+- **2023-10:** DAO nominations and appointments marked a new stage of community governance.
+- **2024-01-14:** Community vote approved a 5% developer fee for development and integration needs.
+- **2024-02-24:** A new Discord server was launched following community communication changes.
+- **2024-08-29:** Mining moved to XelisV2-pepew.
+- **2026-04:** The mandatory HooHash V110 hard fork opened the current mining era.
 
-The future of PEPEPOW depends on practical infrastructure, reliable wallets, mining participation,
-transparent governance, liquidity access, and clear community education. The roadmap may be adjusted over time
-based on contributor availability, technical feasibility, funding, and community consensus.
+For dated details, use the [announcement archive](/announcements/) and [site search](/search/).
 
-#### Core Infrastructure
+## Looking ahead
 
-API server, ElectrumX server, explorers, monitoring dashboards, and masternode tools to support wallets,
-applications, and node operators.
+PEPEPOW development is organized around practical infrastructure rather than a fixed promise of future features. Priorities can change with contributor availability, technical feasibility, funding, and community consensus.
 
-#### Wallet Access
+Current areas of work include:
 
-Non-custodial web wallet, mobile wallet direction, Telegram mini wallet bot, and safer user onboarding tools.
+- **Core infrastructure:** API services, ElectrumX, explorers, monitoring, and masternode tools.
+- **Wallet access:** non-custodial web and mobile access, safer onboarding, backup, and recovery guidance.
+- **Developer tools:** SDKs, payment experiments, game integrations, and community-built utilities.
+- **Liquidity and interoperability:** exchange access, liquidity paths, swaps, and bridge-related experiments where practical.
 
-#### Developer Tools
+## AI-assisted development and community support
 
-JS/TS SDK, PepewPay payment link / POS PWA, PEPEW inscriptions, and Unity Game Kit experiments.
+PEPEPOW is a small community project, so AI-assisted workflows can help extend development capacity for code review, debugging, log analysis, monitoring scripts, documentation, FAQs, translation, and user support.
 
-#### Liquidity and Expansion
+AI assistance does not replace human responsibility. Security-sensitive changes, wallet releases, protocol upgrades, treasury operations, payout handling, and public announcements still require human review.
 
-Wrapped PEPEW, liquidity pools, oracle gateway development, and possible DEX aggregator integration.
+## Visual identity
 
-### AI-Assisted Development and Community Support
+The current visual direction emphasizes effort, persistence, construction, open participation, and forward movement. Website artwork uses a bright hand-drawn editorial system with natural scenery, practical objects, and restrained community motifs.
 
-PEPEPOW is a small community project, so AI-assisted workflows can help expand development capacity.
-AI tools may support code review, debugging, log analysis, monitoring scripts, documentation, FAQ systems,
-mining guides, wallet guides, and multilingual community support.
+Character artwork remains secondary to content, network data, tools, and technical guidance.
 
-AI assistance does not replace human responsibility. Security-sensitive changes, wallet releases, protocol upgrades,
-treasury operations, payout handling, and public announcements should still be reviewed by experienced community members.
+## Reference documents
 
-### Visual Identity and Community Media
+- [PEPEPOW White Paper v1.0 — 18 Sep 2023, Minus](/docs/legacy/2023/09/whitepaper-v1.0.1.pdf)
+- [PEPEPOW DAO Reference — 25 Oct 2023, Minus](/docs/legacy/2023/10/pepepow-dao-op-policy-v1.0.0.pdf)
+- [PEPEPOW White Paper v2.0 — 26 Jan 2025, Edison](https://docs.google.com/document/d/1FIs7lQo_7tjNhJ9n95_YrvuIGmLlSjmkKqEWIktlU5Q/edit?tab=t.0)
+- [PEPEPOW Visual Reference Guideline v1.0 — 1 Jan 2026, Edison](/docs/legacy/2026/01/PEPEPOW-Visual-Reference-Guideline-v1.0.pdf)
+- [PEPEPOW White Paper v2.1 — 31 May 2026, Edison](/docs/legacy/2026/05/PEPEPOW-Whitepaper-v2.1.pdf)
 
-PEPEPOW’s visual identity reflects effort, persistence, construction, and forward movement.
-Community artists and AI-assisted creators are encouraged to explore different styles while keeping the spirit
-constructive, contribution-oriented, and optimistic.
+## Risk and current status
 
-- Proof-of-Work as effort, persistence, and accumulated contribution.
-- Community collaboration, decentralization, and infrastructure building.
-- Pepe-inspired mascot concepts, miner helmets, nodes, digital energy, and creative crypto-themed visuals.
-- Open artistic freedom, including futuristic, cinematic, painterly, minimalist, technical, or abstract styles.
+PEPEPOW is an early-stage community cryptocurrency. Exchange availability, liquidity, trading volume, mining participation, infrastructure reliability, and development progress can change over time.
 
-### Reference Documents
+This page is a project and technical reference, not financial, investment, or legal advice. Verify current operational information before mining, trading, holding, operating nodes, or building services around PEPEPOW.
 
-These documents provide historical, governance, technical, roadmap, and visual references for the PEPEPOW community.
-
-[PEPEPOW White Paper v1.0 — 18 Sep 2023, Minus](/docs/legacy/2023/09/whitepaper-v1.0.1.pdf)
-[PEPEPOW DAO Reference — 25 Oct 2023, Minus](/docs/legacy/2023/10/pepepow-dao-op-policy-v1.0.0.pdf)
-[PEPEPOW White Paper v2.0 — 26 Jan 2025, Edison](https://docs.google.com/document/d/1FIs7lQo_7tjNhJ9n95_YrvuIGmLlSjmkKqEWIktlU5Q/edit?tab=t.0)
-[PEPEPOW Visual Reference Guideline v1.0 — 1 Jan 2026, Edison](/docs/legacy/2026/01/PEPEPOW-Visual-Reference-Guideline-v1.0.pdf)
-[PEPEPOW White Paper v2.1 — 31 May 2026, Edison](/docs/legacy/2026/05/PEPEPOW-Whitepaper-v2.1.pdf)
-
-### Risk Reminder
-
-PEPEPOW is an early-stage community cryptocurrency. Exchange availability, liquidity, trading volume,
-market access, mining participation, infrastructure reliability, and development progress may change over time.
-
-This page is for community and technical reference only. It is not financial advice, investment advice,
-legal advice, or a guarantee of future value. Please do your own research before mining, trading, holding,
-operating nodes, or building services around PEPEPOW.
-
-### Join the PEPEPOW Community
-
-PEPEPOW grows through builders, miners, node operators, developers, artists, testers, writers,
-and long-term community contributors. Learn, build, mine, document, improve, and help shape the next chapter.
-
-[Visit Website](/)
-[GitHub](https://github.com/MattF42/PePe-core)
-[Join Discord](https://discord.gg/sJgDVRkBcq)
-
-![](/media/legacy/2024/12/adminDAO.png)
-Q Q2 2023
-Project Milestones
-
-#### Launch & Foundation
-
-- Launch Mainnet / Hard Fork
-- Release Whitepaper V1.0.1
-- Complete Wallet / Software Audit
-- Establish Social Media Presence
-- Achieve 1st Exchange Listing
-- Fix PrivateSend
-
-![PEPEPOW Launch](/media/legacy/2024/09/2d238ae8-b864-499b-99ce-687f49289298.jpg)
-Q3 2023
-Project Direction Discussions
-
-#### Community & Utility
-
-- Remove Developer Fee
-- Launch Community Mining Pool
-- Secure 2nd Exchange Listing
-- Release Web Wallet (Beta)
-- Introduce Game: Dice
-- Initiate DAO Nominations
-- Launch PEPEW Faucet
-
-![community](/media/legacy/2024/06/GObJzcKXQAAM_7D.jpg)
-Q4 2023
-Expansion Updates
-
-#### Growth & Listings
-
-- Launch Bounty / Rewards Programme
-- Introduce OTC Trading
-- Enable Shared Masternodes
-- Achieve 3rd Exchange Listing
-- Release Game: PEPE Quest (Alpha)
-
-![PEPEPOW growth](/media/legacy/2024/09/PEPEPOW-Dragon-game.png)
-Q1 2024
-Operational Adjustments
-
-#### Governance & Infra
-
-- Suspend Mobile Wallet Development
-- Reinstate Developer Fee
-- Launch New Discord Server
-- Host Masternodes Using Developer Fee
-
-![PEPEPOW Expansion](/media/legacy/2024/09/PEPEPOW-discussion.webp)
-Q2 2024
-Listing on 3rd App Platforms
-
-#### Ecosystem Apps
-
-- List on FORSA platform?Mobile wallet / Masternode holding / New explorer support?
-- Vidulum platform building?suspend?
-
-![PEPEPOW Launch](/media/legacy/2024/09/PEPEPOW-mobile2.webp)
-Q3 2024
-New Algorithm Switch
-
-#### Core Protocol
-
-- Switch to XelisV2-pepew algorithm
-- Enable CPU Mining
-- Launch on Xeggex Exchange App
-
-![PEPEPOW Launch](/media/legacy/2024/03/VIDULUM-APPjpg.jpg)
-Q4 2024
-Start from New Algorithm
-
-#### Release & Community
-
-- Wallet update with new skin features
-- IEO on Dex-Trade
-- Social media update and expansion
-
-![PEPEPOW Launch](/media/legacy/2024/09/PEPEPOW-CPU-miner.webp)
-Q1 2025
-Adoption and Expansion
-
-#### Listings & Mining
-
-- Listed on DEX-Trade Exchange
-- Crowdfunding
-- Explore Bridging Possibility
-- Reinstate GPU mining support
-
-![PEPEPOW Launch](/media/legacy/2024/09/PEPEPOW-desktop1.webp)
-Q2 2025
-Partnerships & Multichain
-
-#### Interoperability
-
-- Establish Partnerships with Other Platforms
-- Look for Multi-Chain Support
-- Initiate DEX and bridging discussions
-- New Tiered Masternode is supported
-
-![PEPEPOW Launch](/media/legacy/2024/07/pepepow-_jewel_adventure2.webp)
-Q3 2025
-Reliability Focus
-
-#### DeFi Foundations
-
-- Focus on stability and reliability of the PEPEPOW ecosystem
-- Introduce basic DeFi features
-- Hybrid GPU/CPU miner specifically for PEPEPOW is supported
-
-![PEPEPOW Launch](/media/legacy/2024/11/PEPEPOW-underwater-adventure.webp)
-Q4 2025
-Governance & Wallets
-
-#### DAO Pilots
-
-- Add Komodo Wallet integration
-- Pilot basic governance tools via DAO voting
-
-![PEPEPOW Launch](/media/legacy/2024/11/PEPEPOW-realistic-style.webp)
-Q1 2026
-Program Expansion
-
-#### Developers & Infra
-
-- Expand bounty programs
-- Onboard more community developers
-- Improve infrastructure for wallets and masternodes
-
-![PEPEPOW Launch](/media/legacy/2024/08/PEPEPOW-Griffin3.webp)
-Q2 2026
-Swaps & Bridge
-
-#### Interchange
-
-- Introduce basic token swapping through trusted platforms
-- Early-stage testing of bridging functionality
-
-![PEPEPOW Launch](/media/legacy/2024/11/PEPEPOW-diving.webp)
-Q3 2026
-Adoption
-
-#### Scale-Up
-
-- Scale marketing for higher adoption
-- Plan for larger exchange listings based on feedback
-- Deployment and Liquidity Provision
-
-![PEPEPOW Launch](/media/legacy/2024/11/pepepow-cyberpunk-future.webp)
-Q4 2026
-Ecosystem Reliability
-
-#### Community Roadmap
-
-- Focus on ecosystem stability and reliability
-- Host a community-driven roadmap planning event
-
-![PEPEPOW Launch](/media/legacy/2024/11/PepePow-sailor-adventurous-sea-voyage.webp)
-Q1: What is PepePow?
-
-A1: PepePow is a decentralized blockchain project that leverages the Pepe meme culture to create a platform for community collaboration, skill development, and global connections.
-
-Q2: What algorithm does PepePow use?
-
-A2: PEPEPOW currently uses **HooHash V110** for Proof-of-Work mining. The network switched from XelisV2-pepew at block height 4,354,200.
-
-Q3: How are block rewards distributed in PepePow?
-
-A3: Current Core code creates coinbase outputs for the miner, the selected masternode, and the foundation/development payment. The masternode amount is calculated as 35% of the block reward after the foundation payment is subtracted; the miner receives the remainder.
-
-Q4: What is the total supply of PepePow?
-
-A4: The total supply of PepePow is capped at 90 billion coins.
-
-Q5: What are superblocks in PepePow?
-
-A5: Superblocks are special blocks that occur every 1000 blocks and offer 2-5 times higher rewards than standard blocks.
-
-Q6: What happens to block rewards after the supply cap is reached?
-
-A6: After the 90 billion supply cap is reached, only superblocks will provide block rewards to help replenish lost coins and dead wallets.
-
-Q7: How is PepePow governed?
-
-A7: PEPEPOW uses community discussion together with DAO- and masternode-oriented governance mechanisms. The practical governance process has changed over time, so historical DAO documents should be read as policy/history rather than assumed to describe every current procedure.
-
-Q8: What is the purpose of masternodes in PepePow?
-
-A8: Masternodes help govern the network, vote on proposals, and receive a share of the block rewards for their services.
-
-Q9: How does PepePow plan to drive adoption?
-
-A9: PepePow aims to drive adoption through strategic partnerships, marketing, and a bounty reward system based on the PEPEW coin.
-
-Q10: What is the vision of PepePow?
-
-A10: PepePow seeks to fill a gap by providing guidance and resources to promising ideas, enabling them to move from conception to implementation. It aims to create a collaborative ecosystem that outlives any single participant.
-
-Q1: What is the main purpose of the PEPEPOW DAO operational policy document?
-
-A1: The document serves as a guideline for the current representatives of the organization, outlining the DAO’s objectives, management strategies, and operational policies.
-
-Q2: What are the main objectives of the PEPEPOW DAO?
-
-A2: The main objectives are ensuring fair practices, operational transparency, maintaining network security, upholding the vision outlined in the PEPEPOW whitepaper, and actively encouraging community growth.
-
-Q3: How does the DAO aim to minimize organizational overheads?
-
-A3: The DAO aims to minimize overheads by employing automated governance techniques, which can reduce human error, offer administrative redundancy, discourage the centralization of power, and improve operational sustainability.
-
-Q4: What rules must be followed when conducting community votes?
-
-A4: Votes must allocate sufficient time before expiration, be clear and concise, avoid ambiguous language, address new subjects descriptively, and accommodate simple majority outcomes by presenting topics with various options.
-
-Q5: How will DAO expenditures be funded?
-
-A5: Expenditures will be funded entirely by community members’ donations, either through direct funding or indirect initiatives such as partnerships or mining to the official community pool.
-
-Q6: What are the main categories for allocating DAO funds?
-
-A6: The main categories are Grants (10%), Network Infrastructure (20%), Reserve Fund (30%), and Marketing (40%).
-
-Q7: What is the purpose of the Grants category?
-
-A7: The Grants category is aimed at funding collaborations and projects that broaden the PEPEPOW ecosystem, such as social media initiatives, layer 2 protocols, DEX integrations, and business-level infrastructure.
-
-Q8: What does the Network Infrastructure category cover?
-
-A8: The Network Infrastructure category covers costs associated with fair compensation for work done by immediate DAO members and community members who actively contribute to the project, including administration, paid bounties, core development, and project-related service providers.
-
-Q9: What is the Reserve Fund used for?
-
-A9: The Reserve Fund is aimed at project rescue, emergencies, and providing a hedge against capital losses or total abandonment. It can be implemented through alternate asset accumulation or allocating funds to a PEPEPOW masternode.
-
-Q10: How are votes currently accepted for consideration by the DAO?
-
-A10: Until further notice, votes will only be accepted for consideration via direct participation on the official Discord server.
+Useful current entry points:
+
+- [Network Pulse](/network/)
+- [Wallets](/wallet/)
+- [Mining](/mining/)
+- [Masternode](/masternode/)
+- [Market](/market/)
+- [Community](/community/)
+- [PEPEPOW Core source](https://github.com/MattF42/PePe-core)
