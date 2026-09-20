@@ -1193,3 +1193,37 @@ Current decisions:
 - No new component framework was introduced. Existing repeated section/card patterns remain explicit because they are currently small and readable.
 
 This pass does not require a database, runtime search service, duplicate blockchain collector, or production-server change.
+
+
+## Announcement publishing workflow — 2026-09-20
+
+The preferred authoring path for new PEPEPOW announcements is now a small authenticated publisher layered on top of the static site rather than a return to WordPress.
+
+Flow:
+
+```text
+/admin/
+→ GitHub OAuth identity check
+→ allowlisted publisher session
+→ validated announcement form
+→ GitHub Contents API
+→ src/content/announcements/
+→ main
+→ optional GitHub Actions production deployment
+```
+
+Design constraints:
+
+- GitHub receives the user's password and 2FA; pepepow.net never does.
+- Do not add a local password database or shared administrator password.
+- Do not expose repository write tokens to browser JavaScript.
+- Keep the publishing token restricted to this repository and minimum Contents permissions.
+- Keep the backend tiny and stateless; Apache CGI is sufficient for this narrow admin function.
+- New announcements remain Markdown and GitHub `main` remains authoritative.
+- Production deployment is opt-in and must use a dedicated forced-command SSH key.
+- The publisher and deployment path must remain isolated from the PEPEPOW wallet/node.
+
+Implementation/setup references:
+
+- `docs/ADMIN_PUBLISHING.md`
+- `docs/DEPLOYMENT.md`
