@@ -17,7 +17,7 @@ const published = entry.data.date instanceof Date
   : String(entry.data.date);
 ---
 
-<BaseLayout title={entry.data.title} description={description}>
+<BaseLayout title={entry.data.title} description={description} theme="handdrawn">
   <article class="legacy-entry">
     {!isPage && (
       <header class="legacy-entry-header">
