@@ -199,7 +199,7 @@ Create a GitHub environment named `production`, then configure:
 
 Repository/environment secrets:
 
-- `PRODUCTION_SSH_KEY` — the dedicated private key
+- `PRODUCTION_SSH_KEY_B64` — the dedicated private key, base64-encoded for GitHub Actions
 - `PRODUCTION_KNOWN_HOSTS` — the verified SSH known-hosts line for edison2
 
 Repository/environment variables:
