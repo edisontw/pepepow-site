@@ -1,11 +1,13 @@
 ---
+import { verifiedLinks } from '../data/verified-links';
+
 interface Props {
   compact?: boolean;
 }
 
 const { compact = false } = Astro.props;
-const lightEndpoint = 'https://light.pepepow.net/api/status';
-const monitorEndpoint = 'https://explorer.pepepow.net/monitor/api/public-summary';
+const lightEndpoint = verifiedLinks.pepewLightStatusApi;
+const monitorEndpoint = verifiedLinks.explorerPublicSummaryApi;
 const titleId = compact ? 'home-network-pulse-title' : 'network-pulse-title';
 ---
 
@@ -84,8 +86,8 @@ const titleId = compact ? 'home-network-pulse-title' : 'network-pulse-title';
   <div class="network-pulse-links">
     <span>Proof of Work: <strong>HooHash V110</strong></span>
     <a href="/network/">Network details</a>
-    <a href="https://light.pepepow.net/">PEPEW Light ↗</a>
-    <a href="https://explorer.pepepow.org/">Explorer ↗</a>
+    <a href={verifiedLinks.pepewLight}>PEPEW Light ↗</a>
+    <a href={verifiedLinks.explorer}>Explorer ↗</a>
   </div>
 </section>
 
