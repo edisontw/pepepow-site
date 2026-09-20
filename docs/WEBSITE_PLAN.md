@@ -786,28 +786,46 @@ Avoid adding a server/database solely for site search.
 
 ## 13. Visual direction
 
+The visual direction was updated on 2026-09-20 from the earlier dark/charcoal-first concept to a bright hand-drawn editorial illustration system with restrained handwritten accents.
+
+Canonical visual guidance:
+
+- `docs/HAND_DRAWN_VISUAL_REFRESH_PLAN.md`
+- `docs/HAND_DRAWN_ASSET_PROMPTS.md`
+
 Desired presentation:
 
-- modern but restrained
-- dark/charcoal base is appropriate
-- PEPEPOW green as an accent
-- strong typography and spacing
-- data/status UI should be clear before decorative
+- warm-white / bright editorial base
+- hand-drawn landscape and spot illustrations
+- restrained watercolor/gouache-like fills
+- PEPEPOW green as the main action/accent color
+- natural wood, sky-blue and muted mountain tones
+- strong conventional typography for real interface/content text
+- handwritten notes, arrows and underlines only as secondary accents
+- data/status UI clear before decorative treatment
 - responsive from the beginning
 - accessible contrast
 - minimal animation
 - fast load
 
+Generated illustrations are reusable visual assets, not page screenshots. Navigation, headings, body text, CTAs, live network data, tables and technical instructions remain semantic HTML/CSS.
+
+Character use is intentionally limited. If a frog mascot appears, it should be a small original PEPEPOW miner-frog with a yellow miner helmet and additional original clothing/gear/design traits. It must not reproduce a recognizable third-party Pepe meme face or become the dominant site identity.
+
+Asset generation should proceed in coherent batches of no more than 10 images, with review between batches.
+
 Avoid:
 
 - exchange/casino visual language
-- excessive tickers
-- excessive glowing effects
+- excessive tickers or glowing effects
 - full-screen animation
 - crowded dashboards on the homepage
 - generic meme-coin landing-page patterns
+- character-heavy layouts
+- copying recognizable third-party Pepe artwork
+- rendering whole production pages as generated images
 
-The visual identity should communicate an open technical community rather than speculative hype.
+The visual identity should communicate an open, practical technical community with a human, approachable surface rather than speculative hype.
 
 ---
 
@@ -1146,11 +1164,12 @@ Do **not** start crypto-news automation or extensive visual polish before the mi
 - existing monitor infrastructure should be reused rather than duplicated.
 - production website work must remain isolated from the PEPEPOW wallet/node.
 - important historical URLs should be preserved whenever practical.
+- the hand-drawn editorial visual system in `docs/HAND_DRAWN_VISUAL_REFRESH_PLAN.md` is the current visual authority.
+- generated visual assets are produced in reviewable batches of no more than 10 images.
 
 ### To decide later
 
 - final code/content license
-- exact visual design system
 - final public-summary API schema
 - exact news source allowlist
 - exact analytics approach (prefer privacy-respecting or none)
