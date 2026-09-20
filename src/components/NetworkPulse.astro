@@ -36,7 +36,7 @@ const titleId = compact ? 'home-network-pulse-title' : 'network-pulse-title';
         <strong data-pulse-field="height">—</strong>
       </div>
       <div class="network-pulse-metric">
-        <span>Light API</span>
+        <span>Wallet service</span>
         <strong data-pulse-field="light-api">—</strong>
       </div>
       <div class="network-pulse-metric">
@@ -79,8 +79,8 @@ const titleId = compact ? 'home-network-pulse-title' : 'network-pulse-title';
 
   <p class="network-pulse-meta" data-pulse-meta aria-live="polite">
     {compact
-      ? 'The homepage heartbeat uses the cached PEPEW Light status API.'
-      : 'Block height prefers PEPEW Light; aggregate network metrics use the cached Explorer monitor.'}
+      ? 'Live status loads from the cached PEPEW Light service.'
+      : 'Block height comes from PEPEW Light when available; broader metrics come from the cached Explorer monitor.'}
   </p>
 
   <div class="network-pulse-links">
@@ -157,8 +157,8 @@ const titleId = compact ? 'home-network-pulse-title' : 'network-pulse-title';
       if (metaNode) {
         const age = formatSeconds(lightData?.cache_age_seconds);
         metaNode.textContent = lightHealthy
-          ? 'PEPEW Light / ElectrumX · cached status age ' + age + ' · refreshes every 60 s.'
-          : 'PEPEW Light status is temporarily unavailable. Static site content remains available.';
+          ? 'PEPEW Light / ElectrumX · data age ' + age + ' · refreshes every 60 s.'
+          : 'Live wallet-service status is temporarily unavailable. The rest of the site remains available.';
       }
     };
 
@@ -196,22 +196,22 @@ const titleId = compact ? 'home-network-pulse-title' : 'network-pulse-title';
       if (metaNode) {
         const parts = [];
         if (lightHealthy) {
-          parts.push('height: PEPEW Light');
+          parts.push('height from PEPEW Light');
         } else if (monitorHealthy) {
-          parts.push('height: Explorer monitor fallback');
+          parts.push('height from Explorer fallback');
         }
         if (monitorHealthy) {
           const age = Number(freshness.snapshot_age_seconds);
           parts.push(
             Number.isFinite(age)
-              ? 'monitor snapshot age ' + formatSeconds(age)
-              : 'Explorer monitor',
+              ? 'network data age ' + formatSeconds(age)
+              : 'Explorer network data',
           );
         } else {
-          parts.push('aggregate monitor unavailable');
+          parts.push('broader network metrics unavailable');
         }
-        parts.push('Light refresh 60 s');
-        parts.push('monitor refresh 120 s');
+        parts.push('height refresh 60 s');
+        parts.push('network metrics refresh 120 s');
         metaNode.textContent = parts.join(' · ');
       }
     };
