@@ -1175,3 +1175,21 @@ Do **not** start crypto-news automation or extensive visual polish before the mi
 - exact analytics approach (prefer privacy-respecting or none)
 - final production directory/rollback convention
 - whether multilingual support is worth adding after English migration is stable
+
+## Architecture maintenance pass — 2026-09-20
+
+The post-migration Astro site received a maintainability pass without changing the production architecture.
+
+Current decisions:
+
+- Primary navigation is limited to Network, Wallets, Mining, Masternode, Market, and News.
+- About, Learn, Tools, Community, and Search are a smaller utility navigation layer.
+- Shared current public service/repository destinations are centralized in `src/data/verified-links.ts`.
+- Current migrated pages use their Astro content `slug` as routing authority. `legacy_url` remains compatibility/provenance data and continues to drive preserved historical announcement/article routes.
+- Search remains browser-side and serverless, but the index is now generated as static `/data/search-index.json` instead of being embedded in the Search page HTML.
+- The Search index architecture includes `guides`, `learn`, and `incidents` collections so those content types can join the same static search path when real public entries are added.
+- Empty future collections remain configured for now. Their harmless glob warnings are preferable to removing planned content architecture that is already referenced by the site plan.
+- `/announcements/` remains the News destination and archive. A separate `/news/` hierarchy should wait until PEPEPOW Lens or another second news stream has enough real content to justify it.
+- No new component framework was introduced. Existing repeated section/card patterns remain explicit because they are currently small and readable.
+
+This pass does not require a database, runtime search service, duplicate blockchain collector, or production-server change.
