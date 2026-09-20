@@ -1,8 +1,8 @@
 ---
 title: "Masternode"
-description: "Current PEPEPOW masternode requirements, collateral tiers, Windows and Linux setup guidance, status checks, backups, and security reminders."
+description: "Set up and maintain a PEPEPOW masternode with current collateral tiers, Windows and Linux guidance, status checks, backups, and security notes."
 date: "2020-04-13 11:18:50"
-updated: "2026-09-19 20:25:51"
+updated: "2026-09-20 16:35:00"
 slug: "masternode"
 categories: []
 tags: []
@@ -13,15 +13,15 @@ featured: false
 migration_review: true
 ---
 
-## PEPEPOW Masternodes
+## Run a PEPEPOW masternode
 
-A PEPEPOW masternode is a continuously available network node configured with a qualifying PEPEW collateral output. Masternodes participate in PEPEPOW network services and reward selection, and they form part of the project's governance and infrastructure model.
+A PEPEPOW masternode is an always-available network node backed by a qualifying PEPEW collateral output. Masternodes participate in network services and reward selection and form part of PEPEPOW’s infrastructure and governance model.
 
-Operators should treat the collateral transaction, masternode key, wallet backup, server access, and software version as security-sensitive operational data.
+Treat the collateral transaction, masternode key, wallet backup, server access, and software version as security-sensitive operational information.
 
-## Current requirements
+## What you need
 
-You can run a masternode on your own machine or use a third-party hosting service. Self-hosting gives you direct control of the node and its configuration; third-party services introduce additional custody and operational risk.
+You can self-host a masternode or use a third-party service. Self-hosting gives you direct control over the node and its configuration; hosted services add another party to your operational and, depending on the service, custody risk.
 
 - Supported collateral tiers: **10,000,000 / 25,000,000 / 50,000,000 / 100,000,000 PEPEW**
 - Higher collateral tiers receive proportionally higher reward-selection frequency
@@ -34,7 +34,7 @@ You can run a masternode on your own machine or use a third-party hosting servic
 Wallet download:
 <https://github.com/MattF42/PePe-core/releases>
 
-Current Core release reviewed on 19 Sep 2026: **v2.9.0.5**.
+Core release checked on 19 Sep 2026: **v2.9.0.5**.
 
 ## Windows Masternode Setup
 
@@ -124,7 +124,7 @@ You can also verify it on the explorer:
 
 ### 11. Rewards
 
-Masternode reward timing is not fixed. It depends on the number of active masternodes, collateral tier, queue position, and current network conditions. Use the current Explorer/network page to verify masternode state rather than relying on a fixed first-payment estimate.
+Masternode reward timing is not fixed. It depends on active masternode count, collateral tier, queue position, and network conditions. Check the current Network or Explorer view instead of relying on a fixed first-payment estimate.
 
 ## Ubuntu / Linux Masternode Setup
 
@@ -218,16 +218,16 @@ scp -i <Your_Private_Key>.key ubuntu@<Your_IP>:/home/ubuntu/.PEPEPOWcore/wallet.
 
 Store the backup somewhere separate from the VPS and protect it as sensitive wallet data.
 
-## Third-Party Masternode Services
+## Third-party masternode services
 
-Third-party services change independently of PEPEPOW. Never infer that a service is endorsed, non-custodial, or currently accepting PEPEPOW solely because it appeared on the old website.
+Third-party services change independently of PEPEPOW. A listing here does not imply endorsement, non-custodial operation, or current availability.
 
 - [NodeHub](https://nodehub.io/dashboard/view_coin?coin=pepepow) — its public explorer still indexes PEPEPOW. Confirm current hosting terms and PEPEPOW support before paying or entering configuration data.
 - [Pecunia Platform](https://www.pecuniaplatform.io/coin-stats/PEPEPOW) — retained as a legacy service reference, but the PEPEPOW product page could not be independently verified during this migration audit. Confirm availability directly before use.
 
 Do not send masternode collateral or private keys to a third-party service until you understand its custody model, withdrawal process, fees, and security requirements.
 
-## Final checks
+## Before you start or restart
 
 Before starting or restarting a masternode, confirm:
 
@@ -238,6 +238,6 @@ Before starting or restarting a masternode, confirm:
 - the current Core release notes do not require an additional protocol or restart step;
 - the masternode key has not been exposed in public support channels.
 
-Reward timing is not fixed. Verify current masternode state through the [Network page](/network/) or the [PEPEPOW Explorer](https://explorer.pepepow.org/network).
+Verify current masternode state through the [Network page](/network/) or the [PEPEPOW Explorer](https://explorer.pepepow.org/network) rather than relying on a fixed reward schedule.
 
 For community support, use the current links on the [Community page](/community/).
