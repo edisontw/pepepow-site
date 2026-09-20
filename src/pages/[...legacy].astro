@@ -20,10 +20,17 @@ export async function getStaticPaths() {
         ),
     )
     .map((entry) => {
-      const legacyUrl = entry.data.legacy_url;
-      if (!legacyUrl) return null;
+      let pathname: string;
 
-      const pathname = new URL(legacyUrl).pathname;
+      if (entry.collection === 'pages') {
+        const slug = entry.data.slug || entry.id.replace(/\.mdx?$/, '');
+        pathname = `/${slug.replace(/^\/+|\/+$/g, '')}/`;
+      } else {
+        const legacyUrl = entry.data.legacy_url;
+        if (!legacyUrl) return null;
+        pathname = new URL(legacyUrl).pathname;
+      }
+
       if (pathname === '/') return null;
 
       const legacy = pathname.replace(/^\/+|\/+$/g, '');
