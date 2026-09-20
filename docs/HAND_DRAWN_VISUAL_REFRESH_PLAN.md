@@ -1,6 +1,6 @@
 # PEPEPOW Hand-Drawn Visual Refresh Specification
 
-Status: Planned visual refresh
+Status: Homepage visual slice implemented / review before page-header rollout
 Target: https://pepepow.net
 Repository authority: edisontw/pepepow-site main
 Last aligned: 2026-09-20
@@ -598,3 +598,18 @@ Recommended order:
 9. perform final accessibility, provenance, and performance review
 
 The hand-drawn system should grow gradually around the existing site rather than replace working UX all at once.
+
+
+---
+
+## 19. Current rollout status
+
+As of 2026-09-20:
+
+- all 40 generated hand-drawn assets are present in `public/media/visual/handdrawn/`
+- the homepage is the first production implementation slice
+- the homepage uses a scoped bright editorial theme rather than changing every existing page at once
+- semantic text, navigation, CTAs, and Network Pulse remain HTML/live UI
+- the first homepage slice uses the scenic hero, signpost, lettering, and selected Start Here icons
+- the next planned implementation set is the six page-header illustrations for Mining, Wallets, Masternode, Community, Learn, and Network
+- mascot assets remain unreferenced in production until a manual visual/provenance review
