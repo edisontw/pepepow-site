@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import NetworkPulse from '../components/NetworkPulse.astro';
+import { verifiedLinks } from '../data/verified-links';
 
 const announcements = (await getCollection('announcements'))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
@@ -53,13 +54,13 @@ const quickLinks = [
   ['Site Search', '/search/'],
   ['Tools', '/tools/'],
   ['Community', '/community/'],
-  ['Explorer', 'https://explorer.pepepow.org/'],
-  ['Core releases', 'https://github.com/MattF42/PePe-core/releases'],
-  ['PEPEW Light', 'https://light.pepepow.net/wallet/'],
-  ['HTN Miner', 'https://htn.foztor.net/'],
-  ['Community Pool', 'https://community-pool.pepepow.org/'],
-  ['Lab Pool', 'https://pool.pepepow.net/'],
-  ['Discord', 'https://discord.gg/sJgDVRkBcq'],
+  ['Explorer', verifiedLinks.explorer],
+  ['Core releases', verifiedLinks.coreReleases],
+  ['PEPEW Light', verifiedLinks.pepewLightWallet],
+  ['HTN Miner', verifiedLinks.htnMiner],
+  ['Community Pool', verifiedLinks.communityPool],
+  ['Lab Pool', verifiedLinks.labPool],
+  ['Discord', verifiedLinks.discord],
 ];
 ---
 
