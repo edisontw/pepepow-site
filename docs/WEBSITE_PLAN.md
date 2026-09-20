@@ -810,7 +810,7 @@ Desired presentation:
 
 Generated illustrations are reusable visual assets, not page screenshots. Navigation, headings, body text, CTAs, live network data, tables and technical instructions remain semantic HTML/CSS.
 
-Character use is intentionally limited. If a frog mascot appears, it should be a small original PEPEPOW miner-frog with a yellow miner helmet and additional original clothing/gear/design traits. It must not reproduce a recognizable third-party Pepe meme face or become the dominant site identity.
+Character use is intentionally limited. The preferred mascot is a small PEPEPOW miner-frog with a yellow miner helmet and original clothing/gear/design traits. Original design should be attempted first, but visual quality takes priority over forced differences: if repeated original variants look awkward, a familiar Pepe-like frog form may be used as a temporary, secondary fallback. Any close derivative should be reviewed for provenance/licensing before production release and should not become the dominant site identity.
 
 Asset generation should proceed in coherent batches of no more than 10 images, with review between batches.
 
@@ -822,7 +822,7 @@ Avoid:
 - crowded dashboards on the homepage
 - generic meme-coin landing-page patterns
 - character-heavy layouts
-- copying recognizable third-party Pepe artwork
+- publishing close third-party character derivatives without provenance/licensing review
 - rendering whole production pages as generated images
 
 The visual identity should communicate an open, practical technical community with a human, approachable surface rather than speculative hype.
