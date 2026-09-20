@@ -4,17 +4,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Search"
-  description="Search PEPEPOW current pages, announcements, guides, learning content, incidents, and recovered historical technical articles."
+  description="Search PEPEPOW current pages, announcements, guides, learning material, incidents, and historical technical content from one static index."
   theme="handdrawn"
 >
   <article class="search-page">
     <header class="search-page-header">
       <p class="eyebrow">Search</p>
-      <h1>Find PEPEPOW information.</h1>
+      <h1>Find the PEPEPOW information you need.</h1>
       <p class="current-page-lede">
-        Search current operational pages, recovered announcements, historical technical articles,
-        and future guides, learning content, and incident records from one static index. Older
-        results keep their publication context and may not describe current software or services.
+        Search current pages, announcements, and historical technical material from one lightweight
+        static index. Older results keep their original dates and context, so check the current
+        Wallet, Mining, Masternode, Market, or Network pages before following operational steps.
       </p>
     </header>
 
@@ -42,9 +42,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div id="search-results" class="search-results"></div>
       <noscript>
         <p class="archive-note">
-          Site search needs JavaScript in the browser. The rest of pepepow.net remains static and
-          usable without it; use the main navigation or announcements archive when JavaScript is
-          disabled.
+          Site search requires JavaScript. The rest of pepepow.net remains static and usable
+          without it; use the main navigation or announcement archive when JavaScript is disabled.
         </p>
       </noscript>
     </section>
@@ -173,7 +172,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           applyQuery(initialQuery);
         } catch {
           summary.textContent =
-            'Search index is temporarily unavailable. Use the main navigation or announcement archive.';
+            'Search is temporarily unavailable. Use the main navigation or announcement archive instead.';
         }
       };
 
