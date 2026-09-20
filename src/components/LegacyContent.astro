@@ -34,21 +34,21 @@ const published = entry.data.date instanceof Date
     {isHistoricalPost && (
       <aside class="archive-note historical-entry-notice">
         <strong>Historical content:</strong>
-        This post is preserved from the PEPEPOW archive and reflects the software, services, market,
-        or network conditions at its original publication date. For current operational guidance,
-        use the <a href="/wallet/">Wallet</a>, <a href="/mining/">Mining</a>,
-        <a href="/masternode/">Masternode</a>, <a href="/market/">Market</a>, and
+        This post is preserved with its original publication context. Software, services, markets,
+        and network conditions may have changed since then. Before following technical or financial
+        information, check the current <a href="/wallet/">Wallet</a>, <a href="/mining/">Mining</a>,
+        <a href="/masternode/">Masternode</a>, <a href="/market/">Market</a>, or
         <a href={verifiedLinks.explorer}>Explorer</a> pages.
       </aside>
     )}
     {isLegacyTechnicalArticle && (
       <aside class="archive-note technical-safety-notice">
         <strong>Legacy technical guide:</strong>
-        Do not run archived commands verbatim on a current wallet or node. Software versions,
-        block heights, peer IPs, download URLs, file paths, and third-party services may be obsolete.
+        Do not copy archived commands directly into a current wallet or node. Versions, block
+        heights, peer addresses, download URLs, file paths, and third-party services may be obsolete.
         Before changing wallet or blockchain files, stop the wallet cleanly and keep a separate
         backup of <code>wallet.dat</code>. Never share private keys or recovery phrases, and verify
-        current instructions before using destructive recovery commands or remote install scripts.
+        current instructions before using destructive recovery steps or remote install scripts.
       </aside>
     )}
     <Content />
