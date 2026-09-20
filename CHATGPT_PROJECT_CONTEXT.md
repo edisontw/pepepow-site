@@ -190,3 +190,29 @@ After the hand-drawn visual rollout, the site received a small architecture/navi
 - future `guides`, `learn`, and `incidents` collections remain configured
 
 Production was not changed as part of this architecture pass.
+
+
+## Announcement publisher state — 2026-09-20
+
+A lightweight authenticated announcement publisher has been added in source:
+
+- public editor route: `/admin/` (not linked from normal navigation; `noindex`)
+- authentication: GitHub OAuth web flow; GitHub handles password/2FA
+- server endpoint source: `server/admin/pepepow_admin.py`
+- protected production config: `/etc/pepepow-admin/config.json` (never commit)
+- only allowlisted GitHub usernames receive a short-lived signed session
+- OAuth user tokens are used only to verify identity and are discarded
+- repository writes use a separate fine-grained token restricted to `edisontw/pepepow-site` with Contents write permission
+- publisher creates new files only under `src/content/announcements/`
+- new announcements without a historical `legacy_url` route from their Astro slug
+- setup authority: `docs/ADMIN_PUBLISHING.md`
+
+An opt-in GitHub Actions production deployment path is also present:
+
+- workflow: `.github/workflows/deploy-production.yml`
+- server helper source: `server/deploy/pepepow-site-deploy`
+- disabled until repository variable `PRODUCTION_DEPLOY_ENABLED=true`
+- use a dedicated SSH key restricted to the single deployment helper; do not reuse a personal/server administration key
+- setup details remain in `docs/DEPLOYMENT.md`
+
+No OAuth secret, publishing token, SSH private key, or production secret is stored in Git.
