@@ -29,6 +29,7 @@ from urllib import error, parse, request
 DEFAULT_CONFIG = "/etc/pepepow-admin/config.json"
 COOKIE_SESSION = "pepepow_admin_session"
 COOKIE_STATE = "pepepow_admin_oauth_state"
+COOKIE_PKCE = "pepepow_admin_oauth_pkce"
 MAX_BODY_BYTES = 200_000
 ALLOWED_CATEGORIES = {
     "Update",
@@ -286,16 +287,23 @@ def authenticated_user(cfg: dict) -> dict:
 def oauth_login(cfg: dict) -> None:
     require_method("GET")
     state = secrets.token_urlsafe(32)
+    code_verifier = secrets.token_urlsafe(64)
+    code_challenge = b64url_encode(hashlib.sha256(code_verifier.encode("ascii")).digest())
     params = {
         "client_id": cfg["github_client_id"],
         "redirect_uri": f"{cfg['site_origin']}/admin-api?action=callback",
         "scope": "read:user",
         "state": state,
+        "code_challenge": code_challenge,
+        "code_challenge_method": "S256",
         "allow_signup": "false",
     }
     redirect(
         "https://github.com/login/oauth/authorize?" + parse.urlencode(params),
-        [cookie_header(COOKIE_STATE, state, max_age=600)],
+        [
+            cookie_header(COOKIE_STATE, state, max_age=600),
+            cookie_header(COOKIE_PKCE, code_verifier, max_age=600),
+        ],
     )
 
 
@@ -307,10 +315,14 @@ def oauth_callback(cfg: dict) -> None:
 
     cookies = get_cookies()
     state_cookie = cookies.get(COOKIE_STATE)
+    pkce_cookie = cookies.get(COOKIE_PKCE)
     expected_state = state_cookie.value if state_cookie else ""
+    code_verifier = pkce_cookie.value if pkce_cookie else ""
 
     if not code or not state or not expected_state or not hmac.compare_digest(state, expected_state):
         raise ApiError(400, "OAuth state validation failed.")
+    if not code_verifier:
+        raise ApiError(400, "OAuth PKCE validation data is missing.")
 
     _, token_payload = github_request(
         "POST",
@@ -320,6 +332,7 @@ def oauth_callback(cfg: dict) -> None:
             "client_secret": cfg["github_client_secret"],
             "code": code,
             "redirect_uri": f"{cfg['site_origin']}/admin-api?action=callback",
+            "code_verifier": code_verifier,
         },
         accept="application/json",
     )
@@ -344,6 +357,7 @@ def oauth_callback(cfg: dict) -> None:
         [
             cookie_header(COOKIE_SESSION, session, max_age=int(cfg["session_hours"]) * 3600),
             clear_cookie(COOKIE_STATE),
+            clear_cookie(COOKIE_PKCE),
         ],
     )
 
