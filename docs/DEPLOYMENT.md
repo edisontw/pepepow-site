@@ -121,3 +121,114 @@ Before significant Apache changes:
 4. reload Apache only after validation
 
 Never delete the previous release or WordPress tree as part of the same deployment step that changes the live document root.
+
+
+## GitHub Actions production deployment
+
+An opt-in workflow now exists at:
+
+`.github/workflows/deploy-production.yml`
+
+It is deliberately disabled until the repository variable below is set:
+
+```text
+PRODUCTION_DEPLOY_ENABLED=true
+```
+
+When enabled, every push to `main` triggers a dedicated SSH connection to `edison2`. The SSH key should be restricted to one forced deployment command rather than being usable as a normal shell key.
+
+The server-side helper source is:
+
+`server/deploy/pepepow-site-deploy`
+
+Install it as a root-owned executable:
+
+```bash
+cd ~/pepepow-site
+git pull --ff-only origin main
+
+sudo install -m 0755 -o root -g root \
+  server/deploy/pepepow-site-deploy \
+  /usr/local/sbin/pepepow-site-deploy
+```
+
+The helper:
+
+1. refuses deployment when tracked production-repository changes are present;
+2. fetches and fast-forwards the existing `~/pepepow-site` checkout;
+3. runs `npm ci` and `npm run build` as the `ubuntu` user;
+4. checks required static routes, including `/admin/`;
+5. copies `dist/` into a timestamped release directory;
+6. atomically repoints `/var/www/pepepow.net/current`.
+
+It does not restart Apache, reboot the host, or touch PEPEPOWd.
+
+### Restricted deployment SSH key
+
+Create a **separate** Ed25519 key for GitHub Actions. Do not reuse a personal SSH key.
+
+Install its public key in `/home/ubuntu/.ssh/authorized_keys` with a forced command:
+
+```text
+restrict,command="sudo -n /usr/local/sbin/pepepow-site-deploy" ssh-ed25519 AAAA... pepepow-github-deploy
+```
+
+Allow only that deployment helper through sudo:
+
+```bash
+sudo visudo -f /etc/sudoers.d/pepepow-site-deploy
+```
+
+Add:
+
+```text
+ubuntu ALL=(root) NOPASSWD: /usr/local/sbin/pepepow-site-deploy
+```
+
+Validate sudoers:
+
+```bash
+sudo visudo -cf /etc/sudoers.d/pepepow-site-deploy
+```
+
+The forced-command key cannot request an interactive shell or substitute another SSH command.
+
+### GitHub production settings
+
+Create a GitHub environment named `production`, then configure:
+
+Repository/environment secrets:
+
+- `PRODUCTION_SSH_KEY` — the dedicated private key
+- `PRODUCTION_KNOWN_HOSTS` — the verified SSH known-hosts line for edison2
+
+Repository/environment variables:
+
+- `PRODUCTION_SSH_HOST` — the public SSH host or address
+- `PRODUCTION_SSH_USER` — `ubuntu`
+- `PRODUCTION_DEPLOY_ENABLED` — set to `true` only after the restricted key and helper are tested
+
+Do not obtain the host key blindly inside CI. Verify the edison2 SSH host key through an already trusted connection before storing `PRODUCTION_KNOWN_HOSTS`.
+
+### Test before enabling push deployments
+
+From edison2, test the helper directly:
+
+```bash
+sudo /usr/local/sbin/pepepow-site-deploy
+```
+
+Then use the GitHub `Deploy production` workflow with `workflow_dispatch` after setting the required secrets and variables.
+
+Only after a successful controlled test should `PRODUCTION_DEPLOY_ENABLED` be set to `true`.
+
+Once enabled, the announcement publisher flow becomes:
+
+```text
+/admin/ Publish
+→ GitHub main
+→ GitHub Actions
+→ restricted SSH command on edison2
+→ pull / build / static release
+→ pepepow.net updated
+```
