@@ -6,37 +6,37 @@ import { verifiedLinks } from '../../data/verified-links';
 const communityLinks = [
   {
     title: 'Discord',
-    text: 'The main public community discussion entry point currently referenced by the PEPEPOW site.',
+    text: 'Join the main public PEPEPOW discussion channel for community conversation and support.',
     href: verifiedLinks.discord,
     label: 'Join Discord',
   },
   {
     title: 'Website source',
-    text: 'Review or contribute to the source for pepepow.net. GitHub main is the public website authority.',
+    text: 'Review or contribute to pepepow.net. The public GitHub main branch is the website’s source of truth.',
     href: verifiedLinks.websiteRepository,
     label: 'Open site repository',
   },
   {
     title: 'PEPEPOW Core',
-    text: 'Inspect the current node and wallet source, releases, issues, and technical history.',
+    text: 'Inspect PEPEPOW Core source code, releases, issues, and technical history.',
     href: verifiedLinks.coreRepository,
     label: 'Open Core repository',
   },
   {
     title: 'Announcements',
-    text: 'Browse recovered project releases, network changes, community notices, and historical decisions.',
+    text: 'Browse releases, network changes, community notices, votes, and other dated project records.',
     href: '/announcements/',
     label: 'Browse announcements',
   },
   {
     title: 'Explorer',
-    text: 'Check current public network information before treating an old announcement or guide as operationally current.',
+    text: 'Check current chain and network data before relying on an older announcement or technical guide.',
     href: verifiedLinks.explorer,
     label: 'Open Explorer',
   },
   {
     title: 'Community infrastructure',
-    text: 'Use the maintained community and lab pool entry points from the current mining guidance.',
+    text: 'Find current community and lab pool links together with the latest mining guidance.',
     href: '/mining/',
     label: 'Open mining resources',
   },
@@ -44,22 +44,22 @@ const communityLinks = [
 
 const participation = [
   ['Verify before repeating', 'Prefer current source code, releases, Explorer data, and dated announcements over screenshots or copied instructions.'],
-  ['Protect keys and recovery material', 'Never post private keys, wallet.dat files, seed phrases, masternode private keys, or RPC credentials in public support channels.'],
-  ['Preserve historical context', 'Older announcements remain useful records, but software versions, exchange availability, pools, peer addresses, and recovery steps can become obsolete.'],
-  ['Contribute reproducibly', 'For website corrections, use the public repository so changes can be reviewed, traced, and rebuilt from source.'],
+  ['Protect keys and recovery material', 'Never post private keys, wallet.dat files, seed phrases, masternode keys, or RPC credentials in public support channels.'],
+  ['Keep historical context', 'Older announcements are useful records, but versions, exchanges, pools, peer addresses, and recovery steps can become obsolete.'],
+  ['Contribute reproducibly', 'Submit website corrections through the public repository so changes can be reviewed, traced, and rebuilt from source.'],
 ];
 ---
 
 <BaseLayout
   title="Community"
-  description="PEPEPOW community links, contribution paths, source repositories, announcements, and safety guidance."
+  description="PEPEPOW community channels, public source repositories, contribution paths, announcements, and practical safety guidance."
   theme="handdrawn"
 >
   <article class="hub-page">
     <IllustratedPageHeader
       eyebrow="Community"
-      title="Participate through verifiable public channels."
-      intro="PEPEPOW is maintained across open repositories, public network services, announcements, and community discussion. Use current sources when technical or financial details matter."
+      title="Find the people, code, and public record."
+      intro="PEPEPOW is maintained through open repositories, public network services, dated announcements, and community discussion. When details matter, follow the source and check that it is current."
       image="/media/visual/handdrawn/headers/header-community-v1.webp"
       actions={[
         { label: 'Join Discord', href: verifiedLinks.discord, primary: true },
@@ -71,7 +71,7 @@ const participation = [
     <section class="hub-section" aria-labelledby="community-links-title">
       <div class="section-heading">
         <p class="eyebrow">Entry points</p>
-        <h2 id="community-links-title">Where to go.</h2>
+        <h2 id="community-links-title">Choose the right community entry point.</h2>
       </div>
       <div class="hub-card-grid">
         {communityLinks.map((item) => (
@@ -87,7 +87,7 @@ const participation = [
     <section class="hub-section" aria-labelledby="participation-title">
       <div class="section-heading">
         <p class="eyebrow">Participation</p>
-        <h2 id="participation-title">Keep community work auditable and safe.</h2>
+        <h2 id="participation-title">Keep participation open, traceable, and safe.</h2>
       </div>
       <dl class="hub-definition-list">
         {participation.map(([term, description]) => (
@@ -102,13 +102,13 @@ const participation = [
     <section class="hub-section" aria-labelledby="history-title">
       <div class="section-heading">
         <p class="eyebrow">History and governance</p>
-        <h2 id="history-title">Use the archive as evidence, not as a live status page.</h2>
+        <h2 id="history-title">The archive records what happened; current pages show what applies now.</h2>
       </div>
       <p class="hub-copy">
         Community votes, funding discussions, service changes, releases, and incident updates are
-        preserved in the announcement archive. Search the site for a topic when you need the
-        original dated record, then verify current operational state through the relevant current
-        page, repository, or Explorer.
+        preserved in the announcement archive. Use those dated records to understand decisions and
+        history, then confirm today’s operational state on the relevant current page, repository, or
+        Explorer.
       </p>
       <div class="actions">
         <a class="button secondary" href="/search/?q=vote">Search governance history</a>
