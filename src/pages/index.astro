@@ -21,26 +21,31 @@ const startItems = [
     href: '/wallet/',
     title: 'Wallets',
     text: 'Use PEPEW Light, Android, or the full PEPEPOW Core wallet.',
+    icon: '/media/visual/handdrawn/icons/icon-wallet-v1.webp',
   },
   {
     href: '/mining/',
     title: 'Mining',
     text: 'Mine HooHash V110 with current miner and pool guidance.',
+    icon: '/media/visual/handdrawn/icons/icon-mine-pickaxe-v1.webp',
   },
   {
     href: '/masternode/',
     title: 'Masternode',
     text: 'Understand collateral tiers, setup, operation, and safety.',
+    icon: '/media/visual/handdrawn/icons/icon-masternode-v1.webp',
   },
   {
     href: '/market/',
     title: 'Market',
     text: 'Check confirmed venues and PEPEW market references.',
+    icon: '/media/visual/handdrawn/icons/icon-share-v1.webp',
   },
   {
     href: '/learn/',
     title: 'Learn',
     text: 'Understand Proof of Work, wallets, blocks, and network metrics through PEPEPOW.',
+    icon: '/media/visual/handdrawn/icons/icon-guides-book-v1.webp',
   },
 ];
 
@@ -61,6 +66,7 @@ const quickLinks = [
 <BaseLayout
   title="PEPEPOW"
   description="PEPEPOW is a community-powered Proof-of-Work cryptocurrency ecosystem: wallets, HooHash mining, masternodes, network tools, and open-source development."
+  theme="handdrawn"
 >
   <div class="home-shell">
     <section class="home-hero" aria-labelledby="home-title">
@@ -76,10 +82,39 @@ const quickLinks = [
           <a class="button secondary" href="/wallet/">Get a Wallet</a>
           <a class="text-action" href="/about/">About PEPEPOW →</a>
         </div>
+        <div class="home-hero-lettering" aria-hidden="true">
+          <img
+            src="/media/visual/handdrawn/lettering/lettering-small-chain-big-community-v1.webp"
+            alt=""
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+        <span class="visually-hidden">Small Chain, Big Community</span>
       </div>
 
-      <NetworkPulse compact />
+      <div class="home-hero-art" aria-hidden="true">
+        <img
+          class="home-hero-art-image"
+          src="/media/visual/handdrawn/heroes/homepage-hero-valley-right-space-v1.webp"
+          alt=""
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <img
+          class="home-hero-signpost"
+          src="/media/visual/handdrawn/signs/signpost-mine-build-share-belong-v1.webp"
+          alt=""
+          loading="eager"
+          decoding="async"
+        />
+      </div>
     </section>
+
+    <div class="home-pulse">
+      <NetworkPulse compact />
+    </div>
 
     <section class="home-section" aria-labelledby="start-title">
       <div class="section-heading">
@@ -89,6 +124,7 @@ const quickLinks = [
       <div class="start-grid">
         {startItems.map((item) => (
           <a class="start-card" href={item.href}>
+            <img class="start-card-icon" src={item.icon} alt="" loading="lazy" decoding="async" />
             <span class="card-arrow" aria-hidden="true">↗</span>
             <h3>{item.title}</h3>
             <p>{item.text}</p>
