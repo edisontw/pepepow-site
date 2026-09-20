@@ -5,30 +5,30 @@ import IllustratedPageHeader from '../../components/IllustratedPageHeader.astro'
 import { verifiedLinks } from '../../data/verified-links';
 
 const metricGuides = [
-  ['Block height', 'The latest block number seen by the cached network monitor. A moving height is one basic sign that the chain is progressing.'],
-  ['Last block age', 'How long it has been since the latest observed block. This helps distinguish a slow chain from a stale website snapshot.'],
-  ['Block time', 'PEPEPOW targets an average block interval; individual blocks can arrive sooner or later. The pulse shows a recent rolling average.'],
-  ['Hashrate', 'An estimate of the mining work securing the network. It can vary as miners enter, leave, or switch hardware.'],
-  ['Masternodes', 'Network service nodes that participate in PEPEPOW masternode functions and reward selection. Counts and states change over time.'],
-  ['Freshness', 'The monitor reports snapshot age separately from last-block age so a stale monitor is not confused with a slow or stalled chain.'],
+  ['Block height', 'The latest block number reported by the current data source. A steadily advancing height is one basic sign that the chain is moving.'],
+  ['Last block age', 'How long it has been since the latest observed block. Read it together with data freshness so a slow chain is not confused with a stale snapshot.'],
+  ['Block time', 'Individual blocks can arrive sooner or later than the target interval. Network Pulse shows a recent rolling average rather than a promise for the next block.'],
+  ['Hashrate', 'An estimate of the mining work securing the network. It changes as miners join, leave, or move hardware between networks.'],
+  ['Masternodes', 'Service nodes that participate in PEPEPOW masternode functions and reward selection. Counts and states can change throughout the day.'],
+  ['Freshness', 'Snapshot age is shown separately from last-block age so delayed monitoring is not mistaken for a slow or stalled chain.'],
 ];
 
 const entryPoints = [
   {
     title: 'Explorer',
-    text: 'Use the PEPEPOW Explorer for current chain, block, network, masternode, and collected market information.',
+    text: 'Inspect blocks, addresses, masternodes, network activity, and collected market data in the public Explorer.',
     href: verifiedLinks.explorer,
     label: 'Open Explorer',
   },
   {
     title: 'Mining',
-    text: 'Current PEPEPOW mining uses HooHash V110. Use the mining page for current miner and pool entry points.',
+    text: 'PEPEPOW currently mines with HooHash V110. Use the Mining page for current software, pool links, and setup guidance.',
     href: '/mining/',
     label: 'Mining guide',
   },
   {
     title: 'Masternodes',
-    text: 'Use the masternode page for current collateral tiers, setup guidance, release references, and operational checks.',
+    text: 'Use the Masternode page for collateral tiers, setup steps, release references, maintenance, and status checks.',
     href: '/masternode/',
     label: 'Masternode guide',
   },
@@ -37,14 +37,14 @@ const entryPoints = [
 
 <BaseLayout
   title="Network"
-  description="PEPEPOW Network Pulse, live cached network visibility, Explorer entry points, and explanations of common network metrics."
+  description="Track PEPEPOW block height, hashrate, masternodes, block timing, and data freshness through cached public network sources."
   theme="handdrawn"
 >
   <article class="network-page">
     <IllustratedPageHeader
       eyebrow="Network"
-      title="See what the PEPEPOW network is doing."
-      intro="Network Pulse reads a small cached public summary from the existing PEPEPOW monitor. The browser never connects to wallet/node RPC, and this website does not run a second blockchain collector. If the summary is unavailable or stale, use the Explorer for direct inspection."
+      title="Follow the PEPEPOW network in real time."
+      intro="Network Pulse combines lightweight cached data from existing PEPEPOW services to show current chain activity without exposing wallet or node RPC. If a reading is delayed or unavailable, open the Explorer for a closer look."
       image="/media/visual/handdrawn/headers/header-network-pulse-v1.webp"
       actions={[
         { label: 'Open Live Explorer', href: verifiedLinks.explorer, primary: true },
@@ -57,7 +57,7 @@ const entryPoints = [
     <section class="network-page-section" aria-labelledby="entry-title">
       <div class="section-heading">
         <p class="eyebrow">Entry points</p>
-        <h2 id="entry-title">Use the right source for the task.</h2>
+        <h2 id="entry-title">Go deeper when you need more detail.</h2>
       </div>
       <div class="network-entry-grid">
         {entryPoints.map((item) => (
@@ -73,7 +73,7 @@ const entryPoints = [
     <section class="network-page-section" aria-labelledby="metrics-title">
       <div class="section-heading">
         <p class="eyebrow">Reading the network</p>
-        <h2 id="metrics-title">What the common metrics mean.</h2>
+        <h2 id="metrics-title">How to read the numbers.</h2>
       </div>
       <dl class="metric-guide-list">
         {metricGuides.map(([term, description]) => (
@@ -88,14 +88,13 @@ const entryPoints = [
     <section class="network-page-section" aria-labelledby="boundary-title">
       <div class="section-heading">
         <p class="eyebrow">Data boundary</p>
-        <h2 id="boundary-title">Cached summary only.</h2>
+        <h2 id="boundary-title">Public data, deliberately limited.</h2>
       </div>
       <p class="network-copy">
-        The public Network Pulse endpoint is an allowlisted slice of the existing monitor snapshot.
-        It exposes only the small set of chain, masternode, service-count, and freshness fields used
-        above. Peer details, block hashes, alerts, masternode records and versions, RPC diagnostics,
-        credentials, and private node data are not part of the website payload. Collection remains
-        centralized in the existing monitor.
+        Network Pulse exposes only the small set of chain, masternode, service, and freshness
+        fields needed for this page. It does not publish credentials, private node details, RPC
+        diagnostics, peer inventories, or full masternode records. Collection stays in the existing
+        monitor rather than being duplicated by the website.
       </p>
     </section>
   </article>
