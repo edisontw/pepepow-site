@@ -248,7 +248,9 @@ A successful publish:
 3. creates one Markdown file on GitHub `main`;
 4. returns the GitHub commit URL and expected public announcement URL.
 
-At this stage, publication to GitHub and production deployment remain separate operations unless the production deployment workflow is enabled.
+The repository includes an opt-in production deployment workflow. After the restricted deployment key and edison2 helper are configured and `PRODUCTION_DEPLOY_ENABLED=true`, a successful announcement commit to `main` automatically triggers pull, build, and static publication on edison2.
+
+See `docs/DEPLOYMENT.md` for the one-time deployment setup.
 
 ## Operational boundaries
 
