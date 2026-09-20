@@ -1,0 +1,11 @@
+{
+  "github_client_id": "YOUR_GITHUB_OAUTH_CLIENT_ID",
+  "github_client_secret": "YOUR_GITHUB_OAUTH_CLIENT_SECRET",
+  "github_publish_token": "YOUR_FINE_GRAINED_GITHUB_TOKEN",
+  "session_secret": "REPLACE_WITH_AT_LEAST_32_RANDOM_BYTES",
+  "allowed_users": ["edisontw"],
+  "repo": "edisontw/pepepow-site",
+  "branch": "main",
+  "site_origin": "https://pepepow.net",
+  "session_hours": 8
+}
