@@ -63,7 +63,15 @@ const isCurrent = (href: string) =>
         aria-label="PEPEPOW home"
         aria-current={currentPath === '/' ? 'page' : undefined}
       >
-        PEPEPOW
+        <img
+          class="brand-logo"
+          src="/media/legacy/2025logo.webp"
+          alt=""
+          width="44"
+          height="42"
+          decoding="async"
+        />
+        <span>PEPEPOW</span>
       </a>
       <div class="site-navigation">
         <nav class="primary-nav" aria-label="Primary">
