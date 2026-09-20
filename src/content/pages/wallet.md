@@ -1,8 +1,8 @@
 ---
 title: "Wallet"
-description: ""
+description: "Choose a PEPEW wallet, verify official sources, and follow current guidance for backups, updates, synchronization, and recovery."
 date: "2020-04-13 11:18:52"
-updated: "2026-09-19 20:25:51"
+updated: "2026-09-20 16:35:00"
 slug: "wallet"
 categories: []
 tags: []
@@ -13,33 +13,33 @@ featured: false
 migration_review: true
 ---
 
-Use a wallet that matches your needs and verify the official project URL before entering a recovery phrase or moving funds.
+Choose the wallet that fits how you use PEPEW. Before entering a recovery phrase, importing keys, or moving funds, verify that you are using the official project URL or release source.
 
-## Recommended Wallet Options
+## Wallet options
 
 ### PEPEW Light Web Wallet
 
 [Open PEPEW Light Wallet](https://light.pepepow.net/wallet/)
 
-PEPEW Light Wallet is the current recommended browser entry for PEPEPOW users. It is client-side and non-custodial: mnemonic and private-key handling remains in the browser, while the public PEPEW Light API provides read-only address/history/UTXO data and accepts already-signed transactions for broadcast.
+PEPEW Light is the recommended browser-based starting point for most users. It is client-side and non-custodial: mnemonic and private-key handling stays in the browser, while the public PEPEW Light API supplies address, history, and UTXO data and broadcasts transactions that have already been signed locally.
 
-The wallet remains a **public beta**. Start with small amounts and verify that you are using the official `light.pepepow.net` domain before entering recovery words.
+The wallet remains a **public beta**. Start with small amounts, keep your recovery phrase private, and confirm that the address bar shows the official `light.pepepow.net` domain before entering recovery words.
 
 ![](/media/legacy/2026/01/web-wallet1.png)
 
 ### Android Wallet
 
-The PEPEW Android wallet has a public **v1.0.0** release.
+The PEPEW Android wallet is available as a public **v1.0.0** release.
 
 [PEPEW Android Wallet releases](https://github.com/edisontw/pepepow-android-wallet-v2/releases)
 
-The Android wallet is non-custodial and uses PEPEW Light services for balance/history/UTXO queries and signed transaction broadcast.
+The Android wallet is non-custodial and uses PEPEW Light services for balance, history, and UTXO queries, plus broadcast of locally signed transactions.
 
 ![](/media/legacy/2025/12/android-wallet-release.png)
 
 ### Desktop Core Wallet
 
-The full PEPEPOW Core wallet remains available for Windows and Linux.
+PEPEPOW Core remains the full desktop wallet and node option for Windows and Linux.
 
 - [PEPEPOW Core releases](https://github.com/MattF42/PePe-core/releases)
 - Latest release reviewed on 19 Sep 2026: **v2.9.0.5**
@@ -63,7 +63,7 @@ wget -c https://github.com/MattF42/PePe-core/releases/download/v2.9.0.5/PEPEPOW-
 wget -c https://github.com/MattF42/PePe-core/releases/download/v2.9.0.5/PEPEPOW-v2.9.0.5-5a9debc-release-aarch64-linux-gnu.tgz -O - | tar -xz
 ```
 
-## Core Wallet Installation and Update
+## Installing or updating PEPEPOW Core
 
 1. Download the current release from the official PEPEPOW Core GitHub releases page.
 2. Confirm that the downloaded filename matches your platform and CPU architecture.
@@ -97,7 +97,7 @@ For masternode-specific startup/status commands, use the current [Masternode gui
 
 ## Sync and Recovery Safety
 
-Do **not** blindly delete the PEPEPOW data directory when troubleshooting synchronization.
+Do **not** delete the PEPEPOW data directory as a first troubleshooting step.
 
 Before any destructive recovery step:
 
@@ -107,9 +107,9 @@ Before any destructive recovery step:
 - check the current Explorer/network status to distinguish a local sync problem from a network incident
 - use a current recovery guide or ask in the PEPEPOW community if the correct recovery path is unclear
 
-Old dated blockchain bootstrap archives may remain useful for specific recovery cases, but they should not be presented as the default current download because they age quickly.
+Dated blockchain bootstrap archives can still help in specific recovery cases, but they are not the default download path because they become stale quickly.
 
-## Verification Links
+## Verify before you download
 
 - [PEPEPOW Explorer](https://explorer.pepepow.org/)
 - [PEPEW Light status/API](https://light.pepepow.net/)
