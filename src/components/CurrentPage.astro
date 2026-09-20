@@ -65,9 +65,17 @@ const pageConfigs: Record<string, {
 };
 
 const visualHeaders: Record<string, string> = {
+  about: '/media/visual/handdrawn/headers/header-about-v1.webp',
   wallet: '/media/visual/handdrawn/headers/header-wallets-v1.webp',
   mining: '/media/visual/handdrawn/headers/header-mining-v1.webp',
   masternode: '/media/visual/handdrawn/headers/header-masternode-v1.webp',
+  market: '/media/visual/handdrawn/headers/header-market-v1.webp',
+};
+
+const visualSpots: Record<string, string> = {
+  about: '/media/visual/handdrawn/spots/spot-about-journey-v1.webp',
+  mining: '/media/visual/handdrawn/spots/spot-mining-setup-v1.webp',
+  market: '/media/visual/handdrawn/spots/spot-market-verified-venues-v1.webp',
 };
 
 const slug = entry.data.slug || entry.id.replace(/\.mdx?$/, '');
@@ -82,6 +90,7 @@ const reviewed = (entry.data.updated ?? entry.data.date).toISOString().slice(0, 
 const tocHeadings = headings.filter((heading) => heading.depth === 2).slice(0, 10);
 const description = entry.data.description || config.intro;
 const headerImage = visualHeaders[slug];
+const spotImage = visualSpots[slug];
 const usesHanddrawnTheme = ['about', 'wallet', 'mining', 'masternode', 'market'].includes(slug);
 const hasToc = tocHeadings.length >= 3;
 ---
@@ -128,6 +137,11 @@ const hasToc = tocHeadings.length >= 3;
       )}
 
       <div class="current-page-body">
+        {spotImage && (
+          <div class="current-page-spot" aria-hidden="true">
+            <img src={spotImage} alt="" loading="lazy" decoding="async" />
+          </div>
+        )}
         <Content />
       </div>
     </div>
