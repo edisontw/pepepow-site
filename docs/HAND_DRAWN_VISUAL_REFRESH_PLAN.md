@@ -128,29 +128,32 @@ Do not use handwriting for long paragraphs, tables, status data, wallet safety i
 
 ---
 
-## 5. Mascot and intellectual-property guardrails
+## 5. Mascot direction and intellectual-property guardrails
 
-PEPEPOW must not depend visually on a recognizable third-party Pepe character.
-
-If a character is used, treat it as an original PEPEPOW miner-frog mascot with its own design language.
+The preferred long-term direction is an original PEPEPOW miner-frog mascot rather than making the site dependent on a third-party Pepe character. However, visual quality takes priority over forcing artificial differences that make the mascot unattractive or inconsistent.
 
 Required direction:
 
+- the yellow miner helmet is the primary recurring PEPEPOW character cue
 - small secondary presence
 - appears only occasionally
 - normally placed near a corner, edge, path, sign, or scenic foreground
-- yellow miner helmet is a recurring PEPEPOW cue
-- optional miner lamp, backpack, work gloves, boots, map, or pickaxe
+- optional miner lamp, backpack, work jacket, gloves, boots, map, or pickaxe
 - simple friendly expression
-- distinct proportions, eyes, mouth, clothing, silhouette, and pose from recognizable Pepe meme artwork
-- avoid classic Pepe facial expressions or close-up meme compositions
+- prefer original clothing, gear, pose language, proportions, and facial treatment
+- do not deliberately distort the character merely to make it look different
 - avoid making the frog mascot the site logo or dominant hero subject unless separately reviewed
 
-The yellow miner helmet alone is not enough to establish visual distinction. Generated mascot assets should add original clothing, gear, pose language, and facial proportions.
+Preferred generation path:
 
-Prefer scenes, objects, landscape, typography, icons, and network/mining metaphors over character-driven compositions.
+1. first attempt an original PEPEPOW miner-frog design with the yellow miner helmet
+2. keep the best-looking design if it is visually coherent and clearly works with the hand-drawn site
+3. if repeated original-design attempts produce an unattractive or awkward mascot, a more familiar Pepe-like frog form may be used temporarily as a visual fallback
+4. any fallback that closely resembles recognizable third-party Pepe artwork should remain small, secondary, and explicitly marked for provenance/licensing review before production release
 
-Before public release of any character-heavy asset, perform a manual visual provenance/IP review.
+The site should not sacrifice the overall visual quality merely to create forced facial or body differences. At the same time, scenery, objects, typography, icons, signs, and network/mining metaphors should carry most of the site's identity so the design does not become character-dependent.
+
+Before public release of any character-heavy or close-derivative asset, perform a manual provenance/IP review.
 
 ---
 
@@ -549,7 +552,7 @@ An asset passes when:
 - composition leaves usable whitespace where required
 - it does not contain malformed or unintended text
 - any mascot is visibly secondary
-- any mascot is distinct from recognizable Pepe meme artwork
+- any mascot follows the approved character direction; close Pepe-like fallback art is explicitly flagged for provenance/licensing review
 - it can be cropped or positioned responsively
 - it does not require the full page to become a raster image
 - it is technically suitable for optimization and web delivery
@@ -575,7 +578,7 @@ This visual refresh does not authorize:
 - adding a database or image-generation backend
 - introducing a full-screen animated background
 - turning the site into a character-first meme portal
-- copying third-party Pepe artwork
+- publishing close third-party character derivatives without provenance/licensing review
 - changing production deployment or Apache configuration solely for visual work
 
 ---
