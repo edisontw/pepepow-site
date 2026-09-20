@@ -159,4 +159,3 @@ If HiveOS shows an old Xelis algorithm, unsupported-algorithm message, or rewrit
 - Re-check pool status before reusing an old flight sheet or command.
 - Historical PEPEPOW mining posts may describe Memehash or XelisV2 and must not be used as current HooHash setup instructions.
 
-![](/media/legacy/2024/11/PEPEPOW-triumphant.webp)

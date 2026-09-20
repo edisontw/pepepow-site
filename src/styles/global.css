@@ -18,6 +18,10 @@ html {
   background: #111411;
   text-size-adjust: 100%;
 }
+
+html.handdrawn-root {
+  background: #f7f5eb;
+}
 body {
   margin: 0;
   min-height: 100vh;
@@ -1672,6 +1676,19 @@ body.handdrawn-theme {
 .handdrawn-theme .page-toc a:focus-visible {
   color: #1f3025;
   background: #f1f6eb;
+}
+
+.handdrawn-theme .current-page-body a {
+  color: #2d7444;
+}
+
+.handdrawn-theme .current-page-body a:hover,
+.handdrawn-theme .current-page-body a:focus-visible {
+  color: #1f5f35;
+}
+
+.handdrawn-theme .current-page-body li + li {
+  margin-top: .35rem;
 }
 
 .handdrawn-theme .current-page-body blockquote {
