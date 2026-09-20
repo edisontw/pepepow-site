@@ -1,0 +1,16 @@
+export const verifiedLinks = {
+  explorer: 'https://explorer.pepepow.org/',
+  explorerNetwork: 'https://explorer.pepepow.org/network',
+  coreRepository: 'https://github.com/MattF42/PePe-core',
+  coreReleases: 'https://github.com/MattF42/PePe-core/releases',
+  pepewLight: 'https://light.pepepow.net/',
+  pepewLightWallet: 'https://light.pepepow.net/wallet/',
+  androidWalletReleases: 'https://github.com/edisontw/pepepow-android-wallet-v2/releases',
+  htnMiner: 'https://htn.foztor.net/',
+  communityPool: 'https://community-pool.pepepow.org/',
+  labPool: 'https://pool.pepepow.net/',
+  discord: 'https://discord.gg/sJgDVRkBcq',
+  websiteRepository: 'https://github.com/edisontw/pepepow-site',
+  nonKycMarket: 'https://nonkyc.io/market/PEPEW_USD',
+  nestExMarket: 'https://trade.nestex.one/spot/PEPEW',
+} as const;
