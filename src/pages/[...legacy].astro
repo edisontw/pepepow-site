@@ -27,8 +27,12 @@ export async function getStaticPaths() {
         pathname = `/${slug.replace(/^\/+|\/+$/g, '')}/`;
       } else {
         const legacyUrl = entry.data.legacy_url;
-        if (!legacyUrl) return null;
-        pathname = new URL(legacyUrl).pathname;
+        if (legacyUrl) {
+          pathname = new URL(legacyUrl).pathname;
+        } else {
+          const slug = entry.data.slug || entry.id.replace(/\.mdx?$/, '');
+          pathname = `/${slug.replace(/^\\/+|\\/+$/g, '')}/`;
+        }
       }
 
       if (pathname === '/') return null;
