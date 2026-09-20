@@ -1,6 +1,6 @@
 ---
 title: "Masternode"
-description: ""
+description: "Current PEPEPOW masternode requirements, collateral tiers, Windows and Linux setup guidance, status checks, backups, and security reminders."
 date: "2020-04-13 11:18:50"
 updated: "2026-09-19 20:25:51"
 slug: "masternode"
@@ -13,54 +13,23 @@ featured: false
 migration_review: true
 ---
 
-## Masternodes play a crucial role
+## PEPEPOW Masternodes
 
-Earning rewards from governance
+A PEPEPOW masternode is a continuously available network node configured with a qualifying PEPEW collateral output. Masternodes participate in PEPEPOW network services and reward selection, and they form part of the project's governance and infrastructure model.
 
-A Masternode is a dedicated server on the PEPEPOW Crypocions network that performs advanced functions beyond the capabilities of regular nodes. These functions include instant transactions, decentralized governance, and the implementation of privacy features.
+Operators should treat the collateral transaction, masternode key, wallet backup, server access, and software version as security-sensitive operational data.
 
-Masternodes play a crucial role in the PEPEPOW Crypocions ecosystem, providing essential services and functionalities that contribute to the network's security, stability, and efficiency. By running a Masternode, participants have the opportunity to actively engage in the network and earn rewards for their contribution.
+## Current requirements
 
-## Benefits of Running a Masternode
+You can run a masternode on your own machine or use a third-party hosting service. Self-hosting gives you direct control of the node and its configuration; third-party services introduce additional custody and operational risk.
 
-### Rewards
-
-Masternode operators are rewarded with PEPEPOW Crypocions tokens for their service to the network. These rewards serve as an incentive for maintaining a robust and reliable Masternode.
-
-### Governance
-
-Masternode operators have the opportunity to participate in the decentralized governance of the PEPEPOW Crypocions network. They can vote on important proposals and decisions, contributing to the evolution and development of the ecosystem.
-
-### Enhanced Security
-
-Masternodes play a vital role in securing the network by validating and relaying transactions. Their presence helps prevent various attacks, ensuring the integrity and trustworthiness of the blockchain.
-
-### Privacy Features
-
-Masternodes enable the implementation of advanced privacy features such as PrivateSend, which enhances transaction privacy and anonymity on the network.
-
-## **Installation Guide for Masternode**
-
-Earning rewards from governance
-
-## PEPEPOW Masternode Setup Guide
-
-A clear and professional step-by-step guide for setting up a PEPEPOW Masternode on
-**Windows** or **Ubuntu/Linux**.
-
-## Overview
-
-A PEPEPOW Masternode helps support the network and, when properly configured, can earn block rewards.
-You can run a Masternode on your own machine or use a third-party hosting service.
-
-## Requirements
-
-- Tiered collateral levels: **10,000,000 / 25,000,000 / 50,000,000 / 100,000,000 PEPEW**
+- Supported collateral tiers: **10,000,000 / 25,000,000 / 50,000,000 / 100,000,000 PEPEW**
 - Higher collateral tiers receive proportionally higher reward-selection frequency
-- The latest **PEPEPOW wallet software**
-- A computer or VPS/server that can remain online **24/7**
-- A **static IP address**
-- Access to wallet configuration files
+- The current **PEPEPOW Core wallet**
+- A computer or VPS/server that can remain online continuously
+- A stable public IP address for the masternode
+- Access to the wallet and masternode configuration files
+- A separate safe backup of `wallet.dat`
 
 Wallet download:
 <https://github.com/MattF42/PePe-core/releases>
@@ -78,38 +47,42 @@ Current Core release reviewed on 19 Sep 2026: **v2.9.0.5**.
 
 ### 2. Create a Receiving Address
 
-- Open **File ? Receiving Addresses**.
+- Open **File → Receiving Addresses**.
 - Create a new address if you do not already have one.
 
 This address will be used for your Masternode collateral.
 
-### 3. Send the Collateral
+### 3. Create the Collateral Output
 
-**Send exactly 10,000,000 PEPEW**.
+Choose one supported tier and create the matching collateral output:
 
-- The amount must be sent in **one single transaction**.
-- The destination address should have **zero balance before receiving the collateral**.
+- **10,000,000 PEPEW**
+- **25,000,000 PEPEW**
+- **50,000,000 PEPEW**
+- **100,000,000 PEPEW**
+
+Use the exact amount for the selected tier and keep the collateral as a dedicated output. Do not split one masternode tier across several smaller outputs.
 
 ### 4. Enable the Masternode Tab
 
-- Go to **Settings ? Options ? Wallet**.
+- Go to **Settings → Options → Wallet**.
 - Enable the **Masternode** tab.
 - Restart the wallet.
 
-### 5. Generate the Masternode Output and Private Key
+### 5. Generate the Masternode Output and Key
 
-Open **Tools ? Debug Console** and run:
+Open **Tools → Debug Console** and run:
 
 ```
 masternode outputs
 masternode genkey
 ```
 
-Save both the **transaction output** and the **masternode private key**.
+Record the collateral transaction output and the generated masternode key in a secure place. Do not post the masternode key in public support channels.
 
 ### 6. Edit `PEPEPOW.conf`
 
-Open **Tools ? Open Wallet Configuration File** and add:
+Open **Tools → Open Wallet Configuration File** and add:
 
 ```
 masternode=1
@@ -119,7 +92,7 @@ externalip=<Your_Static_IP>
 
 ### 7. Edit `masternode.conf`
 
-Open **Tools ? Open Masternode Configuration File** and add one line:
+Open **Tools → Open Masternode Configuration File** and add one line:
 
 ```
 <Node_Name> <Static_IP>:8833 <Private_Key> <Transaction_Output>
@@ -233,13 +206,17 @@ nano masternode.conf
 ./PEPEPOW-cli masternodelist info "<Your_IP>"
 ```
 
-### 10. Backup Your Wallet
+### 10. Back Up Your Wallet
 
-Always back up `wallet.dat` after setup.
+Always keep a separate copy of `wallet.dat` before and after configuration changes. Run the copy command from your local computer, not from the masternode server.
 
+Example:
+
+```bash
+scp -i <Your_Private_Key>.key ubuntu@<Your_IP>:/home/ubuntu/.PEPEPOWcore/wallet.dat ./wallet.dat
 ```
-scp -i <Your_Private_Key>.key ubuntu@<Your_IP>:/home/ubuntu/.PEPEPOWcore/wallet.dat C:Users<Your_User>Downloadswallet.dat
-```
+
+Store the backup somewhere separate from the VPS and protect it as sensitive wallet data.
 
 ## Third-Party Masternode Services
 
@@ -250,17 +227,17 @@ Third-party services change independently of PEPEPOW. Never infer that a service
 
 Do not send masternode collateral or private keys to a third-party service until you understand its custody model, withdrawal process, fees, and security requirements.
 
-## Final Notes
+## Final checks
 
-A properly configured Masternode helps strengthen the PEPEPOW network while allowing operators to participate in rewards and ecosystem support.
+Before starting or restarting a masternode, confirm:
 
-**Before starting, make sure:**
+- the selected collateral tier is represented by the correct dedicated output;
+- the node is fully synchronized;
+- the public IP and masternode key are configured correctly;
+- `wallet.dat` has a separate backup;
+- the current Core release notes do not require an additional protocol or restart step;
+- the masternode key has not been exposed in public support channels.
 
-- Your collateral is sent correctly
-- Your node is fully synced
-- Your IP and private key are configured correctly
-- Your wallet is backed up safely
-- Your masternode private key is never shared with a website, support account, or hosting provider unless that provider's documented setup explicitly requires custody and you understand the risk
+Reward timing is not fixed. Verify current masternode state through the [Network page](/network/) or the [PEPEPOW Explorer](https://explorer.pepepow.org/network).
 
-For additional help, join the
-**PEPEPOW Discord community**.
+For community support, use the current links on the [Community page](/community/).
