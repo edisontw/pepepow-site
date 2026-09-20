@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REPO="/home/ubuntu/pepepow-site"
+RELEASE_ROOT="/var/www/pepepow.net/releases"
+CURRENT_LINK="/var/www/pepepow.net/current"
+BUILD_USER="ubuntu"
+
+log() {
+  printf '[pepepow-deploy] %s\n' "$*"
+}
+
+if [[ ! -d "$REPO/.git" ]]; then
+  log "repository not found: $REPO"
+  exit 1
+fi
+
+if [[ -n "$(sudo -u "$BUILD_USER" -H git -C "$REPO" status --porcelain --untracked-files=no)" ]]; then
+  log "tracked local changes detected; refusing deployment"
+  exit 1
+fi
+
+log "fetching GitHub main"
+sudo -u "$BUILD_USER" -H git -C "$REPO" fetch --prune origin main
+sudo -u "$BUILD_USER" -H git -C "$REPO" checkout main
+sudo -u "$BUILD_USER" -H git -C "$REPO" merge --ff-only origin/main
+
+SHA="$(sudo -u "$BUILD_USER" -H git -C "$REPO" rev-parse HEAD)"
+SHORT_SHA="${SHA:0:12}"
+
+log "installing dependencies and building ${SHORT_SHA}"
+sudo -u "$BUILD_USER" -H bash -lc "cd '$REPO' && npm ci && npm run build"
+
+for required in \
+  "$REPO/dist/index.html" \
+  "$REPO/dist/about/index.html" \
+  "$REPO/dist/network/index.html" \
+  "$REPO/dist/announcements/index.html" \
+  "$REPO/dist/admin/index.html"
+do
+  if [[ ! -f "$required" ]]; then
+    log "required build output missing: $required"
+    exit 1
+  fi
+done
+
+STAMP="$(date -u +%Y%m%d-%H%M%S)"
+RELEASE="${RELEASE_ROOT}/${STAMP}-${SHORT_SHA}"
+
+log "publishing ${RELEASE}"
+mkdir -p "$RELEASE"
+cp -a "$REPO/dist/." "$RELEASE/"
+ln -sfn "$RELEASE" "$CURRENT_LINK"
+
+log "deployment complete: ${SHA}"
