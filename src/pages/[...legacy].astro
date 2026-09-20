@@ -31,7 +31,7 @@ export async function getStaticPaths() {
           pathname = new URL(legacyUrl).pathname;
         } else {
           const slug = entry.data.slug || entry.id.replace(/\.mdx?$/, '');
-          pathname = `/${slug.replace(/^\\/+|\\/+$/g, '')}/`;
+          pathname = `/${slug.replace(/^\/+|\/+$/g, '')}/`;
         }
       }
 
