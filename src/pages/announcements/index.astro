@@ -21,24 +21,24 @@ const routeFor = (entry: (typeof announcements)[number]) => {
 
 <BaseLayout
   title="Announcements"
-  description="PEPEPOW announcements, releases, network updates, and historical community notices."
+  description="PEPEPOW releases, network updates, wallet and mining notices, community announcements, and preserved project history."
   theme="handdrawn"
 >
   <article class="news-archive">
     <header class="news-archive-header">
       <p class="eyebrow">PEPEPOW News</p>
-      <h1>Announcements</h1>
+      <h1>Project news and announcements</h1>
       <p class="lede">
-        Releases, network changes, wallet and mining updates, community notices, and the recovered
-        PEPEPOW announcement archive.
+        Follow PEPEPOW releases, network changes, wallet and mining updates, community notices,
+        and the preserved record of earlier project announcements.
       </p>
       <aside class="archive-note">
         <strong>Historical archive:</strong>
-        Older posts are preserved with their original publication dates and may describe software,
-        exchanges, pools, services, or network conditions that are no longer current. Use the
-        current Wallet, Mining, Masternode, Market, and Explorer pages for operational information.
+        Older posts keep their original publication dates and may describe software, exchanges,
+        pools, services, or network conditions that have since changed. Use the current Wallet,
+        Mining, Masternode, Market, and Network pages before acting on operational information.
       </aside>
-      <p class="archive-count">{announcements.length} recovered announcements</p>
+      <p class="archive-count">{announcements.length} preserved announcements</p>
     </header>
 
     {years.map((year) => {
