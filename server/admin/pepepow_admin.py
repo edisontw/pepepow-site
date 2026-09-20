@@ -196,16 +196,9 @@ def clear_cookie(name: str) -> tuple[str, str]:
 
 
 def current_route() -> str:
-    path = os.environ.get("PATH_INFO", "")
-    if path:
-        return "/" + path.lstrip("/")
-    uri = os.environ.get("REQUEST_URI", "")
-    parsed_path = parse.urlsplit(uri).path
-    prefix = "/admin-api"
-    if parsed_path.startswith(prefix):
-        remainder = parsed_path[len(prefix):]
-        return "/" + remainder.lstrip("/")
-    return "/"
+    params = parse.parse_qs(os.environ.get("QUERY_STRING", ""), keep_blank_values=True)
+    action = (params.get("action") or [""])[0].strip().lower()
+    return "/" + action if action else "/"
 
 
 def require_method(method: str) -> None:
@@ -245,9 +238,10 @@ def github_request(
     token: str | None = None,
     data: dict | None = None,
     form: dict | None = None,
+    accept: str = "application/vnd.github+json",
 ) -> tuple[int, dict]:
     headers = {
-        "Accept": "application/vnd.github+json",
+        "Accept": accept,
         "User-Agent": "pepepow.net-admin",
         "X-GitHub-Api-Version": "2022-11-28",
     }
@@ -294,7 +288,7 @@ def oauth_login(cfg: dict) -> None:
     state = secrets.token_urlsafe(32)
     params = {
         "client_id": cfg["github_client_id"],
-        "redirect_uri": f"{cfg['site_origin']}/admin-api/callback",
+        "redirect_uri": f"{cfg['site_origin']}/admin-api?action=callback",
         "scope": "read:user",
         "state": state,
         "allow_signup": "false",
@@ -325,8 +319,9 @@ def oauth_callback(cfg: dict) -> None:
             "client_id": cfg["github_client_id"],
             "client_secret": cfg["github_client_secret"],
             "code": code,
-            "redirect_uri": f"{cfg['site_origin']}/admin-api/callback",
+            "redirect_uri": f"{cfg['site_origin']}/admin-api?action=callback",
         },
+        accept="application/json",
     )
 
     access_token = token_payload.get("access_token")
