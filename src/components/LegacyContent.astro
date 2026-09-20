@@ -1,6 +1,7 @@
 ---
 import { render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { verifiedLinks } from '../data/verified-links';
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
@@ -37,7 +38,7 @@ const published = entry.data.date instanceof Date
         or network conditions at its original publication date. For current operational guidance,
         use the <a href="/wallet/">Wallet</a>, <a href="/mining/">Mining</a>,
         <a href="/masternode/">Masternode</a>, <a href="/market/">Market</a>, and
-        <a href="https://explorer.pepepow.org/">Explorer</a> pages.
+        <a href={verifiedLinks.explorer}>Explorer</a> pages.
       </aside>
     )}
     {isLegacyTechnicalArticle && (
