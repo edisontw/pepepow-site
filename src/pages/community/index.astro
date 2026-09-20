@@ -1,24 +1,25 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import IllustratedPageHeader from '../../components/IllustratedPageHeader.astro';
+import { verifiedLinks } from '../../data/verified-links';
 
 const communityLinks = [
   {
     title: 'Discord',
     text: 'The main public community discussion entry point currently referenced by the PEPEPOW site.',
-    href: 'https://discord.gg/sJgDVRkBcq',
+    href: verifiedLinks.discord,
     label: 'Join Discord',
   },
   {
     title: 'Website source',
     text: 'Review or contribute to the source for pepepow.net. GitHub main is the public website authority.',
-    href: 'https://github.com/edisontw/pepepow-site',
+    href: verifiedLinks.websiteRepository,
     label: 'Open site repository',
   },
   {
     title: 'PEPEPOW Core',
     text: 'Inspect the current node and wallet source, releases, issues, and technical history.',
-    href: 'https://github.com/MattF42/PePe-core',
+    href: verifiedLinks.coreRepository,
     label: 'Open Core repository',
   },
   {
@@ -30,7 +31,7 @@ const communityLinks = [
   {
     title: 'Explorer',
     text: 'Check current public network information before treating an old announcement or guide as operationally current.',
-    href: 'https://explorer.pepepow.org/',
+    href: verifiedLinks.explorer,
     label: 'Open Explorer',
   },
   {
@@ -61,9 +62,9 @@ const participation = [
       intro="PEPEPOW is maintained across open repositories, public network services, announcements, and community discussion. Use current sources when technical or financial details matter."
       image="/media/visual/handdrawn/headers/header-community-v1.webp"
       actions={[
-        { label: 'Join Discord', href: 'https://discord.gg/sJgDVRkBcq', primary: true },
-        { label: 'Website source', href: 'https://github.com/edisontw/pepepow-site' },
-        { label: 'Core source', href: 'https://github.com/MattF42/PePe-core' },
+        { label: 'Join Discord', href: verifiedLinks.discord, primary: true },
+        { label: 'Website source', href: verifiedLinks.websiteRepository },
+        { label: 'Core source', href: verifiedLinks.coreRepository },
       ]}
     />
 
