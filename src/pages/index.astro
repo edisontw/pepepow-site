@@ -21,31 +21,31 @@ const startItems = [
   {
     href: '/wallet/',
     title: 'Wallets',
-    text: 'Use PEPEW Light, Android, or the full PEPEPOW Core wallet.',
+    text: 'Choose a browser, Android, or full Core wallet and start with current safety guidance.',
     icon: '/media/visual/handdrawn/icons/icon-wallet-v1.webp',
   },
   {
     href: '/mining/',
     title: 'Mining',
-    text: 'Mine HooHash V110 with current miner and pool guidance.',
+    text: 'Start mining HooHash V110 with current software, pool, and setup references.',
     icon: '/media/visual/handdrawn/icons/icon-mine-pickaxe-v1.webp',
   },
   {
     href: '/masternode/',
     title: 'Masternode',
-    text: 'Understand collateral tiers, setup, operation, and safety.',
+    text: 'Learn the collateral tiers, setup flow, operating checks, and backup essentials.',
     icon: '/media/visual/handdrawn/icons/icon-masternode-v1.webp',
   },
   {
     href: '/market/',
     title: 'Market',
-    text: 'Check confirmed venues and PEPEW market references.',
+    text: 'Find current PEPEW market references and confirmed third-party venues.',
     icon: '/media/visual/handdrawn/icons/icon-market-v1.webp',
   },
   {
     href: '/learn/',
     title: 'Learn',
-    text: 'Understand Proof of Work, wallets, blocks, and network metrics through PEPEPOW.',
+    text: 'Learn Proof of Work, wallets, blocks, and network metrics through practical PEPEPOW examples.',
     icon: '/media/visual/handdrawn/icons/icon-guides-book-v1.webp',
   },
 ];
@@ -66,7 +66,7 @@ const quickLinks = [
 
 <BaseLayout
   title="PEPEPOW"
-  description="PEPEPOW is a community-powered Proof-of-Work cryptocurrency ecosystem: wallets, HooHash mining, masternodes, network tools, and open-source development."
+  description="PEPEPOW is a community-powered Proof-of-Work network for PEPEW wallets, HooHash mining, masternodes, open-source tools, and transparent network data."
   theme="handdrawn"
 >
   <div class="home-shell">
@@ -78,8 +78,8 @@ const quickLinks = [
           <span class="home-hero-title-line">Proof of Work.</span>
         </h1>
         <p class="home-hero-lede">
-          Open source, practical, and maintained by the community. Use a wallet, mine PEPEW,
-          operate a masternode, or inspect the network directly.
+          A small, open-source Proof-of-Work network built and maintained by its community. Get a
+          wallet, mine PEPEW, run a masternode, or inspect the chain yourself.
         </p>
         <div class="actions">
           <a class="button" href="/network/">Explore Network</a>
@@ -116,7 +116,7 @@ const quickLinks = [
     <section class="home-section" aria-labelledby="start-title">
       <div class="section-heading">
         <p class="eyebrow">Start here</p>
-        <h2 id="start-title">Choose what you want to do.</h2>
+        <h2 id="start-title">Pick a place to start.</h2>
       </div>
       <div class="start-grid">
         {startItems.map((item) => (
@@ -134,7 +134,7 @@ const quickLinks = [
       <div class="section-heading section-heading-row">
         <div>
           <p class="eyebrow">PEPEPOW News</p>
-          <h2 id="latest-title">Latest from the archive.</h2>
+          <h2 id="latest-title">Latest from PEPEPOW.</h2>
         </div>
         <a class="text-action" href="/announcements/">All announcements →</a>
       </div>
@@ -160,15 +160,15 @@ const quickLinks = [
         })}
       </div>
       <p class="archive-context">
-        Announcement pages preserve their original publication context. For current operational
-        instructions, use the Wallet, Mining, Masternode, Market, and Explorer pages.
+        Announcements keep their original publication dates and context. For up-to-date setup or
+        operational guidance, use the Wallet, Mining, Masternode, Market, and Network pages.
       </p>
     </section>
 
     <section class="home-section" aria-labelledby="links-title">
       <div class="section-heading">
-        <p class="eyebrow">Verified entry points</p>
-        <h2 id="links-title">Useful PEPEPOW links.</h2>
+        <p class="eyebrow">Useful entry points</p>
+        <h2 id="links-title">Project tools, services, and sources.</h2>
       </div>
       <div class="quick-links" aria-label="Useful PEPEPOW links">
         {quickLinks.map(([label, href]) => (
