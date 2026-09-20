@@ -30,7 +30,7 @@ Use this direction for all assets unless a prompt explicitly overrides it:
 
 Create artwork for the PEPEPOW website in a clean hand-drawn editorial illustration style with restrained handwritten accents. Use a warm white background, fresh natural greens, warm wood tones, pale sky blue, muted mountain blue-grey, and dark ink outlines. The mood is friendly, open, community-built, optimistic, practical, and trustworthy. Use slightly imperfect organic linework with watercolor, gouache, or colored-pencil-like fills. Keep compositions airy and suitable for a real modern website.
 
-If a mascot appears, use an original small green miner-frog mascot designed specifically for PEPEPOW. Give it a yellow miner helmet and optionally a miner lamp, backpack, work gloves, boots, map, or pickaxe. Make its facial proportions, eyes, mouth, silhouette, clothing, and poses distinct from recognizable Pepe meme artwork. Keep the mascot secondary, small in scale, and usually near a corner or edge. Do not create a recognizable Pepe meme face or a direct copy of third-party Pepe artwork.
+If a mascot appears, first try an original small green PEPEPOW miner-frog mascot with a yellow miner helmet. The yellow miner helmet is mandatory for the recurring character cue; optional details include a miner lamp, backpack, work jacket, gloves, boots, map, or pickaxe. Prefer original clothing, gear, pose language, proportions, and facial treatment, but do not deliberately distort the character into an unattractive design merely to make it different. Keep the mascot secondary, small in scale, and usually near a corner or edge. If the original redesign repeatedly looks awkward, a more familiar Pepe-like frog form may be used as a temporary fallback reference, still with the yellow miner helmet and still secondary; such fallback assets require manual provenance/licensing review before production use.
 
 Avoid dark cyberpunk, casino styling, neon overload, glossy 3D mascot rendering, photorealism, aggressive meme expressions, dense fake UI, excessive text, clutter, or full-screen poster composition.
 
@@ -454,7 +454,7 @@ Regenerate an item if any of the following occurs:
 - unexpected extra words
 - style shifts to 3D, photorealistic, anime, cyberpunk, or meme-heavy
 - character becomes the focal point when it should be secondary
-- character strongly resembles recognizable Pepe meme artwork
+- character unintentionally drifts into a recognizable Pepe-like form when the prompt specifically requests the original-design path; a familiar-form fallback is allowed only when deliberately selected after review
 - composition has no usable whitespace
 - transparent asset includes unwanted scenery
 - icons are inconsistent in stroke weight or palette
