@@ -42,6 +42,7 @@ Authentication:
 
 - GitHub handles account authentication and 2FA.
 - OAuth requests only `read:user`.
+- The OAuth authorization-code flow uses PKCE (`S256`) in addition to the `state` check.
 - The OAuth access token is used once to read the GitHub login name and is then discarded.
 - Only GitHub usernames listed in `allowed_users` receive a PEPEPOW publisher session.
 - The publisher session is an HMAC-signed, short-lived, Secure + HttpOnly cookie.
@@ -69,6 +70,8 @@ Use:
 - Application name: `PEPEPOW Publisher`
 - Homepage URL: `https://pepepow.net/admin/`
 - Authorization callback URL: `https://pepepow.net/admin-api?action=callback`
+
+Do not enable callback wildcard matching for this app; the publisher needs only this exact callback.
 
 After creation, note:
 
