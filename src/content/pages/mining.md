@@ -1,8 +1,8 @@
 ---
 title: "Mining"
-description: ""
+description: "Mine PEPEW with current HooHash V110 software, pool references, setup steps, HiveOS guidance, and practical safety checks."
 date: "2020-04-13 11:18:48"
-updated: "2026-09-19 20:25:51"
+updated: "2026-09-20 16:35:00"
 slug: "mining"
 categories: []
 tags: []
@@ -13,37 +13,35 @@ featured: false
 migration_review: true
 ---
 
-## Earn and participate in the network through mining
+## Mine PEPEW and help secure the network
 
-Join the Mining Community
+Mining is how PEPEPOW turns computational work into new blocks and network security. Miners compete to find valid blocks, help confirm transactions, and receive the applicable PEPEW block reward when they succeed.
 
-Mining is the process by which new PEPEW coins are created and transactions are validated and added to the blockchain. As a decentralized network, PEPEPOW relies on miners to secure and maintain its blockchain.
+You can participate with supported CPU or GPU hardware, either through a pool or other current mining infrastructure. The sections below focus on today’s HooHash V110 setup rather than older Memehash or XelisV2 instructions.
 
-Become part of the PEPEPOW mining community and contribute to the network's security and stability. Whether you're a new miner or an experienced operator, mining PEPEW provides a direct way to participate in Proof of Work.
-
-## Start Mining
+## How mining works
 
 ### How Mining Works
 
-Mining performs Proof-of-Work computations to validate transactions and create new blocks. Miners compete to find valid blocks, and a successful block earns the applicable PEPEW block reward.
+PEPEPOW miners perform HooHash V110 Proof-of-Work computations and submit valid work to the network or a mining pool. A valid block extends the chain and earns the applicable block reward.
 
 ![](/media/legacy/2024/02/P-coin4-1.png)
 
 ### Mining Pools
 
-Due to the competitive nature of mining, many miners join mining pools to combine their resources and increase their chances of successfully mining blocks. Mining pools distribute rewards among participants based on their contribution to the pool's computational power.
+Mining pools combine work from many miners so rewards can be distributed more regularly than solo mining typically allows. Each pool sets its own fees, payout policy, and connection details, so verify those terms before connecting.
 
 ### Mining Equipment
 
-To mine PEPEW, miners use suitable CPU or GPU hardware according to the miner build. These rigs use central processing units (CPUs) or graphics processing units (GPUs), depending on the miner build and hardware.
+HTN Miner provides builds for several CPU and GPU environments. Choose the build that matches your hardware and operating system rather than reusing an older PEPEPOW miner package.
 
 ### Rewards
 
-Miners receive PEPEW block rewards and applicable transaction fees for successfully mined blocks. These rewards serve as an incentive for miners to contribute their computational power to secure the network.
+Successful blocks pay the applicable PEPEW block reward and transaction fees according to current network rules. Pool miners receive their share according to the pool’s payout method.
 
-## PEPEPOW Mining Quick Guide
+## PEPEPOW mining quick start
 
-Current operational details below were reviewed against the HooHash/HTN miner documentation on **19 Sep 2026**.
+The operational details below were reviewed against the HooHash/HTN miner documentation on **19 Sep 2026**.
 
 - **Algorithm:** HooHash V110 (PEPEPOW variant)
 - **Recommended miner source:** [HTN Miner downloads](https://htn.foztor.net/)
@@ -59,7 +57,7 @@ HTN currently provides several builds:
 - `hoo_gpu_amd` — AMD GPU miner
 - `hoo_cpu_arm` — ARM64 CPU miner, including supported Linux/Termux environments
 
-Always use the current download page rather than copying an old versioned binary from a historical announcement.
+Use the current download page instead of copying a versioned binary or command from an older announcement.
 
 ### Download Mining Software
 
@@ -79,7 +77,7 @@ cd hoo_gpu
 
 For AMD or ARM64, use the matching current package from the [HTN Miner download page](https://htn.foztor.net/).
 
-### Basic Mining Flow
+### Basic mining flow
 
 1. Create or choose a PEPEPOW wallet.
 2. Copy your own PEPEW receiving address.
@@ -132,7 +130,7 @@ A current PEPEW HooHash pool page is available. Its displayed command examples m
 
 [MiningPoolStats — PEPEPOW](https://miningpoolstats.stream/pepepow)
 
-Other third-party endpoints can change over time. They should not be treated as current merely because they appear in an older PEPEPOW guide. Verify the pool page, algorithm, wallet format, fee, payout policy, and Stratum endpoint before connecting.
+Third-party pools can change or disappear. Do not assume a pool is current because it appears in an older PEPEPOW guide; verify the algorithm, wallet format, fee, payout policy, and Stratum endpoint before connecting.
 
 ### HiveOS
 
@@ -151,11 +149,11 @@ Suggested baseline:
 
 If HiveOS shows an old Xelis algorithm, unsupported-algorithm message, or rewrites the connection to a legacy WebSocket/Xelis preset, the worker is using the wrong miner configuration.
 
-### Safety Reminder
+### Before you start
 
 - Use your own wallet address.
 - Verify accepted shares on the pool dashboard.
-- Download miners only from the current trusted project source.
+- Download miner software only from the current source referenced by this guide.
 - Re-check pool status before reusing an old flight sheet or command.
 - Historical PEPEPOW mining posts may describe Memehash or XelisV2 and must not be used as current HooHash setup instructions.
 
