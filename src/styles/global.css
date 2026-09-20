@@ -71,10 +71,19 @@ img { max-width: 100%; }
 }
 .brand {
   flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
   color: var(--accent);
   font-weight: 800;
   letter-spacing: .08em;
   text-decoration: none;
+}
+.brand-logo {
+  display: block;
+  width: 2.65rem;
+  height: auto;
+  flex: 0 0 auto;
 }
 .site-navigation {
   min-width: 0;
