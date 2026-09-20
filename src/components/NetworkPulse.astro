@@ -4,61 +4,87 @@ interface Props {
 }
 
 const { compact = false } = Astro.props;
-const endpoint = 'https://explorer.pepepow.net/monitor/api/public-summary';
+const lightEndpoint = 'https://light.pepepow.net/api/status';
+const monitorEndpoint = 'https://explorer.pepepow.net/monitor/api/public-summary';
 const titleId = compact ? 'home-network-pulse-title' : 'network-pulse-title';
 ---
 
 <section
   class:list={['network-pulse', { 'network-pulse-compact': compact }]}
   data-network-pulse
-  data-endpoint={endpoint}
+  data-compact={compact ? 'true' : 'false'}
+  data-light-endpoint={lightEndpoint}
+  data-monitor-endpoint={monitorEndpoint}
   aria-labelledby={titleId}
 >
   <header class="network-pulse-header">
     <div>
       <p class="eyebrow">Network Pulse</p>
-      <h2 id={titleId}>{compact ? 'Live network summary.' : 'Current network summary.'}</h2>
+      <h2 id={titleId}>{compact ? 'Live network heartbeat.' : 'Current network summary.'}</h2>
     </div>
     <span class="network-pulse-status is-checking" data-pulse-status aria-live="polite">
       Checking…
     </span>
   </header>
 
-  <div class="network-pulse-grid">
-    <div class="network-pulse-metric">
-      <span>Block height</span>
-      <strong data-pulse-field="height">—</strong>
+  {compact ? (
+    <div class="network-pulse-grid">
+      <div class="network-pulse-metric">
+        <span>Block height</span>
+        <strong data-pulse-field="height">—</strong>
+      </div>
+      <div class="network-pulse-metric">
+        <span>Light API</span>
+        <strong data-pulse-field="light-api">—</strong>
+      </div>
+      <div class="network-pulse-metric">
+        <span>ElectrumX</span>
+        <strong data-pulse-field="electrumx">—</strong>
+      </div>
+      <div class="network-pulse-metric">
+        <span>Status age</span>
+        <strong data-pulse-field="status-age">—</strong>
+      </div>
     </div>
-    <div class="network-pulse-metric">
-      <span>Hashrate</span>
-      <strong data-pulse-field="hashrate">—</strong>
+  ) : (
+    <div class="network-pulse-grid">
+      <div class="network-pulse-metric">
+        <span>Block height</span>
+        <strong data-pulse-field="height">—</strong>
+      </div>
+      <div class="network-pulse-metric">
+        <span>Hashrate</span>
+        <strong data-pulse-field="hashrate">—</strong>
+      </div>
+      <div class="network-pulse-metric">
+        <span>Masternodes</span>
+        <strong data-pulse-field="masternodes">—</strong>
+      </div>
+      <div class="network-pulse-metric">
+        <span>Last block</span>
+        <strong data-pulse-field="last-block">—</strong>
+      </div>
+      <div class="network-pulse-metric pulse-secondary">
+        <span>8 min block avg.</span>
+        <strong data-pulse-field="block-time">—</strong>
+      </div>
+      <div class="network-pulse-metric pulse-secondary">
+        <span>Services</span>
+        <strong data-pulse-field="services">—</strong>
+      </div>
     </div>
-    <div class="network-pulse-metric">
-      <span>Masternodes</span>
-      <strong data-pulse-field="masternodes">—</strong>
-    </div>
-    <div class="network-pulse-metric">
-      <span>Last block</span>
-      <strong data-pulse-field="last-block">—</strong>
-    </div>
-    <div class="network-pulse-metric pulse-secondary">
-      <span>8 min block avg.</span>
-      <strong data-pulse-field="block-time">—</strong>
-    </div>
-    <div class="network-pulse-metric pulse-secondary">
-      <span>Services</span>
-      <strong data-pulse-field="services">—</strong>
-    </div>
-  </div>
+  )}
 
   <p class="network-pulse-meta" data-pulse-meta aria-live="polite">
-    Live summary will appear when the cached monitor endpoint is available.
-    <a href="https://explorer.pepepow.org/">Open Explorer</a>
+    {compact
+      ? 'The homepage heartbeat uses the cached PEPEW Light status API.'
+      : 'Block height prefers PEPEW Light; aggregate network metrics use the cached Explorer monitor.'}
   </p>
 
   <div class="network-pulse-links">
     <span>Proof of Work: <strong>HooHash V110</strong></span>
     <a href="/network/">Network details</a>
+    <a href="https://light.pepepow.net/">PEPEW Light ↗</a>
     <a href="https://explorer.pepepow.org/">Explorer ↗</a>
   </div>
 </section>
@@ -88,9 +114,16 @@ const titleId = compact ? 'home-network-pulse-title' : 'network-pulse-title';
     if (!(root instanceof HTMLElement) || root.dataset.pulseBound === 'true') return;
     root.dataset.pulseBound = 'true';
 
-    const endpoint = root.dataset.endpoint;
+    const compact = root.dataset.compact === 'true';
+    const lightEndpoint = root.dataset.lightEndpoint;
+    const monitorEndpoint = root.dataset.monitorEndpoint;
     const statusNode = root.querySelector('[data-pulse-status]');
     const metaNode = root.querySelector('[data-pulse-meta]');
+
+    let lightData = null;
+    let monitorData = null;
+    let lightHealthy = false;
+    let monitorHealthy = false;
 
     const setField = (name, value) => {
       const node = root.querySelector('[data-pulse-field="' + name + '"]');
@@ -104,59 +137,91 @@ const titleId = compact ? 'home-network-pulse-title' : 'network-pulse-title';
       root.dataset.pulseState = state;
     };
 
-    const render = (data) => {
-      setField('height', formatInteger(data.height));
-      setField('hashrate', data.hashrate_display || '—');
+    const renderCompact = () => {
+      const electrumx = lightData?.electrumx || {};
+      setField('height', formatInteger(electrumx.height));
+      setField('light-api', lightHealthy ? 'Online' : 'Unavailable');
+      setField('electrumx', electrumx.connected ? 'Connected' : 'Disconnected');
+      setField('status-age', formatSeconds(lightData?.cache_age_seconds));
+
+      if (lightHealthy && electrumx.connected) {
+        const age = Number(lightData?.cache_age_seconds);
+        const delayed = Number.isFinite(age) && age > 60;
+        setState(delayed ? 'delayed' : 'live', delayed ? 'Delayed' : 'Live');
+      } else {
+        setState('unavailable', 'Unavailable');
+      }
+
+      if (metaNode) {
+        const age = formatSeconds(lightData?.cache_age_seconds);
+        metaNode.textContent = lightHealthy
+          ? 'PEPEW Light / ElectrumX · cached status age ' + age + ' · refreshes every 60 s.'
+          : 'PEPEW Light status is temporarily unavailable. Static site content remains available.';
+      }
+    };
+
+    const renderFull = () => {
+      const lightHeight = lightHealthy ? lightData?.electrumx?.height : null;
+      const monitorHeight = monitorData?.height;
+      setField('height', formatInteger(lightHeight ?? monitorHeight));
+      setField('hashrate', monitorData?.hashrate_display || '—');
       setField(
         'masternodes',
-        formatInteger(data.masternode_enabled) + ' / ' + formatInteger(data.masternode_total),
+        monitorData
+          ? formatInteger(monitorData.masternode_enabled) + ' / ' + formatInteger(monitorData.masternode_total)
+          : '—',
       );
-      setField('last-block', formatSeconds(data.last_block_age_seconds));
-      setField('block-time', formatSeconds(data.avg_block_time_8m));
-      setField('services', formatStatus(data.services?.overall_status));
+      setField('last-block', formatSeconds(monitorData?.last_block_age_seconds));
+      setField('block-time', formatSeconds(monitorData?.avg_block_time_8m));
+      setField('services', monitorData ? formatStatus(monitorData.services?.overall_status) : '—');
 
-      const freshness = data.freshness || {};
-      const delayed =
-        Boolean(data.stale) ||
-        freshness.overall_status !== 'normal' ||
-        freshness.snapshot_status !== 'normal';
+      const freshness = monitorData?.freshness || {};
+      const monitorDelayed =
+        Boolean(monitorData?.stale) ||
+        (monitorData && freshness.overall_status !== 'normal') ||
+        (monitorData && freshness.snapshot_status !== 'normal');
 
-      setState(delayed ? 'delayed' : 'live', delayed ? 'Delayed' : 'Live');
+      if (!lightHealthy && !monitorHealthy) {
+        setState('unavailable', 'Unavailable');
+      } else if (!lightHealthy || !monitorHealthy) {
+        setState('delayed', 'Limited');
+      } else if (monitorDelayed) {
+        setState('delayed', 'Delayed');
+      } else {
+        setState('live', 'Live');
+      }
 
       if (metaNode) {
         const parts = [];
-        if (data.generated_at) {
-          const updated = new Date(data.generated_at);
-          if (!Number.isNaN(updated.valueOf())) {
-            parts.push('Updated ' + updated.toLocaleString());
-          }
+        if (lightHealthy) {
+          parts.push('height: PEPEW Light');
+        } else if (monitorHealthy) {
+          parts.push('height: Explorer monitor fallback');
         }
-        if (Number.isFinite(Number(freshness.snapshot_age_seconds))) {
-          parts.push('snapshot age ' + formatSeconds(freshness.snapshot_age_seconds));
+        if (monitorHealthy) {
+          const age = Number(freshness.snapshot_age_seconds);
+          parts.push(
+            Number.isFinite(age)
+              ? 'monitor snapshot age ' + formatSeconds(age)
+              : 'Explorer monitor',
+          );
+        } else {
+          parts.push('aggregate monitor unavailable');
         }
-        metaNode.textContent = parts.length ? parts.join(' · ') : 'Cached monitor summary received.';
+        parts.push('Light refresh 60 s');
+        parts.push('monitor refresh 120 s');
+        metaNode.textContent = parts.join(' · ');
       }
     };
 
-    const markUnavailable = () => {
-      setState('unavailable', 'Unavailable');
-      if (metaNode) {
-        metaNode.replaceChildren(
-          document.createTextNode('Live summary is temporarily unavailable. '),
-        );
-        const link = document.createElement('a');
-        link.href = 'https://explorer.pepepow.org/';
-        link.textContent = 'Open Explorer';
-        metaNode.append(link);
-      }
+    const render = () => {
+      if (compact) renderCompact();
+      else renderFull();
     };
 
-    const refresh = async () => {
-      if (!endpoint || document.visibilityState === 'hidden') return;
-
+    const fetchJson = async (endpoint) => {
       const controller = new AbortController();
       const timeout = window.setTimeout(() => controller.abort(), 5000);
-
       try {
         const response = await fetch(endpoint, {
           method: 'GET',
@@ -164,26 +229,56 @@ const titleId = compact ? 'home-network-pulse-title' : 'network-pulse-title';
           credentials: 'omit',
           signal: controller.signal,
         });
-        if (!response.ok) throw new Error('network summary request failed');
-        render(await response.json());
-      } catch {
-        markUnavailable();
+        if (!response.ok) throw new Error('request failed');
+        return await response.json();
       } finally {
         window.clearTimeout(timeout);
       }
     };
 
-    refresh();
-    const interval = window.setInterval(refresh, 30000);
+    const refreshLight = async () => {
+      if (!lightEndpoint || document.visibilityState === 'hidden') return;
+      try {
+        const data = await fetchJson(lightEndpoint);
+        lightData = data;
+        lightHealthy = Boolean(data?.ok && data?.electrumx?.connected);
+      } catch {
+        lightHealthy = false;
+      }
+      render();
+    };
+
+    const refreshMonitor = async () => {
+      if (compact || !monitorEndpoint || document.visibilityState === 'hidden') return;
+      try {
+        monitorData = await fetchJson(monitorEndpoint);
+        monitorHealthy = true;
+      } catch {
+        monitorHealthy = false;
+      }
+      render();
+    };
+
+    refreshLight();
+    if (!compact) refreshMonitor();
+
+    const lightInterval = window.setInterval(refreshLight, 60000);
+    const monitorInterval = compact ? null : window.setInterval(refreshMonitor, 120000);
 
     window.addEventListener(
       'pagehide',
-      () => window.clearInterval(interval),
+      () => {
+        window.clearInterval(lightInterval);
+        if (monitorInterval !== null) window.clearInterval(monitorInterval);
+      },
       { once: true },
     );
 
     document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') refresh();
+      if (document.visibilityState === 'visible') {
+        refreshLight();
+        if (!compact) refreshMonitor();
+      }
     });
   };
 
