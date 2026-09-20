@@ -5,54 +5,54 @@ import IllustratedPageHeader from '../../components/IllustratedPageHeader.astro'
 const learningPaths = [
   {
     title: 'Proof of Work and mining',
-    text: 'Start with PEPEPOW mining, HooHash V110, pools, miners, hashrate, and why mining secures the chain.',
+    text: 'See how HooHash V110, miners, pools, and hashrate work together to secure the PEPEPOW chain.',
     href: '/mining/',
   },
   {
     title: 'Blocks and network health',
-    text: 'Learn how block height, block freshness, block time, hashrate, and masternode state help describe network activity.',
+    text: 'Learn what block height, block age, block time, hashrate, and masternode state can tell you about network activity.',
     href: '/network/',
   },
   {
     title: 'Wallets and self-custody',
-    text: 'Understand wallet choices, backups, recovery risk, software updates, and why private recovery material must stay private.',
+    text: 'Compare wallet choices and learn the basics of backups, recovery, updates, and protecting private recovery material.',
     href: '/wallet/',
   },
   {
     title: 'Masternodes',
-    text: 'Review PEPEPOW masternode requirements, collateral context, operation, rewards, and maintenance references.',
+    text: 'Understand PEPEPOW collateral tiers, setup, operation, reward selection, maintenance, and common safety checks.',
     href: '/masternode/',
   },
   {
     title: 'Markets and third-party risk',
-    text: 'Use current market references while treating exchanges and other third-party services as changeable external dependencies.',
+    text: 'Learn how to verify market access while treating exchanges and other third-party services as changeable external dependencies.',
     href: '/market/',
   },
   {
     title: 'Project history',
-    text: 'Read dated announcements and technical articles to see how PEPEPOW software, mining, services, and governance evolved.',
+    text: 'Follow dated announcements and technical articles to see how PEPEPOW software, mining, services, and community decisions changed over time.',
     href: '/announcements/',
   },
 ];
 
 const principles = [
-  ['Check the date', 'A technically correct 2024 guide may be unsafe or obsolete in 2026.'],
-  ['Prefer primary sources', 'Use source repositories, release pages, the Explorer, and current site guidance before third-party summaries.'],
-  ['Separate keys from public support', 'Private keys, seed phrases, wallet files, RPC credentials, and masternode secrets should never be shared for troubleshooting.'],
-  ['Distinguish live data from documentation', 'Changing values such as height, hashrate, price, and masternode count belong to live data sources rather than static prose.'],
+  ['Check the date', 'A guide can be historically correct and still be unsafe or obsolete for today’s software.'],
+  ['Prefer primary sources', 'Check source repositories, release pages, the Explorer, and current site guidance before relying on copied instructions.'],
+  ['Keep secrets out of support channels', 'Never share private keys, seed phrases, wallet files, RPC credentials, or masternode secrets for troubleshooting.'],
+  ['Separate live data from documentation', 'Values such as block height, hashrate, price, and masternode count change continuously and should be checked from live sources.'],
 ];
 ---
 
 <BaseLayout
   title="Learn"
-  description="Learn Proof of Work, wallets, blocks, masternodes, mining, self-custody, and PEPEPOW history through current practical references."
+  description="Learn Proof of Work, wallets, mining, blocks, masternodes, self-custody, and network verification through practical PEPEPOW examples."
   theme="handdrawn"
 >
   <article class="hub-page">
     <IllustratedPageHeader
       eyebrow="Learn"
-      title="Learn crypto concepts through PEPEPOW."
-      intro="Use practical PEPEPOW examples to understand Proof of Work, wallets, network metrics, masternodes, third-party services, and source verification without turning historical material into current instructions."
+      title="Learn how PEPEPOW works."
+      intro="Use practical PEPEPOW examples to understand Proof of Work, wallets, network metrics, masternodes, third-party services, and how to verify information before acting on it."
       image="/media/visual/handdrawn/headers/header-guides-v1.webp"
       actions={[
         { label: 'Start with the network', href: '/network/', primary: true },
@@ -63,7 +63,7 @@ const principles = [
     <section class="hub-section" aria-labelledby="paths-title">
       <div class="section-heading">
         <p class="eyebrow">Learning paths</p>
-        <h2 id="paths-title">Choose a practical starting point.</h2>
+        <h2 id="paths-title">Choose what you want to understand.</h2>
       </div>
       <div class="hub-card-grid">
         {learningPaths.map((item) => (
@@ -78,8 +78,8 @@ const principles = [
 
     <section class="hub-section" aria-labelledby="reading-title">
       <div class="section-heading">
-        <p class="eyebrow">How to read technical crypto information</p>
-        <h2 id="reading-title">Four habits prevent many mistakes.</h2>
+        <p class="eyebrow">Reading technical information</p>
+        <h2 id="reading-title">Four habits make technical information safer to use.</h2>
       </div>
       <dl class="hub-definition-list">
         {principles.map(([term, description]) => (
@@ -94,13 +94,13 @@ const principles = [
     <section class="hub-section" aria-labelledby="archive-learning-title">
       <div class="section-heading">
         <p class="eyebrow">Historical material</p>
-        <h2 id="archive-learning-title">Useful for understanding change.</h2>
+        <h2 id="archive-learning-title">History explains how the project changed.</h2>
       </div>
       <p class="hub-copy">
-        The recovered PEPEPOW archive includes older wallet, mining, masternode, incident, and
-        governance material. Historical technical articles are visibly marked because commands,
-        versions, block heights, peer addresses, and services can become obsolete. Use them to
-        understand what happened, then return to current pages for operational steps.
+        The PEPEPOW archive preserves older wallet, mining, masternode, incident, and governance
+        material. Commands, versions, peer addresses, and services can become obsolete, so historical
+        technical pages are clearly marked. Use them to understand what changed, then return to the
+        current pages before taking operational action.
       </p>
     </section>
   </article>
