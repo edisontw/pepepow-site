@@ -176,3 +176,17 @@ For visual design, illustration, asset generation, or homepage visual-refresh wo
 - `docs/HAND_DRAWN_ASSET_PROMPTS.md`
 
 The current visual direction is a bright hand-drawn editorial illustration system with restrained handwritten accents layered onto the existing Astro site. Generated assets must remain reusable rather than replacing whole pages with raster images. Image generation is intentionally limited to batches of no more than 10 images. The preferred mascot is a small, secondary PEPEPOW miner-frog with a yellow miner helmet. Start with an original design, but do not force unattractive distortions merely to differ from Pepe; if original attempts fail visually, a familiar Pepe-like frog form may be used temporarily as a reviewed fallback. Any close derivative requires provenance/licensing review before production use.
+
+## Latest website architecture state — 2026-09-20
+
+After the hand-drawn visual rollout, the site received a small architecture/navigation cleanup:
+
+- header navigation is split into core operational and utility destinations
+- current migrated pages route from Astro slugs rather than WordPress-derived `legacy_url`
+- historical announcements/articles still preserve their legacy public paths
+- verified current public links live in `src/data/verified-links.ts`
+- Search loads a generated static `/data/search-index.json`
+- `/announcements/` remains the News/archive route; do not add `/news/` until a second real news stream justifies it
+- future `guides`, `learn`, and `incidents` collections remain configured
+
+Production was not changed as part of this architecture pass.
