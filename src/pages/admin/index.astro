@@ -24,7 +24,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <p id="publisher-auth-status">Checking sign-in status…</p>
       </div>
       <div class="publisher-auth-actions">
-        <a id="publisher-login" class="button" href="/admin-api/login" hidden>Sign in with GitHub</a>
+        <a id="publisher-login" class="button" href="/admin-api?action=login" hidden>Sign in with GitHub</a>
         <button id="publisher-logout" class="button secondary" type="button" hidden>Sign out</button>
       </div>
     </section>
@@ -285,7 +285,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
     const loadSession = async () => {
       try {
-        const response = await fetch(`${API_ROOT}/session`, {
+        const response = await fetch(`${API_ROOT}?action=session`, {
           credentials: 'same-origin',
           headers: { Accept: 'application/json' },
         });
@@ -330,7 +330,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       });
 
       logoutButton.addEventListener('click', async () => {
-        await fetch(`${API_ROOT}/logout`, {
+        await fetch(`${API_ROOT}?action=logout`, {
           method: 'POST',
           credentials: 'same-origin',
           headers: { 'Content-Type': 'application/json' },
@@ -358,7 +358,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         publishButton.textContent = 'Publishing…';
 
         try {
-          const response = await fetch(`${API_ROOT}/publish`, {
+          const response = await fetch(`${API_ROOT}?action=publish`, {
             method: 'POST',
             credentials: 'same-origin',
             headers: {
