@@ -1,0 +1,682 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Publisher"
+  description="Private PEPEPOW announcement publishing interface."
+  theme="handdrawn"
+  noindex
+>
+  <article class="publisher-page">
+    <header class="publisher-header">
+      <p class="eyebrow">PEPEPOW Publisher</p>
+      <h1>Publish an announcement.</h1>
+      <p class="publisher-lede">
+        Sign in through GitHub, write the announcement here, and publish it to the PEPEPOW website
+        repository. GitHub credentials are entered only on github.com.
+      </p>
+    </header>
+
+    <section class="publisher-auth" aria-labelledby="publisher-auth-title">
+      <div>
+        <h2 id="publisher-auth-title">Account</h2>
+        <p id="publisher-auth-status">Checking sign-in status…</p>
+      </div>
+      <div class="publisher-auth-actions">
+        <a id="publisher-login" class="button" href="/admin-api/login" hidden>Sign in with GitHub</a>
+        <button id="publisher-logout" class="button secondary" type="button" hidden>Sign out</button>
+      </div>
+    </section>
+
+    <section id="publisher-editor" class="publisher-editor" hidden aria-labelledby="publisher-editor-title">
+      <div class="publisher-editor-heading">
+        <div>
+          <p class="eyebrow">New announcement</p>
+          <h2 id="publisher-editor-title">Write once, publish to GitHub.</h2>
+        </div>
+        <p class="publisher-draft-note">Draft text is saved only in this browser until publication.</p>
+      </div>
+
+      <form id="publisher-form">
+        <label>
+          <span>Title</span>
+          <input id="announcement-title" name="title" type="text" maxlength="180" required />
+        </label>
+
+        <label>
+          <span>Summary</span>
+          <textarea
+            id="announcement-description"
+            name="description"
+            rows="3"
+            maxlength="300"
+            placeholder="One or two sentences for search and page metadata."
+          ></textarea>
+        </label>
+
+        <div class="publisher-two-column">
+          <label>
+            <span>Publish date and time</span>
+            <input id="announcement-date" name="date" type="datetime-local" required />
+          </label>
+
+          <label>
+            <span>Slug <small>(optional)</small></span>
+            <input
+              id="announcement-slug"
+              name="slug"
+              type="text"
+              maxlength="80"
+              pattern="[a-z0-9]+(?:-[a-z0-9]+)*"
+              placeholder="generated-from-title"
+            />
+          </label>
+        </div>
+
+        <fieldset>
+          <legend>Categories</legend>
+          <div class="publisher-check-grid">
+            {['Update', 'Wallet', 'Mining', 'Masternode', 'Network', 'Market', 'Community', 'Campaigns'].map((item) => (
+              <label class="publisher-check">
+                <input type="checkbox" name="categories" value={item} />
+                <span>{item}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+
+        <label>
+          <span>Tags <small>(comma separated)</small></span>
+          <input id="announcement-tags" name="tags" type="text" maxlength="300" placeholder="release, hoohash, wallet" />
+        </label>
+
+        <label>
+          <span>Announcement</span>
+          <textarea
+            id="announcement-body"
+            name="body"
+            rows="20"
+            maxlength="100000"
+            required
+            placeholder="Write in Markdown. Links, headings, lists, images, and code blocks are supported."
+          ></textarea>
+        </label>
+
+        <label class="publisher-check publisher-featured">
+          <input id="announcement-featured" name="featured" type="checkbox" />
+          <span>Feature this announcement</span>
+        </label>
+
+        <div class="publisher-actions">
+          <button id="publisher-preview-button" class="button secondary" type="button">Preview source</button>
+          <button id="publisher-publish-button" class="button" type="submit">Publish</button>
+        </div>
+
+        <p id="publisher-result" class="publisher-result" role="status" aria-live="polite"></p>
+      </form>
+
+      <details id="publisher-preview" class="publisher-preview">
+        <summary>Generated Markdown preview</summary>
+        <pre><code id="publisher-preview-code"></code></pre>
+      </details>
+    </section>
+
+    <aside class="publisher-security">
+      <strong>Security boundary</strong>
+      <p>
+        GitHub handles account authentication and 2FA. The publisher API accepts only allowlisted
+        GitHub users and creates files under <code>src/content/announcements/</code>. No GitHub
+        password is sent to pepepow.net.
+      </p>
+    </aside>
+  </article>
+
+  <script>
+    const API_ROOT = '/admin-api';
+    const DRAFT_KEY = 'pepepow-announcement-draft-v1';
+
+    const authStatus = document.querySelector('#publisher-auth-status');
+    const loginLink = document.querySelector('#publisher-login');
+    const logoutButton = document.querySelector('#publisher-logout');
+    const editor = document.querySelector('#publisher-editor');
+    const form = document.querySelector('#publisher-form');
+    const result = document.querySelector('#publisher-result');
+    const previewButton = document.querySelector('#publisher-preview-button');
+    const preview = document.querySelector('#publisher-preview');
+    const previewCode = document.querySelector('#publisher-preview-code');
+
+    const titleInput = document.querySelector('#announcement-title');
+    const descriptionInput = document.querySelector('#announcement-description');
+    const dateInput = document.querySelector('#announcement-date');
+    const slugInput = document.querySelector('#announcement-slug');
+    const tagsInput = document.querySelector('#announcement-tags');
+    const bodyInput = document.querySelector('#announcement-body');
+    const featuredInput = document.querySelector('#announcement-featured');
+
+    const requiredElements = [
+      authStatus, loginLink, logoutButton, editor, form, result, previewButton, preview,
+      previewCode, titleInput, descriptionInput, dateInput, slugInput, tagsInput, bodyInput,
+      featuredInput,
+    ];
+
+    const ready = requiredElements.every(Boolean);
+
+    const localDateTimeValue = (date = new Date()) => {
+      const shifted = new Date(date.getTime() - date.getTimezoneOffset() * 60_000);
+      return shifted.toISOString().slice(0, 16);
+    };
+
+    const slugify = (value) =>
+      String(value || '')
+        .normalize('NFKD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '')
+        .slice(0, 80);
+
+    const selectedCategories = () =>
+      Array.from(document.querySelectorAll('input[name="categories"]:checked'))
+        .map((input) => input.value);
+
+    const getDraft = () => ({
+      title: titleInput.value,
+      description: descriptionInput.value,
+      date: dateInput.value,
+      slug: slugInput.value,
+      categories: selectedCategories(),
+      tags: tagsInput.value,
+      body: bodyInput.value,
+      featured: featuredInput.checked,
+    });
+
+    const saveDraft = () => {
+      try {
+        localStorage.setItem(DRAFT_KEY, JSON.stringify(getDraft()));
+      } catch {}
+    };
+
+    const restoreDraft = () => {
+      let draft;
+      try {
+        draft = JSON.parse(localStorage.getItem(DRAFT_KEY) || 'null');
+      } catch {
+        draft = null;
+      }
+
+      if (!draft || typeof draft !== 'object') {
+        dateInput.value = localDateTimeValue();
+        return;
+      }
+
+      titleInput.value = draft.title || '';
+      descriptionInput.value = draft.description || '';
+      dateInput.value = draft.date || localDateTimeValue();
+      slugInput.value = draft.slug || '';
+      tagsInput.value = draft.tags || '';
+      bodyInput.value = draft.body || '';
+      featuredInput.checked = Boolean(draft.featured);
+
+      const wanted = new Set(Array.isArray(draft.categories) ? draft.categories : []);
+      for (const checkbox of document.querySelectorAll('input[name="categories"]')) {
+        checkbox.checked = wanted.has(checkbox.value);
+      }
+    };
+
+    const payloadForPublish = () => {
+      const localDate = dateInput.value || localDateTimeValue();
+      const parsed = new Date(localDate);
+      const tags = tagsInput.value
+        .split(',')
+        .map((tag) => tag.trim())
+        .filter(Boolean);
+
+      return {
+        title: titleInput.value.trim(),
+        description: descriptionInput.value.trim(),
+        date: parsed.toISOString(),
+        date_key: localDate.slice(0, 10),
+        slug: slugInput.value.trim(),
+        categories: selectedCategories(),
+        tags,
+        featured: featuredInput.checked,
+        body: bodyInput.value.trim(),
+      };
+    };
+
+    const yamlString = (value) => JSON.stringify(String(value || ''));
+    const yamlArray = (values) => JSON.stringify(values || []);
+
+    const generatedMarkdown = () => {
+      const payload = payloadForPublish();
+      const slug = payload.slug || slugify(payload.title) || 'announcement';
+      return [
+        '---',
+        `title: ${yamlString(payload.title)}`,
+        `description: ${yamlString(payload.description)}`,
+        `date: ${yamlString(payload.date)}`,
+        `slug: ${yamlString(slug)}`,
+        `categories: ${yamlArray(['Announcements', ...payload.categories])}`,
+        `tags: ${yamlArray(payload.tags)}`,
+        'status: "published"',
+        `featured: ${payload.featured ? 'true' : 'false'}`,
+        'migration_review: false',
+        '---',
+        '',
+        payload.body,
+        '',
+      ].join('\n');
+    };
+
+    const setAuthenticated = (session) => {
+      authStatus.textContent = `Signed in as GitHub user @${session.login}.`;
+      loginLink.hidden = true;
+      logoutButton.hidden = false;
+      editor.hidden = false;
+    };
+
+    const setSignedOut = (message = 'Sign in with GitHub to publish announcements.') => {
+      authStatus.textContent = message;
+      loginLink.hidden = false;
+      logoutButton.hidden = true;
+      editor.hidden = true;
+    };
+
+    const loadSession = async () => {
+      try {
+        const response = await fetch(`${API_ROOT}/session`, {
+          credentials: 'same-origin',
+          headers: { Accept: 'application/json' },
+        });
+
+        if (response.status === 401) {
+          setSignedOut();
+          return;
+        }
+
+        if (!response.ok) {
+          setSignedOut('Publisher API is not configured on this server yet.');
+          return;
+        }
+
+        const session = await response.json();
+        if (session.authenticated) setAuthenticated(session);
+        else setSignedOut();
+      } catch {
+        setSignedOut('Publisher API is not configured on this server yet.');
+      }
+    };
+
+    if (ready) {
+      restoreDraft();
+
+      form.addEventListener('input', saveDraft);
+      form.addEventListener('change', saveDraft);
+
+      titleInput.addEventListener('blur', () => {
+        if (!slugInput.value.trim()) slugInput.value = slugify(titleInput.value);
+        saveDraft();
+      });
+
+      previewButton.addEventListener('click', () => {
+        try {
+          previewCode.textContent = generatedMarkdown();
+          preview.open = true;
+          preview.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } catch {
+          result.textContent = 'Enter a valid publication date before previewing.';
+        }
+      });
+
+      logoutButton.addEventListener('click', async () => {
+        await fetch(`${API_ROOT}/logout`, {
+          method: 'POST',
+          credentials: 'same-origin',
+          headers: { 'Content-Type': 'application/json' },
+          body: '{}',
+        }).catch(() => {});
+        setSignedOut();
+      });
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        result.textContent = '';
+
+        if (!form.reportValidity()) return;
+
+        const payload = payloadForPublish();
+        if (!payload.title || !payload.body) return;
+
+        const confirmed = window.confirm(
+          `Publish “${payload.title}” to the PEPEPOW GitHub main branch?\n\nThis creates a new public announcement file.`,
+        );
+        if (!confirmed) return;
+
+        const publishButton = document.querySelector('#publisher-publish-button');
+        publishButton.disabled = true;
+        publishButton.textContent = 'Publishing…';
+
+        try {
+          const response = await fetch(`${API_ROOT}/publish`, {
+            method: 'POST',
+            credentials: 'same-origin',
+            headers: {
+              Accept: 'application/json',
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload),
+          });
+
+          const data = await response.json().catch(() => ({}));
+
+          if (response.status === 401) {
+            setSignedOut('Your session expired. Sign in again before publishing.');
+            return;
+          }
+
+          if (!response.ok) {
+            result.textContent = data.error || 'Publication failed.';
+            return;
+          }
+
+          localStorage.removeItem(DRAFT_KEY);
+          result.replaceChildren();
+
+          const message = document.createElement('span');
+          message.textContent = 'Published to GitHub. ';
+
+          const commitLink = document.createElement('a');
+          commitLink.href = data.commit_url;
+          commitLink.textContent = 'View commit';
+          commitLink.target = '_blank';
+          commitLink.rel = 'noopener noreferrer';
+
+          const pageLink = document.createElement('a');
+          pageLink.href = data.public_path;
+          pageLink.textContent = 'Open announcement';
+          pageLink.style.marginLeft = '1rem';
+
+          result.append(message, commitLink, pageLink);
+
+          form.reset();
+          dateInput.value = localDateTimeValue();
+          preview.open = false;
+          previewCode.textContent = '';
+        } catch {
+          result.textContent = 'Publication failed because the publisher API could not be reached.';
+        } finally {
+          publishButton.disabled = false;
+          publishButton.textContent = 'Publish';
+        }
+      });
+
+      void loadSession();
+    }
+  </script>
+
+  <style>
+    .publisher-page {
+      max-width: 58rem;
+      margin: 0 auto;
+      padding: clamp(3rem, 7vw, 5.5rem) 0 5rem;
+    }
+
+    .publisher-header {
+      max-width: 48rem;
+      margin-bottom: 2rem;
+    }
+
+    .publisher-header h1 {
+      max-width: 12ch;
+      color: #1d2b21;
+      font-size: clamp(2.7rem, 6vw, 4.8rem);
+    }
+
+    .publisher-lede,
+    .publisher-auth p,
+    .publisher-draft-note,
+    .publisher-result,
+    .publisher-security p {
+      color: #5d6a60;
+    }
+
+    .publisher-lede {
+      font-size: 1.12rem;
+      line-height: 1.7;
+    }
+
+    .publisher-auth,
+    .publisher-editor,
+    .publisher-security {
+      border: 1px solid #d7ddcf;
+      border-radius: 1rem;
+      background: rgba(255, 255, 255, .76);
+      box-shadow: 0 .55rem 1.5rem rgba(65, 85, 63, .05);
+    }
+
+    .publisher-auth {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.2rem 1.35rem;
+      margin-bottom: 1rem;
+    }
+
+    .publisher-auth h2,
+    .publisher-editor h2 {
+      margin: 0;
+      color: #243128;
+    }
+
+    .publisher-auth p {
+      margin: .25rem 0 0;
+    }
+
+    .publisher-auth-actions,
+    .publisher-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .7rem;
+    }
+
+    .publisher-auth-actions .button,
+    .publisher-actions .button {
+      border-radius: .55rem;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .publisher-editor {
+      padding: clamp(1.2rem, 3vw, 1.75rem);
+    }
+
+    .publisher-editor-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 1rem 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .publisher-editor-heading .eyebrow {
+      margin: 0 0 .25rem;
+    }
+
+    .publisher-draft-note {
+      max-width: 18rem;
+      margin: 0;
+      font-size: .86rem;
+    }
+
+    #publisher-form {
+      display: grid;
+      gap: 1.15rem;
+    }
+
+    #publisher-form > label,
+    .publisher-two-column > label {
+      display: grid;
+      gap: .42rem;
+      color: #243128;
+      font-weight: 700;
+    }
+
+    #publisher-form small {
+      color: #748078;
+      font-weight: 500;
+    }
+
+    #publisher-form input[type="text"],
+    #publisher-form input[type="datetime-local"],
+    #publisher-form textarea {
+      width: 100%;
+      border: 1px solid #cbd5c6;
+      border-radius: .55rem;
+      background: #fffdf8;
+      color: #243128;
+      padding: .75rem .82rem;
+      font: inherit;
+    }
+
+    #publisher-form textarea {
+      resize: vertical;
+      line-height: 1.55;
+    }
+
+    #publisher-form input:focus-visible,
+    #publisher-form textarea:focus-visible {
+      border-color: #4d9360;
+      outline: .15rem solid rgba(77, 147, 96, .18);
+      outline-offset: .08rem;
+    }
+
+    .publisher-two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    fieldset {
+      margin: 0;
+      padding: .8rem 1rem 1rem;
+      border: 1px solid #d7ddcf;
+      border-radius: .7rem;
+    }
+
+    legend {
+      padding: 0 .35rem;
+      color: #243128;
+      font-weight: 700;
+    }
+
+    .publisher-check-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: .55rem .8rem;
+    }
+
+    .publisher-check {
+      display: inline-flex;
+      align-items: center;
+      gap: .48rem;
+      color: #334239;
+      font-weight: 600;
+    }
+
+    .publisher-check input {
+      width: 1rem;
+      height: 1rem;
+      accent-color: #327c49;
+    }
+
+    .publisher-featured {
+      width: fit-content;
+      padding: .25rem 0;
+    }
+
+    .publisher-actions {
+      justify-content: flex-end;
+      padding-top: .5rem;
+    }
+
+    .publisher-actions button:disabled {
+      opacity: .6;
+      cursor: progress;
+    }
+
+    .publisher-result {
+      min-height: 1.7rem;
+      margin: 0;
+    }
+
+    .publisher-result a {
+      color: #2d7444;
+      font-weight: 700;
+    }
+
+    .publisher-preview {
+      margin-top: 1.5rem;
+      border-top: 1px solid #d7ddcf;
+      padding-top: 1rem;
+    }
+
+    .publisher-preview summary {
+      cursor: pointer;
+      color: #2d7444;
+      font-weight: 700;
+    }
+
+    .publisher-preview pre {
+      max-height: 36rem;
+      overflow: auto;
+      margin-top: 1rem;
+      padding: 1rem;
+      border: 1px solid #d7ddcf;
+      border-radius: .6rem;
+      background: #eef3e9;
+      color: #243128;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .publisher-security {
+      margin-top: 1rem;
+      padding: 1rem 1.15rem;
+    }
+
+    .publisher-security strong {
+      color: #243128;
+    }
+
+    .publisher-security p {
+      margin: .35rem 0 0;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 44rem) {
+      .publisher-auth,
+      .publisher-editor-heading {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .publisher-two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .publisher-check-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .publisher-actions {
+        justify-content: stretch;
+      }
+
+      .publisher-actions .button {
+        flex: 1 1 auto;
+      }
+    }
+  </style>
+</BaseLayout>
