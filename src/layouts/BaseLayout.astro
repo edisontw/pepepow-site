@@ -5,12 +5,14 @@ interface Props {
   title?: string;
   description?: string;
   theme?: 'default' | 'handdrawn';
+  noindex?: boolean;
 }
 
 const {
   title = 'PEPEPOW',
   description = 'PEPEPOW community-powered Proof of Work.',
   theme = 'default',
+  noindex = false,
 } = Astro.props;
 
 const handdrawnTheme = theme === 'handdrawn';
@@ -44,6 +46,7 @@ const isCurrent = (href: string) =>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow, noarchive" />}
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content={handdrawnTheme ? '#f7f5eb' : '#111411'} />
     <link rel="icon" type="image/png" href="/media/legacy/2024/02/P-coin4-1.png" />
