@@ -5,55 +5,55 @@ import { verifiedLinks } from '../../data/verified-links';
 const tools = [
   {
     title: 'PEPEPOW Explorer',
-    text: 'Current public chain, block, network, masternode, and collected market information.',
+    text: 'Inspect blocks, addresses, masternodes, network activity, and collected market data.',
     href: verifiedLinks.explorer,
     label: 'Open Explorer',
   },
   {
     title: 'Site search',
-    text: 'Search current pages, recovered announcements, and historical technical articles without a server-side search service.',
+    text: 'Search current pages, announcements, and historical technical material from the site’s static index.',
     href: '/search/',
     label: 'Search PEPEPOW',
   },
   {
     title: 'PEPEW Light',
-    text: 'Current lightweight PEPEW wallet entry point referenced by the site.',
+    text: 'Open the lightweight, non-custodial PEPEW wallet used for browser-based access.',
     href: verifiedLinks.pepewLightWallet,
     label: 'Open PEPEW Light',
   },
   {
     title: 'Core releases',
-    text: 'Official PEPEPOW Core release artifacts and version history.',
+    text: 'Download PEPEPOW Core releases and review version history from the source repository.',
     href: verifiedLinks.coreReleases,
     label: 'Open Core releases',
   },
   {
     title: 'Android releases',
-    text: 'Android wallet release artifacts maintained in the current PEPEPOW Android repository.',
+    text: 'Download Android wallet releases from the current PEPEPOW Android repository.',
     href: verifiedLinks.androidWalletReleases,
     label: 'Open Android releases',
   },
   {
     title: 'HTN Miner',
-    text: 'Current miner entry point referenced by the PEPEPOW mining page.',
+    text: 'Download current HTN Miner builds used by the PEPEPOW mining guide.',
     href: verifiedLinks.htnMiner,
     label: 'Open HTN Miner',
   },
   {
     title: 'Community Pool',
-    text: 'Community mining pool entry point referenced by current mining guidance.',
+    text: 'Open the community mining pool and check its current connection details.',
     href: verifiedLinks.communityPool,
     label: 'Open Community Pool',
   },
   {
     title: 'Lab Pool',
-    text: 'PEPEPOW lab pool entry point referenced by current mining guidance.',
+    text: 'Open the PEPEPOW lab pool for development and testing use.',
     href: verifiedLinks.labPool,
     label: 'Open Lab Pool',
   },
   {
     title: 'Market references',
-    text: 'Current PEPEW venue and market-reference page with third-party risk context.',
+    text: 'Review current PEPEW market references, confirmed venues, and third-party risk notes.',
     href: '/market/',
     label: 'Open Market page',
   },
@@ -69,16 +69,16 @@ const safetyNotes = [
 
 <BaseLayout
   title="Tools"
-  description="PEPEPOW Explorer, wallet, miner, pool, release, market, and search entry points in one compact directory."
+  description="A compact directory of PEPEPOW Explorer, wallet, mining, release, market, community, and search resources."
   theme="handdrawn"
 >
   <article class="hub-page">
     <header class="hub-page-header">
       <p class="eyebrow">Tools</p>
-      <h1>Useful PEPEPOW entry points in one place.</h1>
+      <h1>PEPEPOW tools and services in one place.</h1>
       <p class="current-page-lede">
-        This directory links to current project pages and public services. It does not proxy wallet
-        RPC, store keys, or create a second blockchain collector.
+        Use this directory to reach current project tools, downloads, and public services. The site
+        does not store keys, proxy wallet RPC, or duplicate the blockchain monitor.
       </p>
       <div class="actions">
         <a class="button" href={verifiedLinks.explorer}>Open Explorer</a>
@@ -89,7 +89,7 @@ const safetyNotes = [
     <section class="hub-section" aria-labelledby="tools-title">
       <div class="section-heading">
         <p class="eyebrow">Directory</p>
-        <h2 id="tools-title">Current tools and references.</h2>
+        <h2 id="tools-title">Open the tool you need.</h2>
       </div>
       <div class="hub-card-grid">
         {tools.map((item) => (
@@ -105,7 +105,7 @@ const safetyNotes = [
     <section class="hub-section" aria-labelledby="tool-safety-title">
       <div class="section-heading">
         <p class="eyebrow">Safety</p>
-        <h2 id="tool-safety-title">Before using external tools.</h2>
+        <h2 id="tool-safety-title">A few checks before you connect.</h2>
       </div>
       <ul class="hub-safety-list">
         {safetyNotes.map((note) => <li>{note}</li>)}
