@@ -337,38 +337,41 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     };
 
     const renderInlineMarkdown = (value) => {
-      const codeSpans = [];
-      let text = String(value || '').replace(/`([^`\n]+)`/g, (_, code) => {
-        const key = `%%CODE${codeSpans.length}%%`;
-        codeSpans.push(`<code>${escapeHtml(code)}</code>`);
+      const tokens = [];
+      const token = (html) => {
+        const key = `%%INLINE${tokens.length}%%`;
+        tokens.push(html);
         return key;
-      });
+      };
 
-      text = escapeHtml(text);
+      let text = String(value || '');
+
+      text = text.replace(/`([^`\n]+)`/g, (_, code) =>
+        token(`<code>${escapeHtml(code)}</code>`));
 
       text = text.replace(/!\[([^\]]*)\]\(([^\s)]+)(?:\s+"([^"]*)")?\)/g, (_, alt, rawUrl, title) => {
         const url = safeUrl(rawUrl, true);
-        if (!url) return escapeHtml(alt);
+        if (!url) return alt;
         const titleAttr = title ? ` title="${escapeHtml(title)}"` : '';
-        return `<img src="${escapeHtml(url)}" alt="${escapeHtml(alt)}"${titleAttr} loading="lazy" />`;
+        return token(`<img src="${escapeHtml(url)}" alt="${escapeHtml(alt)}"${titleAttr} loading="lazy" />`);
       });
 
       text = text.replace(/\[([^\]]+)\]\(([^\s)]+)(?:\s+"([^"]*)")?\)/g, (_, label, rawUrl, title) => {
         const url = safeUrl(rawUrl);
         if (!url) return label;
         const titleAttr = title ? ` title="${escapeHtml(title)}"` : '';
-        return `<a href="${escapeHtml(url)}"${titleAttr} rel="noopener noreferrer">${label}</a>`;
+        return token(`<a href="${escapeHtml(url)}"${titleAttr} rel="noopener noreferrer">${escapeHtml(label)}</a>`);
       });
 
-      text = text
+      text = escapeHtml(text)
         .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
         .replace(/__([^_]+)__/g, '<strong>$1</strong>')
         .replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<em>$2</em>')
         .replace(/(^|[^_])_([^_\n]+)_/g, '$1<em>$2</em>')
         .replace(/~~([^~]+)~~/g, '<del>$1</del>');
 
-      codeSpans.forEach((html, index) => {
-        text = text.replace(`%%CODE${index}%%`, html);
+      tokens.forEach((html, index) => {
+        text = text.replace(`%%INLINE${index}%%`, html);
       });
 
       return text;
