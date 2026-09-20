@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import NetworkPulse from '../../components/NetworkPulse.astro';
 import IllustratedPageHeader from '../../components/IllustratedPageHeader.astro';
+import { verifiedLinks } from '../../data/verified-links';
 
 const metricGuides = [
   ['Block height', 'The latest block number seen by the cached network monitor. A moving height is one basic sign that the chain is progressing.'],
@@ -16,7 +17,7 @@ const entryPoints = [
   {
     title: 'Explorer',
     text: 'Use the PEPEPOW Explorer for current chain, block, network, masternode, and collected market information.',
-    href: 'https://explorer.pepepow.org/',
+    href: verifiedLinks.explorer,
     label: 'Open Explorer',
   },
   {
@@ -46,8 +47,8 @@ const entryPoints = [
       intro="Network Pulse reads a small cached public summary from the existing PEPEPOW monitor. The browser never connects to wallet/node RPC, and this website does not run a second blockchain collector. If the summary is unavailable or stale, use the Explorer for direct inspection."
       image="/media/visual/handdrawn/headers/header-network-pulse-v1.webp"
       actions={[
-        { label: 'Open Live Explorer', href: 'https://explorer.pepepow.org/', primary: true },
-        { label: 'Network Details', href: 'https://explorer.pepepow.org/network' },
+        { label: 'Open Live Explorer', href: verifiedLinks.explorer, primary: true },
+        { label: 'Network Details', href: verifiedLinks.explorerNetwork },
       ]}
     />
 
