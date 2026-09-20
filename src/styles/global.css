@@ -1226,3 +1226,314 @@ h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); }
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+
+/* Hand-drawn homepage visual refresh */
+body.handdrawn-theme {
+  color-scheme: light;
+  --surface: #fffdf8;
+  --surface-raised: #f2f6eb;
+  --border: #d7ddcf;
+  --muted: #5d6a60;
+  --accent: #327c49;
+  --focus: #176c3b;
+  --warning: #9a6819;
+  color: #1d2b21;
+  background:
+    radial-gradient(circle at 7% 11%, rgba(87, 146, 91, .10), transparent 22rem),
+    radial-gradient(circle at 92% 4%, rgba(174, 205, 225, .18), transparent 28rem),
+    #f7f5eb;
+}
+
+.handdrawn-theme .site-header {
+  border-bottom-color: rgba(76, 101, 74, .22);
+}
+
+.handdrawn-theme .brand {
+  color: #2d7444;
+}
+
+.handdrawn-theme .primary-nav a {
+  color: #5a665d;
+}
+
+.handdrawn-theme .primary-nav a:hover,
+.handdrawn-theme .primary-nav a:focus-visible,
+.handdrawn-theme .primary-nav a[aria-current="page"] {
+  color: #203126;
+  background: rgba(255, 255, 255, .68);
+}
+
+.handdrawn-theme .button {
+  border-color: #327c49;
+  background: #327c49;
+  color: #fff;
+  box-shadow: 0 .35rem 1rem rgba(45, 102, 59, .10);
+}
+
+.handdrawn-theme .button.secondary {
+  border-color: #cad3c4;
+  background: rgba(255, 255, 255, .66);
+  color: #243128;
+  box-shadow: none;
+}
+
+.handdrawn-theme .text-action {
+  color: #2d7444;
+}
+
+.handdrawn-theme .site-footer {
+  border-top-color: rgba(76, 101, 74, .22);
+  color: #667168;
+}
+
+.handdrawn-theme .home-shell {
+  padding-bottom: 2.5rem;
+}
+
+.handdrawn-theme .home-hero {
+  grid-template-columns: minmax(0, .86fr) minmax(24rem, 1.14fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  padding: clamp(3.25rem, 7vw, 6.25rem) 0 clamp(2rem, 5vw, 3.5rem);
+}
+
+.handdrawn-theme .home-hero-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 41rem;
+}
+
+.handdrawn-theme .home-hero h1 {
+  max-width: 9.6ch;
+  color: #1d2b21;
+  text-wrap: balance;
+}
+
+.handdrawn-theme .home-hero-lede {
+  max-width: 38rem;
+  color: #536158;
+}
+
+.home-hero-lettering {
+  width: min(19rem, 70%);
+  margin-top: 1.35rem;
+  transform: rotate(-1.5deg);
+}
+
+.home-hero-lettering img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.home-hero-art {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  aspect-ratio: 9 / 5.4;
+  border: 1px solid rgba(76, 101, 74, .18);
+  border-radius: clamp(1.2rem, 3vw, 2rem);
+  background: #fbfaf3;
+  box-shadow: 0 1.2rem 3.5rem rgba(65, 85, 63, .12);
+  isolation: isolate;
+}
+
+.home-hero-art::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 24%;
+  background: linear-gradient(to top, rgba(247, 245, 235, .55), transparent);
+  pointer-events: none;
+}
+
+.home-hero-art-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-hero-signpost {
+  position: absolute;
+  z-index: 2;
+  right: clamp(.6rem, 2vw, 1.35rem);
+  bottom: clamp(.45rem, 1.5vw, 1rem);
+  width: clamp(6.5rem, 21%, 10rem);
+  height: auto;
+  filter: drop-shadow(0 .45rem .7rem rgba(54, 66, 49, .16));
+}
+
+.home-pulse {
+  position: relative;
+  margin: 0 0 clamp(1rem, 3vw, 2rem);
+}
+
+.handdrawn-theme .home-pulse .network-pulse {
+  margin: 0;
+  border-color: #d5ddce;
+  border-radius: 1rem;
+  background:
+    linear-gradient(120deg, rgba(95, 155, 93, .08), rgba(255, 255, 255, .70)),
+    #fffdf8;
+  box-shadow: 0 .6rem 1.8rem rgba(65, 85, 63, .06);
+}
+
+.handdrawn-theme .network-pulse-status {
+  border-color: #d0d9ca;
+  background: #f2f6eb;
+  color: #607065;
+}
+
+.handdrawn-theme .network-pulse-status.is-live {
+  border-color: #4d9360;
+  color: #2f7a47;
+}
+
+.handdrawn-theme .network-pulse-status.is-delayed {
+  color: #7d642a;
+}
+
+.handdrawn-theme .network-pulse-metric {
+  border-color: #d9e0d3;
+  background: rgba(244, 248, 239, .88);
+}
+
+.handdrawn-theme .network-pulse-metric strong,
+.handdrawn-theme .network-pulse-links strong {
+  color: #233128;
+}
+
+.handdrawn-theme .network-pulse-links {
+  border-top-color: #d9e0d3;
+}
+
+.handdrawn-theme .home-section {
+  border-top-color: rgba(76, 101, 74, .20);
+}
+
+.handdrawn-theme .section-heading h2 {
+  color: #213027;
+}
+
+.handdrawn-theme .start-grid {
+  gap: .9rem;
+}
+
+.handdrawn-theme .start-card {
+  min-height: 14rem;
+  border-color: #d7ddcf;
+  border-radius: 1rem;
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, .92), rgba(242, 246, 235, .72));
+  box-shadow: 0 .55rem 1.4rem rgba(65, 85, 63, .05);
+}
+
+.start-card-icon {
+  display: block;
+  width: 3.25rem;
+  height: 3.25rem;
+  object-fit: contain;
+}
+
+.handdrawn-theme .start-card h3 {
+  margin-top: 1.25rem;
+  color: #233128;
+}
+
+.handdrawn-theme .start-card p {
+  color: #5d6a60;
+}
+
+.handdrawn-theme .card-arrow {
+  color: #327c49;
+}
+
+.handdrawn-theme .latest-card {
+  border-color: #d7ddcf;
+  border-radius: .85rem;
+  background: rgba(255, 255, 255, .72);
+}
+
+.handdrawn-theme .latest-card h3,
+.handdrawn-theme .latest-card h3 a {
+  color: #243128;
+}
+
+.handdrawn-theme .card-meta,
+.handdrawn-theme .archive-context {
+  color: #667168;
+}
+
+.handdrawn-theme .quick-links a {
+  border-color: #d5dccf;
+  background: rgba(255, 255, 255, .68);
+  color: #334239;
+}
+
+.handdrawn-theme .quick-links a:hover,
+.handdrawn-theme .quick-links a:focus-visible {
+  border-color: #72a27d;
+  background: #f1f6eb;
+  color: #1f3025;
+}
+
+@media (hover: hover) {
+  .handdrawn-theme .start-card:hover {
+    border-color: #92b49a;
+    background: #fffdf8;
+    box-shadow: 0 .8rem 2rem rgba(65, 85, 63, .09);
+  }
+}
+
+@media (max-width: 56rem) {
+  .handdrawn-theme .home-hero {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .handdrawn-theme .home-hero-copy {
+    max-width: 44rem;
+  }
+
+  .home-hero-art {
+    width: 100%;
+    max-width: 46rem;
+    aspect-ratio: 16 / 9;
+  }
+
+  .home-hero-lettering {
+    width: min(17rem, 58%);
+  }
+}
+
+@media (max-width: 48rem) {
+  .handdrawn-theme .primary-nav a {
+    border-color: #d7ddcf;
+    background: rgba(255, 255, 255, .58);
+  }
+}
+
+@media (max-width: 38rem) {
+  .handdrawn-theme .home-hero {
+    padding-top: 2.4rem;
+  }
+
+  .home-hero-art {
+    aspect-ratio: 4 / 3;
+  }
+
+  .home-hero-signpost {
+    width: 24%;
+  }
+
+  .home-hero-lettering {
+    width: min(15rem, 72%);
+  }
+
+  .handdrawn-theme .network-pulse-grid,
+  .handdrawn-theme .network-pulse-compact .network-pulse-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
