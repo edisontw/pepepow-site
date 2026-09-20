@@ -11,6 +11,11 @@ dist/
 *.pem
 *.p12
 *.pfx
+id_rsa
+id_ed25519
+id_ecdsa
+id_dsa
+server/admin/config.json
 
 # Private migration inputs / local working output
 *.WordPress.*.xml
