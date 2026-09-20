@@ -126,8 +126,10 @@ Production deployment is automated from `main` using the restricted deployment w
 
 The website deployment path is intentionally isolated from PEPEPOW wallet/node operation. Site deployment must not stop, reconfigure, or modify PEPEPOWd, wallet data, blockchain data, or RPC credentials.
 
-## Content and media provenance
+## License
 
-Historical content and media were recovered from several PEPEPOW community sources. Code, site content, and third-party/historical media may have different licensing or provenance.
+Source code authored for this repository is licensed under the **MIT License**. See `LICENSE`.
 
-This repository does **not currently declare a single repository-wide license** covering all code, content, and media. Do not assume that every historical asset is freely reusable outside this project.
+Original written content created specifically for the current pepepow.net website is generally licensed under **CC BY 4.0** unless otherwise noted. See `CONTENT_LICENSE.md`.
+
+Historical, migrated, and third-party media/documents are excluded from these blanket grants unless their own licensing terms say otherwise. See `NOTICE.md` for provenance and exclusions.
