@@ -23,13 +23,16 @@ jobs:
     steps:
       - name: Configure deployment SSH key
         env:
-          SSH_KEY: ${{ secrets.PRODUCTION_SSH_KEY }}
+          SSH_KEY_B64: ${{ secrets.PRODUCTION_SSH_KEY_B64 }}
           KNOWN_HOSTS: ${{ secrets.PRODUCTION_KNOWN_HOSTS }}
         run: |
           set -euo pipefail
           install -d -m 700 ~/.ssh
-          printf '%s\n' "$SSH_KEY" > ~/.ssh/pepepow_deploy
+          test -n "$SSH_KEY_B64"
+          printf '%s' "$SSH_KEY_B64" | base64 --decode > ~/.ssh/pepepow_deploy
+          printf '\n' >> ~/.ssh/pepepow_deploy
           chmod 600 ~/.ssh/pepepow_deploy
+          ssh-keygen -y -f ~/.ssh/pepepow_deploy > /dev/null
           printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
           chmod 600 ~/.ssh/known_hosts
 
