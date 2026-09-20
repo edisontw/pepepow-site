@@ -342,7 +342,7 @@ Content:
 
 ## 5. Homepage design
 
-Production implementation status: **custom homepage and Phase 2 discovery UX implemented**. Live Network Pulse data remains the next monitor/API integration; the current homepage uses verified static entry points, build-time announcement data, and links to Learn, Tools, Community, and static site search.
+Production implementation status: **custom homepage, Phase 2 discovery UX, and Network Pulse v1 are implemented**. The current Network Pulse source is split so the homepage heartbeat uses PEPEW Light for inexpensive status/height reads, while the full Network page supplements that with cached Explorer monitor aggregates.
 
 
 The homepage must remain concise.
@@ -549,28 +549,35 @@ Do not silently discard frequently linked historical URLs.
 
 ## 8. Network Pulse architecture
 
-The main site should consume a minimal read-only endpoint.
+The main site uses two existing read-only data paths rather than making every visitor poll the Explorer monitor.
 
-Preferred future endpoint in the monitor project:
+### PEPEW Light — lightweight heartbeat
 
-`/monitor/api/public-summary`
+`https://light.pepepow.net/api/status`
 
-Candidate payload:
+Use for:
 
-```json
-{
-  "network_status": "normal",
-  "height": 0,
-  "last_block_age_seconds": 0,
-  "avg_block_time_seconds": 0,
-  "hashrate": 0,
-  "masternode_count": 0,
-  "price_usdt": 0,
-  "updated_at": 0
-}
-```
+- block height
+- PEPEW Light gateway health
+- ElectrumX connectivity
+- cached status age
 
-The endpoint should:
+This endpoint already has a short server-side status cache and is suitable for the small homepage heartbeat.
+
+### Explorer monitor — aggregate network detail
+
+`https://explorer.pepepow.net/monitor/api/public-summary`
+
+Use for:
+
+- hashrate
+- masternode totals
+- last-block age
+- recent average block time
+- aggregate service state
+- monitor freshness
+
+The monitor endpoint must continue to:
 
 - read cached state
 - expose only allowlisted fields
@@ -584,31 +591,39 @@ The endpoint should:
 Homepage:
 
 - initial static shell
-- fetch small summary endpoint after load
+- fetch only PEPEW Light status after load
+- refresh approximately every 60 seconds while visible
+- do not poll the Explorer monitor from the homepage
 - show stale/unavailable state cleanly
-- do not block page rendering if the monitor is offline
 
-Suggested browser refresh:
+Full Network page:
 
-- approximately 60–120 seconds for homepage summary
+- prefer PEPEW Light for current height
+- fall back to monitor height if Light is unavailable
+- fetch aggregate Explorer monitor metrics separately
+- refresh Light approximately every 60 seconds
+- refresh monitor aggregates approximately every 120 seconds
+- retain last known values with a Limited/Delayed state when one source is temporarily unavailable
 
-The full Network page can use slightly more detailed cached endpoints.
+This keeps the high-traffic homepage off the Explorer monitor while preserving richer diagnostics on the dedicated Network page.
 
 ---
 
 ## 9. Price data
 
-Use the existing explorer/monitor path as primary site data where reliable.
+Prefer the existing PEPEW Light cached price endpoint for ordinary website price display:
 
-Current monitor already obtains cached price from the explorer and adds `price_usdt` to status output.
+`https://light.pepepow.net/api/price`
+
+The Explorer monitor may remain a secondary/cross-check source where useful, but normal website traffic should not require a monitor request solely to display price.
 
 Design goals:
 
-- one price collection path
+- use an existing cached price path rather than a new collector
 - source attribution
 - cache aggressively
 - tolerate upstream failure
-- optionally cross-check/fallback to a second source
+- optionally cross-check/fallback to the monitor source
 
 Do not load third-party price widgets directly into the main site unless there is a strong reason.
 
@@ -1041,7 +1056,7 @@ Exit criteria:
 
 ### Phase 3 — Network integration
 
-Status: **Network Pulse v1 implemented in source; production deployment pending**. The website consumes only a minimal allowlisted cached public summary from the existing PEPEPOW monitor. No second collector or browser-to-RPC access is introduced.
+Status: **Network Pulse v1 implemented; split-source load optimization in source**. The homepage uses PEPEW Light for the lightweight heartbeat, while the full Network page adds the minimal allowlisted cached summary from the existing Explorer monitor. No second collector or browser-to-RPC access is introduced.
 
 Deliver:
 
