@@ -1,103 +1,133 @@
-# PEPEPOW Site
+# PEPEPOW Website
 
-Official source repository for the next-generation PEPEPOW community website at `pepepow.net`.
+Official source repository for the PEPEPOW (PEPEW) community website.
 
-## Status
+**Live site:** https://pepepow.net
 
-The Astro site is live in production at `pepepow.net`. Core migration and Phase 2 site UX are complete; current work is moving into Phase 3 network-data integration and ongoing content/UX refinement.
+<p align="center">
+  <img src="public/media/legacy/2025logo.webp" alt="PEPEPOW logo" width="120" />
+</p>
 
-The site replaces the legacy WordPress presentation with a maintainable static-first architecture while preserving useful PEPEPOW content, public URLs, media, documents, and historical announcements.
+## Overview
 
-## Direction
+The site is built with Astro and generated as a static website. GitHub `main` is the source of truth for the current site.
 
-- **Source of truth:** this repository (`edisontw/pepepow-site`, branch `main`)
+The project replaces the former WordPress presentation with a maintainable static-first architecture while preserving useful PEPEPOW pages, historical announcements, public URLs, media, and documents.
+
+Primary areas include:
+
+- PEPEPOW network information and status
+- wallets
+- mining
+- masternodes
+- market links
+- community channels
+- announcements and historical records
+- learning material and practical tools
+
+## Architecture
+
 - **Framework:** Astro
 - **Content:** Markdown / MDX and structured data
-- **Production serving:** Apache serving the generated Astro static release
-- **Dynamic data:** small read-only public APIs only where needed
-- **Primary focus:** PEPEPOW information, tools, network visibility, mining, masternodes, wallets, community and education
-- **Secondary focus:** small, curated cryptocurrency news and reference information
+- **Production:** static Astro build served by Apache
+- **Dynamic data:** small read-only public APIs where required
+- **Repository authority:** `edisontw/pepepow-site`, branch `main`
 
-## Read first
+The browser must never connect directly to PEPEPOW wallet/node RPC.
 
-Before substantial website work, read:
+## Local development
 
-1. `CHATGPT_PROJECT_CONTEXT.md`
-2. `docs/WEBSITE_PLAN.md`
-3. `docs/MIGRATION_REPORT.md` when working on restored WordPress content/media
+Node.js 22.12 or newer is required. The repository includes `.nvmrc` for Node 22.
 
-## Local site development
-
-Current Astro requires Node.js 22.12 or newer. The repository includes `.nvmrc` for Node 22.
+For a reproducible install:
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
-Production-style static build:
+Production-style build:
 
 ```bash
 npm run build
 ```
 
-Output is written to `dist/`.
+The generated static site is written to `dist/`.
 
-## WordPress migration inventory
+## Repository structure
 
-Raw WXR exports are migration inputs and must remain outside Git.
+Key paths:
 
-Run the privacy-conscious inventory tool against one or more local exports:
-
-```bash
-python3 scripts/migration/wxr_inventory.py \
-  /path/to/pepepowcommunityorganization.WordPress.2026-09-18.xml \
-  /path/to/pepepowcommunityorganization.WordPress.2026-09-19.xml
+```text
+src/pages/                  Astro routes
+src/content/                Markdown content
+src/components/             Shared Astro components
+src/data/                   Verified structured links/data
+public/                     Public media and documents
+scripts/migration/          Migration and validation tooling
+migration/public/           Sanitized migration metadata
+docs/                       Project, migration and deployment documentation
+server/admin/               Announcement publisher source
+server/deploy/              Restricted deployment helper
 ```
 
-Local outputs are written to `migration/work/` and ignored by Git.
+For substantial work, read:
 
-See `docs/MIGRATION_REPORT.md` for the currently validated inventory.
+1. `CHATGPT_PROJECT_CONTEXT.md`
+2. `docs/WEBSITE_PLAN.md`
+3. `docs/MIGRATION_REPORT.md` for restored WordPress content/media
+4. `docs/DEPLOYMENT.md` for production/deployment work
 
-## Migration sources
+## Contributing
 
-Migration sources are evidence/input only and are not future website authority:
+Issues and pull requests are welcome for corrections, documentation, accessibility, site UX, PEPEPOW information, and practical tools.
 
-1. WordPress WXR exports supplied outside the repository
-2. legacy static mirror under `edisontw/web/portal/pepepow-org/`
-3. the existing PEPEPOW explorer / monitor project
-4. public PEPEPOW repositories and services
+When contributing:
 
-Do not copy WordPress/Elementor generated HTML as the long-term content architecture.
+- keep changes focused and reviewable
+- preserve important historical/public URLs
+- prefer static generation over unnecessary backend services
+- keep operational information verifiable and current
+- do not introduce browser access to wallet/node RPC
+- do not commit credentials, private keys, tokens, or private server configuration
+
+Site validation runs automatically for pushes and pull requests.
+
+## WordPress migration
+
+The former WordPress site is a migration/reference source only and is not the authority for the current website.
+
+Raw WordPress WXR exports must remain outside Git because they can contain account or author metadata.
+
+Privacy-conscious migration tools are available under `scripts/migration/`. Sanitized public migration metadata is stored under `migration/public/`.
+
+Do not copy WordPress/Elementor-generated HTML as the long-term site architecture.
 
 ## Security
 
-Do not commit:
+Never commit:
 
-- SSH keys
+- SSH private keys
+- GitHub or OAuth tokens/secrets
 - wallet/node credentials
 - RPC credentials
-- private keys or masternode secrets
+- wallet private keys or masternode secrets
 - `.env` files
-- raw WordPress exports containing author/account metadata
-- local migration inventories generated from private inputs
+- production admin configuration
+- raw WordPress exports containing private/account metadata
 
-The website must never require direct browser access to wallet/node RPC.
+Example configuration files contain placeholders only. Production secrets are stored outside the repository.
+
+If reporting a security problem, do not include live credentials, private keys, seed phrases, tokens, or other sensitive values in a public issue.
 
 ## Deployment
 
-Production static serving is active on the existing Apache host. See `docs/DEPLOYMENT.md` for the verified production baseline.
+Production deployment is automated from `main` using the restricted deployment workflow documented in `docs/DEPLOYMENT.md`.
 
-Target flow:
+The website deployment path is intentionally isolated from PEPEPOW wallet/node operation. Site deployment must not stop, reconfigure, or modify PEPEPOWd, wallet data, blockchain data, or RPC credentials.
 
-```text
-edit
-→ commit/push main
-→ server pull
-→ npm ci
-→ Astro build
-→ publish static release
-→ Apache serve /var/www/pepepow.net/current
-```
+## Content and media provenance
 
-Production website changes must not stop, reconfigure, or otherwise interfere with the PEPEPOW wallet/node running on the host.
+Historical content and media were recovered from several PEPEPOW community sources. Code, site content, and third-party/historical media may have different licensing or provenance.
+
+This repository does **not currently declare a single repository-wide license** covering all code, content, and media. Do not assume that every historical asset is freely reusable outside this project.
