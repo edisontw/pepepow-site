@@ -1537,3 +1537,198 @@ body.handdrawn-theme {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+
+/* Hand-drawn internal page rollout */
+@media (min-width: 64rem) {
+  .handdrawn-theme .home-hero {
+    grid-template-columns: minmax(0, .96fr) minmax(24rem, 1.04fr);
+    gap: clamp(2.25rem, 4vw, 3.75rem);
+  }
+
+  .handdrawn-theme .home-hero h1 {
+    max-width: 18ch;
+    font-size: clamp(3.35rem, 4.4vw, 4.25rem);
+    line-height: .98;
+  }
+
+  .home-hero-nowrap {
+    white-space: nowrap;
+  }
+}
+
+.illustrated-page-header {
+  display: grid;
+  grid-template-columns: minmax(0, .88fr) minmax(22rem, 1.12fr);
+  gap: clamp(2rem, 5vw, 4.25rem);
+  align-items: center;
+  padding-bottom: clamp(2.75rem, 6vw, 4.5rem);
+}
+
+.illustrated-page-header-copy {
+  min-width: 0;
+}
+
+.illustrated-page-header h1 {
+  max-width: 12ch;
+  margin-block: .45rem 1.15rem;
+  color: #1d2b21;
+  font-size: clamp(2.75rem, 5.3vw, 4.9rem);
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+.illustrated-page-header-art {
+  min-width: 0;
+  overflow: hidden;
+  aspect-ratio: 8 / 3;
+  border: 1px solid rgba(76, 101, 74, .18);
+  border-radius: clamp(1rem, 2.4vw, 1.65rem);
+  background: #fbfaf3;
+  box-shadow: 0 1rem 2.8rem rgba(65, 85, 63, .10);
+}
+
+.illustrated-page-header-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.handdrawn-theme .current-page,
+.handdrawn-theme .hub-page,
+.handdrawn-theme .network-page {
+  color: #1d2b21;
+}
+
+.handdrawn-theme .current-page-lede,
+.handdrawn-theme .reviewed-date,
+.handdrawn-theme .current-page-body p,
+.handdrawn-theme .current-page-body li,
+.handdrawn-theme .hub-card p,
+.handdrawn-theme .hub-copy,
+.handdrawn-theme .hub-definition-list dd,
+.handdrawn-theme .hub-safety-list,
+.handdrawn-theme .network-entry-card p,
+.handdrawn-theme .network-copy,
+.handdrawn-theme .metric-guide-list dd {
+  color: #5d6a60;
+}
+
+.handdrawn-theme .current-page-layout,
+.handdrawn-theme .hub-section,
+.handdrawn-theme .network-page-section,
+.handdrawn-theme .hub-definition-list,
+.handdrawn-theme .hub-definition-list > div,
+.handdrawn-theme .metric-guide-list,
+.handdrawn-theme .metric-guide-list > div {
+  border-color: rgba(76, 101, 74, .20);
+}
+
+.handdrawn-theme .page-toc,
+.handdrawn-theme .hub-card,
+.handdrawn-theme .network-entry-card,
+.handdrawn-theme .network-status-panel {
+  border-color: #d7ddcf;
+  background: rgba(255, 255, 255, .72);
+  box-shadow: 0 .45rem 1.4rem rgba(65, 85, 63, .04);
+}
+
+.handdrawn-theme .page-toc-title,
+.handdrawn-theme .current-page-body h2,
+.handdrawn-theme .current-page-body h3,
+.handdrawn-theme .current-page-body h4,
+.handdrawn-theme .hub-card h3,
+.handdrawn-theme .hub-definition-list dt,
+.handdrawn-theme .network-entry-card h3,
+.handdrawn-theme .metric-guide-list dt,
+.handdrawn-theme .network-status-panel h2 {
+  color: #243128;
+}
+
+.handdrawn-theme .page-toc a {
+  color: #5d6a60;
+}
+
+.handdrawn-theme .page-toc a:hover,
+.handdrawn-theme .page-toc a:focus-visible {
+  color: #1f3025;
+  background: #f1f6eb;
+}
+
+.handdrawn-theme .current-page-body blockquote {
+  border-left-color: #4d9360;
+  background: rgba(242, 246, 235, .82);
+  color: #536158;
+}
+
+.handdrawn-theme .current-page-body pre {
+  border-color: #d7ddcf;
+  background: #eef3e9;
+  color: #243128;
+}
+
+.handdrawn-theme .current-page-body th,
+.handdrawn-theme .current-page-body td {
+  border-color: #d7ddcf;
+}
+
+.handdrawn-theme .network-status-panel {
+  background:
+    linear-gradient(145deg, rgba(120, 180, 104, .10), transparent 62%),
+    rgba(255, 255, 255, .74);
+}
+
+.handdrawn-theme .network-static-facts > div {
+  border-color: #d7ddcf;
+}
+
+.handdrawn-theme .network-static-facts dt {
+  color: #657168;
+}
+
+.handdrawn-theme .network-static-facts dd {
+  color: #243128;
+}
+
+@media (hover: hover) {
+  .handdrawn-theme .hub-card-link:hover,
+  .handdrawn-theme .network-entry-card:hover {
+    border-color: #92b49a;
+    background: #fffdf8;
+  }
+}
+
+@media (max-width: 56rem) {
+  .illustrated-page-header {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .illustrated-page-header-copy {
+    max-width: 46rem;
+  }
+
+  .illustrated-page-header-art {
+    width: 100%;
+    max-width: 50rem;
+  }
+
+  .illustrated-page-header h1 {
+    max-width: 15ch;
+  }
+}
+
+@media (max-width: 38rem) {
+  .illustrated-page-header {
+    padding-bottom: 2.75rem;
+  }
+
+  .illustrated-page-header h1 {
+    font-size: clamp(2.55rem, 12vw, 3.65rem);
+  }
+
+  .illustrated-page-header-art {
+    aspect-ratio: 16 / 7;
+  }
+}

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import NetworkPulse from '../../components/NetworkPulse.astro';
+import IllustratedPageHeader from '../../components/IllustratedPageHeader.astro';
 
 const metricGuides = [
   ['Block height', 'The latest block number seen by the cached network monitor. A moving height is one basic sign that the chain is progressing.'],
@@ -36,21 +37,19 @@ const entryPoints = [
 <BaseLayout
   title="Network"
   description="PEPEPOW Network Pulse, live cached network visibility, Explorer entry points, and explanations of common network metrics."
+  theme="handdrawn"
 >
   <article class="network-page">
-    <header class="network-page-header">
-      <p class="eyebrow">Network</p>
-      <h1>See what the PEPEPOW network is doing.</h1>
-      <p class="current-page-lede">
-        Network Pulse reads a small cached public summary from the existing PEPEPOW monitor. The
-        browser never connects to wallet/node RPC, and this website does not run a second blockchain
-        collector. If the summary is unavailable or stale, use the Explorer for direct inspection.
-      </p>
-      <div class="actions">
-        <a class="button" href="https://explorer.pepepow.org/">Open Live Explorer</a>
-        <a class="button secondary" href="https://explorer.pepepow.org/network">Network Details</a>
-      </div>
-    </header>
+    <IllustratedPageHeader
+      eyebrow="Network"
+      title="See what the PEPEPOW network is doing."
+      intro="Network Pulse reads a small cached public summary from the existing PEPEPOW monitor. The browser never connects to wallet/node RPC, and this website does not run a second blockchain collector. If the summary is unavailable or stale, use the Explorer for direct inspection."
+      image="/media/visual/handdrawn/headers/header-network-pulse-v1.webp"
+      actions={[
+        { label: 'Open Live Explorer', href: 'https://explorer.pepepow.org/', primary: true },
+        { label: 'Network Details', href: 'https://explorer.pepepow.org/network' },
+      ]}
+    />
 
     <NetworkPulse />
 

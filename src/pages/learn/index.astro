@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import IllustratedPageHeader from '../../components/IllustratedPageHeader.astro';
 
 const learningPaths = [
   {
@@ -45,21 +46,19 @@ const principles = [
 <BaseLayout
   title="Learn"
   description="Learn Proof of Work, wallets, blocks, masternodes, mining, self-custody, and PEPEPOW history through current practical references."
+  theme="handdrawn"
 >
   <article class="hub-page">
-    <header class="hub-page-header">
-      <p class="eyebrow">Learn</p>
-      <h1>Learn crypto concepts through PEPEPOW.</h1>
-      <p class="current-page-lede">
-        Use practical PEPEPOW examples to understand Proof of Work, wallets, network metrics,
-        masternodes, third-party services, and source verification without turning historical
-        material into current instructions.
-      </p>
-      <div class="actions">
-        <a class="button" href="/network/">Start with the network</a>
-        <a class="button secondary" href="/search/">Search the archive</a>
-      </div>
-    </header>
+    <IllustratedPageHeader
+      eyebrow="Learn"
+      title="Learn crypto concepts through PEPEPOW."
+      intro="Use practical PEPEPOW examples to understand Proof of Work, wallets, network metrics, masternodes, third-party services, and source verification without turning historical material into current instructions."
+      image="/media/visual/handdrawn/headers/header-guides-v1.webp"
+      actions={[
+        { label: 'Start with the network', href: '/network/', primary: true },
+        { label: 'Search the archive', href: '/search/' },
+      ]}
+    />
 
     <section class="hub-section" aria-labelledby="paths-title">
       <div class="section-heading">

@@ -1,0 +1,47 @@
+---
+interface HeaderAction {
+  label: string;
+  href: string;
+  primary?: boolean;
+}
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  image: string;
+  actions?: HeaderAction[];
+  reviewed?: string;
+}
+
+const {
+  eyebrow,
+  title,
+  intro,
+  image,
+  actions = [],
+  reviewed,
+} = Astro.props;
+---
+
+<header class="illustrated-page-header">
+  <div class="illustrated-page-header-copy">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1>{title}</h1>
+    <p class="current-page-lede">{intro}</p>
+    {actions.length > 0 && (
+      <div class="actions current-page-actions">
+        {actions.map((action) => (
+          <a class={action.primary ? 'button' : 'button secondary'} href={action.href}>
+            {action.label}
+          </a>
+        ))}
+      </div>
+    )}
+    {reviewed && <p class="reviewed-date">{reviewed}</p>}
+  </div>
+
+  <div class="illustrated-page-header-art" aria-hidden="true">
+    <img src={image} alt="" loading="eager" decoding="async" fetchpriority="high" />
+  </div>
+</header>

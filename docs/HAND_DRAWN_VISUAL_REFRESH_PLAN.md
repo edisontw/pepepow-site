@@ -1,6 +1,6 @@
 # PEPEPOW Hand-Drawn Visual Refresh Specification
 
-Status: Homepage visual slice implemented / review before page-header rollout
+Status: Homepage + six page-header visual slices implemented / production review
 Target: https://pepepow.net
 Repository authority: edisontw/pepepow-site main
 Last aligned: 2026-09-20
@@ -611,5 +611,8 @@ As of 2026-09-20:
 - the homepage uses a scoped bright editorial theme rather than changing every existing page at once
 - semantic text, navigation, CTAs, and Network Pulse remain HTML/live UI
 - the first homepage slice uses the scenic hero, signpost, lettering, and selected Start Here icons
-- the next planned implementation set is the six page-header illustrations for Mining, Wallets, Masternode, Community, Learn, and Network
+- six page-header illustrations are now wired into Mining, Wallets, Masternode, Community, Learn, and Network
+- those six pages use the same scoped bright editorial theme while their semantic content and operational controls remain HTML
+- the homepage hero typography was tightened after the first production visual review to avoid an awkward desktop break in “Community-powered”
+- the next visual review should focus on real-device responsive behavior, header crop quality, and whether any page needs a dedicated secondary spot illustration
 - mascot assets remain unreferenced in production until a manual visual/provenance review

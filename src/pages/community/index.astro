@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import IllustratedPageHeader from '../../components/IllustratedPageHeader.astro';
 
 const communityLinks = [
   {
@@ -51,21 +52,20 @@ const participation = [
 <BaseLayout
   title="Community"
   description="PEPEPOW community links, contribution paths, source repositories, announcements, and safety guidance."
+  theme="handdrawn"
 >
   <article class="hub-page">
-    <header class="hub-page-header">
-      <p class="eyebrow">Community</p>
-      <h1>Participate through verifiable public channels.</h1>
-      <p class="current-page-lede">
-        PEPEPOW is maintained across open repositories, public network services, announcements, and
-        community discussion. Use current sources when technical or financial details matter.
-      </p>
-      <div class="actions">
-        <a class="button" href="https://discord.gg/sJgDVRkBcq">Join Discord</a>
-        <a class="button secondary" href="https://github.com/edisontw/pepepow-site">Website source</a>
-        <a class="button secondary" href="https://github.com/MattF42/PePe-core">Core source</a>
-      </div>
-    </header>
+    <IllustratedPageHeader
+      eyebrow="Community"
+      title="Participate through verifiable public channels."
+      intro="PEPEPOW is maintained across open repositories, public network services, announcements, and community discussion. Use current sources when technical or financial details matter."
+      image="/media/visual/handdrawn/headers/header-community-v1.webp"
+      actions={[
+        { label: 'Join Discord', href: 'https://discord.gg/sJgDVRkBcq', primary: true },
+        { label: 'Website source', href: 'https://github.com/edisontw/pepepow-site' },
+        { label: 'Core source', href: 'https://github.com/MattF42/PePe-core' },
+      ]}
+    />
 
     <section class="hub-section" aria-labelledby="community-links-title">
       <div class="section-heading">
