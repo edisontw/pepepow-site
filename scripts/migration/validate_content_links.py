@@ -44,6 +44,7 @@ SOURCE_ARTIFACTS = (
     ),
 )
 SKIP_SCHEMES = {"mailto", "tel", "javascript", "data"}
+RUNTIME_PATH_PREFIXES = ("/admin-api",)
 
 
 def markdown_body(text: str) -> str:
@@ -165,6 +166,12 @@ def main() -> int:
 
             resolved = urlsplit(urljoin(base_url, value))
             if resolved.hostname != "site.invalid":
+                continue
+
+            if any(
+                resolved.path == prefix or resolved.path.startswith(prefix + "/")
+                for prefix in RUNTIME_PATH_PREFIXES
+            ):
                 continue
 
             references_checked += 1
