@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import lensData from '../../data/generated/pepepow-lens.json';
+
+const items = lensData.items;
+const updated = lensData.generated_at
+  ? new Date(lensData.generated_at).toISOString().slice(0, 10)
+  : null;
+---
+
+<BaseLayout
+  title="PEPEPOW Lens"
+  description="A small daily selection of high-signal cryptocurrency policy, security, technology, and Proof-of-Work developments."
+  theme="handdrawn"
+>
+  <article class="lens-page">
+    <header class="news-archive-header">
+      <p class="eyebrow">PEPEPOW Lens</p>
+      <h1>Worth tracking.</h1>
+      <p class="lede">
+        A deliberately small automated reading list covering broader developments that may matter
+        to PEPEPOW users. It is updated once per day and links directly to the original sources.
+      </p>
+      {updated && <p class="archive-count">Last data update: {updated} · maximum 6 items</p>}
+    </header>
+
+    {items.length > 0 ? (
+      <div class="lens-list">
+        {items.map((item) => (
+          <article class="lens-item">
+            <h3>
+              <a href={item.url}>{item.title}</a>
+              <span class="lens-tag">{item.category}</span>
+            </h3>
+            <p class="lens-meta">
+              {item.source} · <time datetime={item.published}>{item.published.slice(0, 10)}</time>
+            </p>
+          </article>
+        ))}
+      </div>
+    ) : (
+      <p class="archive-note">
+        No Lens items are currently available. PEPEPOW announcements remain available in
+        <a href="/announcements/"> PEPEPOW News</a>.
+      </p>
+    )}
+
+    <p class="archive-context">
+      Lens entries are external links selected by a small deterministic feed filter. PEPEPOW does
+      not republish the source article body and does not use Lens as trading advice.
+    </p>
+  </article>
+</BaseLayout>

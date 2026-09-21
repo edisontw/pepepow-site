@@ -1,0 +1,32 @@
+[
+  {
+    "name": "SEC",
+    "feed": "https://www.sec.gov/news/pressreleases.rss",
+    "mode": "strict",
+    "priority": 5
+  },
+  {
+    "name": "Bitcoin Optech",
+    "feed": "https://bitcoinops.org/feed.xml",
+    "mode": "technical",
+    "priority": 5
+  },
+  {
+    "name": "Ethereum Foundation",
+    "feed": "https://blog.ethereum.org/feed.xml",
+    "mode": "technical",
+    "priority": 4
+  },
+  {
+    "name": "CoinDesk",
+    "feed": "https://www.coindesk.com/arc/outboundfeeds/rss/",
+    "mode": "crypto",
+    "priority": 3
+  },
+  {
+    "name": "Decrypt",
+    "feed": "https://decrypt.co/feed",
+    "mode": "crypto",
+    "priority": 3
+  }
+]

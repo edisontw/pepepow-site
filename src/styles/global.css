@@ -2004,3 +2004,92 @@ body.handdrawn-theme {
   color: #7f5918;
 }
 
+
+
+/* PEPEPOW Lens — deliberately compact, low-volume external reading list */
+.lens-page {
+  max-width: 60rem;
+  padding: 3rem 0 5rem;
+}
+
+.lens-list {
+  display: grid;
+  gap: .75rem;
+  max-width: 60rem;
+}
+
+.lens-item {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: .6rem;
+  background: var(--surface);
+}
+
+.lens-item h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.lens-item h3 a {
+  text-decoration-thickness: .08em;
+  text-underline-offset: .2em;
+}
+
+.lens-tag {
+  display: inline-flex;
+  align-items: center;
+  margin-left: .5rem;
+  padding: .08rem .42rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: .7rem;
+  font-weight: 800;
+  line-height: 1.5;
+  vertical-align: .12em;
+  white-space: nowrap;
+}
+
+.lens-meta {
+  margin: .35rem 0 0;
+  color: var(--muted);
+  font-size: .84rem;
+}
+
+.lens-list--compact .lens-item {
+  padding-block: .9rem;
+}
+
+.handdrawn-theme .lens-item {
+  border-color: #d7ddcf;
+  background: rgba(255, 255, 255, .72);
+  box-shadow: 0 .35rem 1.1rem rgba(65, 85, 63, .035);
+}
+
+.handdrawn-theme .lens-item h3,
+.handdrawn-theme .lens-item h3 a {
+  color: #243128;
+}
+
+.handdrawn-theme .lens-tag {
+  border-color: #bad0bc;
+  background: #f1f6eb;
+  color: #2d7444;
+}
+
+.handdrawn-theme .lens-meta {
+  color: #667168;
+}
+
+@media (hover: hover) {
+  .lens-item:hover {
+    border-color: #3b493d;
+    background: var(--surface-raised);
+  }
+
+  .handdrawn-theme .lens-item:hover {
+    border-color: #92b49a;
+    background: #fffdf8;
+  }
+}

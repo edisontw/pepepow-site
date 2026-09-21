@@ -46,7 +46,7 @@ jobs:
 
       - name: Inventory historical announcement links
         run: >-
-          python3 scripts/migration/audit_external_links.py
+          python3 scripts/migration/audit_external_links.py scripts/news/fetch_lens.py
           src/content/announcements/*.md
           --inventory-only
           --output migration/work/announcement-external-link-audit.json

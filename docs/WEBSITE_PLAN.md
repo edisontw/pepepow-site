@@ -1092,6 +1092,18 @@ Exit criteria:
 
 ### Phase 4 — Automation / PEPEPOW Lens
 
+Status: **PEPEPOW Lens v1 implemented 2026-09-21**. It intentionally uses a low-resource, low-volume model: five allowlisted RSS/Atom sources, one scheduled fetch per day, no full-text ingestion, no manual curation queue, no database, and at most six retained external items. The homepage shows at most three. Categories are displayed as compact labels after each article title.
+
+Current v1 sources:
+
+- SEC Press Releases — policy/regulatory items only after strict crypto/tokenization filtering
+- Bitcoin Optech — technical, mining, wallet, protocol and infrastructure developments
+- Ethereum Foundation Blog — protocol/security/technical developments
+- CoinDesk — broader major, policy, security and technology developments
+- Decrypt — broader major, policy, security and technology developments
+
+The fetcher uses deterministic filtering/deduplication and preserves recent last-known-good items for temporarily failed sources. Low-value price-prediction, sponsored, podcast/video and promotional items are excluded. A generated-data change triggers production deployment; an unchanged daily fetch does not create a commit.
+
 Deliver:
 
 - curated feed allowlist

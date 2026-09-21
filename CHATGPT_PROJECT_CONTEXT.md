@@ -192,6 +192,25 @@ After the hand-drawn visual rollout, the site received a small architecture/navi
 Production was not changed as part of this architecture pass.
 
 
+
+## PEPEPOW Lens state — 2026-09-21
+
+A lightweight external-news layer is now implemented:
+
+- public route: `/lens/`
+- homepage shows at most 3 Lens items
+- generated data retains at most 6 items total
+- categories appear as compact labels after article titles
+- source allowlist: SEC Press Releases, Bitcoin Optech, Ethereum Foundation Blog, CoinDesk, Decrypt
+- fetch cadence: once daily through GitHub Actions
+- implementation: Python standard library only; RSS/Atom metadata only
+- no database, long-running service, full-text ingestion, or manual curation queue
+- filtering is deliberately strict and excludes low-value price-prediction/promotional content
+- unchanged fetches do not commit or deploy
+- if an upstream source temporarily fails, recent last-known-good items for that source may be retained
+
+PEPEPOW News remains `/announcements/`; PEPEPOW Lens remains a separate, small external-reading stream.
+
 ## Announcement publisher state — 2026-09-20
 
 A lightweight authenticated announcement publisher has been added in source:

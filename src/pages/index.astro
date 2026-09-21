@@ -3,10 +3,13 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import NetworkPulse from '../components/NetworkPulse.astro';
 import { verifiedLinks } from '../data/verified-links';
+import lensData from '../data/generated/pepepow-lens.json';
 
 const announcements = (await getCollection('announcements'))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 3);
+
+const lensItems = lensData.items.slice(0, 3);
 
 const routeFor = (entry: (typeof announcements)[number]) => {
   if (entry.data.legacy_url) {
@@ -164,6 +167,33 @@ const quickLinks = [
         operational guidance, use the Wallet, Mining, Masternode, Market, and Network pages.
       </p>
     </section>
+
+
+    {lensItems.length > 0 && (
+      <section class="home-section" aria-labelledby="lens-title">
+        <div class="section-heading section-heading-row">
+          <div>
+            <p class="eyebrow">PEPEPOW Lens</p>
+            <h2 id="lens-title">A few developments worth tracking.</h2>
+          </div>
+          <a class="text-action" href="/lens/">View Lens →</a>
+        </div>
+
+        <div class="lens-list lens-list--compact">
+          {lensItems.map((item) => (
+            <article class="lens-item">
+              <h3>
+                <a href={item.url}>{item.title}</a>
+                <span class="lens-tag">{item.category}</span>
+              </h3>
+              <p class="lens-meta">
+                {item.source} · <time datetime={item.published}>{item.published.slice(0, 10)}</time>
+              </p>
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
 
     <section class="home-section" aria-labelledby="links-title">
       <div class="section-heading">
