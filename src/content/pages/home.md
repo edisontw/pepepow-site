@@ -128,7 +128,7 @@ Difficulty: Medium
 
 ### 4. PepewPay – Payment Link / POS PWA
 
-Completed
+Not Completed
 
 **Core purpose:** One-page merchant payment system with payment links, QR codes, and live confirmation for in-store and online payments.
 
