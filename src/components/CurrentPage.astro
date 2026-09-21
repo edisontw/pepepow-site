@@ -19,8 +19,19 @@ const pageConfigs: Record<string, {
     intro: 'A concise guide to what PEPEPOW is, how the network has evolved, and where to verify its software, history, and public sources.',
     actions: [
       { label: 'Explore Network', href: '/network/', primary: true },
+      { label: 'Development Roadmap', href: '/roadmap/' },
       { label: 'Core source', href: verifiedLinks.coreRepository },
       { label: 'Announcements', href: '/announcements/' },
+    ],
+  },
+  roadmap: {
+    title: 'PEPEPOW Development Roadmap',
+    eyebrow: 'Build · maintain · extend',
+    intro: 'A current view of completed, in-progress, and planned PEPEPOW infrastructure and ecosystem work.',
+    actions: [
+      { label: 'About PEPEPOW', href: '/about/', primary: true },
+      { label: 'Announcements', href: '/announcements/' },
+      { label: 'Core source', href: verifiedLinks.coreRepository },
     ],
   },
   wallet: {
@@ -92,7 +103,7 @@ const tocHeadings = headings.filter((heading) => heading.depth === 2).slice(0, 1
 const description = entry.data.description || config.intro;
 const headerImage = visualHeaders[slug];
 const spotImage = visualSpots[slug];
-const usesHanddrawnTheme = ['about', 'wallet', 'mining', 'masternode', 'market'].includes(slug);
+const usesHanddrawnTheme = ['about', 'roadmap', 'wallet', 'mining', 'masternode', 'market'].includes(slug);
 const hasToc = tocHeadings.length >= 3;
 ---
 
