@@ -71,7 +71,7 @@ def clean_text(value: str | None) -> str:
     if not value:
         return ""
     value = re.sub(r"<[^>]+>", " ", value)
-    return re.sub(r"\\s+", " ", html.unescape(value)).strip()
+    return re.sub(r"\s+", " ", html.unescape(value)).strip()
 
 
 def first_child_text(parent: ET.Element, names: tuple[str, ...]) -> str:
@@ -315,7 +315,7 @@ def main() -> int:
         "generated_at": now.replace(microsecond=0).isoformat().replace("+00:00", "Z"),
         "items": selected,
     }
-    args.output.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\\n", encoding="utf-8")
+    args.output.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(
         f"Lens updated: {len(selected)} items | "
         f"sources ok: {len(successful_sources)} | sources failed: {len(failed_sources)}"
