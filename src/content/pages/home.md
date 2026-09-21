@@ -2,7 +2,7 @@
 title: "Home"
 description: ""
 date: "2024-12-13 16:19:47"
-updated: "2026-09-19 20:25:51"
+updated: "2026-09-21 21:33:00"
 slug: "home-new"
 categories: []
 tags: []
@@ -128,7 +128,7 @@ Difficulty: Medium
 
 ### 4. PepewPay – Payment Link / POS PWA
 
-Not Completed
+Completed
 
 **Core purpose:** One-page merchant payment system with payment links, QR codes, and live confirmation for in-store and online payments.
 
@@ -142,9 +142,9 @@ Not Completed
 
 Difficulty: Medium
 
-### 6. Mobile Wallet (Android / iOS)
+### 6. Mobile Wallet (Android)
 
-Partially Completed
+Completed
 
 **Core purpose:** Native mobile wallet with fast sync, PIN/biometric lock, QR scanning, and push notifications.
 
