@@ -16,7 +16,7 @@ The new website is now available at:
 
 https://pepepow.net/
 
-The existing https://pepepow.org/ address has been retained and now redirects visitors to the new website.
+The previous PEPEPOW website address has been retained and now redirects visitors to the new website.
 
 The migration provides a cleaner foundation for future updates while making the website easier to maintain alongside other PEPEPOW community infrastructure.
 
