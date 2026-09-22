@@ -1,33 +1,47 @@
 {
-  "generated_at": "2026-09-21T03:58:00Z",
+  "generated_at": "2026-09-22T05:21:56Z",
   "items": [
     {
-      "title": "How the Clarity Act's Defeat Handed the SEC and CFTC the Wheel on Crypto",
-      "url": "https://decrypt.co/378688/how-clarity-act-defeat-sec-cftc-wheel-crypto",
+      "title": "After Clarity Act Fails, Crypto Super PAC Fairshake Targets Sherrod Brown With $30 Million",
+      "url": "https://decrypt.co/378891/clarity-act-crypto-super-pac-fairshake-sherrod-brown-30-million",
       "source": "Decrypt",
-      "published": "2026-09-19T00:00:00Z",
+      "published": "2026-09-21T22:16:03Z",
       "category": "Policy"
     },
     {
-      "title": "Bitcoin Optech Newsletter #423",
-      "url": "https://bitcoinops.org/en/newsletters/2026/09/18/",
-      "source": "Bitcoin Optech",
-      "published": "2026-09-18T00:00:00Z",
-      "category": "Mining / PoW"
+      "title": "X Sues Two Bitcoin Influencers Over Bot Army That Milked Creator Payouts",
+      "url": "https://decrypt.co/378877/x-sues-bitcoin-influencers-bot-army-creator-payout",
+      "source": "Decrypt",
+      "published": "2026-09-21T20:16:03Z",
+      "category": "Policy"
     },
     {
-      "title": "Crypto tech provider Haruko hit by cyberattack affecting 15 clients, some funds lost",
-      "url": "https://www.coindesk.com/business/2026/09/18/crypto-tech-provider-haruko-hit-by-cyberattack-affecting-15-clients-some-funds-lost",
+      "title": "Why this investment bank expects little demand for tokenized stocks despite SEC’s new trading rules",
+      "url": "https://www.coindesk.com/markets/2026/09/21/why-this-investment-bank-sees-little-demand-for-tokenized-stocks-despite-sec-s-new-trading-rules",
       "source": "CoinDesk",
-      "published": "2026-09-18T00:00:00Z",
-      "category": "Security"
+      "published": "2026-09-21T19:08:40Z",
+      "category": "Policy"
+    },
+    {
+      "title": "Crypto political group plans to spend $30 million against Sherrod Brown's Senate bid",
+      "url": "https://www.coindesk.com/news-analysis/2026/09/21/crypto-s-fairshake-repeats-history-with-usd30-million-to-oppose-sherrod-brown-senate-bid",
+      "source": "CoinDesk",
+      "published": "2026-09-21T16:01:36Z",
+      "category": "Policy"
     },
     {
       "title": "SEC Issues “Innovation Exemption” to Facilitate the Trading of Tokenized NMS Stock and Request for Comment",
       "url": "https://www.sec.gov/newsroom/press-releases/2026-90-sec-issues-innovation-exemption-facilitate-trading-tokenized-nms-stock-request-comment",
       "source": "SEC",
-      "published": "2026-09-17T00:00:00Z",
+      "published": "2026-09-17T12:55:00Z",
       "category": "Policy"
+    },
+    {
+      "title": "Bitcoin Optech Newsletter #422",
+      "url": "https://bitcoinops.org/en/newsletters/2026/09/11/",
+      "source": "Bitcoin Optech",
+      "published": "2026-09-11T00:00:00Z",
+      "category": "Security"
     }
   ]
 }
