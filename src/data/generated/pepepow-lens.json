@@ -1,33 +1,40 @@
 {
-  "generated_at": "2026-09-22T05:21:56Z",
+  "generated_at": "2026-09-23T05:09:41Z",
   "items": [
     {
-      "title": "After Clarity Act Fails, Crypto Super PAC Fairshake Targets Sherrod Brown With $30 Million",
-      "url": "https://decrypt.co/378891/clarity-act-crypto-super-pac-fairshake-sherrod-brown-30-million",
+      "title": "White-Hat Hackers Route Coldcard Exploit Bitcoin Into 'Recovery Trust'",
+      "url": "https://decrypt.co/378978/white-hat-hackers-coldcard-exploit-bitcoin-recovery-trust",
       "source": "Decrypt",
-      "published": "2026-09-21T22:16:03Z",
-      "category": "Policy"
+      "published": "2026-09-22T19:31:03Z",
+      "category": "Security"
     },
     {
-      "title": "X Sues Two Bitcoin Influencers Over Bot Army That Milked Creator Payouts",
-      "url": "https://decrypt.co/378877/x-sues-bitcoin-influencers-bot-army-creator-payout",
+      "title": "Whitehats move 52 bitcoin from the Coldcard hack to a recovery trust",
+      "url": "https://www.coindesk.com/markets/2026/09/22/whitehats-move-52-bitcoin-from-the-coldcard-hack-to-a-recovery-trust",
+      "source": "CoinDesk",
+      "published": "2026-09-22T06:27:28Z",
+      "category": "Security"
+    },
+    {
+      "title": "$161 Million in Decade-Old Bitcoin Has Moved in Just Two Weeks",
+      "url": "https://decrypt.co/379006/161-million-decade-old-bitcoin-moves-two-weeks",
       "source": "Decrypt",
-      "published": "2026-09-21T20:16:03Z",
+      "published": "2026-09-22T21:16:03Z",
       "category": "Policy"
     },
     {
-      "title": "Why this investment bank expects little demand for tokenized stocks despite SEC’s new trading rules",
-      "url": "https://www.coindesk.com/markets/2026/09/21/why-this-investment-bank-sees-little-demand-for-tokenized-stocks-despite-sec-s-new-trading-rules",
+      "title": "European central banks push to expand stablecoin yield ban to crypto lending and staking",
+      "url": "https://www.coindesk.com/policy/2026/09/22/european-central-banks-push-to-expand-stablecoin-yield-ban-to-crypto-lending-and-staking",
       "source": "CoinDesk",
-      "published": "2026-09-21T19:08:40Z",
+      "published": "2026-09-22T14:32:59Z",
       "category": "Policy"
     },
     {
-      "title": "Crypto political group plans to spend $30 million against Sherrod Brown's Senate bid",
-      "url": "https://www.coindesk.com/news-analysis/2026/09/21/crypto-s-fairshake-repeats-history-with-usd30-million-to-oppose-sherrod-brown-senate-bid",
-      "source": "CoinDesk",
-      "published": "2026-09-21T16:01:36Z",
-      "category": "Policy"
+      "title": "Bitcoin Optech Newsletter #423",
+      "url": "https://bitcoinops.org/en/newsletters/2026/09/18/",
+      "source": "Bitcoin Optech",
+      "published": "2026-09-18T00:00:00Z",
+      "category": "Security"
     },
     {
       "title": "SEC Issues “Innovation Exemption” to Facilitate the Trading of Tokenized NMS Stock and Request for Comment",
@@ -35,13 +42,6 @@
       "source": "SEC",
       "published": "2026-09-17T12:55:00Z",
       "category": "Policy"
-    },
-    {
-      "title": "Bitcoin Optech Newsletter #422",
-      "url": "https://bitcoinops.org/en/newsletters/2026/09/11/",
-      "source": "Bitcoin Optech",
-      "published": "2026-09-11T00:00:00Z",
-      "category": "Security"
     }
   ]
 }
