@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-09-26T05:27:42Z",
+  "generated_at": "2026-09-27T05:44:36Z",
   "items": [
+    {
+      "title": "How Crypto Stopped Waiting for Congress and Learned to Love the Regulators",
+      "url": "https://decrypt.co/379383/how-crypto-stopped-waiting-congress-learned-love-regulators",
+      "source": "Decrypt",
+      "published": "2026-09-26T16:06:03Z",
+      "category": "Policy"
+    },
+    {
+      "title": "Binance deal gives Circle a boost in stablecoin race with Tether, analysts say",
+      "url": "https://www.coindesk.com/business/2026/09/26/binance-deal-gives-circle-a-boost-in-stablecoin-race-with-tether-analysts-say",
+      "source": "CoinDesk",
+      "published": "2026-09-26T13:00:00Z",
+      "category": "Policy"
+    },
+    {
+      "title": "Bitcoin could soon get Zcash-style 'shielded' privacy without changing its rules",
+      "url": "https://www.coindesk.com/tech/2026/09/25/bitcoin-could-soon-get-zcash-style-shielded-privacy-without-changing-its-rules",
+      "source": "CoinDesk",
+      "published": "2026-09-26T12:00:00Z",
+      "category": "Policy"
+    },
     {
       "title": "Circle and Tether Freeze Stablecoins Tied to Bitget Hack—But Most Funds Slip Away",
       "url": "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
       "source": "Decrypt",
       "published": "2026-09-25T18:42:51Z",
       "category": "Security"
-    },
-    {
-      "title": "Bitget Hack Losses Climb to $387M: Here’s What Happened, and Why North Korea Is a Suspect",
-      "url": "https://decrypt.co/379350/bitget-hack-387m-what-happened-why-north-korea-suspect",
-      "source": "Decrypt",
-      "published": "2026-09-25T17:08:57Z",
-      "category": "Security"
-    },
-    {
-      "title": "Circle and Tether step in to freeze hacker wallet after massive Bitget crypto heist",
-      "url": "https://www.coindesk.com/markets/2026/09/25/circle-and-tether-step-in-to-freeze-hacker-wallet-after-massive-bitget-crypto-heist",
-      "source": "CoinDesk",
-      "published": "2026-09-25T14:41:53Z",
-      "category": "Security"
-    },
-    {
-      "title": "Bitcoin could soon get Zcash-style 'shielded' privacy without changing its rules",
-      "url": "https://www.coindesk.com/tech/2026/09/25/bitcoin-could-soon-get-zcash-style-shielded-privacy-without-changing-its-rules",
-      "source": "CoinDesk",
-      "published": "2026-09-26T04:02:13Z",
-      "category": "Policy"
     },
     {
       "title": "Bitcoin Optech Newsletter #423",
