@@ -1,12 +1,19 @@
 {
-  "generated_at": "2026-09-27T05:44:36Z",
+  "generated_at": "2026-09-28T05:51:38Z",
   "items": [
     {
-      "title": "How Crypto Stopped Waiting for Congress and Learned to Love the Regulators",
-      "url": "https://decrypt.co/379383/how-crypto-stopped-waiting-congress-learned-love-regulators",
+      "title": "SEC Staff Says Token Buybacks Don't Make Crypto a Security—If the Network Works",
+      "url": "https://decrypt.co/379398/sec-staff-token-buybacks-dont-make-crypto-security",
       "source": "Decrypt",
-      "published": "2026-09-26T16:06:03Z",
+      "published": "2026-09-27T13:01:03Z",
       "category": "Policy"
+    },
+    {
+      "title": "Bitcoin's Quantum Problem: Three Ways Researchers Are Trying to Fix It",
+      "url": "https://decrypt.co/379400/bitcoins-quantum-problem-three-ways-researchers-are-trying-to-fix-it",
+      "source": "Decrypt",
+      "published": "2026-09-27T15:01:03Z",
+      "category": "Technology"
     },
     {
       "title": "Binance deal gives Circle a boost in stablecoin race with Tether, analysts say",
@@ -21,13 +28,6 @@
       "source": "CoinDesk",
       "published": "2026-09-26T12:00:00Z",
       "category": "Policy"
-    },
-    {
-      "title": "Circle and Tether Freeze Stablecoins Tied to Bitget Hack—But Most Funds Slip Away",
-      "url": "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
-      "source": "Decrypt",
-      "published": "2026-09-25T18:42:51Z",
-      "category": "Security"
     },
     {
       "title": "Bitcoin Optech Newsletter #423",
