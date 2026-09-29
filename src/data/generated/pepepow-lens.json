@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-09-28T05:51:38Z",
+  "generated_at": "2026-09-29T06:11:28Z",
   "items": [
     {
-      "title": "SEC Staff Says Token Buybacks Don't Make Crypto a Security—If the Network Works",
-      "url": "https://decrypt.co/379398/sec-staff-token-buybacks-dont-make-crypto-security",
+      "title": "THORChain rejects Bitget request to block hacker as $6 million moves to bitcoin",
+      "url": "https://www.coindesk.com/tech/2026/09/28/thorchain-rejects-bitget-request-to-block-hacker-as-usd6-million-moves-to-bitcoin",
+      "source": "CoinDesk",
+      "published": "2026-09-28T12:13:09Z",
+      "category": "Security"
+    },
+    {
+      "title": "Citi Clients Can Now Take Stablecoin Payments Through Coinbase—Without Touching Crypto",
+      "url": "https://decrypt.co/379497/citi-stablecoin-payments-coinbase-without-touching-crypto",
       "source": "Decrypt",
-      "published": "2026-09-27T13:01:03Z",
+      "published": "2026-09-28T20:36:03Z",
       "category": "Policy"
     },
     {
-      "title": "Bitcoin's Quantum Problem: Three Ways Researchers Are Trying to Fix It",
-      "url": "https://decrypt.co/379400/bitcoins-quantum-problem-three-ways-researchers-are-trying-to-fix-it",
+      "title": "Morning Minute: SEC Clears Token Buybacks for Crypto Networks",
+      "url": "https://decrypt.co/379412/morning-minute-sec-clears-token-buybacks-for-crypto-networks",
       "source": "Decrypt",
-      "published": "2026-09-27T15:01:03Z",
+      "published": "2026-09-28T12:03:21Z",
+      "category": "Policy"
+    },
+    {
+      "title": "Chainlink launches new version of its crypto bridge tech 'CCIP' to give apps more control over their security",
+      "url": "https://www.coindesk.com/business/2026/09/28/chainlink-updates-its-crypto-bridge-tech-months-after-a-usd292-million-hack-shook-the-industry",
+      "source": "CoinDesk",
+      "published": "2026-09-28T12:30:00Z",
       "category": "Technology"
-    },
-    {
-      "title": "Binance deal gives Circle a boost in stablecoin race with Tether, analysts say",
-      "url": "https://www.coindesk.com/business/2026/09/26/binance-deal-gives-circle-a-boost-in-stablecoin-race-with-tether-analysts-say",
-      "source": "CoinDesk",
-      "published": "2026-09-26T13:00:00Z",
-      "category": "Policy"
-    },
-    {
-      "title": "Bitcoin could soon get Zcash-style 'shielded' privacy without changing its rules",
-      "url": "https://www.coindesk.com/tech/2026/09/25/bitcoin-could-soon-get-zcash-style-shielded-privacy-without-changing-its-rules",
-      "source": "CoinDesk",
-      "published": "2026-09-26T12:00:00Z",
-      "category": "Policy"
     },
     {
       "title": "Bitcoin Optech Newsletter #423",
