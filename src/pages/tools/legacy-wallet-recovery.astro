@@ -86,33 +86,65 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <section class="hub-section" aria-labelledby="recovery-results-title">
       <div class="section-heading">
         <p class="eyebrow">Step 2</p>
-        <h2 id="recovery-results-title">Verify the recovered address.</h2>
+        <h2 id="recovery-results-title">Check that your old funds were found.</h2>
       </div>
       <div id="recovery-results" class="recovery-results"></div>
       <p class="small-note">
-        A zero balance in PEPEW Light does not prove the old wallet is empty. The old Android wallet
-        used multiple HD addresses, while the current Light wallet normally opens one active path.
+        When an address with your expected balance appears, open it in Explorer and check the amount.
+        If it is correct, continue with <strong>Show Recovery Key</strong>.
+      </p>
+      <p class="small-note">
+        Technical note: the old Android wallet used multiple HD (hierarchical deterministic) addresses.
+        In simple terms, one 12-word recovery phrase can control many different wallet addresses.
       </p>
     </section>
 
     <section class="hub-section" aria-labelledby="move-funds-title">
       <div class="section-heading">
-        <p class="eyebrow">Step 3</p>
-        <h2 id="move-funds-title">Move recovered coins to a new wallet.</h2>
+        <p class="eyebrow">After your funds are found</p>
+        <h2 id="move-funds-title">Recover the coins in 4 simple steps.</h2>
       </div>
-      <div class="recovery-instructions">
+      <div class="recovery-instructions recovery-simple-steps">
         <ol>
-          <li>Open the recovered address in Explorer and confirm the expected balance.</li>
-          <li>Reveal the WIF private key only on a device you trust.</li>
           <li>
-            In PEPEPOW Core, open the debug console and import the key with
-            <code>importprivkey "YOUR_WIF" "legacy-recovery"</code>.
+            <strong>Show and copy the Recovery Key.</strong><br />
+            Click <strong>Show Recovery Key</strong> under the address that has your funds.<br />
+            <span class="small-note">
+              Technical term: this is a WIF private key — the private key for that recovered address.
+            </span>
           </li>
-          <li>After the balance appears, send all recovered PEPEW to a new wallet address.</li>
+          <li>
+            <strong>Open PEPEPOW Core (desktop wallet).</strong><br />
+            In PEPEPOW Core, open <strong>Tools → Debug console</strong>.<br />
+            <span class="small-note">
+              The Debug console is the command window inside the PEPEPOW Core desktop wallet.
+              If you do not have Core installed, get it from the <a href="/wallet/">Wallets page</a>.
+            </span>
+          </li>
+          <li>
+            <strong>Import the Recovery Key.</strong><br />
+            Paste this command, replacing <code>YOUR_RECOVERY_KEY</code> with the key you copied:
+            <code class="recovery-command">importprivkey "YOUR_RECOVERY_KEY" "old-android-wallet"</code>
+            <span class="small-note">
+              Technical term: <code>importprivkey</code> tells PEPEPOW Core to add that recovered address
+              to the desktop wallet so it can spend the coins.
+            </span>
+          </li>
+          <li>
+            <strong>Wait for the balance, then move the coins.</strong><br />
+            After PEPEPOW Core finishes scanning, confirm the old balance appears. Then send the full
+            balance to a <strong>new PEPEW Light Wallet address</strong>.
+          </li>
         </ol>
-        <p>
-          Never paste the 12 words or WIF private key into chat, Telegram, Discord, email, an issue,
-          or a support form. After recovery, treat the revealed WIF as exposed and stop using it.
+
+        <div class="recovery-alert recovery-alert-danger">
+          <strong>Important:</strong> Never send your 12 words or Recovery Key (WIF private key) to
+          anyone. Do not post them in Discord, Telegram, email, GitHub, or support chat.
+        </div>
+
+        <p class="small-note">
+          If more than one recovered address has a balance, repeat the import step for each Recovery Key.
+          After the coins are moved to a new wallet, stop using the old Recovery Keys.
         </p>
       </div>
     </section>
@@ -225,12 +257,27 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     border-radius: 10px;
     background: rgba(155,47,47,.07);
   }
-  .recovery-secret code {
+  .recovery-secret code,
+  .recovery-command {
     display: block;
     margin: .65rem 0;
     padding: .7rem;
     background: #fff;
     user-select: all;
+  }
+  .recovery-simple-steps ol {
+    display: grid;
+    gap: 1.15rem;
+    margin: 0;
+    padding-left: 1.4rem;
+  }
+  .recovery-simple-steps li {
+    padding-left: .25rem;
+  }
+  .recovery-alert-danger {
+    margin-top: .25rem;
+    border-color: #9b2f2f;
+    background: rgba(155,47,47,.07);
   }
   .small-note,
   .muted {
