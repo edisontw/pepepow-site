@@ -392,13 +392,13 @@
         </dl>
         <div class="recovery-result-actions">
           <a class="button secondary" href="https://explorer.pepepow.net/address/${encodeURIComponent(address)}" target="_blank" rel="noopener noreferrer">Open in Explorer</a>
-          <button class="button danger" type="button" data-reveal="${id}">Reveal recovery private key</button>
+          <button class="button danger" type="button" data-reveal="${id}">Show Recovery Key</button>
         </div>
         <div class="recovery-secret" data-secret="${id}" hidden>
-          <p><strong>Private key (WIF)</strong> — anyone with this key can spend these coins.</p>
+          <p><strong>Recovery Key (WIF private key)</strong> — this is the private key for this recovered address. Anyone with it can spend these coins.</p>
           <code data-wif="${id}"></code>
-          <button class="button secondary" type="button" data-copy="${id}">Copy WIF</button>
-          <p class="small-note">After recovery, move the full balance to a new wallet address and do not continue using this exposed private key.</p>
+          <button class="button secondary" type="button" data-copy="${id}">Copy Recovery Key</button>
+          <p class="small-note">Next: import this Recovery Key into PEPEPOW Core (desktop wallet), then move the full balance to a new wallet address.</p>
         </div>
       `;
       resultsEl.append(card);
@@ -414,10 +414,10 @@
         const box = resultsEl.querySelector(`[data-secret="${CSS.escape(revealId)}"]`);
         const code = resultsEl.querySelector(`[data-wif="${CSS.escape(revealId)}"]`);
         if (!node || !box || !code) return;
-        if (!window.confirm('Reveal the private key on this screen? Anyone who sees or copies it can spend the funds.')) return;
+        if (!window.confirm('Show the Recovery Key (WIF private key) on this screen? Anyone who sees or copies it can spend the funds.')) return;
         code.textContent = await privateKeyToWif(node.key);
         box.hidden = false;
-        target.textContent = 'Private key revealed';
+        target.textContent = 'Recovery Key shown';
         target.setAttribute('disabled', 'disabled');
       }
       if (copyId) {
@@ -425,7 +425,7 @@
         if (!code?.textContent) return;
         await navigator.clipboard.writeText(code.textContent);
         target.textContent = 'Copied';
-        setTimeout(() => { target.textContent = 'Copy WIF'; }, 1400);
+        setTimeout(() => { target.textContent = 'Copy Recovery Key'; }, 1400);
       }
     });
 
@@ -476,7 +476,7 @@
                 addResult({ label: branch.label, path, address: item.address, atoms, node: item.node, matched: true });
                 found += 1;
                 if (summaryEl) summaryEl.textContent = `Found the supplied old address at ${path}.`;
-                setStatus('Old address found. Verify it in Explorer, then reveal its recovery private key only if needed.', 'success');
+                setStatus('Old address found. Verify it in Explorer, then click Show Recovery Key to continue.', 'success');
                 return;
               }
             } else {
