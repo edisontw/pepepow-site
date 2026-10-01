@@ -1,18 +1,32 @@
 {
-  "generated_at": "2026-09-30T05:57:56Z",
+  "generated_at": "2026-10-01T06:32:02Z",
   "items": [
     {
-      "title": "Ethereum Gets Another Privacy Boost as Aztec Brings Back zk.money",
-      "url": "https://decrypt.co/379621/ethereum-privacy-aztec-brings-back-zk-money",
+      "title": "Ex-NCA Officer Must Repay $2.4M for Bitcoin He Stole When It Was Worth $77K",
+      "url": "https://decrypt.co/379702/ex-nca-officer-must-repay-2-4m-for-bitcoin-he-stole-when-it-was-worth-77k",
       "source": "Decrypt",
-      "published": "2026-09-29T21:46:03Z",
+      "published": "2026-09-30T15:17:45Z",
+      "category": "Security"
+    },
+    {
+      "title": "Dogecoin gets DeFi testnet as DogeOS bets miners will eventually secure its apps",
+      "url": "https://www.coindesk.com/tech/2026/10/01/dogecoin-gets-defi-testnet-as-dogeos-bets-miners-will-eventually-secure-its-apps",
+      "source": "CoinDesk",
+      "published": "2026-10-01T04:58:52Z",
+      "category": "Mining / PoW"
+    },
+    {
+      "title": "Coinbase-Backed Crypto Group Reveals Midterm Endorsements After Clarity Act Collapse",
+      "url": "https://decrypt.co/379767/coinbase-crypto-group-senate-midterm-endorsements-clarity-act",
+      "source": "Decrypt",
+      "published": "2026-09-30T20:31:04Z",
       "category": "Policy"
     },
     {
-      "title": "Morning Minute: Citi and Coinbase Just Made Stablecoins Invisible",
-      "url": "https://decrypt.co/379526/morning-minute-citi-and-coinbase-just-made-stablecoins-invisible",
-      "source": "Decrypt",
-      "published": "2026-09-29T12:05:18Z",
+      "title": "Open USD takes on Tether, Circle with a different stablecoin model that's 'building money'",
+      "url": "https://www.coindesk.com/business/2026/09/24/open-usd-takes-on-tether-circle-with-a-different-stablecoin-model-that-s-building-money",
+      "source": "CoinDesk",
+      "published": "2026-09-30T15:34:50Z",
       "category": "Policy"
     },
     {
@@ -21,20 +35,6 @@
       "source": "Ethereum Foundation",
       "published": "2026-09-28T00:00:00Z",
       "category": "Technology"
-    },
-    {
-      "title": "Bitcoin rally shows signs of cooling even as a 'bull score' gauge nears its perfect score",
-      "url": "https://www.coindesk.com/markets/2026/09/30/bitcoin-rally-shows-signs-of-cooling-even-as-a-bull-score-gauge-nears-its-perfect-score",
-      "source": "CoinDesk",
-      "published": "2026-09-30T04:38:18Z",
-      "category": "Major"
-    },
-    {
-      "title": "Cboe, S&P Dow Jones may explore tokenized options contracts under extended licensing deal",
-      "url": "https://www.coindesk.com/business/2026/09/29/cboe-s-and-p-dow-jones-may-explore-tokenized-options-contracts-under-extended-licensing-deal",
-      "source": "CoinDesk",
-      "published": "2026-09-29T18:21:07Z",
-      "category": "Major"
     },
     {
       "title": "Bitcoin Optech Newsletter #423",
