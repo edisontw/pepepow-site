@@ -1,0 +1,243 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Legacy Android Wallet Recovery"
+  description="Recover PEPEW addresses from the retired PEPEPOW Android v1.0.0 wallet. Mnemonic and private keys stay in the browser."
+  theme="handdrawn"
+  noindex={true}
+>
+  <article class="hub-page recovery-page">
+    <header class="hub-page-header">
+      <p class="eyebrow">Wallet recovery</p>
+      <h1>Recover an old PEPEPOW Android wallet.</h1>
+      <p class="current-page-lede">
+        Use this only for the retired Android v1.0.0 wallet when the app no longer sends coins or
+        importing the same 12 words into PEPEW Light shows a zero balance.
+      </p>
+      <div class="recovery-alert">
+        <strong>Your 12 words and private keys stay in this browser tab.</strong>
+        They are not uploaded or stored by pepepow.net. If balance lookup is used, only derived
+        public addresses are sent to <code>light.pepepow.net</code>.
+      </div>
+    </header>
+
+    <section class="hub-section" aria-labelledby="recovery-form-title">
+      <div class="section-heading">
+        <p class="eyebrow">Step 1</p>
+        <h2 id="recovery-form-title">Enter the old wallet recovery phrase.</h2>
+      </div>
+
+      <div class="recovery-form">
+        <label for="recovery-mnemonic">
+          Old Android wallet 12-word recovery phrase
+          <textarea
+            id="recovery-mnemonic"
+            rows="4"
+            autocomplete="off"
+            autocapitalize="none"
+            spellcheck="false"
+            placeholder="word1 word2 word3 … word12"
+          ></textarea>
+        </label>
+
+        <label for="known-address">
+          Old PEPEW public address <span class="muted">(optional, faster and fully local)</span>
+          <input
+            id="known-address"
+            type="text"
+            autocomplete="off"
+            autocapitalize="none"
+            spellcheck="false"
+            placeholder="X..."
+          />
+        </label>
+
+        <label for="scan-depth">
+          Addresses to check per old-wallet branch
+          <select id="scan-depth">
+            <option value="20">20 — quick scan</option>
+            <option value="50" selected>50 — recommended</option>
+            <option value="100">100 — extended scan</option>
+          </select>
+        </label>
+
+        <div class="recovery-paths">
+          <strong>Paths checked</strong>
+          <code>m/44'/5'/0'/0/x</code>
+          <code>m/44'/5'/0'/1/x</code>
+          <code>m/0'/0/x</code>
+          <code>m/0'/1/x</code>
+        </div>
+
+        <div class="actions">
+          <button class="button" id="scan-wallet" type="button">Find old wallet funds</button>
+          <button class="button secondary" id="clear-recovery" type="button">Clear sensitive data</button>
+        </div>
+        <p id="crypto-self-test" class="small-note">Checking local cryptography…</p>
+        <p id="recovery-status" class="recovery-status" role="status" aria-live="polite">
+          Ready. If you know the old public address, enter it above to avoid balance scanning.
+        </p>
+        <p id="recovery-summary" class="small-note"></p>
+      </div>
+    </section>
+
+    <section class="hub-section" aria-labelledby="recovery-results-title">
+      <div class="section-heading">
+        <p class="eyebrow">Step 2</p>
+        <h2 id="recovery-results-title">Verify the recovered address.</h2>
+      </div>
+      <div id="recovery-results" class="recovery-results"></div>
+      <p class="small-note">
+        A zero balance in PEPEW Light does not prove the old wallet is empty. The old Android wallet
+        used multiple HD addresses, while the current Light wallet normally opens one active path.
+      </p>
+    </section>
+
+    <section class="hub-section" aria-labelledby="move-funds-title">
+      <div class="section-heading">
+        <p class="eyebrow">Step 3</p>
+        <h2 id="move-funds-title">Move recovered coins to a new wallet.</h2>
+      </div>
+      <div class="recovery-instructions">
+        <ol>
+          <li>Open the recovered address in Explorer and confirm the expected balance.</li>
+          <li>Reveal the WIF private key only on a device you trust.</li>
+          <li>
+            In PEPEPOW Core, open the debug console and import the key with
+            <code>importprivkey "YOUR_WIF" "legacy-recovery"</code>.
+          </li>
+          <li>After the balance appears, send all recovered PEPEW to a new wallet address.</li>
+        </ol>
+        <p>
+          Never paste the 12 words or WIF private key into chat, Telegram, Discord, email, an issue,
+          or a support form. After recovery, treat the revealed WIF as exposed and stop using it.
+        </p>
+      </div>
+    </section>
+  </article>
+
+  <script is:inline src="/tools/legacy-wallet-recovery.js"></script>
+</BaseLayout>
+
+<style>
+  .recovery-page { max-width: 980px; }
+  .recovery-alert {
+    margin-top: 1.25rem;
+    padding: 1rem 1.1rem;
+    border: 2px solid currentColor;
+    border-radius: 14px;
+    background: rgba(255, 226, 92, 0.14);
+  }
+  .recovery-form,
+  .recovery-instructions {
+    display: grid;
+    gap: 1rem;
+    padding: 1.1rem;
+    border: 1px solid var(--line, #c8c7ba);
+    border-radius: 16px;
+    background: rgba(255,255,255,0.4);
+  }
+  .recovery-form label {
+    display: grid;
+    gap: .45rem;
+    font-weight: 700;
+  }
+  .recovery-form textarea,
+  .recovery-form input,
+  .recovery-form select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: .75rem .8rem;
+    border: 1px solid #8c8c80;
+    border-radius: 10px;
+    background: #fffef8;
+    color: #151713;
+    font: inherit;
+  }
+  .recovery-form textarea {
+    resize: vertical;
+    min-height: 7rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  .recovery-paths {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55rem;
+    align-items: center;
+  }
+  .recovery-paths strong { width: 100%; }
+  .recovery-paths code,
+  .recovery-result-data code,
+  .recovery-secret code,
+  .recovery-instructions code {
+    overflow-wrap: anywhere;
+  }
+  .recovery-status {
+    margin: 0;
+    padding: .8rem .9rem;
+    border-left: 4px solid #555;
+    background: rgba(0,0,0,.035);
+  }
+  .recovery-status[data-kind="success"] { border-left-color: #2b7b40; }
+  .recovery-status[data-kind="error"] { border-left-color: #9b2f2f; }
+  .recovery-results {
+    display: grid;
+    gap: 1rem;
+  }
+  .recovery-result-card {
+    padding: 1rem;
+    border: 2px solid #2b7b40;
+    border-radius: 14px;
+    background: rgba(72, 157, 91, .08);
+  }
+  .recovery-result-head {
+    display: flex;
+    gap: 1rem;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .recovery-result-head h3 { margin-top: .2rem; }
+  .recovery-result-data {
+    display: grid;
+    gap: .65rem;
+    margin: 1rem 0;
+  }
+  .recovery-result-data div {
+    display: grid;
+    gap: .2rem;
+  }
+  .recovery-result-data dt { font-weight: 700; }
+  .recovery-result-data dd { margin: 0; }
+  .recovery-result-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .65rem;
+  }
+  .button.danger {
+    border-color: #9b2f2f;
+  }
+  .recovery-secret {
+    margin-top: 1rem;
+    padding: .9rem;
+    border: 2px dashed #9b2f2f;
+    border-radius: 10px;
+    background: rgba(155,47,47,.07);
+  }
+  .recovery-secret code {
+    display: block;
+    margin: .65rem 0;
+    padding: .7rem;
+    background: #fff;
+    user-select: all;
+  }
+  .small-note,
+  .muted {
+    font-size: .92rem;
+    opacity: .78;
+  }
+  @media (max-width: 680px) {
+    .recovery-result-head { display: grid; }
+  }
+</style>
