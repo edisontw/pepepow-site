@@ -1,47 +1,47 @@
 {
-  "generated_at": "2026-10-01T06:32:02Z",
+  "generated_at": "2026-10-02T06:10:53Z",
   "items": [
     {
-      "title": "Ex-NCA Officer Must Repay $2.4M for Bitcoin He Stole When It Was Worth $77K",
-      "url": "https://decrypt.co/379702/ex-nca-officer-must-repay-2-4m-for-bitcoin-he-stole-when-it-was-worth-77k",
-      "source": "Decrypt",
-      "published": "2026-09-30T15:17:45Z",
+      "title": "SEC Proposal Would Address How Investment Advisers and Funds Can Custody Crypto Assets Under the Federal Securities Laws",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-100-sec-proposal-would-address-how-investment-advisers-funds-can-custody-crypto-assets-under-federal",
+      "source": "SEC",
+      "published": "2026-10-01T16:16:07Z",
+      "category": "Policy"
+    },
+    {
+      "title": "NEAR Intents hit by $3.8 million exploit as crypto's rough year of hacks continues",
+      "url": "https://www.coindesk.com/tech/2026/10/01/near-intents-hit-by-usd3-8-million-exploit-as-crypto-s-rough-year-of-hacks-continues",
+      "source": "CoinDesk",
+      "published": "2026-10-01T14:18:14Z",
       "category": "Security"
     },
     {
-      "title": "Dogecoin gets DeFi testnet as DogeOS bets miners will eventually secure its apps",
-      "url": "https://www.coindesk.com/tech/2026/10/01/dogecoin-gets-defi-testnet-as-dogeos-bets-miners-will-eventually-secure-its-apps",
+      "title": "Crypto lost $1.26 billion in hacks while bitcoin bulls enjoyed a monster quarter",
+      "url": "https://www.coindesk.com/daybook-us/2026/10/01/crypto-lost-usd1-26-billion-in-hacks-while-bitcoin-bulls-enjoyed-a-monster-quarter",
       "source": "CoinDesk",
-      "published": "2026-10-01T04:58:52Z",
-      "category": "Mining / PoW"
+      "published": "2026-10-01T11:30:38Z",
+      "category": "Security"
     },
     {
-      "title": "Coinbase-Backed Crypto Group Reveals Midterm Endorsements After Clarity Act Collapse",
-      "url": "https://decrypt.co/379767/coinbase-crypto-group-senate-midterm-endorsements-clarity-act",
+      "title": "MetaMask Exits Lido Validators Amid Infrastructure ‘Security Incident’",
+      "url": "https://decrypt.co/379800/metamask-exits-lido-validators-amid-infrastructure-security-incident",
       "source": "Decrypt",
-      "published": "2026-09-30T20:31:04Z",
+      "published": "2026-10-01T09:38:06Z",
+      "category": "Security"
+    },
+    {
+      "title": "SEC Proposes Rules to Clear Up How Advisers and Funds Can Hold Crypto",
+      "url": "https://decrypt.co/379899/sec-proposes-rules-advisers-funds-hold-crypto",
+      "source": "Decrypt",
+      "published": "2026-10-01T20:46:03Z",
       "category": "Policy"
     },
     {
-      "title": "Open USD takes on Tether, Circle with a different stablecoin model that's 'building money'",
-      "url": "https://www.coindesk.com/business/2026/09/24/open-usd-takes-on-tether-circle-with-a-different-stablecoin-model-that-s-building-money",
-      "source": "CoinDesk",
-      "published": "2026-09-30T15:34:50Z",
-      "category": "Policy"
-    },
-    {
-      "title": "Glamsterdam Testnet Announcement",
-      "url": "https://blog.ethereum.org/en/2026/09/17/glamsterdam-testnet-announcement",
+      "title": "Introducing zkAPI: private usage credits for any API",
+      "url": "https://blog.ethereum.org/en/2026/10/01/introducing-zkapi",
       "source": "Ethereum Foundation",
-      "published": "2026-09-28T00:00:00Z",
+      "published": "2026-10-01T00:00:00Z",
       "category": "Technology"
-    },
-    {
-      "title": "Bitcoin Optech Newsletter #423",
-      "url": "https://bitcoinops.org/en/newsletters/2026/09/18/",
-      "source": "Bitcoin Optech",
-      "published": "2026-09-18T00:00:00Z",
-      "category": "Security"
     }
   ]
 }
