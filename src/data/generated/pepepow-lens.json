@@ -1,12 +1,19 @@
 {
-  "generated_at": "2026-10-03T05:43:23Z",
+  "generated_at": "2026-10-04T06:19:56Z",
   "items": [
     {
-      "title": "Spanish Police Arrest 16-Year-Old Accused of Running KillSec Ransomware Group",
-      "url": "https://decrypt.co/379913/spanish-police-arrest-16-year-old-accused-of-running-killsec-ransomware-group",
+      "title": "Chainalysis Used AI to Trace the $387M Bitget Hack Back to North Korea",
+      "url": "https://decrypt.co/380005/chainalysis-ai-87m-bitget-hack-north-korea",
       "source": "Decrypt",
-      "published": "2026-10-02T09:12:54Z",
+      "published": "2026-10-03T17:01:03Z",
       "category": "Security"
+    },
+    {
+      "title": "Trump Is Hosting Yet Another Meme Coin Dinner: Here Are the Details",
+      "url": "https://decrypt.co/380002/trump-third-meme-coin-dinner-details",
+      "source": "Decrypt",
+      "published": "2026-10-03T15:01:03Z",
+      "category": "Policy"
     },
     {
       "title": "SEC Proposal Would Address How Investment Advisers and Funds Can Custody Crypto Assets Under the Federal Securities Laws",
@@ -16,25 +23,18 @@
       "category": "Policy"
     },
     {
-      "title": "Circle Pushes Back on MiCA's Bank-Deposit Mandate for Stablecoins",
-      "url": "https://decrypt.co/379984/circle-pushes-back-on-micas-bank-deposit-mandate-for-stablecoins",
-      "source": "Decrypt",
-      "published": "2026-10-02T19:46:03Z",
+      "title": "Once a $2 billion Ethereum layer-2, Blast is shutting down after assets plunge 98%",
+      "url": "https://www.coindesk.com/tech/2026/10/02/once-a-usd2-billion-ethereum-layer-2-blast-is-shutting-down-after-assets-plunge-98",
+      "source": "CoinDesk",
+      "published": "2026-10-02T17:15:35Z",
+      "category": "Technology"
+    },
+    {
+      "title": "SEC proposes new crypto custody rules for investment advisers and funds",
+      "url": "https://www.coindesk.com/policy/2026/10/01/u-s-sec-maps-out-crypto-custody-in-new-proposal-that-furthers-its-digital-assets-agenda",
+      "source": "CoinDesk",
+      "published": "2026-10-01T20:20:04Z",
       "category": "Policy"
-    },
-    {
-      "title": "NEAR Intents hit by $3.8 million exploit as crypto's rough year of hacks continues",
-      "url": "https://www.coindesk.com/tech/2026/10/01/near-intents-hit-by-usd3-8-million-exploit-as-crypto-s-rough-year-of-hacks-continues",
-      "source": "CoinDesk",
-      "published": "2026-10-01T14:18:14Z",
-      "category": "Security"
-    },
-    {
-      "title": "Crypto lost $1.26 billion in hacks while bitcoin bulls enjoyed a monster quarter",
-      "url": "https://www.coindesk.com/daybook-us/2026/10/01/crypto-lost-usd1-26-billion-in-hacks-while-bitcoin-bulls-enjoyed-a-monster-quarter",
-      "source": "CoinDesk",
-      "published": "2026-10-01T11:30:38Z",
-      "category": "Security"
     },
     {
       "title": "Introducing zkAPI: private usage credits for any API",
