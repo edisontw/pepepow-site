@@ -1,40 +1,33 @@
 {
-  "generated_at": "2026-10-08T06:38:14Z",
+  "generated_at": "2026-10-09T06:40:52Z",
   "items": [
     {
-      "title": "Europol Warns Crypto Wallets Are 'Primary Risk' for Quantum Attacks",
-      "url": "https://decrypt.co/380268/europol-warns-crypto-wallets-are-primary-risk-for-quantum-attacks",
+      "title": "US Government Moves $1 Billion in Bitcoin Seized From Bitfinex Hacker",
+      "url": "https://decrypt.co/380504/us-government-moves-1-billion-bitcoin-bitfinex",
       "source": "Decrypt",
-      "published": "2026-10-07T10:49:16Z",
+      "published": "2026-10-08T16:44:20Z",
       "category": "Security"
     },
     {
-      "title": "SEC and CFTC Crypto Rules 'Fall Short' of Clarity, Says Rep. French Hill",
-      "url": "https://decrypt.co/380349/sec-cftc-crypto-rules-fall-short-clarity-french-hill",
+      "title": "U.S. government moves $1 billion in bitcoin tied to Bitfinex hack, with no sign of sale",
+      "url": "https://www.coindesk.com/business/2026/10/08/u-s-government-moves-usd1-billion-in-bitcoin-from-bitfinex-hack-wallet-no-sale-indicated",
+      "source": "CoinDesk",
+      "published": "2026-10-08T15:43:04Z",
+      "category": "Security"
+    },
+    {
+      "title": "Uranium Finance Hacker Who Bought Pokémon and Magic Cards Convicted Over $50M Theft",
+      "url": "https://decrypt.co/380401/uranium-finance-hacker-who-bought-pokemon-and-magic-cards-convicted-over-50m-theft",
       "source": "Decrypt",
-      "published": "2026-10-07T20:16:04Z",
-      "category": "Policy"
+      "published": "2026-10-08T11:37:17Z",
+      "category": "Security"
     },
     {
-      "title": "Polygon taps TRON’s $94 billion stablecoin supply for seamless cross-border transfers",
-      "url": "https://www.coindesk.com/business/2026/10/07/polygon-and-tron-partner-to-bridge-usd94-billion-usdt-ecosystem-with-u-s-banking-rails",
+      "title": "XRP Ledger adds new controls for banks, stablecoins and tokenized funds",
+      "url": "https://www.coindesk.com/tech/2026/10/09/xrp-ledger-adds-new-controls-for-banks-stablecoins-and-tokenized-funds",
       "source": "CoinDesk",
-      "published": "2026-10-07T16:30:00Z",
+      "published": "2026-10-09T04:21:36Z",
       "category": "Policy"
-    },
-    {
-      "title": "Tether tapped by Kazakhstan’s central bank to explore stablecoin and tokenization",
-      "url": "https://www.coindesk.com/business/2026/10/07/tether-tapped-by-kazakhstan-s-central-bank-to-explore-stablecoin-and-tokenization",
-      "source": "CoinDesk",
-      "published": "2026-10-07T14:27:37Z",
-      "category": "Policy"
-    },
-    {
-      "title": "How native transaction assertions could enforce a transaction's final outcome",
-      "url": "https://blog.ethereum.org/en/2026/10/05/transaction-assertions",
-      "source": "Ethereum Foundation",
-      "published": "2026-10-05T00:00:00Z",
-      "category": "Technology"
     },
     {
       "title": "Bitcoin Optech Newsletter #425",
@@ -42,6 +35,13 @@
       "source": "Bitcoin Optech",
       "published": "2026-10-02T00:00:00Z",
       "category": "Security"
+    },
+    {
+      "title": "How native transaction assertions could enforce a transaction's final outcome",
+      "url": "https://blog.ethereum.org/en/2026/10/05/transaction-assertions",
+      "source": "Ethereum Foundation",
+      "published": "2026-10-05T00:00:00Z",
+      "category": "Technology"
     }
   ]
 }
