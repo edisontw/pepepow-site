@@ -1,18 +1,25 @@
 {
-  "generated_at": "2026-10-18T05:06:39Z",
+  "generated_at": "2026-10-19T05:18:26Z",
   "items": [
     {
-      "title": "Circle defends USDC economics as stablecoin rivals court its partners with bigger cut",
-      "url": "https://www.coindesk.com/business/2026/10/17/circle-defends-usdc-economics-as-stablecoin-rivals-court-its-partners-with-bigger-cut",
+      "title": "Crypto audits give investors false sense of security as Q3 hacks cost $1.18 billion, Hacken says",
+      "url": "https://www.coindesk.com/tech/2026/10/18/crypto-audits-give-investors-false-sense-of-security-as-q3-hacks-cost-usd1-18-billion-hacken-says",
       "source": "CoinDesk",
-      "published": "2026-10-18T01:06:35Z",
+      "published": "2026-10-18T13:00:00Z",
+      "category": "Security"
+    },
+    {
+      "title": "SEC tokenized stock framework faces issuer pushback as Broadcom, Verizon object to OKX-ICE listing",
+      "url": "https://www.coindesk.com/business/2026/10/18/sec-tokenized-stock-framework-faces-issuer-pushback-as-broadcom-verizon-object-to-okx-ice-listing",
+      "source": "CoinDesk",
+      "published": "2026-10-18T23:28:06Z",
       "category": "Policy"
     },
     {
-      "title": "Banks could slow stablecoin growth by paying savers more, BIS paper finds",
-      "url": "https://www.coindesk.com/business/2026/10/14/banks-could-slow-stablecoin-growth-by-paying-savers-more-bis-paper-finds",
-      "source": "CoinDesk",
-      "published": "2026-10-17T12:00:00Z",
+      "title": "Banks Hold a Lever Over Stablecoin Adoption, BIS Economists Say",
+      "url": "https://decrypt.co/381253/banks-hold-a-lever-over-stablecoin-adoption-bis-economists-say",
+      "source": "Decrypt",
+      "published": "2026-10-18T13:01:04Z",
       "category": "Policy"
     },
     {
@@ -21,13 +28,6 @@
       "source": "Decrypt",
       "published": "2026-10-16T15:43:58Z",
       "category": "Security"
-    },
-    {
-      "title": "Circle Plans Push Into 40 Emerging Markets as Stablecoins Go Mainstream, CEO Says",
-      "url": "https://decrypt.co/381178/circle-40-emerging-markets-stablecoins-go-mainstream",
-      "source": "Decrypt",
-      "published": "2026-10-16T18:55:37Z",
-      "category": "Policy"
     },
     {
       "title": "Glamsterdam Hoodi Testnet Announcement",
