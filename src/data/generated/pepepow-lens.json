@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-10-23T05:20:54Z",
+  "generated_at": "2026-10-24T05:00:54Z",
   "items": [
     {
-      "title": "Is the Internet Safe Again After the PHP Nightmare? What You Need to Know",
-      "url": "https://decrypt.co/381662/internet-safe-again-after-php-nightmare-what-you-need-know",
+      "title": "Senate Democrat Probes Tether Payments to Ex-White House Crypto Adviser’s Firm",
+      "url": "https://decrypt.co/381755/senate-democrat-tether-payments-ex-white-house-crypto-adviser",
       "source": "Decrypt",
-      "published": "2026-10-22T22:21:46Z",
+      "published": "2026-10-23T20:16:02Z",
       "category": "Policy"
     },
     {
-      "title": "What Is a Neocloud? The GPU Clouds Powering the AI Boom",
-      "url": "https://decrypt.co/resources/what-is-a-neocloud-the-gpu-clouds-powering-the-ai-boom",
+      "title": "SEC Flags AI 'Super Intelligence' and Tokenization as Systemic Market Risks",
+      "url": "https://decrypt.co/381745/sec-ai-super-intelligence-tokenization-2027-exam-list",
       "source": "Decrypt",
-      "published": "2026-10-22T15:45:07Z",
-      "category": "Mining / PoW"
-    },
-    {
-      "title": "Crypto for Advisors: Stablecoins are ready for prime time",
-      "url": "https://www.coindesk.com/coindesk-indices/2026/10/22/crypto-for-advisors-stablecoins-are-ready-for-prime-time",
-      "source": "CoinDesk",
-      "published": "2026-10-22T14:58:31Z",
+      "published": "2026-10-23T18:54:55Z",
       "category": "Policy"
     },
     {
-      "title": "Ethereum delays Glamsterdam test after security devs flag risk to existing contracts",
-      "url": "https://www.coindesk.com/tech/2026/10/23/ethereum-delays-glamsterdam-test-after-security-devs-flag-risk-to-existing-contracts",
+      "title": "Bitcoin Core changes security rules as AI makes finding code bugs dangerously easy",
+      "url": "https://www.coindesk.com/tech/2026/10/23/bitcoin-will-now-stop-hiding-bugs-an-ai-can-find-in-one-prompt",
       "source": "CoinDesk",
-      "published": "2026-10-23T04:59:34Z",
-      "category": "Technology"
+      "published": "2026-10-23T12:03:53Z",
+      "category": "Policy"
+    },
+    {
+      "title": "HSBC rolls out its first stablecoin to over 3 million everyday app users",
+      "url": "https://www.coindesk.com/business/2026/10/23/hsbc-rolls-out-its-first-stablecoin-to-over-3-million-everyday-app-users",
+      "source": "CoinDesk",
+      "published": "2026-10-23T10:22:56Z",
+      "category": "Policy"
     },
     {
       "title": "Bitcoin Optech Newsletter #427",
