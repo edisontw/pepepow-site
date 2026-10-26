@@ -1,6 +1,20 @@
 {
-  "generated_at": "2026-10-25T05:17:16Z",
+  "generated_at": "2026-10-26T05:16:28Z",
   "items": [
+    {
+      "title": "Latvia targets tokenization rules in 2027 with commercial property in focus",
+      "url": "https://www.coindesk.com/business/2026/10/25/latvia-targets-tokenization-rules-in-2027-with-commercial-property-in-focus",
+      "source": "CoinDesk",
+      "published": "2026-10-25T15:00:00Z",
+      "category": "Policy"
+    },
+    {
+      "title": "Bitcoin wallet bug let rogue servers steal funds when users tried to speed up payments",
+      "url": "https://www.coindesk.com/tech/2026/10/26/bitcoin-wallet-bug-let-rogue-servers-steal-funds-when-users-tried-to-speed-up-payments",
+      "source": "CoinDesk",
+      "published": "2026-10-26T05:15:20Z",
+      "category": "Technology"
+    },
     {
       "title": "Hong Kong’s Biggest Bank Puts a Stablecoin in 3 Million Wallets",
       "url": "https://decrypt.co/381760/hong-kong-bank-hsbc-stablecoin-3-million-wallets",
@@ -13,20 +27,6 @@
       "url": "https://decrypt.co/381755/senate-democrat-tether-payments-ex-white-house-crypto-adviser",
       "source": "Decrypt",
       "published": "2026-10-23T20:16:02Z",
-      "category": "Policy"
-    },
-    {
-      "title": "Bitcoin Core changes security rules as AI makes finding code bugs dangerously easy",
-      "url": "https://www.coindesk.com/tech/2026/10/23/bitcoin-will-now-stop-hiding-bugs-an-ai-can-find-in-one-prompt",
-      "source": "CoinDesk",
-      "published": "2026-10-23T12:03:53Z",
-      "category": "Policy"
-    },
-    {
-      "title": "HSBC rolls out its first stablecoin to over 3 million everyday app users",
-      "url": "https://www.coindesk.com/business/2026/10/23/hsbc-rolls-out-its-first-stablecoin-to-over-3-million-everyday-app-users",
-      "source": "CoinDesk",
-      "published": "2026-10-23T10:22:56Z",
       "category": "Policy"
     },
     {
