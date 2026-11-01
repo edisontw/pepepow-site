@@ -1,11 +1,25 @@
 {
-  "generated_at": "2026-10-31T06:16:03Z",
+  "generated_at": "2026-11-01T06:49:38Z",
   "items": [
     {
-      "title": "Bitcoin stolen from Binance tops Tesla’s holdings and is over twice El Salvador’s reserve",
-      "url": "https://www.coindesk.com/markets/2026/10/31/bitcoin-stolen-from-binance-tops-tesla-s-holdings-and-is-over-twice-el-salvador-s-reserve",
+      "title": "FBI confirms North Korea's role in $6 billion Binance hack, asks DeFi community to block BTC, ETH, SOL addresses",
+      "url": "https://www.coindesk.com/policy/2026/10/31/fbi-confirms-north-korea-s-role-in-usd6-billion-binance-hack-asks-defi-community-to-block-btc-eth-sol-addresses",
       "source": "CoinDesk",
-      "published": "2026-10-31T05:01:32Z",
+      "published": "2026-11-01T01:10:05Z",
+      "category": "Security"
+    },
+    {
+      "title": "A stolen iPhone, $14,000 in losses and London's crypto theft problem",
+      "url": "https://www.coindesk.com/business/2026/11/01/a-stolen-iphone-usd14-000-in-losses-and-london-s-crypto-theft-problem",
+      "source": "CoinDesk",
+      "published": "2026-10-31T16:09:30Z",
+      "category": "Security"
+    },
+    {
+      "title": "Binance Hack: Everything You Need to Know About the Biggest Crypto Heist in History",
+      "url": "https://decrypt.co/382306/binance-hack-everything-you-need-to-know",
+      "source": "Decrypt",
+      "published": "2026-10-31T15:01:02Z",
       "category": "Security"
     },
     {
@@ -13,20 +27,6 @@
       "url": "https://decrypt.co/382282/crypto-hacks-buy-bitcoin-proxies-stock-market-wall-street",
       "source": "Decrypt",
       "published": "2026-10-30T20:06:03Z",
-      "category": "Security"
-    },
-    {
-      "title": "Binance Hack: Why Bitcoin Didn't Crash Like It Did in 2018",
-      "url": "https://decrypt.co/382257/binance-hack-why-bitcoin-didnt-crash",
-      "source": "Decrypt",
-      "published": "2026-10-30T18:45:03Z",
-      "category": "Security"
-    },
-    {
-      "title": "Wall Street analysts urge investors to buy crypto stocks after $6.3 billion Binance hack",
-      "url": "https://www.coindesk.com/markets/2026/10/30/wall-street-analysts-urge-investors-to-buy-crypto-stocks-on-weakness-after-usd6-3-billion-binance-hack",
-      "source": "CoinDesk",
-      "published": "2026-10-30T14:13:34Z",
       "category": "Security"
     },
     {
