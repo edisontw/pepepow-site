@@ -1,46 +1,46 @@
 {
-  "generated_at": "2026-11-04T06:57:49Z",
+  "generated_at": "2026-11-05T07:23:04Z",
   "items": [
     {
-      "title": "Crypto Docs Host GitBook Hit by AI Agent Security Breach, Urges Users to Rotate Keys",
-      "url": "https://decrypt.co/382465/crypto-docs-gitbook-ai-agent-security-breach",
+      "title": "Coinbase Says 99% of Customer Crypto Is Offline and Out of Hackers’ Reach",
+      "url": "https://decrypt.co/382570/coinbase-99-percent-customer-crypto-offline-binance-hack",
       "source": "Decrypt",
-      "published": "2026-11-03T19:46:03Z",
+      "published": "2026-11-04T20:46:03Z",
       "category": "Security"
     },
     {
-      "title": "Brazil's Biggest Bitcoin Exchange Says It Will Refund Users After a $40 Million Hack",
-      "url": "https://decrypt.co/382459/brazil-mercado-bitcoin-will-refund-users-40-million-hack",
+      "title": "Crédit Mutuel Arkéa Confirms Cyberattack After ZachXBT Ties It to $133M Crypto Theft",
+      "url": "https://decrypt.co/382486/zachxbt-names-french-bank-credit-mutuel-arkea-as-alleged-victim-of-133m-crypto-theft",
       "source": "Decrypt",
-      "published": "2026-11-03T18:16:03Z",
+      "published": "2026-11-04T15:30:31Z",
       "category": "Security"
     },
     {
-      "title": "South Korea asks its biggest banks how a major crypto hack would hit them",
-      "url": "https://www.coindesk.com/business/2026/11/03/south-korea-asks-its-biggest-banks-how-a-major-crypto-hack-would-hit-them",
+      "title": "ZachXBT names French bank Crédit Mutuel Arkéa as suspected victim of $133 million crypto theft",
+      "url": "https://www.coindesk.com/business/2026/11/04/zachxbt-names-french-bank-credit-mutuel-arkea-as-suspected-victim-of-usd133-million-crypto-theft",
       "source": "CoinDesk",
-      "published": "2026-11-03T14:42:30Z",
+      "published": "2026-11-04T10:18:50Z",
       "category": "Security"
     },
     {
-      "title": "South Korea's ruling party wants to delay its crypto tax again",
-      "url": "https://www.coindesk.com/policy/2026/11/04/south-korea-s-ruling-party-wants-to-put-off-its-crypto-tax-again",
+      "title": "Tokenization and stablecoins may weather Democrats' sweep as broader crypto rules face uncertainty",
+      "url": "https://www.coindesk.com/policy/2026/11/04/tokenization-and-stablecoins-may-weather-democrats-sweep-as-broader-crypto-rules-face-uncertainty",
       "source": "CoinDesk",
-      "published": "2026-11-04T05:09:40Z",
+      "published": "2026-11-04T22:55:00Z",
       "category": "Policy"
+    },
+    {
+      "title": "Bitcoin Optech Newsletter #429",
+      "url": "https://bitcoinops.org/en/newsletters/2026/10/30/",
+      "source": "Bitcoin Optech",
+      "published": "2026-10-30T00:00:00Z",
+      "category": "Security"
     },
     {
       "title": "Bitcoin Optech Newsletter #428",
       "url": "https://bitcoinops.org/en/newsletters/2026/10/23/",
       "source": "Bitcoin Optech",
       "published": "2026-10-23T00:00:00Z",
-      "category": "Security"
-    },
-    {
-      "title": "Bitcoin Optech Newsletter #427",
-      "url": "https://bitcoinops.org/en/newsletters/2026/10/16/",
-      "source": "Bitcoin Optech",
-      "published": "2026-10-16T00:00:00Z",
       "category": "Security"
     }
   ]
