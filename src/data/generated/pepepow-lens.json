@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-11-05T07:23:04Z",
+  "generated_at": "2026-11-06T07:23:05Z",
   "items": [
     {
-      "title": "Coinbase Says 99% of Customer Crypto Is Offline and Out of Hackers’ Reach",
-      "url": "https://decrypt.co/382570/coinbase-99-percent-customer-crypto-offline-binance-hack",
+      "title": "Mercado Bitcoin Said Its Hack Was Contained, But Blockchain Data Tells a Different Story",
+      "url": "https://decrypt.co/382670/mercado-bitcoin-hack-contained-blockchain-data",
       "source": "Decrypt",
-      "published": "2026-11-04T20:46:03Z",
+      "published": "2026-11-05T20:16:03Z",
       "category": "Security"
     },
     {
-      "title": "Crédit Mutuel Arkéa Confirms Cyberattack After ZachXBT Ties It to $133M Crypto Theft",
-      "url": "https://decrypt.co/382486/zachxbt-names-french-bank-credit-mutuel-arkea-as-alleged-victim-of-133m-crypto-theft",
+      "title": "Gate CEO says crypto exchanges must prove they can survive a hack like Binance’s",
+      "url": "https://www.coindesk.com/business/2026/11/05/gate-ceo-says-crypto-exchanges-must-prove-they-can-survive-a-hack-like-binance-s",
+      "source": "CoinDesk",
+      "published": "2026-11-05T14:21:50Z",
+      "category": "Security"
+    },
+    {
+      "title": "Morning Minute: Democrat Sweep Pumps Crypto as Clarity Act Resurfaces",
+      "url": "https://decrypt.co/382603/morning-minute-democrat-sweep-pumps-crypto-as-clarity-act-resurfaces",
       "source": "Decrypt",
-      "published": "2026-11-04T15:30:31Z",
+      "published": "2026-11-05T13:14:05Z",
       "category": "Security"
     },
     {
-      "title": "ZachXBT names French bank Crédit Mutuel Arkéa as suspected victim of $133 million crypto theft",
-      "url": "https://www.coindesk.com/business/2026/11/04/zachxbt-names-french-bank-credit-mutuel-arkea-as-suspected-victim-of-usd133-million-crypto-theft",
+      "title": "Mercado Bitcoin hack continued hours after exchange said attack was contained, report finds",
+      "url": "https://www.coindesk.com/business/2026/11/05/mercado-bitcoin-hack-continued-hours-after-exchange-said-attack-was-contained-report-finds",
       "source": "CoinDesk",
-      "published": "2026-11-04T10:18:50Z",
+      "published": "2026-11-05T10:44:54Z",
       "category": "Security"
-    },
-    {
-      "title": "Tokenization and stablecoins may weather Democrats' sweep as broader crypto rules face uncertainty",
-      "url": "https://www.coindesk.com/policy/2026/11/04/tokenization-and-stablecoins-may-weather-democrats-sweep-as-broader-crypto-rules-face-uncertainty",
-      "source": "CoinDesk",
-      "published": "2026-11-04T22:55:00Z",
-      "category": "Policy"
     },
     {
       "title": "Bitcoin Optech Newsletter #429",
