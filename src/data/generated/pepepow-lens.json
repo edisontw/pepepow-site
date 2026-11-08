@@ -1,6 +1,13 @@
 {
-  "generated_at": "2026-11-07T06:35:14Z",
+  "generated_at": "2026-11-08T06:41:10Z",
   "items": [
+    {
+      "title": "Gnosis Pay breach exposes card numbers, home addresses and linked crypto wallets",
+      "url": "https://www.coindesk.com/business/2026/11/07/gnosis-pay-breach-exposes-card-numbers-home-addresses-and-linked-crypto-wallets",
+      "source": "CoinDesk",
+      "published": "2026-11-07T16:51:00Z",
+      "category": "Security"
+    },
     {
       "title": "Crypto Card Provider Gnosis Pay Says Hackers Accessed Customer Data",
       "url": "https://decrypt.co/382718/crypto-card-provider-gnosis-pay-hackers-customer-data",
@@ -21,13 +28,6 @@
       "source": "CoinDesk",
       "published": "2026-11-06T08:47:42Z",
       "category": "Policy"
-    },
-    {
-      "title": "Gate CEO says crypto exchanges must prove they can survive a hack like Binance’s",
-      "url": "https://www.coindesk.com/business/2026/11/05/gate-ceo-says-crypto-exchanges-must-prove-they-can-survive-a-hack-like-binance-s",
-      "source": "CoinDesk",
-      "published": "2026-11-05T14:21:50Z",
-      "category": "Security"
     },
     {
       "title": "EIP-8037/EIP-8038 Glamsterdam",
