@@ -21,8 +21,7 @@ This page is an access and verification reference, not a source of price predict
 
 ### NonKYC
 
-- [PEPEW asset page](https://nonkyc.io/asset/PEPEW)
-- [PEPEW / USD market](https://nonkyc.io/market/PEPEW_USD)
+- [PEPEW / USDT market](https://nonkyc.io/market/PEPEW_USDT)
 
 ### NestEx
 

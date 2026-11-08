@@ -16,6 +16,6 @@ export const verifiedLinks = {
   telegramAnnouncements: 'https://t.me/PEPEWCommunity',
   telegramChatEn: 'https://t.me/PEPEPOWCHAT',
   websiteRepository: 'https://github.com/edisontw/pepepow-site',
-  nonKycMarket: 'https://nonkyc.io/market/PEPEW_USD',
+  nonKycMarket: 'https://nonkyc.io/market/PEPEW_USDT',
   nestExMarket: 'https://trade.nestex.one/spot/PEPEW',
 } as const;

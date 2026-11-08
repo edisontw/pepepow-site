@@ -233,7 +233,7 @@ The old WordPress homepage contained a large logo wall mixing exchanges, tracker
 - [PEPEPOW Community Pool](https://community-pool.pepepow.org/)
 - [PEPEPOW Lab Pool](https://pool.pepepow.net/)
 - [MiningPoolStats — PEPEPOW](https://miningpoolstats.stream/pepepow)
-- [NonKYC — PEPEW](https://nonkyc.io/asset/PEPEW)
+- [NonKYC — PEPEW](https://nonkyc.io/market/PEPEW_USDT)
 - [NestEx — PEPEW](https://trade.nestex.one/spot/PEPEW)
 - [CoinCodex — PEPEPOW](https://coincodex.com/crypto/pepepow/)
 - [CoinPaprika — PEPEPOW](https://coinpaprika.com/coin/pepew-pepe-pow/)
