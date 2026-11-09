@@ -1,12 +1,26 @@
 {
-  "generated_at": "2026-11-08T06:41:10Z",
+  "generated_at": "2026-11-09T07:10:12Z",
   "items": [
     {
-      "title": "Gnosis Pay breach exposes card numbers, home addresses and linked crypto wallets",
-      "url": "https://www.coindesk.com/business/2026/11/07/gnosis-pay-breach-exposes-card-numbers-home-addresses-and-linked-crypto-wallets",
+      "title": "Binance's bitcoin mining pool finds just one block in a week as shutdown nears",
+      "url": "https://www.coindesk.com/tech/2026/11/09/binance-s-bitcoin-mining-pool-finds-just-one-block-in-a-week-as-shutdown-nears",
       "source": "CoinDesk",
-      "published": "2026-11-07T16:51:00Z",
-      "category": "Security"
+      "published": "2026-11-09T04:54:39Z",
+      "category": "Mining / PoW"
+    },
+    {
+      "title": "Stablecoin growth has stalled. The payments boom hasn't",
+      "url": "https://www.coindesk.com/business/2026/11/08/stablecoin-growth-has-stalled-the-payments-boom-hasn-t",
+      "source": "CoinDesk",
+      "published": "2026-11-08T19:16:42Z",
+      "category": "Policy"
+    },
+    {
+      "title": "This Bitcoin Developer’s Idea Would Make Quantum Attacks a Losing Bet",
+      "url": "https://decrypt.co/382761/bitcoin-developer-quantum-landmines-losing-bet",
+      "source": "Decrypt",
+      "published": "2026-11-08T14:01:03Z",
+      "category": "Technology"
     },
     {
       "title": "Crypto Card Provider Gnosis Pay Says Hackers Accessed Customer Data",
@@ -14,20 +28,6 @@
       "source": "Decrypt",
       "published": "2026-11-06T16:41:29Z",
       "category": "Security"
-    },
-    {
-      "title": "$3.1B in Stolen Binance Crypto Has Yet to Be Laundered: Elliptic",
-      "url": "https://decrypt.co/382711/3-1b-in-stolen-binance-crypto-has-yet-to-be-laundered-elliptic",
-      "source": "Decrypt",
-      "published": "2026-11-06T14:04:18Z",
-      "category": "Security"
-    },
-    {
-      "title": "Greece approves 10% tax on crypto gains and 15% levy on DeFi income",
-      "url": "https://www.coindesk.com/policy/2026/11/06/greece-approves-10-tax-on-crypto-gains-and-15-levy-on-defi-income",
-      "source": "CoinDesk",
-      "published": "2026-11-06T08:47:42Z",
-      "category": "Policy"
     },
     {
       "title": "EIP-8037/EIP-8038 Glamsterdam",
