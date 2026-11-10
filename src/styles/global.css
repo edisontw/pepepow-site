@@ -2152,7 +2152,8 @@ html[data-color-theme="dark"] .handdrawn-theme :is(
   .news-archive-header h1, .search-page-header h1,
   .search-panel label, .search-result h2, .search-result h2 a,
   .archive-item h3, .archive-item h3 a, .latest-card h3,
-  .latest-card h3 a, .start-card h3, .legacy-entry h1,
+  .latest-card h3 a, .lens-item h3, .lens-item h3 a,
+  .start-card h3, .legacy-entry h1,
   .legacy-entry h2, .legacy-entry h3, .legacy-entry h4,
   .legacy-entry h5, .legacy-entry h6, .archive-note strong,
   .network-pulse-metric strong, .network-pulse-links strong,
@@ -2160,7 +2161,8 @@ html[data-color-theme="dark"] .handdrawn-theme :is(
 ) { color: #edf5ee; }
 html[data-color-theme="dark"] .handdrawn-theme :is(
   .home-hero-lede, .current-page-lede, .reviewed-date,
-  .start-card p, .card-meta, .archive-context, .hub-card p,
+  .start-card p, .card-meta, .archive-context, .archive-note,
+  .hub-card p,
   .hub-copy, .hub-definition-list dd, .hub-safety-list,
   .network-entry-card p, .network-copy, .metric-guide-list dd,
   .current-page-body p, .current-page-body li, .legacy-entry p,
@@ -2318,7 +2320,9 @@ html[data-color-theme="light"] body:not(.handdrawn-theme) .button.secondary {
   border-color: #b9c8ba;
   background: #fffdf8;
 }
-html[data-color-theme="light"] body:not(.handdrawn-theme) .primary-nav a:hover,
-html[data-color-theme="light"] body:not(.handdrawn-theme) .utility-nav a:hover {
-  color: #1d2b21;
-}
+html[data-color-theme="light"] body:not(.handdrawn-theme) :is(
+  .primary-nav a:hover, .primary-nav a:focus-visible,
+  .utility-nav a:hover, .utility-nav a:focus-visible,
+  .page-toc a:hover, .page-toc a:focus-visible,
+  .quick-links a:hover, .quick-links a:focus-visible
+) { color: #1d2b21; }
