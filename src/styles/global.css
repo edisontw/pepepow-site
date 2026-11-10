@@ -2093,3 +2093,236 @@ body.handdrawn-theme {
     background: #fffdf8;
   }
 }
+
+
+/* User-selectable appearance; hand-drawn artwork and page layout are unchanged. */
+html[data-color-theme="dark"] { color-scheme: dark; }
+html[data-color-theme="light"] { color-scheme: light; }
+
+.theme-toggle {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  min-width: 5.5rem;
+  min-height: 2.5rem;
+  padding: .45rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: inherit;
+  font: inherit;
+  font-size: .86rem;
+  font-weight: 700;
+  line-height: 1.1;
+  cursor: pointer;
+}
+.theme-toggle:hover { border-color: var(--accent); background: var(--surface-raised); }
+.theme-toggle-icon { font-size: 1.25rem; line-height: 1; }
+@media (max-width: 48rem) {
+  .site-header { position: relative; }
+  .theme-toggle { position: absolute; right: 0; top: 1.05rem; }
+  .brand { padding-right: 6rem; }
+}
+
+/* New illustrated pages default to light, but can use the calm, readable night palette. */
+html.handdrawn-root[data-color-theme="dark"] { background: #111815; }
+html[data-color-theme="dark"] body.handdrawn-theme {
+  --surface: #1b2620;
+  --surface-raised: #25342a;
+  --border: #34483b;
+  --muted: #b6c9bc;
+  --accent: #91e29b;
+  --focus: #b9ffc2;
+  --warning: #f2c879;
+  color: #edf5ee;
+  background:
+    radial-gradient(circle at 7% 11%, rgba(91, 155, 106, .12), transparent 22rem),
+    radial-gradient(circle at 92% 4%, rgba(81, 130, 149, .12), transparent 28rem),
+    #111815;
+}
+html[data-color-theme="dark"] .handdrawn-theme :is(
+  .home-hero h1, .illustrated-page-header h1, .current-page-header h1,
+  .section-heading h2, .current-page, .hub-page, .network-page,
+  .news-archive, .search-page, .legacy-entry,
+  .page-toc-title, .current-page-body h2, .current-page-body h3,
+  .current-page-body h4, .hub-card h3, .hub-definition-list dt,
+  .network-entry-card h3, .metric-guide-list dt, .network-status-panel h2,
+  .news-archive-header h1, .search-page-header h1,
+  .search-panel label, .search-result h2, .search-result h2 a,
+  .archive-item h3, .archive-item h3 a, .latest-card h3,
+  .latest-card h3 a, .lens-item h3, .lens-item h3 a,
+  .start-card h3, .legacy-entry h1,
+  .legacy-entry h2, .legacy-entry h3, .legacy-entry h4,
+  .legacy-entry h5, .legacy-entry h6, .archive-note strong,
+  .network-pulse-metric strong, .network-pulse-links strong,
+  .network-static-facts dd
+) { color: #edf5ee; }
+html[data-color-theme="dark"] .handdrawn-theme :is(
+  .home-hero-lede, .current-page-lede, .reviewed-date,
+  .start-card p, .card-meta, .archive-context, .archive-note,
+  .hub-card p,
+  .hub-copy, .hub-definition-list dd, .hub-safety-list,
+  .network-entry-card p, .network-copy, .metric-guide-list dd,
+  .current-page-body p, .current-page-body li, .legacy-entry p,
+  .legacy-entry li, .legacy-entry-meta, .news-archive .lede,
+  .archive-count, .archive-item-meta, .search-summary,
+  .search-result-meta, .search-result-context, .lens-meta,
+  .network-static-facts dt, .page-toc a
+) { color: #b6c9bc; }
+html[data-color-theme="dark"] .handdrawn-theme :is(
+  .site-header, .site-footer, .home-section, .current-page-layout,
+  .hub-section, .network-page-section, .hub-definition-list,
+  .hub-definition-list > div, .metric-guide-list, .metric-guide-list > div,
+  .archive-year, .search-panel, .legacy-entry-header,
+  .network-pulse-links, .network-static-facts > div
+) { border-color: #34483b; }
+html[data-color-theme="dark"] .handdrawn-theme :is(
+  .home-pulse .network-pulse, .page-toc, .hub-card,
+  .network-entry-card, .network-status-panel, .start-card,
+  .latest-card, .archive-item, .archive-note, .search-result,
+  .lens-item
+) {
+  border-color: #34483b;
+  background: #1b2620;
+  box-shadow: 0 .4rem 1.4rem rgba(0, 0, 0, .12);
+}
+html[data-color-theme="dark"] .handdrawn-theme .network-status-panel,
+html[data-color-theme="dark"] .handdrawn-theme .home-pulse .network-pulse {
+  background: linear-gradient(145deg, rgba(95, 155, 104, .13), transparent 64%), #1b2620;
+}
+html[data-color-theme="dark"] .handdrawn-theme .network-pulse-metric {
+  border-color: #34483b;
+  background: #25342a;
+}
+html[data-color-theme="dark"] .handdrawn-theme .network-pulse-status {
+  border-color: #45624b;
+  background: #25342a;
+  color: #d5e3d7;
+}
+html[data-color-theme="dark"] .handdrawn-theme .network-pulse-status.is-live { color: #91e29b; }
+html[data-color-theme="dark"] .handdrawn-theme .network-pulse-status.is-delayed { color: #f2c879; }
+html[data-color-theme="dark"] .handdrawn-theme :is(
+  .brand, .text-action, .card-arrow, .archive-year h2,
+  .current-page-body a, .legacy-entry a
+) { color: #91e29b; }
+html[data-color-theme="dark"] .handdrawn-theme :is(
+  .current-page-body a:hover, .legacy-entry a:hover
+) { color: #b9ffc2; }
+html[data-color-theme="dark"] .handdrawn-theme :is(.primary-nav a, .utility-nav a) {
+  color: #c2d3c5;
+}
+html[data-color-theme="dark"] .handdrawn-theme :is(
+  .primary-nav a:hover, .primary-nav a:focus-visible,
+  .primary-nav a[aria-current="page"], .utility-nav a:hover,
+  .utility-nav a:focus-visible, .utility-nav a[aria-current="page"],
+  .page-toc a:hover, .page-toc a:focus-visible,
+  .quick-links a:hover, .quick-links a:focus-visible
+) {
+  color: #edf5ee;
+  background: #25342a;
+}
+html[data-color-theme="dark"] .handdrawn-theme .button {
+  border-color: #91e29b;
+  background: #91e29b;
+  color: #111815;
+  box-shadow: none;
+}
+html[data-color-theme="dark"] .handdrawn-theme .button.secondary {
+  border-color: #45624b;
+  background: #25342a;
+  color: #edf5ee;
+}
+html[data-color-theme="dark"] .handdrawn-theme :is(.quick-links a, .lens-tag) {
+  border-color: #45624b;
+  background: #25342a;
+  color: #d5e9d9;
+}
+html[data-color-theme="dark"] .handdrawn-theme :is(.current-page-body blockquote, .legacy-entry blockquote) {
+  background: #25342a;
+  color: #c2d3c5;
+}
+html[data-color-theme="dark"] .handdrawn-theme :is(.current-page-body pre, .legacy-entry pre) {
+  border-color: #34483b;
+  background: #101a14;
+  color: #e6f3e8;
+}
+html[data-color-theme="dark"] .handdrawn-theme :is(
+  .current-page-body th, .current-page-body td,
+  .legacy-entry th, .legacy-entry td
+) { border-color: #45624b; }
+html[data-color-theme="dark"] .handdrawn-theme .technical-safety-notice {
+  border-color: #8f6b37;
+  background: #30271c;
+}
+html[data-color-theme="dark"] .handdrawn-theme .technical-safety-notice strong { color: #f2c879; }
+html[data-color-theme="dark"] .handdrawn-theme :is(
+  .site-search-controls input, .recovery-form input, .recovery-form select,
+  .recovery-form textarea, .publisher-page input:not([type="checkbox"]),
+  .publisher-page textarea, .publisher-page select
+) {
+  border: 1px solid #45624b;
+  background: #142018;
+  color: #edf5ee;
+}
+html[data-color-theme="dark"] .handdrawn-theme input::placeholder,
+html[data-color-theme="dark"] .handdrawn-theme textarea::placeholder { color: #adbcaf; }
+html[data-color-theme="dark"] .handdrawn-theme .site-search-controls input:focus-visible {
+  border-color: #91e29b;
+  background: #142018;
+}
+html[data-color-theme="dark"] .handdrawn-theme .site-footer { color: #b6c9bc; }
+@media (hover: hover) {
+  html[data-color-theme="dark"] .handdrawn-theme :is(
+    .start-card:hover, .hub-card-link:hover, .network-entry-card:hover,
+    .archive-item:hover, .search-result:hover, .lens-item:hover
+  ) { border-color: #63846b; background: #25342a; }
+}
+@media (max-width: 48rem) {
+  html[data-color-theme="dark"] .handdrawn-theme .primary-nav a {
+    border-color: #34483b;
+    background: #1b2620;
+  }
+  html[data-color-theme="dark"] .handdrawn-theme .utility-nav {
+    border-color: #34483b;
+  }
+}
+
+/* The remaining older-style pages already default to dark; offer light mode there too. */
+html[data-color-theme="light"]:not(.handdrawn-root) { background: #f7f5eb; }
+html[data-color-theme="light"] body:not(.handdrawn-theme) {
+  --surface: #fffdf8;
+  --surface-raised: #f2f6eb;
+  --border: #d7ddcf;
+  --muted: #5d6a60;
+  --accent: #327c49;
+  --focus: #176c3b;
+  --warning: #9a6819;
+  color: #1d2b21;
+  background: #f7f5eb;
+}
+html[data-color-theme="light"] body:not(.handdrawn-theme) :is(
+  .home-hero-lede, .current-page-lede, .current-page-body p,
+  .current-page-body li, .legacy-entry p, .legacy-entry li,
+  .quick-links a
+) { color: #4e5e52; }
+html[data-color-theme="light"] body:not(.handdrawn-theme) :is(
+  .page-toc-title, .archive-note strong, .network-static-facts dd
+) { color: #1d2b21; }
+html[data-color-theme="light"] body:not(.handdrawn-theme) :is(
+  .site-search-controls input, .button.secondary
+) { color: #1d2b21; }
+html[data-color-theme="light"] body:not(.handdrawn-theme) :is(
+  .current-page-body pre, .legacy-entry pre
+) { background: #eef3e9; color: #1d2b21; }
+html[data-color-theme="light"] body:not(.handdrawn-theme) .button.secondary {
+  border-color: #b9c8ba;
+  background: #fffdf8;
+}
+html[data-color-theme="light"] body:not(.handdrawn-theme) :is(
+  .primary-nav a:hover, .primary-nav a:focus-visible,
+  .utility-nav a:hover, .utility-nav a:focus-visible,
+  .page-toc a:hover, .page-toc a:focus-visible,
+  .quick-links a:hover, .quick-links a:focus-visible
+) { color: #1d2b21; }

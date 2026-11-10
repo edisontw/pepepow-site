@@ -16,6 +16,7 @@ const {
 } = Astro.props;
 
 const handdrawnTheme = theme === 'handdrawn';
+const defaultColorTheme = handdrawnTheme ? 'light' : 'dark';
 
 const pageTitle = title === 'PEPEPOW' ? title : `${title} | PEPEPOW`;
 const currentPath = Astro.url.pathname;
@@ -42,10 +43,21 @@ const isCurrent = (href: string) =>
   href === '/' ? currentPath === '/' : currentPath.startsWith(href);
 ---
 <!doctype html>
-<html lang="en" class:list={{ 'handdrawn-root': handdrawnTheme }}>
+<html lang="en" class:list={{ 'handdrawn-root': handdrawnTheme }} data-color-theme={defaultColorTheme}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline>
+      // Apply an explicitly saved preference before the page stylesheet is painted.
+      try {
+        const saved = localStorage.getItem('pepepow-color-theme');
+        if (saved === 'light' || saved === 'dark') {
+          document.documentElement.dataset.colorTheme = saved;
+        }
+      } catch {
+        // Storage can be disabled; the original page theme remains the fallback.
+      }
+    </script>
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex, nofollow, noarchive" />}
     <meta name="generator" content={Astro.generator} />
@@ -96,6 +108,16 @@ const isCurrent = (href: string) =>
           ))}
         </nav>
       </div>
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-label={defaultColorTheme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+        title={defaultColorTheme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+      >
+        <span class="theme-toggle-icon" data-theme-icon aria-hidden="true">{defaultColorTheme === 'dark' ? '☀' : '☾'}</span>
+        <span data-theme-label>{defaultColorTheme === 'dark' ? 'Light' : 'Dark'}</span>
+      </button>
     </header>
     <main id="main-content" tabindex="-1">
       <slot />
@@ -103,5 +125,36 @@ const isCurrent = (href: string) =>
     <footer class="site-footer">
       <p>PEPEPOW · Open source · Community maintained</p>
     </footer>
+    <script>
+      const root = document.documentElement;
+      const toggle = document.querySelector<HTMLButtonElement>('#theme-toggle');
+      const themeMeta = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
+
+      const syncThemeControl = () => {
+        const isDark = root.dataset.colorTheme === 'dark';
+        const next = isDark ? 'light' : 'dark';
+        if (toggle) {
+          const action = 'Switch to ' + next + ' theme';
+          toggle.setAttribute('aria-label', action);
+          toggle.title = action;
+          const icon = toggle.querySelector('[data-theme-icon]');
+          const label = toggle.querySelector('[data-theme-label]');
+          if (icon) icon.textContent = isDark ? '☀' : '☾';
+          if (label) label.textContent = isDark ? 'Light' : 'Dark';
+        }
+        if (themeMeta) themeMeta.content = isDark ? '#111815' : '#f7f5eb';
+      };
+
+      syncThemeControl();
+      toggle?.addEventListener('click', () => {
+        root.dataset.colorTheme = root.dataset.colorTheme === 'dark' ? 'light' : 'dark';
+        try {
+          localStorage.setItem('pepepow-color-theme', root.dataset.colorTheme);
+        } catch {
+          // The in-page toggle still works without persistent storage.
+        }
+        syncThemeControl();
+      });
+    </script>
   </body>
 </html>
