@@ -2129,6 +2129,7 @@ html[data-color-theme="light"] { color-scheme: light; }
 /* New illustrated pages default to light, but can use the calm, readable night palette. */
 html.handdrawn-root[data-color-theme="dark"] { background: #111815; }
 html[data-color-theme="dark"] body.handdrawn-theme {
+  color-scheme: dark;
   --surface: #1b2620;
   --surface-raised: #25342a;
   --border: #34483b;
