@@ -1,6 +1,13 @@
 {
-  "generated_at": "2026-11-22T07:25:57Z",
+  "generated_at": "2026-11-23T08:12:07Z",
   "items": [
+    {
+      "title": "Bitcoin's quantum security challenge extends to bridges, custodians and millions of coins",
+      "url": "https://www.coindesk.com/tech/2026/11/22/bitcoin-s-quantum-security-challenge-extends-to-bridges-custodians-and-millions-of-coins",
+      "source": "CoinDesk",
+      "published": "2026-11-22T14:00:00Z",
+      "category": "Technology"
+    },
     {
       "title": "Fraudsters Used Fake Crypto Exchanges to Steal $37 Million, SEC Alleges",
       "url": "https://decrypt.co/383752/fraudsters-fake-crypto-exchanges-steal-37-million-sec",
@@ -27,13 +34,6 @@
       "url": "https://www.coindesk.com/business/2026/11/20/fairmint-plans-tokenized-stock-venue-on-canton-ethereum-under-sec-experiment",
       "source": "CoinDesk",
       "published": "2026-11-20T22:05:31Z",
-      "category": "Policy"
-    },
-    {
-      "title": "Hong Kong moves to extend crypto licensing rules to brokers, advisers and custodians",
-      "url": "https://www.coindesk.com/policy/2026/11/20/hong-kong-moves-to-extend-crypto-licensing-rules-to-brokers-advisers-and-custodians",
-      "source": "CoinDesk",
-      "published": "2026-11-20T14:38:30Z",
       "category": "Policy"
     },
     {
