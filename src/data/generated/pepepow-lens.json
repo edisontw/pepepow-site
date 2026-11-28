@@ -1,6 +1,27 @@
 {
-  "generated_at": "2026-11-27T09:03:45Z",
+  "generated_at": "2026-11-28T08:25:28Z",
   "items": [
+    {
+      "title": "Could AI Break Bitcoin? Not Yet, Research Firm K33 Says",
+      "url": "https://decrypt.co/384218/could-ai-break-bitcoin-not-yet-research-firm-k33-says",
+      "source": "Decrypt",
+      "published": "2026-11-27T20:46:02Z",
+      "category": "Security"
+    },
+    {
+      "title": "Tether can freeze stolen crypto in minutes. Getting it back can take years.",
+      "url": "https://www.coindesk.com/business/2026/11/27/tether-can-freeze-stolen-crypto-in-minutes-getting-it-back-can-take-years",
+      "source": "CoinDesk",
+      "published": "2026-11-27T10:00:00Z",
+      "category": "Security"
+    },
+    {
+      "title": "Next ECB chief favors tokenized bank deposits over stablecoins and bitcoin",
+      "url": "https://www.coindesk.com/policy/2026/11/27/next-ecb-chief-favors-tokenized-bank-deposits-over-stablecoins-and-bitcoin",
+      "source": "CoinDesk",
+      "published": "2026-11-27T11:22:42Z",
+      "category": "Policy"
+    },
     {
       "title": "Standard Chartered's Zodia Custody Says Hackers Accessed Client Contact Details",
       "url": "https://decrypt.co/384033/standard-chartereds-zodia-custody-says-hackers-accessed-client-contact-details",
@@ -9,32 +30,11 @@
       "category": "Security"
     },
     {
-      "title": "UK Regulator Cites Binance Hack as It Plans Tougher DeFi Rules Than US and EU: Report",
-      "url": "https://decrypt.co/384027/uk-regulator-cites-binance-hack-as-it-plans-tougher-defi-rules-than-us-and-eu-report",
-      "source": "Decrypt",
-      "published": "2026-11-26T11:50:23Z",
-      "category": "Security"
-    },
-    {
       "title": "SEC Investor Advisory Committee to Host Dec. 3 Virtual Meeting",
       "url": "https://www.sec.gov/newsroom/press-releases/2026-118-sec-investor-advisory-committee-host-dec-3-virtual-meeting",
       "source": "SEC",
       "published": "2026-11-25T14:10:24Z",
       "category": "Policy"
-    },
-    {
-      "title": "Ripple's lending plan moves closer to tapping XRP Ledger's $800 million in stablecoins",
-      "url": "https://www.coindesk.com/markets/2026/11/27/ripple-s-lending-plan-moves-closer-to-tapping-xrp-ledger-s-usd950-million-in-stablecoins",
-      "source": "CoinDesk",
-      "published": "2026-11-27T05:06:32Z",
-      "category": "Policy"
-    },
-    {
-      "title": "Ethereum's much-awaited Glamsterdam upgrade cleared for December test. Here's what to know",
-      "url": "https://www.coindesk.com/tech/2026/11/27/ethereum-s-much-awaited-glamsterdam-upgrade-cleared-for-december-test-here-s-what-to-know",
-      "source": "CoinDesk",
-      "published": "2026-11-27T04:29:47Z",
-      "category": "Technology"
     },
     {
       "title": "Bitcoin Optech Newsletter #432",
